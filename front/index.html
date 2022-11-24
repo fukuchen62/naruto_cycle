@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/top.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/wave.scss">
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -100,8 +101,16 @@
             </div>
         </section>
 
+        <!-- 髙瀬ここから下やります -->
+
+        <!-- SPOTここから-->
         <section class="spot">
-            <!-- 動く波上部がここに入ります -->
+            <!-- 動く波の上部分 -->
+            <div class="canvas-wrapper">
+                <canvas class="wave-bar" data-color1="#43c0e4" data-color2="#43c0e4" data-color3="#43c0e4"></canvas>
+                <div class="inner" data-bgcolor="rgba(67, 193, 236, 0.72)" data-color="#fff">Waveform Canvas<br />Three waves</div>
+            </div>
+
             <div class="pickup">\PICK UP!/</div>
             <h2 class="spot_top"><ruby>SPOT<rt>周辺スポット</rt></ruby></h2>
             <div class="card_container">
@@ -122,8 +131,11 @@
                 </ul>
                 <a class="spot_top_btn" href="">スポット一覧⇒</a>
             </div>
-            <!-- 動く波下部がここに入ります -->
+            <!-- 動く波の下部分 -->
+
         </section>
+
+        <!-- INSTAGRAMここから -->
 
         <section class="insta">
             <!-- アイコンフォントか画像でインスタロゴ -->
@@ -162,7 +174,7 @@
         </div>
         <p class="copyright"></p>
     </footer>
-
+    <script src="/js/index.js"></script>
 </body>
 </html>
 <!-- フッター切り取りここまで -->
