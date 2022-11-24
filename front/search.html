@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search</title>
+  <link rel="stylesheet" href="/Users/yumi/Desktop/root.naruto_cycle/CSS/resett.css">
+</head>
+<body>
+  <!-- ページタイトル -->
+  <h2><div class="search_title_jp">スポットを探す</div>
+    <div class="search_title">SEARCH</div></h2>
+  <!-- 検索ボックス -->
+  <div class="search_container">
+    <!-- ｈ３検索カテゴリ -->
+    <h3 class="search_cate">コース</h3>
+    <!-- ラジオボタン -->
+    <ul id="course" class="radio-box">
+      <!-- 初心者コース -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="beginner" id="beginner" class="checkbox_list">
+        <label for="beginner" class="s-search-btn">初心者</label>
+      </li>
+      <!-- 短距離コース -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="short" id="short" class="checkbox_list">
+        <label for="short" class="s-search-btn">
+          短距離</label>
+      </li>
+      <!-- 中距離 -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="medium" id="medium" class="checkbox_list">
+        <label for="medium" class="s-search-btn">中距離</label>
+      </li>
+      <!-- 長距離 -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="long" id="long" class="checkbox_list">
+        <label for="long" class="s-search-btn">長距離</label>
+      </li>
+    </ul>
+    <!-- 検索タイトル -->
+    <h3 class="search_cate">食べる</h3>
+    <ul>
+      <!-- カフェ -->
+      <li class="choice-item"><input type="checkbox" name="spot_type[]" value="cafe" id="cafe" class="checkbox_list">
+        <label for="cafe" class="s-search-btn">カフェ</label>
+      </li>
+      <!-- レストラン -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="restaurant" id="restaurant" class="checkbox_list">
+        <label for="restaurant" class="s-search-btn">レストラン</label>
+      </li>
+      <!-- 食堂 -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="dining" id="dining" class="checkbox_list">
+        <label for="dining" class="s-search-btn">食堂</label>
+      </li>
+      <!-- ラーメン -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="ramen" id="ramen" class="checkbox_list">
+        <label for="ramen" class="s-search-btn">ラーメン</label>
+      </li>
+    </ul>
+    <!-- 検索タイトル -->
+    <h3 class="search_cate">買う</h3>
+    <ul>
+      <!-- お土産 -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="souvenir" id="souvenir" class="checkbox_list">
+        <label for="souvenir" class="s-search-btn">お土産</label>
+      </li>
+
+      <!-- 道の駅 -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="roadsidestation" id="roadsidestation" class="checkbox_list">
+        <label for="roadsidestation" class="s-search-btn">道の駅</label>
+      </li>
+    </ul>
+    <!-- 検索タイトル -->
+    <h3 class="search_cate">楽しむ</h3>
+    <ul>
+      <!-- 歴史・文化 -->
+      <li class="choice-item"><input type="checkbox" name="spot_type[]" value="history" id="history" class="checkbox_list">
+        <label for="history" class="s-search-btn">歴史・文化</label>
+      </li>
+      <!-- 体験 -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="experience" id="experience" class="checkbox_list">
+        <label for="experience" class="s-search-btn">体験</label>
+      </li>
+      <!-- ホテル・温泉 -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="hotel" id="hotel" class="checkbox_list">
+        <label for="hotel" class="s-search-btn">ホテル・温泉</label>
+      </li>
+      <!-- ビュースポット -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="vie-spot" id="vie-spot" class="checkbox_list">
+        <label for="vie-spot" class="s-search-btn">ビュースポット</label>
+      </li>
+    </ul>
+    <!-- 検索タイトル -->
+    <h3 class="search_cate">サイクルスポット</h3>
+    <ul>
+      <!-- レンタルショップ -->
+      <li class="choice-item"><input type="checkbox" name="spot_type[]" value="rental" id="rental" class="checkbox_list">
+        <label for="rental" class="s-search-btn">レンタルショップ</label>
+      </li>
+      <!-- サイクルショップ -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="bicycle" id="bicycle" class="checkbox_list">
+        <label for="bicycle" class="s-search-btn">サイクルショップ</label>
+      </li>
+      <!-- サイクルビット -->
+      <li class="choice-item">
+        <input type="checkbox" name="spot_type[]" value="cyclebit" id="cyclebit" class="checkbox_list">
+        <label for="cyclebit" class="s-search-btn">サイクルビット</label>
+      </li>
+    </ul>
+    <div class="searchbtn-restbtn-wrap">
+      <!-- リセットボタン -->
+      <div class="reset-btn-inner">
+        <input type="checkbox" value="リセット" id="reset-btn"><label for="reset-btn" class="reset-btn">リセット</label>
+      </div>
+      <!-- 検索ボタン -->
+      <div class="search-btn-inner">
+        <!-- ボタン内文字変更-->
+        <input type="submit" value="検索" id="search-btn">
+      </div>
+    </div>
+    <!-- あしらい -->
+    <img src="/Users/yumi/Desktop/root.naruto_cycle/img/enjoyboy.png">
+
+    <div class="pickup">＼ PICK UP! ／ </div>
+    <!-- ピックアップタイトル -->
+    <h2><div class="reccomend_title_jp">こちらもいかがですか？</div>
+<div class="reccomend_title">RECCOMEND</div></h2>
+    <!-- スポットカード -->
+    <div class="course_choice">
+      <ul class="course_choice_list">
+        <li class="course_choice_item"><img src="/Users/yumi/Desktop/root.naruto_cycle/img/Rectangle 7.png">
+          <div class="fav_btn"></div>
+          <div class="like_btn"></div>
+          <p class="course_choice_title">CafeAAA</p>
+          <p class="course_choice_cate">営業時間</p>
+          <p class="course_choice_time">10:00〜18:00</p>
+          <p class="course_choice_cate">住所</p>
+          <p class="course_choice_address">鳴門市＊＊町：：１２３−４aaaaaaaaaaa</p>
+          <p class="course_choice_cate">電話番号</p>
+          <p class="course_choice_tell">0123-456-789</p>
+        </li>
+      </ul>
+    </div>
+
+</body>
+</html>
