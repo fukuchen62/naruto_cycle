@@ -1,0 +1,109 @@
+/* sectionキービジュアル */
+.key_visual {}
+
+/* キービジュアルの動画 */
+.key_bg_movie {}
+
+/* h2キービジュアルの見出し（RIDE ON THE UZU WAVE）*/
+.key_msg {}
+
+/* sectionニュース */
+.news {}
+
+/* h2ニュースの見出し */
+.news_top {}
+
+/* ulニュースの配列 */
+.news_top_list {}
+
+/* liニュースinfo */
+.news_top_item {}
+
+/* ニュースのカテゴリー */
+.news_top_item_cate {}
+
+/* ニュースの日付 */
+.news_top_item_data {}
+
+/* ニュースのヘッドライン */
+.news_top_item_txt {}
+
+/* ニュース一覧へボタン */
+.news_top_btn {}
+
+/* sectionサイクリングについて */
+.howto {}
+
+/* h2サイクリングについて見出し */
+.howto_top {}
+
+/* サイクリングについてのテキスト */
+.howto_top_txt {}
+
+/* サイクリングについてもっと読むボタン */
+.howto_top_btn {}
+
+/* サイクリングについての画像 */
+.howto_top_img {}
+
+/* sectionコース */
+.course {}
+
+/* h2コースの見出し */
+.course_top {}
+
+/* コースのコンテナ */
+.course_top_container {}
+
+/* 「コースを選ぶ」の一文 */
+.course_top_choice {}
+
+/* ulコースを選ぶリスト */
+.course_top_choice_list {}
+
+/* コース選択ボタン・imgにするか要相談 */
+.course_top_choice_btn {}
+
+/* .course_top_choice_cate
+.course_top_choice_km */
+
+/* sectionスポット */
+.spot {}
+
+/* ここに動く波の上部が入ります */
+
+/* PICK UPの文字あしらい */
+.pickup {}
+
+/* h2スポットの見出し */
+.spot_top {}
+
+/* スポットカードのコンテナ */
+.card_container {}
+
+/* ulスポットリスト */
+.spot_list {}
+
+/* liスポットカード */
+.spot_item {}
+
+/* カードの中の写真 */
+.spot_item_img {}
+
+/* カードのスポット名 */
+.spot_item_name {}
+
+/* dlカードのスポット情報 */
+.spot_item_info {}
+
+/* スポットのもっと見るボタン */
+.spot_top_btn {}
+
+/* sectionインスタ */
+.insta {}
+
+/* アイコンフォントかimgでインスタロゴ */
+.insta_logo {}
+
+/* h2 インスタの見出し*/
+.insta_top {}
