@@ -1,1 +1,31 @@
-/* reset.css*/
+/* フッター */
+.footer {
+    color:
+}
+
+/* ulバナーリスト */
+.banner_list {}
+
+/* liバナー */
+.banner_item {}
+
+/* フッターナビのコンテナ */
+.fnav_container {}
+
+/* navフッターナビ */
+.fnav {}
+
+/* ulフッターナビのメニュー */
+.fnav_menu {}
+
+/* liフッターナビメニューのリスト */
+.fnav_list {}
+
+/* ulフッターナビメニューリストの項目 */
+.fnav_item {}
+
+/* SNSアイコン置き場 */
+.sns {}
+
+/* 著作権表示 */
+.copyright {}
