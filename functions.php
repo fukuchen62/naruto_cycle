@@ -1,13 +1,13 @@
-//functions.php
+<!-- naruto_cycleのfunction -->
 
-<!-- awa農ライフのfunction -->
 <?php
-
+add_theme_support('post-thumbnails');
 /**
  * WordPressの既成機能を有効させる
  *
  * @return void
  */
+
 function naruto_cycle_theme_support()
 {
     /**
@@ -18,6 +18,7 @@ function naruto_cycle_theme_support()
     /**
      * アイキャッチ画像を使用可能にする
      */
+
     add_theme_support('post-thumbnails');
 
     /**
@@ -119,7 +120,7 @@ function add_individual_stylesheet_script()
     if (is_home()) {
 
         //トップページのCSS（top.css）を読み込む
-        wp_enqueue_style('awa_nolife-top', get_template_directory_uri() . '/assets/css/top.css', array(), false);
+        wp_enqueue_style('naruto_cycle-top', get_template_directory_uri() . '/assets/css/top.css', array(), false);
 
         //トップページのヘッダーのCSS（template_top_header.css）を読み込む
         wp_enqueue_style('naruto_cycle-template_top_header', get_template_directory_uri() . '/assets/css/template_top_header.css', array(), false);

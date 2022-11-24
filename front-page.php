@@ -13,9 +13,14 @@
     <ul>
         <?php while (have_posts()) : the_post(); ?>
 
+        <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('medium'); ?>
+        </a>
         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         <?php the_category(); ?>
         <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d') ?></time>
+
+
         <?php endwhile; ?>
     </ul>
     <?php endif; ?>
