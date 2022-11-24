@@ -2,10 +2,18 @@
 
 /* 背景色 */
 body {
-    color:
+	color: ;
 }
 
 /* 親要素にflex */
-.flex {}
+.flex {
+}
 
 /* h2の文字サイズ */
+
+/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
+@media screen and (min-width: 599px) {
+}
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
+@media screen and (min-width: 1024px) {
+}
