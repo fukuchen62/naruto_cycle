@@ -12,30 +12,30 @@
 <?php the_content(); ?>
 
 <?php
-        $pic = get_field('eyecatch');
-        $pic_url = $pic['sizes']['medium'];
-        $width = $pic['sizes']['medium-width'];
-        $height = $pic['sizes']['medium-height'];
+                $pic = get_field('eyecatch');
+                $pic_url = $pic['sizes']['medium'];
+                $width = $pic['sizes']['medium-width'];
+                $height = $pic['sizes']['medium-height'];
 
 
-        ?>
+                ?>
 <img src="<?php echo $pic_url; ?>" width=" <?php echo $width; ?>" height="<?php echo $height; ?>" alt="">
 
 <?php
-        $pic = get_field('pic1');
-        $pic_url = $pic['sizes']['thumbnail'];
-        $width = $pic['sizes']['thumbnail-width'];
-        $height = $pic['sizes']['thumbnail-height'];
+                $pic = get_field('pic1');
+                $pic_url = $pic['sizes']['thumbnail'];
+                $width = $pic['sizes']['thumbnail-width'];
+                $height = $pic['sizes']['thumbnail-height'];
 
-        ?>
+                ?>
 <img src=" <?php echo $pic_url; ?>" width=" <?php echo $width; ?>" height="<?php echo $height; ?>" alt="">
 
 <?php
-        $pic = get_field('pic2');
-        $pic_url = $pic['sizes']['thumbnail'];
-        $width = $pic['sizes']['thumbnail-width'];
-        $height = $pic['sizes']['thumbnail-height'];
-        ?>
+                $pic = get_field('pic2');
+                $pic_url = $pic['sizes']['thumbnail'];
+                $width = $pic['sizes']['thumbnail-width'];
+                $height = $pic['sizes']['thumbnail-height'];
+                ?>
 <img src="<?php echo $pic_url; ?>" width=" <?php echo $width; ?>" height="<?php echo $height; ?>" alt="">
 
 <ul>
