@@ -225,7 +225,8 @@ iframe {
  */
 
 button,
-input,
+/* チェックボックス反映させるためinputタグはコメントアウト */
+/* input, */
 optgroup,
 select,
 textarea {
