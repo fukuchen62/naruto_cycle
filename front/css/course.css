@@ -68,6 +68,7 @@
 	height: 558px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 40px;
 }
 .iframe_wrapper iframe {
 	position: absolute;
@@ -92,4 +93,65 @@
 	max-width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+.dl-btn {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.info_wrap {
+	padding-top: 80px;
+	background-color: #fff;
+	width: 320px;
+	height: 560px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+@media screen and (min-width: 1024px) {
+	.info_wrap {
+		padding-top: 48px;
+		width: 1024px;
+	}
+}
+
+.info {
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 2rem;
+}
+@media screen and (min-width: 1024px) {
+	.info {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.info_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.info_item {
+	width: 50%;
+	font-weight: bold;
+}
+
+.comment_text {
+	line-height: 1.5rem;
+	padding-bottom: 40px;
+}
+
+/* 右下の注釈部分の設定 */
+.annotation {
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+	font-size: 12px;
+}
+
+section + section {
+	margin: 160px;
 }
