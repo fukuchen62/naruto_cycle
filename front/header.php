@@ -34,7 +34,7 @@
 <body>
 
     <header class="header">
-        <div class="header_container">
+        <div class="header_container flex align_center">
             <h1 class="header_logo"><a href="#">ロゴが入ります<img src="" alt="なるとサイくるっと！のロゴ"></a></h1>
             <nav class="gnav_hamburger">
                 <div class="gnav_hamburger_inner">
