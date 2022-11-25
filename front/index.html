@@ -105,30 +105,56 @@
 
         <!-- SPOTここから-->
         <section class="spot">
-            <!-- 動く波の上部分 -->
+
+            <!-- 上下の境界線上に動く波を入れる -->
             <div class="canvas-wrapper">
-                <canvas class="wave-bar" data-color1="#43c0e4" data-color2="#43c0e4" data-color3="#43c0e4"></canvas>
-                <div class="inner" data-bgcolor="rgba(67, 193, 236, 0.72)" data-color="#fff">Waveform Canvas<br />Three waves</div>
+                <canvas class="wave-bar" data-color1="#96D601" data-color2="#00BA89"></canvas>
+                <canvas class="wave-bar flipped" data-color1="#96D601" data-color2="#00BA89"></canvas>
             </div>
 
+            <!-- 波形は3つまで表示可能で、波形の色は、canvas要素の data-color1, data-color2, data-color3 属性で指定します。
+            この data-color[n] の数が波形の数に一致します。
+
+            境界の波形(canvas)とメインコンテンツ(.inner)が同化して見えるようにするために、メインコンテンツ要素には data-bgcolor で背景カラー、data-color でフォントカラーを指定できるようにしておきます。
+            これらのカラーコードを、Javascript側で取得してメインコンテンツのスタイルに反映させます。 -->
+
+            <!-- <div class="canvas-wrapper">
+                <canvas class="wave-bar" data-color1="#43c0e4" data-color2="#43c0e4" data-color3="#43c0e4"></canvas>
+                <div class="inner" data-bgcolor="rgba(67, 193, 236, 0.72)" data-color="#fff">Waveform Canvas<br />Three waves</div>
+            </div> -->
+            <!-- 動く波ここまで -->
+
+            <!-- 吹き出しPICKUP！文字 -->
             <div class="pickup">\PICK UP!/</div>
+            <!-- SPOT見出し -->
             <h2 class="spot_top"><ruby>SPOT<rt>周辺スポット</rt></ruby></h2>
+            <!-- カード全てのコンテナ←不要？？ -->
             <div class="card_container">
+
+                <!-- カード全体の入れ物 -->
                 <ul class="spot_list">
-                    <!-- カード -->
+
+                    <!-- カード１枚の入れ物-->
                     <li class="spot_item">
-                        <img class="spot_item_img" src="" alt="スポットの写真">
-                        <h3 class="spot_item_name">味処　あらし</h3>
-                        <dl class="spot_item_info">
-                            <dt>営業時間</dt>
-                            <dd>11:00～21:00</dd>
-                            <dt>住所</dt>
-                            <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                            <dt>電話番号</dt>
-                            <dd>088-686-0005</dd>
-                        </dl>
+                        <!-- カード１枚にかかるスポット一覧へのリンク -->
+                        <a href="spot.html">
+                            <!-- スポット写真 -->
+                            <img class="spot_item_img" src="" alt="スポットの写真">
+                            <!-- スポット名 -->
+                            <h3 class="spot_item_name">味処　あらし</h3>
+                            <!-- スポット情報の表 -->
+                            <dl class="spot_item_info">
+                                <dt>営業時間</dt>
+                                <dd>11:00～21:00</dd>
+                                <dt>住所</dt>
+                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                <dt>電話番号</dt>
+                                <dd>088-686-0005</dd>
+                            </dl>
+                        </a>
                     </li>
                 </ul>
+                <!-- スポットもっと見るボタン -->
                 <a class="spot_top_btn" href="">スポット一覧⇒</a>
             </div>
             <!-- 動く波の下部分 -->
@@ -138,9 +164,9 @@
         <!-- INSTAGRAMここから -->
 
         <section class="insta">
-            <!-- アイコンフォントか画像でインスタロゴ -->
+            <!-- アイコンフォントでインスタロゴ -->
             <span class="insta_logo">
-                <i>ココにインスタのアイコンフォント</i>
+                <img src="/image/instagram_logo.png" alt="">
             </span>
             <h2 class="insta_top"><ruby>INSTAGRAM<rt>公式インスタグラム</rt></ruby></h2>
         </section>
@@ -150,9 +176,9 @@
     <footer class="footer">
         <ul class="banner_list">
             <!-- asaなどのバナーがliで入ります -->
-            <li class="banner_item"><a href=""><img src="" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="" alt="○○のバナー"></a></li>
+            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
         </ul>
         <nav class="fnav_container">
             <ul class="fnav">

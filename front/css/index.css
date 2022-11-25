@@ -79,16 +79,30 @@
 .spot_top {}
 
 /* スポットカードのコンテナ */
-.card_container {}
+/* .card_container {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+} */
 
 /* ulスポットリスト */
-.spot_list {}
+.spot_list {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
 /* liスポットカード */
-.spot_item {}
+.spot_item {
+    width: 320px;
+    height: 400px;
+}
 
 /* カードの中の写真 */
-.spot_item_img {}
+.spot_item_img {
+    width: 280px;
+    height: 240px;
+}
 
 /* カードのスポット名 */
 .spot_item_name {}
