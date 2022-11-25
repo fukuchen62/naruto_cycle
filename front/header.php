@@ -34,7 +34,20 @@
 <body>
 
     <header class="header">
-        <h1 class="header_logo"><a href="#">ロゴが入ります<img src="" alt="なるとサイくるっと！のロゴ"></a></h1>
-        <nav class="gnav"></nav>
+        <div class="header_container">
+            <h1 class="header_logo"><a href="#">ロゴが入ります<img src="" alt="なるとサイくるっと！のロゴ"></a></h1>
+            <nav class="gnav_hamburger">
+                <div class="gnav_hamburger_inner">
+                    <ul class="menu_hbmenu_camp">
+                        <li>NEWS</li>
+                        <li>HOWTO</li>
+                        <li>COURSE</li>
+                        <li>SPOT</li>
+                        <li>MY PAGE</li>
+                        <li>Q&A</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <!-- ヘッダー切り取りここまで -->
