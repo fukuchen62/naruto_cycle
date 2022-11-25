@@ -20,6 +20,8 @@
 .header_logo {
     position: fixed;
     border: 1px solid #fff;
+    /* 最前面に */
+    z-index: 101;
 }
 
 /* ハンバーガーメニューの設定ここから */

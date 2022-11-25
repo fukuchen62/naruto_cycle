@@ -20,6 +20,11 @@ body {
 	position: relative;
 }
 
+/* absolute; */
+.absolute {
+	position: absolute;
+}
+
 
 
 /* ----見出し(最初に来るh2部分）の設定--------------*/

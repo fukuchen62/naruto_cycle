@@ -10,13 +10,32 @@ main {
 .key_bg_movie {
     width: 100vw;
     height: 100%;
-    background-position: center center;
+    background-position: center center no-repeat;
+    align-items: center;
     justify-content: center;
     background-size: cover;
 }
 
 /* h2キービジュアルの見出し（RIDE ON THE UZU WAVE）*/
-.key_msg {}
+.key_msg {
+    /* 透明白ふち文字 */
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    color: rgba(0, 0, 0, 0);
+
+    font-size: 144px;
+    position: absolute;
+    top: 240px;
+    left: 32px;
+    /* transform: rotate(-30deg); */
+}
+
+/* キービジュアルのイラスト */
+.key_man {
+    position: absolute;
+    top: 700px;
+    left: 208px;
+}
 
 /* sectionニュース */
 .news {}
