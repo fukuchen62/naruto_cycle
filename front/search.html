@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <title>search</title>
   <link rel="stylesheet" href="css\reset.css">
   <link rel="stylesheet" href="css\search.css">
@@ -14,13 +16,17 @@
     <h2><div class="search_title_jp">スポットを探す</div>
     <div class="search_title">SEARCH</div></h2>
     <div class="wrap_search_container">
+
+
       <!-- 検索ボックス -->
       <div class="search_container">
+        <!-- 自転車のあしらい -->
+        <img src="image\index_insta_img.png" alt="装飾" class="index_insta_img img_pc_only">
         <!-- ｈ３検索カテゴリ -->
         <div class="search_cate_box">
           <h3 class="search_cate">コース</h3>
-          <!-- ラジオボタン -->
-          <ul id="course" class="radio-box">
+          <!-- チェックボックス -->
+          <ul class="radio-box">
             <!-- 初心者コース -->
             <ul class="item_box">
               <li class="choice_item">
@@ -28,6 +34,7 @@
                 <label for="beginner" class="s-search-btn">初心者</label>
               </li>
             </ul>
+
             <!-- 短距離コース -->
             <ul class="item_box">
               <li class="choice_item">
@@ -55,7 +62,7 @@
         <!-- 検索タイトル -->
         <div class="search_cate_box">
           <h3 class="search_cate">食べる</h3>
-          <ul>
+          <ul class="radio-box">
             <!-- カフェ -->
             <ul class="item_box">
               <li class="choice_item"><input type="checkbox" name="spot_type[]" value="cafe" id="cafe" class="checkbox_list">
@@ -88,7 +95,7 @@
         <!-- 検索タイトル -->
         <div class="search_cate_box">
           <h3 class="search_cate">買う</h3>
-          <ul>
+          <ul class="radio-box">
             <!-- お土産 -->
             <ul class="item_box">
               <li class="choice_item">
@@ -109,7 +116,7 @@
         <!-- 検索タイトル -->
         <div class="search_cate_box">
           <h3 class="search_cate">楽しむ</h3>
-          <ul>
+          <ul class="radio-box">
             <!-- 歴史・文化 -->
             <ul class="item_box">
               <li class="choice_item"><input type="checkbox" name="spot_type[]" value="history" id="history" class="checkbox_list">
@@ -142,7 +149,7 @@
         <!-- 検索タイトル -->
         <div class="search_cate_box">
           <h3 class="search_cate">サイクルスポット</h3>
-          <ul>
+          <ul class="radio-box">
             <!-- レンタルショップ -->
             <ul class="item_box">
               <li class="choice_item"><input type="checkbox" name="spot_type[]" value="rental" id="rental" class="checkbox_list">
@@ -167,27 +174,36 @@
         </ul>
 
         <!-- 検索ボタン -->
-        <ul class="btn-inner">
-          <!-- ボタン内文字変更-->
-          <!-- <input type="submit" value="検索" id="search-btn"> -->
-          <li class="search-btn reset-btn">検索</li>
-        </ul>
-        <div class="searchbtn-restbtn-wrap">
+        <div class="btn-inner-box radio-box">
+          <ul class="btn-inner">
+            <!-- ボタン内文字変更-->
+            <!-- <input type="submit" value="検索" id="search-btn"> -->
+            <li class="search-btn">検索</li>
+          </ul>
+
           <!-- リセットボタン -->
           <ul class="btn-inner">
             <!-- <input type="checkbox" value="リセット" id="reset-btn"><label for="reset-btn" class="reset-btn">リセット</label> -->
-            <li class="reset-btn search-btn">リセット</li>
+            <li class="search-btn">リセット</li>
           </ul>
-        </div>
-      </div>
-    </div>
-    <!-- あしらい -->
-    <img src="images\enjoyboy.png">
 
-    <div class="pickup">＼ PICK UP! ／ </div>
-    <!-- ピックアップタイトル -->
-    <h2><div class="reccomend_title_jp">こちらもいかがですか？</div>
+        </div>
+        <!-- PC表示の人のあしらい１ -->
+        <img src="image\search_form_img1.png" alt="装飾" class="search_img1_pc img_pc_only">
+        <!-- PC表示の人のあしらい２ -->
+        <img src="image\search_form_img2.png" alt="装飾" class="search_img2_pc img_pc_only">
+      </div>
+
+    </div>
+    <!-- スマホ表示の人のあしらい -->
+    <img src="image\search_form_img1.png" alt="装飾" class="search_img1_sp">
+
+    <div class="reccomend-wrap">
+      <div class="pickup">＼ PICK UP! ／ </div>
+      <!-- ピックアップタイトル -->
+      <h2><div class="reccomend_title_jp">こちらもいかがですか？</div>
 <div class="reccomend_title">RECCOMEND</div></h2>
+    </div>
     <!-- スポットカード -->
     <div class="course_choice">
       <ul class="course_choice_list">

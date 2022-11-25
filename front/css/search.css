@@ -1,4 +1,9 @@
 @charset "utf-8";
+
+body {
+	background-color: #F3F0E8;
+}
+
 .wrap{
   width: 100%;
   /* margin: auto; */
@@ -7,7 +12,7 @@
 
 /* ページタイトルの日本語ルビ */
 .search_title_jp{
-  font-size: 18px;
+  font-size: 16px;
   margin: 12px auto auto auto;
 }
 
@@ -29,7 +34,8 @@
 .search_container{
   /* position: absolute; */
 width: 320px;
-height: 1629px;
+/* height: 1629px; */
+height: 1673px;
 border: 1px solid #74C7F0;
 background-color: #D4EBEC;
 margin: auto;
@@ -66,32 +72,169 @@ border-radius: 10px;
 
 /* チェックボックス内のテキスト */
 .choice_item{
+  font-size: 16px;
+  font-weight: bold;
   position: absolute;
   left: 12px;
   top:9px;
   bottom: 9px;
 }
 
-.btn-inner{
-  margin: 24px auto auto auto;
+.btn-inner-box{
+  margin: 48px auto auto auto;
 }
 
+/* 検索ボタン装飾 */
 .btn-inner{
   width: 240px;
   height: 56px;
   background: linear-gradient(0deg, #74C7F0, #74C7F0), linear-gradient(0deg, #D4EBEC, #D4EBEC), #FFFFFC;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
-margin: 24px 40px auto;
+margin: 24px 40px 20px auto;
 position: relative;
 }
 
-.reset-btn{
+/* 検索ボタンのテキスト */
+.search-btn{
   color: #FFFFFC;
   font-size: 24px;
   font-weight: bold;
   margin: auto;
   position: absolute;
- top: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* あしらい（PC）非表示 */
+.img_pc_only{
+  display: none;
+}
+
+/* 人のあしらい（スマホ） */
+.search_img1_sp{
+  margin: 32px;
+  object-fit: cover;
+  width: 250px;
+  height: 267px;
+}
+
+.pickup{
+  margin: 160px auto auto;
+font-weight: 900;
+font-size: 32px;
+line-height: 39px;
+color: #EF6000;
+}
+
+.reccomend_title_jp{
+font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 23px;
+margin: auto auto -5px auto;
+}
+
+.reccomend_title{
+font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 70px;
+}
+
+/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
+@media screen and (min-width: 599px) {
+
+}
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
+@media screen and (min-width: 1024px) {
+/* ページタイトルの日本語ルビ */
+.search_title_jp{
+margin: 131px auto auto auto;
+}
+
+  /* 検索ボックス */
+  .search_container{
+  /* position: absolute; */
+width: 928px;
+height: 813px;
+border: 1px solid #74C7F0;
+background-color: #D4EBEC;
+margin: auto;
+position: relative;
+}
+/* 自転車のあしらい */
+.index_insta_img{
+  object-fit: cover;
+  width: 205px;
+  height: 123px;
+  display: block;
+  /* margin: 105px 0px 0px 0px; */
+  position: absolute;
+  left:102px;
+  top:-123px;
+  bottom: auto;
+}
+/* 人のあしらい（スマホ） */
+.search_img1_sp{
+  display: none;
+}
+
+/* 人のあしらい（PC） */
+.search_img1_pc{
+  object-fit: cover;
+  width: 250px;
+  height: 267px;
+  display: block;
+  position: absolute;
+  top:703px;
+  right: 726px;
+}
+.search_img2_pc{
+  object-fit: cover;
+  width: 200px;
+  height: 250px;
+  display: block;
+  position: absolute;
+  top:695px;
+  left: 776px;
+}
+
+
+/* 要素を横並びにする */
+.radio-box{
+display:flex;
+width: 848px;
+margin: 0px 40px;
+}
+
+/* チェックボックスの幅*/
+.item_box{
+  margin: 16px 8px auto;
+}
+
+/* 検索ボタンの配置 */
+.btn-inner-box{
+  margin:72px 208px 28px auto;
+  width: 512px;
+}
+/* 検索ボタン */
+.btn-inner{
+  margin: auto 16px;
+}
+
+/* .reccomend_wrap{
+  width: 421px;
+  position: relative;
+} */
+
+.pickup{
+  transform: rotate(-15deg);
+  /* position: absolute;
+  right: auto; */
+}
+
 }
