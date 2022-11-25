@@ -30,18 +30,44 @@
     <!-- ファビコン↓() -->
 </head>
 <body>
-
-    <header class="header">
-        <h1 class="header_logo"><a href="#">ロゴが入ります<img src="" alt="なるとサイくるっと！のロゴ"></a></h1>
-        <nav class="gnav"></nav>
+    <header class="header flex">
+        <h1 class="header_logo"><a href="#"><img src="https://placehold.jp/80x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+        <nav>
+            <ul class="menu">
+                <li class="menu-list font_edge_white">
+                    <a href="news.html">NEWS</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="howto.html">HOWTO</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="course.html">COURSE</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="spot.html">SPOT</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="mypage.html">MYPAGE</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="question.html">Q&A</a>
+                </li>
+            </ul>
+            <button type="button" class="btn js-btn">
+                <span class="btn-line"></span>
+            </button>
+        </nav>
     </header>
     <!-- ヘッダー切り取りここまで -->
     <main>
         <section class="key_visual">
-            <div class="key_bg_movie"></div>
-            <h2 class="key_msg">RIDE ON THE UZU WAVE</h2>
-            <img src="" alt="サイクリングマン">
+            <div class="key_bg_movie"><img src="https://placehold.jp/1440x600.png" alt="キービジュアル画像">
+                <h2 class="key_msg">RIDE ON THE UZU WAVE</h2>
+                <img src="" alt="サイクリングマン">
+            </div>
         </section>
+
+        <!-- NEWS -->
         <section class="news">
             <h2 class="news_top">NEWS</h2>
             <ul class="news_top_list">
@@ -134,25 +160,26 @@
                 <!-- カード全体の入れ物 -->
                 <ul class="spot_list">
 
-                    <!-- カード１枚の入れ物-->
-                    <li class="spot_item">
-                        <!-- カード１枚にかかるスポット一覧へのリンク -->
-                        <a href="spot.html">
+                    <!-- カード１枚にかかるスポット一覧へのリンク -->
+                    <a href="spot.html">
+                        <!-- カード１枚の入れ物-->
+                        <li class="spot_item relative">
+                            <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
                             <!-- スポット写真 -->
-                            <img class="spot_item_img" src="" alt="スポットの写真">
+                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
                             <!-- スポット名 -->
-                            <h3 class="spot_item_name">味処　あらし</h3>
+                            <h3 class="spot_item_name">味処 あらし</h3>
                             <!-- スポット情報の表 -->
-                            <dl class="spot_item_info">
+                            <dl class="spot_item_info flex">
                                 <dt>営業時間</dt>
                                 <dd>11:00～21:00</dd>
                                 <dt>住所</dt>
                                 <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
                                 <dt>電話番号</dt>
-                                <dd>088-686-0005</dd>
+                                <dd">088-686-0005</dd>
                             </dl>
-                        </a>
-                    </li>
+                        </li>
+                    </a>
                 </ul>
                 <!-- スポットもっと見るボタン -->
                 <a class="spot_top_btn" href="">スポット一覧⇒</a>
@@ -200,7 +227,7 @@
         </div>
         <p class="copyright"></p>
     </footer>
-    <script src="/js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
 <!-- フッター切り取りここまで -->

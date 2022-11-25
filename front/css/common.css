@@ -2,12 +2,198 @@
 
 /* 背景色 */
 body {
-	color: ;
+	background-color: #F3F0E8;
 }
 
 /* 親要素にflex */
 .flex {
+	display: flex;
 }
+
+/* flexして中央ぞろえ */
+.align_items_c {
+	align-items: center;
+}
+
+/* ヘッダーの設定 */
+/* headerの設定 */
+.header {
+	/* align-items: center; */
+	/* background-color: transparent; */
+	/* height: 50px; */
+	/* padding: 20px; */
+}
+
+/* ヘッダーロゴの設定 */
+.header_logo {
+	position: fixed;
+	border: 1px solid #fff;
+}
+
+/* ハンバーガーメニューの設定ここから */
+::before,
+::after {
+	/* 親要素と同じ大きさに */
+	box-sizing: inherit;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.menu {
+	position: fixed;
+	right: -70%;
+	width: 40%;
+	margin-left: auto;
+	font-size: 100%;
+	color: rgb(0, 0, 0);
+	background-color: transparent;
+	z-index: 9;
+	transition: 0.3s;
+}
+
+.menu-list {
+	/* デバック用 */
+	border: 1px solid #000;
+	width: 100%;
+	/* margin: 10px; */
+	/* padding: 10px; */
+	/* height: 100%; */
+	/* メニューテキスト位置をリスト内中心に */
+	text-align: center;
+}
+
+/* gnavの文字、白枠線付けようとするとなぜかSPOTだけ効かない */
+.font_edge_white {
+	font-weight: bold;
+	/* color: #000; */
+	/* -webkit-text-stroke: 0.8px #FFF; */
+	/* text-stroke: 0.8px #FFF; */
+}
+
+.menu-list a {
+	justify-items: center;
+	display: block;
+	padding: 24px;
+	height: 100%;
+	/* border-radius: 10px; 角丸むつごいので消し*/
+
+	/* background: rosybrown; */
+}
+
+.menu a:hover {
+	background: rgb(162, 148, 255);
+}
+
+.btn {
+	/* ボタンの配置位置  */
+	position: fixed;
+	top: 12px;
+	right: 16px;
+	/* ボタンの大きさ  */
+	width: 48px;
+	height: 48px;
+	/* 最前面に */
+	z-index: 100;
+}
+
+/* 真ん中のバーガー線 */
+.btn-line {
+	display: block;
+	position: relative;
+	/* バーガー線の位置基準として設定 */
+	width: 100%;
+	/* 線の長さと高さ */
+	height: 4px;
+	background-color: rgb(255, 255, 255);
+	/* バーガー線の色 */
+	transition: 0.2s;
+}
+
+/* 上下のバーガー線 */
+.btn-line::before,
+.btn-line::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	transition: 0.5s;
+}
+
+.btn-line::before {
+	/* 上の線の位置 */
+	transform: translateY(-16px);
+}
+
+.btn-line::after {
+	/* 下の線の位置 */
+	transform: translateY(16px);
+}
+
+.menu.open {
+	right: 0;
+	/*右端にくっつける*/
+}
+
+/* 640px以上はハンバーガーボタン非表示、ヘッダー固定 */
+@media screen and (min-width: 640px) {
+	.btn {
+		display: none;
+	}
+
+	.menu {
+		/* メニューを横に */
+		display: flex;
+		flex-direction: row;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 65%;
+		height: 76.79px;
+		font-size: 100%;
+	}
+
+	.menu-list a {
+		padding-top: 25px;
+	}
+}
+
+/*　メニューオープン時の線の動き　*/
+.btn-line.open {
+	background-color: transparent;
+	/* 真ん中の線を透明に */
+}
+
+.btn-line.open::before,
+.btn-line.open::after {
+	content: "";
+	/* background-color: #333; 上下の線の色を変える */
+	transition: 0.2s;
+}
+
+.btn-line.open::before {
+	transform: rotate(45deg);
+	/* 上の線を傾ける */
+}
+
+.btn-line.open::after {
+	transform: rotate(-45deg);
+	/* 下の線を傾ける */
+}
+
+/* ハンバーガーメニューの設定ここまで */
 
 /* ----見出し(最初に来るh2部分）の設定--------------*/
 .headline {
@@ -16,17 +202,175 @@ body {
 	text-align: center;
 	margin-bottom: 40px;
 }
+
 /* ---見出しルビの設定------- */
 .headline rt {
 	font-size: 16px;
 	font-weight: normal;
 	text-align: center;
 }
+
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {
-}
+@media screen and (min-width: 599px) {}
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {}
+
+
+/* ---------カードの設定---------*/
+.spot_item {
+	width: 320px;
+	height: 480px;
+	padding: 18px;
+	border: dashed 2px #EF6000;
+	background-color: #FFFFFC;
+}
+
+.spot_item_cate {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.spot_item_img {
+	width: 280px;
+	height: 240px;
+	object-fit: cover;
+}
+
+.spot_item_name {
+	font-weight: bold;
+	font-size: 24px;
+	margin: 8px auto;
+	flex-wrap: wrap;
+}
+
+.spot_item_info {
+	flex-wrap: wrap;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	line-height: 20px;
+}
+
+.spot_item_info dt {
+	width: 30%;
+	font-weight: normal;
+}
+
+.spot_item_info dd {
+	width: 70%;
+}
+
+/* --------------------------- */
+
+/* フッターの設定ここから */
+
+.footer_logo_and_nav {
+	padding: 1em;
+}
+
+/* フッターナビの設定 */
+
+.footer_nav li {
+	/* 罫線なくしてスッキリバージョン */
+	/* border: 1px solid rgba(73, 52, 52, 0.2);
+    border-left: none;
+    border-right: none; */
+	list-style-type: none;
+	/* display: inline-block; */
+	width: 200px;
+	text-align: center;
+	font-size: 150%;
+}
+
+/* footer_navのリンク（押せる部分）の設定 */
+.footer_nav a {
+	justify-items: center;
+	display: block;
+	padding: 5px;
+}
+
+.footer_nav a:hover {
+	background: rgb(73, 52, 52);
+}
+
+@media screen and (min-width: 640px) {
+	.menu {
+		/* メニューを横に */
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+/* コピーライトの設定 */
+.copyright {
+	padding-bottom: 20px;
+}
+
+/* TOPに戻るボタンの設定 */
+.gotop {
+	display: none;
+	/*最初は非表示で*/
+	width: 60px;
+	height: 60px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: rgb(255, 255, 255);
+	border: 1px solid rgb(153, 153, 153);
+	padding-top: 30px;
+	text-align: center;
+	letter-spacing: -1px;
+	font-size: 100%;
+	text-decoration: none;
+	color: rgb(128, 0, 0);
+	font-size: 120%;
+	opacity: 0.5;
+	/*背景を半透明に*/
+	position: fixed;
+	/*表示場所を下記に固定*/
+	bottom: 20px;
+	right: 20px;
+	z-index: 100;
+	/*一番手前に*/
+}
+
+/*三角の矢印マーク*/
+.gotop::before {
+	content: "";
+	display: block;
+	border-top: 2px solid rgb(128, 0, 0);
+	border-right: 2px solid rgb(128, 0, 0);
+	width: 25%;
+	height: 25%;
+	top: 25%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+	transform: rotate(-45deg);
+	/*角を回転させて上向きに*/
+}
+
+.gotop:hover {
+	opacity: 1;
+}
+
+@media (max-width: 750px) {
+	.gotop {
+		width: 40px;
+		height: 40px;
+		text-indent: -9999px;
+		opacity: 1;
+		border: none;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 50%;
+		bottom: 10px;
+		right: 10px;
+	}
+
+	.gotop::before {
+		bottom: 0;
+	}
 }
