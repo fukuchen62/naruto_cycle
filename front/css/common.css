@@ -5,12 +5,23 @@ body {
 	background-color: #F3F0E8;
 }
 
+/* 親要素にflex */
+.flex {
+	display: flex;
+}
+
+/* flexして中央ぞろえ */
+.align_items_c {
+	align-items: center;
+}
+
 /* ヘッダーの設定 */
 /* headerの設定 */
 .header {
 	align-items: center;
+	background-color: transparent;
 	/* height: 50px; */
-	padding: 20px;
+	/* padding: 20px; */
 }
 
 /* ヘッダーロゴの設定 */
@@ -44,9 +55,9 @@ button {
 	right: -70%;
 	width: 40%;
 	margin-left: auto;
-	font-size: 150%;
+	font-size: 100%;
 	color: rgb(0, 0, 0);
-	background-color: rgb(255, 255, 255);
+	background-color: transparent;
 	z-index: 9;
 	transition: 0.3s;
 }
@@ -55,11 +66,19 @@ button {
 	/* デバック用 */
 	border: 1px solid #000;
 	width: 100%;
-	margin: auto;
-	padding: auto;
+	/* margin: 10px; */
+	/* padding: 10px; */
 	/* height: 100%; */
 	/* メニューテキスト位置をリスト内中心に */
 	text-align: center;
+}
+
+/* gnavの文字、白枠線付けようとするとなぜかSPOTだけ効かない */
+.font_edge_white {
+	font-weight: bold;
+	/* color: #000; */
+	/* -webkit-text-stroke: 0.8px #FFF; */
+	/* text-stroke: 0.8px #FFF; */
 }
 
 .menu-list a {
@@ -140,9 +159,9 @@ button {
 		position: fixed;
 		top: 0;
 		right: 0;
-		width: 50%;
+		width: 65%;
 		height: 76.79px;
-		font-size: 150%;
+		font-size: 100%;
 	}
 
 	.menu-list a {
@@ -175,7 +194,31 @@ button {
 
 /* ハンバーガーメニューの設定ここまで */
 
-/* フッターの設定 */
+/* ----見出し(最初に来るh2部分）の設定--------------*/
+.headline {
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/* ---見出しルビの設定------- */
+.headline rt {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+}
+
+/* ---------------------------------------------- */
+
+/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
+@media screen and (min-width: 599px) {}
+
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
+@media screen and (min-width: 1024px) {}
+
+
+/* フッターの設定ここから */
 
 .footer_logo_and_nav {
 	padding: 1em;
@@ -284,36 +327,3 @@ button {
 		bottom: 0;
 	}
 }
-
-
-/* 親要素にflex */
-.flex {
-	display: flex;
-}
-
-.align_center {
-	align-content: center;
-}
-
-/* ----見出し(最初に来るh2部分）の設定--------------*/
-.headline {
-	font-size: 48px;
-	font-weight: bold;
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-/* ---見出しルビの設定------- */
-.headline rt {
-	font-size: 16px;
-	font-weight: normal;
-	text-align: center;
-}
-
-/* ---------------------------------------------- */
-
-/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {}
-
-/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {}

@@ -7,7 +7,13 @@ main {
 .key_visual {}
 
 /* キービジュアルの動画 */
-.key_bg_movie {}
+.key_bg_movie {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    justify-content: center;
+    background-size: cover;
+}
 
 /* h2キービジュアルの見出し（RIDE ON THE UZU WAVE）*/
 .key_msg {}

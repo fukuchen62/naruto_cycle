@@ -10,13 +10,13 @@
     <nav class="fnav_container">
         <ul class="fnav">
             <li class="fnav_menu">
-                <ul class="fnav_list">
-                    <!-- リストの数はそれぞれ -->
-                    <li class="fnav_item">
-                        <a href=""></a>
-                    </li>
-                </ul>
+                <ul class="fnav_list"></ul>
+                <!-- リストの数はそれぞれ -->
+            <li class="fnav_item">
+                <a href=""></a>
             </li>
+        </ul>
+        </li>
         </ul>
     </nav>
     <div class="sns">
