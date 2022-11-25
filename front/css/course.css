@@ -1,7 +1,55 @@
-/* スクリーンサイズが769px以上の場合に適用するflex */
-@media screen and (min-width: 768px) {
-	.flex {
-		display: flex;
-		justify-content: center;
+/*------------------- コース選択時ボタンの設定----------- */
+.course_nav_list {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1024px;
+	height: 64px;
+	text-align: center;
+}
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 1024px) {
+	.course_nav_list {
+		height: 80px;
 	}
+}
+
+.course_nav {
+	font-size: 1.5rem;
+	width: 25%;
+	color: #fff;
+	border-radius: 8px 8px 0 0;
+}
+.beginner {
+	background-color: #96c85c;
+}
+.short {
+	background-color: #ef6000;
+}
+.middle {
+	background-color: #0018ef;
+}
+.long {
+	background-color: #f00000;
+}
+
+/*------------------- 地図のサイズの設定---- */
+.iframe_wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 1024px;
+	height: 558px;
+}
+.iframe_wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
+@media screen and (min-width: 599px) {
+}
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
+@media screen and (min-width: 1024px) {
 }
