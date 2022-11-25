@@ -1,3 +1,8 @@
+/* デバッグ用 */
+main {
+    border: 1px solid black;
+}
+
 /* sectionキービジュアル */
 .key_visual {}
 
