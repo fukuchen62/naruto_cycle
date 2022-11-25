@@ -18,15 +18,16 @@ body {
 /* ヘッダーの設定 */
 /* headerの設定 */
 .header {
-	align-items: center;
-	background-color: transparent;
+	/* align-items: center; */
+	/* background-color: transparent; */
 	/* height: 50px; */
 	/* padding: 20px; */
 }
 
 /* ヘッダーロゴの設定 */
-.logo {
-	/* border: 1px solid #fff; */
+.header_logo {
+	position: fixed;
+	border: 1px solid #fff;
 }
 
 /* ハンバーガーメニューの設定ここから */
@@ -217,6 +218,52 @@ button {
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {}
 
+
+/* ---------カードの設定---------*/
+.spot_item {
+	width: 320px;
+	height: 480px;
+	padding: 18px;
+	border: dashed 2px #EF6000;
+	background-color: #FFFFFC;
+}
+
+.spot_item_cate {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.spot_item_img {
+	width: 280px;
+	height: 240px;
+	object-fit: cover;
+}
+
+.spot_item_name {
+	font-weight: bold;
+	font-size: 24px;
+	margin: 8px auto;
+	flex-wrap: wrap;
+}
+
+.spot_item_info {
+	flex-wrap: wrap;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	line-height: 20px;
+}
+
+.spot_item_info dt {
+	width: 30%;
+	font-weight: normal;
+}
+
+.spot_item_info dd {
+	width: 70%;
+}
+
+/* --------------------------- */
 
 /* フッターの設定ここから */
 
