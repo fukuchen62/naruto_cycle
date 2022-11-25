@@ -1,3 +1,14 @@
+/* 見出しの設定 */
+.headline {
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+}
+.headline rt {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+}
 /*------------------- コース選択時ボタンの設定----------- */
 .course_nav_list {
 	display: flex;
@@ -5,7 +16,8 @@
 	width: 100%;
 	max-width: 1024px;
 	height: 64px;
-	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
 @media screen and (min-width: 1024px) {
@@ -15,30 +27,48 @@
 }
 
 .course_nav {
-	font-size: 1.5rem;
+	font-size: 24px;
+	font-weight: bold;
 	width: 25%;
 	color: #fff;
 	border-radius: 8px 8px 0 0;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
 }
 .beginner {
 	background-color: #96c85c;
+	border: solid 4px #96c85c;
 }
 .short {
 	background-color: #ef6000;
+	border: solid 4px #ef6000;
 }
 .middle {
 	background-color: #0018ef;
+	border: solid 4px #0018ef;
 }
 .long {
 	background-color: #f00000;
+	border: solid 4px #f00000;
 }
 
+.course_nav_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
 /*------------------- 地図のサイズの設定---- */
 .iframe_wrapper {
 	position: relative;
 	width: 100%;
 	max-width: 1024px;
 	height: 558px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
 }
 .iframe_wrapper iframe {
 	position: absolute;
@@ -52,4 +82,14 @@
 }
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
+}
+
+.icon_list {
+	background-color: #d4ebec;
+	border: solid 4px #74c7f0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
 }
