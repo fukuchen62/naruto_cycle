@@ -1,7 +1,5 @@
 /* フッター */
-.footer {
-    color:
-}
+.footer {}
 
 /* ulバナーリスト */
 .banner_list {}
@@ -29,3 +27,113 @@
 
 /* 著作権表示 */
 .copyright {}
+
+/* フッターの設定ここから */
+
+.footer_logo_and_nav {
+    padding: 1em;
+}
+
+/* フッターナビの設定 */
+
+.footer_nav li {
+    /* 罫線なくしてスッキリバージョン */
+    /* border: 1px solid rgba(73, 52, 52, 0.2);
+    border-left: none;
+    border-right: none; */
+    list-style-type: none;
+    /* display: inline-block; */
+    width: 200px;
+    text-align: center;
+    font-size: 150%;
+}
+
+/* footer_navのリンク（押せる部分）の設定 */
+.footer_nav a {
+    justify-items: center;
+    display: block;
+    padding: 5px;
+}
+
+.footer_nav a:hover {
+    background: rgb(73, 52, 52);
+}
+
+@media screen and (min-width: 640px) {
+    .menu {
+        /* メニューを横に */
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* コピーライトの設定 */
+.copyright {
+    padding-bottom: 20px;
+}
+
+/* TOPに戻るボタンの設定 */
+.gotop {
+    display: none;
+    /*最初は非表示で*/
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(153, 153, 153);
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 100%;
+    text-decoration: none;
+    color: rgb(128, 0, 0);
+    font-size: 120%;
+    opacity: 0.5;
+    /*背景を半透明に*/
+    position: fixed;
+    /*表示場所を下記に固定*/
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    /*一番手前に*/
+}
+
+/*三角の矢印マーク*/
+.gotop::before {
+    content: "";
+    display: block;
+    border-top: 2px solid rgb(128, 0, 0);
+    border-right: 2px solid rgb(128, 0, 0);
+    width: 25%;
+    height: 25%;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-45deg);
+    /*角を回転させて上向きに*/
+}
+
+.gotop:hover {
+    opacity: 1;
+}
+
+@media (max-width: 750px) {
+    .gotop {
+        width: 40px;
+        height: 40px;
+        text-indent: -9999px;
+        opacity: 1;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .gotop::before {
+        bottom: 0;
+    }
+}
