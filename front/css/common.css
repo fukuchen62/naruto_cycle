@@ -9,7 +9,21 @@ body {
 .flex {
 }
 
-/* h2の文字サイズ */
+(
+/* ----見出し(最初に来るh2部分）の設定------------------------*/
+.headline {
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+}
+/* ---見出しルビの設定------- */
+.headline rt {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+}
+/* -------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
 @media screen and (min-width: 599px) {
