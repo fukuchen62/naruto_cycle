@@ -1,4 +1,4 @@
-/* 見出しの設定 */
+/* 見出しの設定（共通CSSに同じものがあるので削除予定） */
 .headline {
 	font-size: 48px;
 	font-weight: bold;
@@ -68,7 +68,6 @@
 	height: 558px;
 	margin-left: auto;
 	margin-right: auto;
-	box-sizing: border-box;
 }
 .iframe_wrapper iframe {
 	position: absolute;
@@ -84,6 +83,7 @@
 @media screen and (min-width: 1024px) {
 }
 
+/* 地図上アイコンの説明 */
 .icon_list {
 	background-color: #d4ebec;
 	border: solid 4px #74c7f0;
