@@ -15,12 +15,21 @@
     <header>
         <nav>ヘッダーとナビゲーション
             <ul>
-                <li>about</li>
+                <?php
+                $args = array(
+                    'menu' => 'global-navigation', //作成したメニュー名
+                    'menu_class' => '', //メニューに使うクラス名
+                    'container' => false, //ulタグを囲んでいるdivを削除
+                );
+                wp_nav_menu($args);
+                ?>
+
+                <!-- <li>about</li>
                 <li>course</li>
                 <li>search</li>
                 <li>Q&A</li>
                 <li>my page</li>
-                <li>contact</li>
+                <li>contact</li> -->
             </ul>
         </nav>
         <?php wp_head(); ?>

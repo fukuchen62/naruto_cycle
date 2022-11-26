@@ -1,7 +1,16 @@
 <footer>
     <nav>フッターとサイトマップ
         <ul>
-            <li>about</li>
+            <?php
+            $args = array(
+                'menu' => 'footer-navigation', //作成したメニュー名
+                'menu_class' => '', //メニューに使うクラス名
+                'container' => false, //ulタグを囲んでいるdivを削除
+            );
+            wp_nav_menu($args);
+            ?>
+
+            <!-- <li>about</li>
             <li>course</li>
             <li>search</li>
             <li>Q&A</li>
@@ -9,7 +18,7 @@
             <li>contact</li>
             <li>サイト制作に当たって</li>
             <li>おといあわせ</li>
-            <li>プライバシーポリシ</li>
+            <li>プライバシーポリシ</li> -->
         </ul>
     </nav>
 </footer>
