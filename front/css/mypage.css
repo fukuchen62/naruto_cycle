@@ -1,0 +1,134 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+section+section {
+    margin-top: 160px;
+}
+
+section:first-child {
+    margin-top: 32px;
+}
+
+section:last-child {
+    margin-bottom: 60px;
+}
+
+section {
+    width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.mypage_h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mypage_h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.mypage_h3:first-child {
+    margin-bottom: 16px;
+}
+
+.key_mypage {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 1024px) {
+    .key_bg_mypage {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+.mypage_about {
+    width: 320px;
+    padding: 20px;
+    border: solid 1px #EF6000;
+    background-color: rgba(255, 255, 252, 0.5);
+}
+
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 1024px) {
+    .mypage_about {
+        width: 1024px;
+    }
+}
+
+.mypage_spot {
+    margin: 0 auto;
+}
+
+.mypage_spot_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 32px 32px;
+}
+
+.mypage_spot_list::after {
+    display: block;
+    content: "";
+    width: 320px;
+}
+
+
+
+/* ---------カードの設定---------*/
+.spot_item {
+    width: 320px;
+    height: 440px;
+    padding: 20px;
+    margin: 0 auto;
+    border: dashed 2px #EF6000;
+    background-color: #FFFFFC;
+}
+
+.spot_item_cate {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.spot_item_img {
+    width: 280px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.spot_item_name {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 8px auto;
+    flex-wrap: wrap;
+}
+
+.spot_item_info {
+    flex-wrap: wrap;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+
+.spot_item_info dt {
+    width: 30%;
+    font-weight: normal;
+}
+
+.spot_item_info dd {
+    width: 70%;
+}
+
+/* --------------------------- */
