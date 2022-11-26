@@ -63,8 +63,9 @@
         <div class="bg-slider">
             <section class="key_visual">
                 <!-- <div class="key_bg_movie"><img class="img" src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像"> -->
-                <div class="key_circle debug">
-                    <h2 class="key_logo">
+                <!-- <div class="key_top_container debug"> -->
+                <div class="key_msg_box debug">
+                    <h2 class="key_logo key_msg">
                     RIDE ON <br>
                     THE UZU <br>
                     WAVES!!</h2>
@@ -73,6 +74,7 @@
                 <!-- <div class="debug"> -->
                 <img class="key_man debug" src="./image/index_top_img.png" alt="サイクリングマン">
                 <!-- </div> -->
+        </div>
         </div>
         </section>
         </div>
@@ -98,8 +100,8 @@
                     </li>
                 </ul>
                 <a href="news.html" class="news_top_btn">
-                    <div class="contents flex column debug">
-                        <i class="fa-sharp fa-solid fa-right">⇒</i></spa>
+                    <div class="contents flex column bg_blue white debug">
+                        <i class="fa-sharp fa-solid fa-right">⇒</i>
                         一覧へ
                     </div>
                 </a>
@@ -118,10 +120,13 @@
                 ここにテキストが入ります<br>
                 ここにテキストが入ります<br>
                 </p>
-                    <a href="" class="howto_top_btn">もっと読む→</a>
+
+
+                    <div class="more_btn">
+                        <a href="cycling.html" class="btn_inner">もっと読む→</a>
+                    </div>
+                    <img class="howto_top_img img" src="./image/index_about_img.jpg" alt="鳴門サイクリングの写真">
                 </div>
-                <img class="howto_top_img img" src="https://placehold.jp/720x480.png" alt="鳴門サイクリングの写真">
-            </div>
         </section>
 
         <!-- COURSEここから -->
@@ -129,27 +134,30 @@
             <h2 class="course_top headline"><ruby>COURSE<rt>サイクリングコース</rt></ruby></h2>
             <div class="course_top_container">
                 <img class="img map_top_img" src="image/index_course_img.png" alt="サイクリングコースマップ">
-                <div class="course_top_choice">
+                <div class="course_top_choice_container debug">
+                    <div class="course_top_choice">
+                        <p class="p_auto txt_c">コースを選ぶ</p>
+                    </div>
                     <ul class="course_top_choice_list">
                         <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate"></p>
+                            <p class="course_top_choice_cate">初心者コース</p>
                             <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km"></p>
+                            <p class="course_top_choice_km">〇〇㎞</p>
                         </li>
                         <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate"></p>
+                            <p class="course_top_choice_cate">短距離コース</p>
                             <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km"></p>
+                            <p class="course_top_choice_km">〇〇㎞</p>
                         </li>
                         <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate"></p>
+                            <p class="course_top_choice_cate">中距離コース</p>
                             <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km"></p>
+                            <p class="course_top_choice_km">〇〇㎞</p>
                         </li>
                         <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate"></p>
+                            <p class="course_top_choice_cate">長距離コース</p>
                             <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km"></p>
+                            <p class="course_top_choice_km">〇〇㎞</p>
                         </li>
                     </ul>
                 </div>
@@ -178,7 +186,7 @@
             <!-- 動く波ここまで -->
 
             <!-- 吹き出しPICKUP！文字 -->
-            <div class="pickup">\PICK UP!/</div>
+            <div class="pickup txt_c">＼PICK UP!／</div>
             <!-- SPOT見出し -->
             <h2 class="spot_top headline"><ruby>SPOT<rt>周辺スポット</rt></ruby></h2>
             <!-- カード全てのコンテナ←不要？？ -->
@@ -209,7 +217,9 @@
                     </a>
                 </ul>
                 <!-- スポットもっと見るボタン -->
-                <a class="spot_top_btn" href="">スポット一覧⇒</a>
+                <div class="more_btn txt_c">
+                    <a class="spot_top_btn btn_inner" href="search.html">スポット検索へ⇒</a>
+                </div>
             </div>
             <!-- 動く波の下部分 -->
 
@@ -219,23 +229,24 @@
 
         <section class="insta">
             <!-- アイコンフォントでインスタロゴ -->
-            <span class="insta_logo">
-                <img src="/image/instagram_logo.png" alt="">
-            </span>
+            <div class="txt_c debug">
+                <img class="insta_logo" src="./image/instagram_logo.png" alt="インスタグラムのロゴ">
+            </div>
             <h2 class="insta_top headline"><ruby>INSTAGRAM<rt>公式インスタグラム</rt></ruby></h2>
+            <div class="insta_slide"><img src="https://placehold.jp/1500x250.png" alt="インスタスライドの仮画像"></div>
         </section>
     </main>
 
     <!-- フッター切り取りここから -->
 
-    <footer class="footer">
+    <footer class="footer bg_blue white txt_c debug">
         <ul class="banner_list">
             <!-- asaなどのバナーがliで入ります -->
             <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
             <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
             <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
         </ul>
-        <nav class="fnav_container">
+        <nav class="fnav_container bg_blue">
 
             <!-- フッターナビ -->
             <ul class="fnav">

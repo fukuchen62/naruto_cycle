@@ -5,13 +5,17 @@
 .banner_list {}
 
 /* liバナー */
-.banner_item {}
+.banner_item {
+    padding-top: 32px;
+}
 
 /* フッターナビのコンテナ */
 .fnav_container {}
 
 /* navフッターナビ */
-.fnav {}
+.fnav {
+    padding: 32px;
+}
 
 /* ulフッターナビのメニュー */
 .fnav_menu {}
@@ -25,6 +29,7 @@
 /* SNSアイコン置き場 */
 .sns_container {
     margin: 10px 5px;
+    justify-content: center;
 }
 
 /* SNSアイコン */
@@ -48,7 +53,9 @@
 } */
 
 /* 著作権表示 */
-.copyright {}
+.copyright {
+    font-size: small;
+}
 
 /* フッターの設定ここから */
 

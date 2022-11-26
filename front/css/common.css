@@ -10,9 +10,19 @@ body {
 	background-color: #F3F0E8;
 }
 
+/* 青い背景 */
+.bg_blue {
+	background-color: #005EA7;
+}
+
 /* 文字色白にする */
 .white {
 	color: #fff;
+}
+
+/* 文字をセンター配置 */
+.txt_c {
+	text-align: center;
 }
 
 /* ブロック要素にする */
@@ -42,6 +52,11 @@ body {
 /* marginをauto */
 .m_auto {
 	margin: auto;
+}
+
+/* paddingをauto */
+.p_auto {
+	padding: auto;
 }
 
 /* 親要素にflex */

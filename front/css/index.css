@@ -1,6 +1,37 @@
 /* index本体 */
 main {}
 
+
+/* moreボタンのスタイルここから */
+
+.more_btn {
+    margin: 48px auto auto auto;
+}
+
+/* 検索ボタン装飾 */
+.btn_inner {
+    width: 240px;
+    height: 56px;
+    background: #fff;
+    box-shadow: 4px 4px #EF6000;
+    border: 3px solid #005EA7;
+    position: relative;
+}
+
+/* 検索ボタンのテキスト */
+.top_more_btn {
+    color: #FFFFFC;
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* moreボタンのスタイルここまで */
+
 /* BgSwitcherで変化するキービジュアル */
 .bg-slider {
     width: 100%;
@@ -26,13 +57,18 @@ main {}
     background-size: cover;
 } */
 
+/* キービジュアル全面用コンテナ */
+/* .key_top_container {
+    margin: auto auto 0 0;
+
+} */
 
 /* キーメッセージ枠１（位置用） */
-.key_circle {
+.key_msg_box {
     /* justify-content: center; */
     /* display: flex; */
-    width: 300px;
-    /* height: 300px; */
+    width: 100%;
+    height: 100%;
     /* background-color: rgba(158, 128, 128, 0.6); */
     /* background-position: center center no-repeat; */
 }
@@ -52,13 +88,15 @@ main {}
 }
 
 /* h2キービジュアルの見出し（RIDE ON THE UZU WAVE）*/
-/* .key_msg {
-    width: 640px;
-    height: 500px;
+.key_msg {
+    /* width: 640px;
+    height: 500px; */
     /* 透明白ふち文字 */
-/* -webkit-text-stroke: 1px #fff; */
-/* text-stroke: 1px #fff; */
-/* color: rgba(0, 0, 0, 0); */
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+    color: rgba(0, 0, 0, 0);
+    opacity: 0.5;
+}
 
 /* font-size: 20lem; */
 /*
@@ -70,7 +108,7 @@ main {}
 
 /* キービジュアルのイラスト */
 .key_man {
-    background-position: bottom left;
+    justify-content: flex-end;
     /* position: absolute;
     top: 700px;
     left: 208px; */
@@ -100,10 +138,10 @@ main {}
 .news_top_item_txt {}
 
 /* ニュース一覧へボタン */
-.news_top_btn {
+/* .news_top_btn {
     color: #fff;
     background-color: #005EA7;
-}
+} */
 
 /* sectionサイクリングについて */
 .howto {
@@ -139,10 +177,30 @@ main {}
 .course_top_container {}
 
 /* コースマップの画像 */
-.map_top_img
+.map_top_img {
+    border: 10px solid #E1D6B8;
+}
 
-/* 「コースを選ぶ」の一文 */
-.course_top_choice {}
+/* マップ下のコースチョイスコンテナ */
+.course_top_choice_container {
+    background-color: #fff;
+}
+
+/* 「コースを選ぶ」の枠 */
+.course_top_choice {
+    margin: 32px auto;
+    width: 240px;
+    height: 56px;
+    background: #fff;
+    /* box-shadow: 4px 4px #EF6000; */
+    border: 3px solid #005EA7;
+    /* position: relative; */
+}
+
+/* 「コースを選ぶ」の文 */
+.course_top_choice p {
+    font-size: 24px;
+}
 
 /* ulコースを選ぶリスト */
 .course_top_choice_list {}
@@ -154,12 +212,18 @@ main {}
 .course_top_choice_km */
 
 /* sectionスポット */
-.spot {}
+.spot {
+    background-color: #D4EBEC;
+}
 
 /* ここに動く波の上部が入ります */
 
 /* PICK UPの文字あしらい */
-.pickup {}
+.pickup {
+    color: #EF6000;
+    font-size: 32px;
+    font-weight: bold;
+}
 
 /* h2スポットの見出し */
 .spot_top {}
@@ -202,8 +266,14 @@ main {}
 /* sectionインスタ */
 .insta {}
 
-/* アイコンフォントかimgでインスタロゴ */
-.insta_logo {}
+/* imgでインスタロゴ */
+.insta_logo {
+    width: 100px;
+    height: 100px;
+    flex-basis: 100%;
+}
+
+.insta_slide {}
 
 /* h2 インスタの見出し*/
 .insta_top {}
