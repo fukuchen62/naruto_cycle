@@ -23,7 +23,29 @@
 .fnav_item {}
 
 /* SNSアイコン置き場 */
-.sns {}
+.sns_container {
+    margin: 10px 5px;
+}
+
+/* SNSアイコン */
+.sns_icon {
+    width: 100%;
+    height: 32px;
+    flex-basis: 100%;
+}
+
+/* .image-wrap {
+    margin: 10px 5px;
+}
+
+.image-wrap img {
+    width: 100%;
+    height: 300px;
+}
+
+.flex-item {
+    flex-basis: 100%;
+} */
 
 /* 著作権表示 */
 .copyright {}

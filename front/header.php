@@ -32,22 +32,32 @@
 </head>
 
 <body>
-
-    <header class="header">
-        <div class="header">
-            <h1 class="header_logo"><a href="#">ロゴが入ります<img src="" alt="なるとサイくるっと！のロゴ"></a></h1>
-            <nav class="gnav_hamburger">
-                <div class="gnav_hamburger_inner">
-                    <ul class="menu_hbmenu_camp">
-                        <li>NEWS</li>
-                        <li>HOWTO</li>
-                        <li>COURSE</li>
-                        <li>SPOT</li>
-                        <li>MY PAGE</li>
-                        <li>Q&A</li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+    <header class="header flex">
+        <h1 class="header_logo"><a href="#"><img src="https://placehold.jp/320x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+        <nav>
+            <ul class="menu">
+                <li class="menu-list font_edge_white">
+                    <a href="news.html">NEWS</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="howto.html">HOWTO</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="course.html">COURSE</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="spot.html">SPOT</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="mypage.html">MYPAGE</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="question.html">Q&A</a>
+                </li>
+            </ul>
+            <button type="button" class="btn js-btn">
+                <span class="btn-line"></span>
+            </button>
+        </nav>
     </header>
     <!-- ヘッダー切り取りここまで -->
