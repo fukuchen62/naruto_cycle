@@ -1,42 +1,85 @@
 /* index本体 */
 main {}
 
+/* BgSwitcherで変化するキービジュアル */
+.bg-slider {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+
 /* sectionキービジュアル */
-.key_visual {}
+/* .key_visual {} */
 
 /* キービジュアルの動画 */
-.key_bg_movie {
+/* .key_bg_movie {
     width: 100vw;
     height: 100%;
     background-position: center center no-repeat;
     align-items: center;
     justify-content: center;
     background-size: cover;
+} */
+
+
+/* キーメッセージ枠１（位置用） */
+.key_circle {
+    /* justify-content: center; */
+    /* display: flex; */
+    width: 300px;
+    /* height: 300px; */
+    /* background-color: rgba(158, 128, 128, 0.6); */
+    /* background-position: center center no-repeat; */
+}
+
+/* キーメッセージ枠２（枠内メッセージ用） */
+.key_word {
+    justify-content: center;
+}
+
+/* キーメッセージロゴ */
+.key_logo {
+    font-size: 3em;
+    line-height: 1em;
+    font-family: "Josefin Sans", sans-serif;
+    /* text-align: center; */
+    background-position: left;
 }
 
 /* h2キービジュアルの見出し（RIDE ON THE UZU WAVE）*/
-.key_msg {
+/* .key_msg {
+    width: 640px;
+    height: 500px;
     /* 透明白ふち文字 */
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
-    color: rgba(0, 0, 0, 0);
+/* -webkit-text-stroke: 1px #fff; */
+/* text-stroke: 1px #fff; */
+/* color: rgba(0, 0, 0, 0); */
 
-    font-size: 144px;
+/* font-size: 20lem; */
+/*
     position: absolute;
     top: 240px;
-    left: 32px;
-    /* transform: rotate(-30deg); */
-}
+    left: 32px; */
+/* transform: rotate(-30deg); */
+/* } */
 
 /* キービジュアルのイラスト */
 .key_man {
-    position: absolute;
+    background-position: bottom left;
+    /* position: absolute;
     top: 700px;
-    left: 208px;
+    left: 208px; */
 }
 
 /* sectionニュース */
-.news {}
+.news {
+    color: #005EA7;
+}
 
 /* h2ニュースの見出し */
 .news_top {}
@@ -57,16 +100,28 @@ main {}
 .news_top_item_txt {}
 
 /* ニュース一覧へボタン */
-.news_top_btn {}
+.news_top_btn {
+    color: #fff;
+    background-color: #005EA7;
+}
 
 /* sectionサイクリングについて */
-.howto {}
+.howto {
+    height: 100vh;
+}
+
+.howto_bg_box {
+    background-color: #005EA7;
+    text-align: center;
+}
 
 /* h2サイクリングについて見出し */
 .howto_top {}
 
 /* サイクリングについてのテキスト */
-.howto_top_txt {}
+.howto_top_txt {
+    text-align: center;
+}
 
 /* サイクリングについてもっと読むボタン */
 .howto_top_btn {}
@@ -78,10 +133,13 @@ main {}
 .course {}
 
 /* h2コースの見出し */
-.course_top {}
+/* .course_top {} */
 
 /* コースのコンテナ */
 .course_top_container {}
+
+/* コースマップの画像 */
+.map_top_img
 
 /* 「コースを選ぶ」の一文 */
 .course_top_choice {}
@@ -89,7 +147,7 @@ main {}
 /* ulコースを選ぶリスト */
 .course_top_choice_list {}
 
-/* コース選択ボタン・imgにするか要相談 */
+/* コース選択ボタンimg */
 .course_top_choice_btn {}
 
 /* .course_top_choice_cate

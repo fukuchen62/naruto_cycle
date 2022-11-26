@@ -5,9 +5,43 @@
 	border: 1px solid #000;
 }
 
-/* 背景色 */
+/* メイン背景色 */
 body {
 	background-color: #F3F0E8;
+}
+
+/* 文字色白にする */
+.white {
+	color: #fff;
+}
+
+/* ブロック要素にする */
+.block {
+	display: block;
+}
+
+/* img画像のフルード化 */
+/* 全部に適用しても良ければ.を取ります */
+.img {
+	border: 0;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 位置を固定する */
+.fix {
+	position: fixed;
+}
+
+/* 文字コンテンツの位置を真ん中に */
+.contents {
+	text-align: center;
+	/* margin: auto; */
+}
+
+/* marginをauto */
+.m_auto {
+	margin: auto;
 }
 
 /* 親要素にflex */
@@ -15,9 +49,18 @@ body {
 	display: flex;
 }
 
-/* flexして中央ぞろえ */
+/* flexしたアイテムを中央ぞろえ */
 .align_items_c {
 	align-items: center;
+}
+
+/* flexしたものを */
+
+
+/* flexしたものを縦並びに */
+.column {
+	flex-direction: column;
+
 }
 
 /* 上下32,左右16の間隔 */

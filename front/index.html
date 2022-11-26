@@ -31,7 +31,7 @@
 </head>
 <body>
     <header class="header flex">
-        <h1 class="header_logo"><a href="#"><img src="https://placehold.jp/320x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+        <h1 class="header_logo"><a href="#"><img class="img" src="https://placehold.jp/320x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
         <nav>
             <ul class="menu">
                 <li class="menu-list font_edge_white">
@@ -60,52 +60,75 @@
     </header>
     <!-- ヘッダー切り取りここまで -->
     <main class="main">
-        <section class="key_visual relative">
-            <div class="key_bg_movie"><img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像">
-                <h2 class="key_msg absolute">
+        <div class="bg-slider">
+            <section class="key_visual">
+                <!-- <div class="key_bg_movie"><img class="img" src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像"> -->
+                <div class="key_circle debug">
+                    <h2 class="key_logo">
                     RIDE ON <br>
                     THE UZU <br>
                     WAVES!!</h2>
+                </div>
                 <!-- <img class="key_onpu" src="" alt=""> -->
-                <img class="key_man relative" src="./image/index_top_img.png" alt="サイクリングマン">
-            </div>
+                <!-- <div class="debug"> -->
+                <img class="key_man debug" src="./image/index_top_img.png" alt="サイクリングマン">
+                <!-- </div> -->
+        </div>
         </section>
+        </div>
 
         <!-- NEWSここから -->
-        <section class="news">
-            <h2 class="news_top">NEWS</h2>
-            <ul class="news_top_list">
-                <li class="news_top_item">
-                    <a href="">
-                        <p class="news_top_item_cate">コラム</p>
-                        <p class="news_top_item_date">2022.11.30</p>
-                        <p class="news_top_item_txt">周辺スポットを追加しました！</p>
-                    </a>
-                </li>
-                <li class="news_top_item">
-                    <a href="">
-                        <p class="news_top_item_cate">コラム</p>
-                        <p class="news_top_item_date">2022.11.30</p>
-                        <p class="news_top_item_txt">周辺スポットを追加しました！</p>
-                    </a>
-                </li>
-            </ul>
-            <a href="" class="news_top_btn"></a>
+        <section class="news debug">
+            <div class="flex gap32_16 align_items_c">
+                <h2 class="news_top headline  debug">NEWS</h2>
+                <ul class="news_top_list debug">
+                    <li class="news_top_item">
+                        <a href="">
+                            <p class="news_top_item_cate">コラム</p>
+                            <p class="news_top_item_date">2022.11.30</p>
+                            <p class="news_top_item_txt">周辺スポットを追加しました！</p>
+                        </a>
+                    </li>
+                    <li class="news_top_item">
+                        <a href="">
+                            <p class="news_top_item_cate">コラム</p>
+                            <p class="news_top_item_date">2022.11.30</p>
+                            <p class="news_top_item_txt">周辺スポットを追加しました！</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="news.html" class="news_top_btn">
+                    <div class="contents flex column debug">
+                        <i class="fa-sharp fa-solid fa-right">⇒</i></spa>
+                        一覧へ
+                    </div>
+                </a>
+            </div>
         </section>
 
         <!-- HOWTOここから -->
         <section class="howto">
-            <h2 class="howto_top"><ruby>HOW TO<rt>鳴門のサイクリングについて</rt></ruby></h2>
-            <p class="howto_top_txt"></p>
-            <a href="" class="howto_top_btn"></a>
-            <img class="howto_top_img" src="" alt="鳴門サイクリングの写真">
+            <div class="howto_bg_box">
+                <h2 class="howto_top headline white"><ruby>HOW TO<rt>鳴門のサイクリングについて</rt></ruby></h2>
+                <div class="howto_top_container">
+                    <p class="howto_top_txt white">
+                ここにテキストが入ります<br>
+                ここにテキストが入ります<br>
+                ここにテキストが入ります<br>
+                ここにテキストが入ります<br>
+                ここにテキストが入ります<br>
+                </p>
+                    <a href="" class="howto_top_btn">もっと読む→</a>
+                </div>
+                <img class="howto_top_img img" src="https://placehold.jp/720x480.png" alt="鳴門サイクリングの写真">
+            </div>
         </section>
 
         <!-- COURSEここから -->
         <section class="course">
-            <h2 class="course_top"><ruby>COURSE<rt>サイクリングコース</rt></ruby></h2>
+            <h2 class="course_top headline"><ruby>COURSE<rt>サイクリングコース</rt></ruby></h2>
             <div class="course_top_container">
-                <img src="" alt="サイクリングコースマップ">
+                <img class="img map_top_img" src="image/index_course_img.png" alt="サイクリングコースマップ">
                 <div class="course_top_choice">
                     <ul class="course_top_choice_list">
                         <li class="course_top_choice_btn">
@@ -157,7 +180,7 @@
             <!-- 吹き出しPICKUP！文字 -->
             <div class="pickup">\PICK UP!/</div>
             <!-- SPOT見出し -->
-            <h2 class="spot_top"><ruby>SPOT<rt>周辺スポット</rt></ruby></h2>
+            <h2 class="spot_top headline"><ruby>SPOT<rt>周辺スポット</rt></ruby></h2>
             <!-- カード全てのコンテナ←不要？？ -->
             <div class="card_container">
 
@@ -199,7 +222,7 @@
             <span class="insta_logo">
                 <img src="/image/instagram_logo.png" alt="">
             </span>
-            <h2 class="insta_top"><ruby>INSTAGRAM<rt>公式インスタグラム</rt></ruby></h2>
+            <h2 class="insta_top headline"><ruby>INSTAGRAM<rt>公式インスタグラム</rt></ruby></h2>
         </section>
     </main>
 
@@ -220,7 +243,7 @@
                 <!-- フッターナビメニューの見出し -->
                 <!-- リストがないものはこのliのみ -->
                 <li class="fnav_menu">
-                    "ニュース"
+                    ニュース
 
                     <!-- フッターナビメニューのリスト -->
                     <ul class="fnav_list">
@@ -240,7 +263,7 @@
 
                 <!-- フッターCOURSE -->
                 <li class="fnav_menu">
-                    "サイクリングコース"
+                    サイクリングコース
                     <!-- フッターナビメニューのリスト -->
                     <ul class="fnav_list">
                         <!-- リストの内容 -->
@@ -261,7 +284,7 @@
 
                 <!-- フッターSPOT -->
                 <li class="fnav_menu">
-                    "周辺スポット検索"
+                    周辺スポット検索
                     <!-- フッターナビメニューのリスト -->
                     <ul class="fnav_list">
                         <!-- リストの内容 -->
@@ -295,7 +318,7 @@
 
                 <!-- フッターその他 -->
                 <li class="fnav_menu">
-                    "その他"
+                    その他
                     <!-- フッターナビメニューのリスト -->
                     <ul class="fnav_list">
                         <!-- リストの内容 -->
@@ -319,9 +342,11 @@
             <!-- facebook -->
             <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
         </div>
-        <p class="copyright"></p>
+        <p class="copyright">AllCopyRight©なるとサイくるっと！</p>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script src="js/bgswitcher.js"></script>
 </body>
 </html>
 <!-- フッター切り取りここまで -->
