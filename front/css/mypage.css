@@ -128,6 +128,7 @@ section {
     background-color: #FFFFFC;
 }
 
+/* カテゴリラベル */
 .spot_item_cate {
     position: absolute;
     left: 0;
