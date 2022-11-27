@@ -1,10 +1,12 @@
+@charset 'utf-8';
+
 body {
     box-sizing: border-box;
     width: 100%;
 }
 
 section+section {
-    margin-top: 160px;
+    margin-bottom: 60px;
 }
 
 section:first-child {
@@ -23,7 +25,7 @@ section {
 
 .mypage_h2 {
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 900;
     text-align: center;
 }
 
@@ -58,6 +60,7 @@ section {
     padding: 20px;
     border: solid 1px #EF6000;
     background-color: rgba(255, 255, 252, 0.5);
+    border-radius: 3px;
 }
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
@@ -65,6 +68,14 @@ section {
     .mypage_about {
         width: 1024px;
     }
+}
+
+.mypage_about_list>li+li {
+    margin-top: 16px;
+}
+
+.mypage_about_list>li {
+    list-style-type: disc;
 }
 
 .mypage_spot {
@@ -84,6 +95,27 @@ section {
     width: 320px;
 }
 
+/* 検索ボタン装飾 */
+.btn_inner {
+    width: 240px;
+    height: 56px;
+    background: #fff;
+    box-shadow: 4px 4px #EF6000;
+    border: 3px solid #005EA7;
+    position: relative;
+}
+
+/* 検索ボタンのテキスト */
+.top_more_btn {
+    color: #FFFFFC;
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 /* ---------カードの設定---------*/
@@ -129,6 +161,56 @@ section {
 
 .spot_item_info dd {
     width: 70%;
+}
+
+/* お気に入りボタン */
+.spot_like_icon {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    z-index: 100;
+}
+
+/* ---------------------------- */
+/* --- ハートアニメーション --- */
+/* ---------------------------- */
+@keyframes heartAnimation {
+    0% {
+        /* アイコンサイズをもとのより小さくする */
+        transform: scale(0.5);
+    }
+
+    10% {
+        transform: scale(0.7);
+    }
+
+    30% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    80% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        /* もとのサイズに戻す */
+        transform: scale(1.0);
+    }
+}
+
+.LikesIcon-fa-heart {
+    font-size: 30px;
+}
+
+.LikesIcon-fa-heart.heart {
+    /* heartAnimationアニメーションを200ミリ秒かけて実行する */
+    animation: heartAnimation .2s;
+    /* アイコン色を黒から赤へ変更する */
+    color: #e2264d;
 }
 
 /* --------------------------- */

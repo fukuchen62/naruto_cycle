@@ -70,10 +70,12 @@
 
             <section class="mypage_about">
                 <h3 class="mypage_h3">マイページについて</h3>
-                <p>・本マイページは周辺スポット検索またはスポット詳細ページでブックマークした情報が表示されます。</p>
-                <p>・ブックマークした場所をgoogleマップで参照できます。</p>
-                <p>・ブックマークにはcookieを使用しています。</p>
-                <p>・cookieの削除に伴いブックマークした情報も削除されます。</p>
+                <ul class="mypage_about_list">
+                    <li>本マイページは周辺スポット検索またはスポット詳細ページでブックマークした情報が表示されます。</li>
+                    <li>ブックマークした場所をgoogleマップで参照できます。</li>
+                    <li>ブックマークにはcookieを使用しています。</li>
+                    <li>cookieの削除に伴いブックマークした情報も削除されます。</li>
+                </ul>
             </section>
 
             <section class="mypage_spot">
@@ -85,7 +87,12 @@
                         <ul class="spot_list">
                             <!-- カード１枚の入れ物-->
                             <li class="spot_item relative">
+                                <!-- カテゴリーのラベル -->
                                 <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                                <!-- お気に入りボタン -->
+                                <div class="spot_like_icon">
+                                    <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                </div>
                                 <!-- スポット写真 -->
                                 <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
                                 <!-- スポット名 -->
@@ -225,7 +232,9 @@
                 </div>
 
                 <!-- スポットもっと見るボタン -->
-                <a class="spot_top_btn" href="">スポット一覧⇒</a>
+                <div class="more_btn txt_c">
+                    <a class="spot_top_btn btn_inner" href="search.html">もっと見る</a>
+                </div>
 
             </section>
 
@@ -264,7 +273,7 @@
         </div>
         <p class="copyright"></p>
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./js/mypage.js"></script>
 </body>
 </html>
 <!-- フッター切り取りここまで -->
