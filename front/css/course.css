@@ -89,7 +89,7 @@
 }
 
 /* 地図上アイコンの説明 */
-.icon_list {
+.icon_list_wrap {
 	background-color: #d4ebec;
 	border: solid 4px #74c7f0;
 	box-sizing: border-box;
@@ -98,6 +98,45 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 40px;
+}
+.icon_list {
+	width: 320px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 8px;
+}
+/* @media screen and (min-width: 599px) {
+	.icon_list {
+		width: auto;
+		gap: 8px;
+	}
+} */
+@media screen and (min-width: 1024px) {
+	.icon_list {
+		width: auto;
+		gap: 8px;
+	}
+}
+.icon {
+	width: 50%;
+	height: 40px;
+	text-align: left;
+	line-height: 40px;
+}
+/* @media screen and (min-width: 599px) {
+	.icon {
+		margin: 8px;
+		width: auto;
+		text-align: center;
+	}
+} */
+@media screen and (min-width: 1024px) {
+	.icon {
+		margin: 8px;
+		width: auto;
+		text-align: center;
+	}
 }
 
 /* 地図のダウンロードボタンの装飾 */
@@ -149,21 +188,81 @@
 	justify-content: center;
 }
 
-/* .course_info_pic_woman {
+/* 装飾の設定 */
+/* デスクトップサイズの時だけ表示する背景装飾 */
+.circle {
+	display: none;
+}
+@media screen and (min-width: 1024px) {
+	.circle {
+		display: inline-block;
+		position: absolute;
+		left: 200px;
+		margin: 20px auto;
+		width: 760px;
+		height: 760px;
+		border-radius: 50%;
+	}
+	.inner {
+		/* 文字を配置する起点となる親要素 */
+		position: relative;
+		width: 128px; /* この親要素自体は1文字が収まる程度の小さいサイズ */
+		height: 128px;
+		border-radius: 50%;
+		animation: rotateAnim 15s linear infinite; /* 円形テキストを回転 */
+		z-index: -1;
+	}
+	@keyframes rotateAnim {
+		0% {
+			transform: rotate(0deg);
+		}
+		50% {
+			transform: rotate(180deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	/* テキストの設定 */
+	.info_cycle_deco {
+		position: absolute;
+		font-weight: bold;
+		font-size: 128px;
+		/* 縁取り文字にするための設定 */
+		text-shadow: -1px -1px 0 #ef6000, -1px 0 0 #fdacac, -1px 1px 0 #fdacac,
+			0 -1px 0 #fdacac, 0 1px 0 #fdacac, 1px -1px 0 #fdacac, 1px 0 0 #fdacac,
+			1px 1px 0 #fdacac;
+		color: #f3f0e8;
+	}
+}
+.course_info_pic_woman {
+	display: none;
+}
+.course_info_pic_man {
 	display: none;
 }
 @media screen and (min-width: 1024px) {
 	.course_info_pic_woman {
-	display: inline-block;
-	position: absolute;
-	top: -20px;
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: -20px;
+	}
+	.course_info_pic_man {
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		left: -30px;
+	}
 }
-.course_info_pic_man {
-	position: absolute;
-	bottom: 0;
-	left: -30px;
-} */
 
+/* 常に表示する装飾 */
+.course_info_pic_clip {
+	position: absolute;
+	top: -15px;
+	left: 40px;
+	transform: rotateZ(-15deg);
+}
 /* テキストが入る部分の設定 */
 .info_content {
 	width: 250px;
@@ -212,6 +311,11 @@
 	margin-right: auto;
 	width: 320px;
 }
+/* タブレット時2カラムにする場合 */
+/* @media screen and (min-width: 599px) {
+	.course_spot_cate_list {
+		width: 672px;
+	} */
 @media screen and (min-width: 1024px) {
 	.course_spot_cate_list {
 		width: 1024px;
