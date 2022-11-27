@@ -1,4 +1,7 @@
 /* 見出しの設定（共通CSSに同じものがあるので削除予定） */
+.body {
+	font-size: 16px;
+}
 .headline {
 	font-size: 48px;
 	font-weight: bold;
@@ -101,33 +104,61 @@
 	margin-right: auto;
 }
 
+/*--------- コース情報 -------------------------------------*/
+
+/* コース情報を囲う色付きの部分の設定 */
 .info_wrap {
 	padding-top: 80px;
-	background-color: #fff;
 	width: 320px;
 	height: 560px;
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;
 }
 @media screen and (min-width: 1024px) {
 	.info_wrap {
 		padding-top: 48px;
+		height: 320px;
 		width: 1024px;
 	}
 }
+/* 後ろの茶色の装飾 */
+.info_bg_deco {
+	background-color: #e1d6b8;
+	position: absolute;
+	left: 0;
+	right: 0;
+	transform: rotateZ(3deg);
+}
+/* 前の白い部分 */
+.info_main {
+	background-color: #fff;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 64px;
+}
 
-.info {
+/* .course_info_pic_woman {
+	display: none;
+}
+@media screen and (min-width: 1024px) {
+	.course_info_pic_woman {
+	display: inline-block;
+	position: absolute;
+	top: -20px;
+}
+.course_info_pic_man {
+	position: absolute;
+	bottom: 0;
+	left: -30px;
+} */
+
+/* テキストが入る部分の設定 */
+.info_content {
 	width: 250px;
 	margin-left: auto;
 	margin-right: auto;
 	line-height: 2rem;
-}
-@media screen and (min-width: 1024px) {
-	.info {
-		display: flex;
-		flex-wrap: wrap;
-	}
 }
 
 .info_list {
@@ -151,7 +182,98 @@
 	bottom: 8px;
 	font-size: 12px;
 }
+/* ----------------------------------------- */
+
+.course_spot_cate_list {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+@media screen and (min-width: 1024px) {
+	.course_spot_cate_list {
+		width: 1024px;
+	}
+}
+.course_spot_cate_item + .course_spot_cate_item {
+	margin: 40px;
+}
+
+.course_spot_cate_headline {
+	position: relative;
+	margin-bottom: 40px;
+	font-size: 32px;
+	font-weight: bold;
+	height: 48px;
+	width: 320px;
+	background-color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	line-height: 48px;
+	left: 50%;
+	transform: translate(-50%);
+}
+.course_spot_cate_headline:before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 48px;
+	position: absolute;
+	left: 0;
+}
+.course_spot_cate_headline:after {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 48px;
+	position: absolute;
+	right: -1px;
+}
+
+.eat {
+	border: solid 1px #fdacac;
+}
+.eat:before {
+	background: #fdacac;
+}
+.eat:after {
+	background: #fdacac;
+}
+
+.enjoy {
+	border: solid 1px #ffe55b;
+}
+.enjoy:before {
+	background: #ffe55b;
+}
+.enjoy:after {
+	background: #ffe55b;
+}
+
+.shopping {
+	border: solid 1px #c0db8c;
+}
+.shopping:before {
+	background: #c0db8c;
+}
+.shopping:after {
+	background: #c0db8c;
+}
+
+.cyclespot {
+	border: solid 1px #d391f2;
+}
+.cyclespot:before {
+	background: #d391f2;
+}
+.cyclespot:after {
+	background: #d391f2;
+}
+
+.spot_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+}
 
 section + section {
-	margin: 160px;
+	margin-top: 160px;
 }
