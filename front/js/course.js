@@ -44,3 +44,37 @@ $(".course_nav.long").click(function () {
 		"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840136.7674177035!2d134.85883703576513!3d34.6601512909704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e86b2acc70d7%3A0xa399ff48811f596d!2z5aSn6Ziq5bqc!5e0!3m2!1sja!2sjp!4v1669542436434!5m2!1sja!2sjp"
 	);
 });
+
+// コース情報の後ろで回転する装飾のアニメーション
+const before = $(".text");
+const text = before.text(); // spanタグで囲む前のテキストを取得
+const textArray = text.split(""); // 取得したテキストを1文字ずつに分割し配列に
+
+let after = "";
+$.each(textArray, function (index, val) {
+	// 配列のそれぞれ（1文字）をinfo_cycle_decoクラスで囲み、繋げる
+	after += '<span class="info_cycle_deco">' + val + "</span>";
+});
+
+before.html(after); // 元のテキストに生成したタグごと置き換え
+
+const textcnt = textArray.length; // これは、const textcnt = $('info_cycle_deco').length; と同じ
+const circleR = $(".circle").height() / 2; // 円の半径
+const fontH = $(".inner").height();
+const dist = circleR - fontH;
+
+$(".info_cycle_deco").each(function (index) {
+	const num = index + 1;
+	const radX = Math.sin((360 / textcnt) * num * (Math.PI / 180)); // 文字の中心からのX軸方向の移動距離を計算
+	const radY = Math.sin((90 - (360 / textcnt) * num) * (Math.PI / 180)); // 文字の中心からのY軸方向の移動距離（実際にはマイナス移動）を計算
+	$(this).css(
+		"transform",
+		"translate(" +
+			dist * radX +
+			"px, " +
+			-(dist * radY) +
+			"px) rotate(" +
+			(360 / textcnt) * num +
+			"deg)"
+	); // 文字を水平維持ならば、rotateプロパティは不要
+});
