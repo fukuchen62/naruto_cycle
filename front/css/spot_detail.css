@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+.search_title_jp{
+    font-size: 16px;
+    margin: 12px auto auto auto;
+  }
+  
+  /* ページタイトル */
+  .search_title{
+    font-family: 'Noto Sans JP';
+    font-weight: bold;
+    font-size: 48px;
+    margin: auto auto 20px auto;
+  }
+  
+  /* 真ん中にする */
+  .wrap_search_container{
+    text-align: center;
+    margin: auto;
+  }
+
+  /* 詳細ボックス */
+  .box_spot_info{
+    box-sizing: border-box;
+    background: #FFFFFC;
+    /* アクセント4 */
+    border: 8px solid #96C85C;
+    width: 320px;
+    height: 1201px;
+    margin: auto;
+  }
+
+
+/* アクティブな画像の枠線を変更 */
+.sub-img li.current img {
+    border: 1px solid red;
+    transition: border .5s;
+  }
+  /* 画像レイアウトのためのスタイル */
+  .container {
+    margin: 50px auto 0;
+    max-width: 500px;
+  }
+  .main-img {
+    width: 280px;
+    height: 199px;
+    margin: auto;
+  }
+  .main-img img {
+    height: auto;
+    width: 100%;
+  }
+  .sub-img {
+    display: flex;
+    margin-top: 10px;
+  }
+  .sub-img li {
+    margin-right: 2%;
+    width: calc(96% / 3);
+  }
+  .sub-img li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .sub-img li img {
+    border: 2px solid transparent;
+    transition: border .5s;
+  }
+  .sub-img img {
+    cursor: pointer;
+    width: 100%;
+  }
+
+.spot_name{
+    font-size: 32px;
+    text-align: left;
+}
+
+.info_item{
+    margin: 8px 19px ;
+    text-align: left;
+}
+
+.info_item p{
+    text-align: right;
+}
+
+/* テーブル */
+.info_item{
+    border-spacing: 8px;
+    margin: 20px;
+}
+
+th{
+    font-weight: normal;
+    margin: 8px auto;
+}
+
+
