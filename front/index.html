@@ -99,11 +99,15 @@
                         </a>
                     </li>
                 </ul>
-                <a href="news.html" class="news_top_btn">
-                    <div class="contents flex column bg_blue white debug">
+                <a href="news.html" class="news_top_btn white bg_blue">
+                    <ul>
+                        <li class="arrow_right">⇒</li>
+                        <li class="news_more">一覧へ</li>
+                    </ul>
+                    <!-- <div class="contents flex column bg_blue white debug">
                         <i class="fa-sharp fa-solid fa-right">⇒</i>
                         一覧へ
-                    </div>
+                    </div> -->
                 </a>
             </div>
         </section>
@@ -134,31 +138,41 @@
             <h2 class="course_top headline"><ruby>COURSE<rt>サイクリングコース</rt></ruby></h2>
             <div class="course_top_container">
                 <img class="img map_top_img" src="image/index_course_img.png" alt="サイクリングコースマップ">
-                <div class="course_top_choice_container debug">
+                <!-- サイクリングコース選択エリアのコンテナ -->
+                <div class="course_top_choice_container">
                     <div class="course_top_choice">
-                        <p class="p_auto txt_c">コースを選ぶ</p>
+                        <p class="txt_c">コースを選ぶ</p>
                     </div>
-                    <ul class="course_top_choice_list">
-                        <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate">初心者コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
-                        <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate">短距離コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
-                        <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate">中距離コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
-                        <li class="course_top_choice_btn">
-                            <p class="course_top_choice_cate">長距離コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
+                    <ul class="course_top_choice_list flex just_center f_wrap white">
+                        <a href="">
+                            <li class="course_top_choice_btn bg_lightgreen">
+                                <p class="course_top_choice_cate">初心者コース</p>
+                                <!-- 距離のクラス名要再考 -->
+                                <p class="course_top_choice_km">〇〇㎞</p>
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="course_top_choice_btn bg_orange">
+                                <p class="course_top_choice_cate">短距離コース</p>
+                                <!-- 距離のクラス名要再考 -->
+                                <p class="course_top_choice_km">〇〇㎞</p>
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="course_top_choice_btn bg_vividblue">
+                                <p class="course_top_choice_cate">中距離コース</p>
+                                <!-- 距離のクラス名要再考 -->
+                                <p class="course_top_choice_km">〇〇㎞</p>
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="course_top_choice_btn bg_red">
+                                <p class="course_top_choice_cate">長距離コース</p>
+                                <!-- 距離のクラス名要再考 -->
+                                <p class="course_top_choice_km">〇〇㎞</p>
+                            </li>
+                        </a>
+
                     </ul>
                 </div>
             </div>
@@ -194,27 +208,72 @@
 
                 <!-- カード全体の入れ物 -->
                 <ul class="spot_list">
-
-                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                    <a href="spot.html">
-                        <!-- カード１枚の入れ物-->
-                        <li class="spot_item relative">
-                            <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
-                            <!-- スポット写真 -->
-                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                            <!-- スポット名 -->
-                            <h3 class="spot_item_name">味処 あらし</h3>
-                            <!-- スポット情報の表 -->
-                            <dl class="spot_item_info flex">
-                                <dt>営業時間</dt>
-                                <dd>11:00～21:00</dd>
-                                <dt>住所</dt>
-                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                <dt>電話番号</dt>
-                                <dd">088-686-0005</dd>
-                            </dl>
-                        </li>
-                    </a>
+                    <ui class="card_container">
+                        <!-- カード１枚にかかるスポット一覧へのリンク -->
+                        <a href="spot.html">
+                            <!-- カード１枚の入れ物-->
+                            <li class="spot_item relative ">
+                                <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                                <!-- スポット写真 -->
+                                <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                <!-- スポット名 -->
+                                <h3 class="spot_item_name">味処 あらし</h3>
+                                <!-- スポット情報の表 -->
+                                <dl class="spot_item_info flex">
+                                    <dt>営業時間</dt>
+                                    <dd>11:00～21:00</dd>
+                                    <dt>住所</dt>
+                                    <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                    <dt>電話番号</dt>
+                                    <dd">088-686-0005</dd>
+                                </dl>
+                            </li>
+                        </a>
+                    </ui>
+                    <ui class="card_container">
+                        <!-- カード１枚にかかるスポット一覧へのリンク -->
+                        <a href="spot.html">
+                            <!-- カード１枚の入れ物-->
+                            <li class="spot_item relative">
+                                <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                                <!-- スポット写真 -->
+                                <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                <!-- スポット名 -->
+                                <h3 class="spot_item_name">味処 あらし</h3>
+                                <!-- スポット情報の表 -->
+                                <dl class="spot_item_info flex">
+                                    <dt>営業時間</dt>
+                                    <dd>11:00～21:00</dd>
+                                    <dt>住所</dt>
+                                    <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                    <dt>電話番号</dt>
+                                    <dd">088-686-0005</dd>
+                                </dl>
+                            </li>
+                        </a>
+                    </ui>
+                    <ui class="card_container">
+                        <!-- カード１枚にかかるスポット一覧へのリンク -->
+                        <a href="spot.html">
+                            <!-- カード１枚の入れ物-->
+                            <li class="spot_item relative">
+                                <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                                <!-- スポット写真 -->
+                                <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                <!-- スポット名 -->
+                                <h3 class="spot_item_name">味処 あらし</h3>
+                                <!-- スポット情報の表 -->
+                                <dl class="spot_item_info flex">
+                                    <dt>営業時間</dt>
+                                    <dd>11:00～21:00</dd>
+                                    <dt>住所</dt>
+                                    <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                    <dt>電話番号</dt>
+                                    <dd">088-686-0005</dd>
+                                </dl>
+                            </li>
+                        </a>
+                    </ui>
                 </ul>
                 <!-- スポットもっと見るボタン -->
                 <div class="more_btn txt_c">
@@ -229,7 +288,7 @@
 
         <section class="insta">
             <!-- アイコンフォントでインスタロゴ -->
-            <div class="txt_c debug">
+            <div class="txt_c">
                 <img class="insta_logo" src="./image/instagram_logo.png" alt="インスタグラムのロゴ">
             </div>
             <h2 class="insta_top headline"><ruby>INSTAGRAM<rt>公式インスタグラム</rt></ruby></h2>

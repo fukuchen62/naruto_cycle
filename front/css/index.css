@@ -138,10 +138,17 @@ main {}
 .news_top_item_txt {}
 
 /* ニュース一覧へボタン */
-/* .news_top_btn {
-    color: #fff;
-    background-color: #005EA7;
-} */
+.news_top_btn li {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.news_top_btn a {
+    display: block;
+}
 
 /* sectionサイクリングについて */
 .howto {
@@ -203,7 +210,29 @@ main {}
 }
 
 /* ulコースを選ぶリスト */
-.course_top_choice_list {}
+.course_top_choice_list li {
+    /* デバッグ用 */
+    /* border: 1px solid #000; */
+
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    margin: 8px;
+    border-radius: 50%;
+}
+
+.course_top_choice_list a {
+    display: block;
+    padding: 10px;
+}
+
+.course_top_choice_list p {
+    font-size: small;
+}
 
 /* コース選択ボタンimg */
 .course_top_choice_btn {}
