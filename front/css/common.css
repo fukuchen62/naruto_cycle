@@ -10,9 +10,29 @@ body {
 	background-color: #F3F0E8;
 }
 
-/* 青い背景 */
+/* テーマ青の背景 */
 .bg_blue {
 	background-color: #005EA7;
+}
+
+/* 黄緑の背景 */
+.bg_lightgreen {
+	background-color: #96C85C;
+}
+
+/* オレンジの背景 */
+.bg_orange {
+	background-color: #EF6000;
+}
+
+/* 鮮やかな青の背景 */
+.bg_vividblue {
+	background-color: #0018EF;
+}
+
+/* 赤の背景 */
+.bg_red {
+	background-color: #F00000;
 }
 
 /* 文字色白にする */
@@ -69,7 +89,20 @@ body {
 	align-items: center;
 }
 
-/* flexしたものを */
+/* flexしたものを主軸方向等間隔に並べる*/
+.between {
+	justify-content: space-between;
+}
+
+/* flexしたものを主軸方向中央に整列 */
+.just_center {
+	justify-content: center;
+}
+
+/* flexしたものを折り返す */
+.f_wrap {
+	flex-wrap: wrap;
+}
 
 
 /* flexしたものを縦並びに */
@@ -122,6 +155,12 @@ body {
 
 
 /* ---------カードの設定---------*/
+/* .spot_list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+} */
+
 .spot_item {
 	width: 320px;
 	height: 480px;
