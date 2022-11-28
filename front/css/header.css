@@ -51,7 +51,7 @@ button {
 
 .menu {
     position: fixed;
-    right: -70%;
+    right: -1000%;
     width: 40%;
     margin-left: auto;
     font-size: 100%;
@@ -145,7 +145,7 @@ button {
     /*右端にくっつける*/
 }
 
-/* 640px以上はハンバーガーボタン非表示、ヘッダー固定 */
+/* 1025px以上はハンバーガーボタン非表示、ヘッダー固定 */
 @media screen and (min-width: 1025px) {
     .btn {
         display: none;
