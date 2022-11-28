@@ -58,30 +58,41 @@ section:last-child {
     margin-bottom: 16px;
 }
 
-.key_bg_mypage {
-    width: 390px;
+/* キービジュ */
+.key_img {
+    width: 100%;
     height: 80px;
     object-fit: cover;
 }
 
-/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
-@media screen and (min-width: 1024px) {
-    .key_bg_mypage {
+/* スクリーンサイズが600px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 600px) {
+    .key_img {
         width: 100%;
         height: 400px;
         object-fit: cover;
     }
 }
 
+.key_bg_mypage {
+    margin-bottom: 32px;
+}
+
 /* マイページについて */
 .mypage_about {
-    width: calc(100%*0.820512820512821);
-    min-width: 320px;
+    width: 320px;
     margin-top: 32px;
     padding: 20px;
     border: solid 1px #EF6000;
     background-color: rgba(255, 255, 252, 0.5);
     border-radius: 3px;
+}
+
+/* スクリーンサイズが672px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 672px) {
+    .mypage_about {
+        width: 672px;
+    }
 }
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
@@ -106,6 +117,13 @@ section:last-child {
     min-width: 320px;
     margin: 60px auto;
 
+}
+
+/* スクリーンサイズが672px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 672px) {
+    .mypage_spot {
+        width: 672px;
+    }
 }
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
@@ -224,7 +242,7 @@ section:last-child {
     position: absolute;
     top: 28px;
     right: 28px;
-    z-index: 100;
+    z-index: 2;
 }
 
 .LikesIcon-fa-heart {
