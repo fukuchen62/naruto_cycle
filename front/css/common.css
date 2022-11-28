@@ -7,32 +7,32 @@
 
 /* メイン背景色 */
 body {
-	background-color: #F3F0E8;
+	background-color: #f3f0e8;
 }
 
 /* テーマ青の背景 */
 .bg_blue {
-	background-color: #005EA7;
+	background-color: #005ea7;
 }
 
 /* 黄緑の背景 */
 .bg_lightgreen {
-	background-color: #96C85C;
+	background-color: #96c85c;
 }
 
 /* オレンジの背景 */
 .bg_orange {
-	background-color: #EF6000;
+	background-color: #ef6000;
 }
 
 /* 鮮やかな青の背景 */
 .bg_vividblue {
-	background-color: #0018EF;
+	background-color: #0018ef;
 }
 
 /* 赤の背景 */
 .bg_red {
-	background-color: #F00000;
+	background-color: #f00000;
 }
 
 /* 文字色白にする */
@@ -104,11 +104,9 @@ body {
 	flex-wrap: wrap;
 }
 
-
 /* flexしたものを縦並びに */
 .column {
 	flex-direction: column;
-
 }
 
 /* 上下32,左右16の間隔 */
@@ -125,10 +123,6 @@ body {
 .absolute {
 	position: absolute;
 }
-
-
-
-
 
 /* ----見出し(最初に来るh2部分）の設定--------------*/
 .headline {
@@ -163,10 +157,12 @@ body {
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {}
+@media screen and (min-width: 599px) {
+}
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
 /* moreボタン設定 */
 .common_btn {
@@ -181,6 +177,10 @@ body {
 	position: relative;
 	margin: auto;
 }
+.common_btn:hover {
+	transform: translate3d(8px, 8px, 0);
+	box-shadow: none;
+}
 
 /* ---------カードの設定---------*/
 /* .spot_list {
@@ -193,8 +193,8 @@ body {
 	width: 320px;
 	height: 480px;
 	padding: 18px;
-	border: dashed 2px #EF6000;
-	background-color: #FFFFFC;
+	border: dashed 2px #ef6000;
+	background-color: #fffffc;
 }
 
 .spot_item_cate {
