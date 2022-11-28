@@ -1,5 +1,6 @@
 "use strict";
 
+// コースがクリックされた場合の挙動（データベースで画面遷移する場合は不要かも）
 $(".course_nav.beginner").click(function () {
 	$(".iframe_wrapper")
 		.removeClass("short")

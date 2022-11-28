@@ -38,7 +38,9 @@
 	text-align: center;
 	position: relative;
 	box-sizing: border-box;
+	cursor: pointer;
 }
+/* コースのボタンごとに異なる設定 */
 .beginner {
 	background-color: #96c85c;
 	border: solid 4px #96c85c;
@@ -151,6 +153,13 @@
 	line-height: 60px;
 	position: relative;
 	margin: auto;
+	transition: 0.5s;
+}
+.dl-btn:hover {
+	transform: translate3d(8px, 8px, 0);
+	/* color: #007db9; */
+	box-shadow: none;
+	/* background: #fff; */
 }
 
 /*--------- コース情報 -------------------------------------*/
