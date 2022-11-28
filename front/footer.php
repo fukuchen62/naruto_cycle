@@ -1,16 +1,16 @@
 <!-- フッター切り取りここから -->
 
 <footer class="footer bg_blue white txt_c debug">
-    <ul class="banner_list">
+    <ul class="banner_list debug">
         <!-- asaなどのバナーがliで入ります -->
         <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
         <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
         <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
     </ul>
-    <nav class="fnav_container bg_blue">
+    <nav class="fnav_container bg_blue debug">
 
         <!-- フッターナビ -->
-        <ul class="fnav">
+        <ul class="fnav debug">
 
             <!-- フッターナビメニューの見出し -->
             <!-- リストがないものはこのliのみ -->

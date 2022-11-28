@@ -145,6 +145,21 @@ body {
 	text-align: center;
 }
 
+/* あしらいイラスト関係 */
+
+/* あしらい（PC）非表示 */
+.img_pc_only {
+	display: none;
+}
+
+/* 人のあしらい（スマホ） */
+.common_img_sp {
+	margin: 32px;
+	object-fit: cover;
+	width: 250px;
+	height: 267px;
+}
+
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
@@ -153,6 +168,19 @@ body {
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {}
 
+/* moreボタン設定 */
+.common_btn {
+	font-size: 16px;
+	width: 240px;
+	height: 60px;
+	background: #fff;
+	box-shadow: 8px 8px #ef6000;
+	border: 2px solid #005ea7;
+	text-align: center;
+	line-height: 60px;
+	position: relative;
+	margin: auto;
+}
 
 /* ---------カードの設定---------*/
 /* .spot_list {
