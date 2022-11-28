@@ -12,6 +12,7 @@ body {
 	/* フォント設定 */
 	font-family: 'Arvo', serif;
 	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 400;
 }
 
 /* サイト全体を包むwrap */
@@ -212,6 +213,8 @@ body {
 
 /* カテゴリラベル */
 .spot_item_cate {
+	width: 48px;
+	height: 64px;
 	position: absolute;
 	left: 0;
 	top: 0;
