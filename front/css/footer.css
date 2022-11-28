@@ -1,3 +1,16 @@
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
+@media screen and (min-width: 1024px) {
+    .banner_list {
+        /* メニューを横に */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
+@media screen and (min-width: 599px) {}
+
 /* フッター */
 .footer {}
 
@@ -15,6 +28,7 @@
 /* navフッターナビ */
 .fnav {
     padding: 32px;
+    margin: 16px;
 }
 
 .fnav ul li {
