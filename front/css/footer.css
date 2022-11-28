@@ -7,14 +7,14 @@
         justify-content: center;
     }
 
-    .fnav_menu {
+    .fnav_list {
         /* メニューを横に */
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
 
-    .fnav_item {
+    .fnav_menu a {
         /* メニュー項目を縦に */
         display: flex;
         flex-direction: column;
