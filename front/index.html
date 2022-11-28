@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/wave.scss">
+    <link rel="stylesheet" href="css/wave.css">
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -198,24 +198,38 @@
     </section>
 
     <!-- SPOTここから-->
+
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+
+        <defs>
+            <linearGradient id="gradient" x1="13%" y1="16%" x2="87%" y2="84%">
+                <stop offset="5%" stop-color="#d4ebec"></stop>
+                <stop offset="95%" stop-color="#d4ebec"></stop>
+            </linearGradient>
+        </defs>
+        <path d="M 0,400 C 0,400 0,100 0,100 C 179.86666666666667,117.6 359.73333333333335,135.2 538,129 C 716.2666666666667,122.8 892.9333333333334,92.8 1043,84 C 1193.0666666666666,75.2 1316.5333333333333,87.6 1440,100 C 1440,100 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+
+        <defs>
+            <linearGradient id="gradient" x1="13%" y1="16%" x2="87%" y2="84%">
+                <stop offset="5%" stop-color="#d4ebec"></stop>
+                <stop offset="95%" stop-color="#d4ebec"></stop>
+            </linearGradient>
+        </defs>
+        <path d="M 0,400 C 0,400 0,200 0,200 C 103.19999999999999,204.53333333333333 206.39999999999998,209.06666666666666 395,205 C 583.6,200.93333333333334 857.6000000000001,188.26666666666668 1046,186 C 1234.3999999999999,183.73333333333332 1337.1999999999998,191.86666666666667 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
+
+        <defs>
+            <linearGradient id="gradient" x1="13%" y1="16%" x2="87%" y2="84%">
+                <stop offset="5%" stop-color="#d4ebec"></stop>
+                <stop offset="95%" stop-color="#d4ebec"></stop>
+            </linearGradient>
+        </defs>
+        <path d="M 0,400 C 0,400 0,300 0,300 C 150.66666666666663,294.93333333333334 301.33333333333326,289.8666666666667 466,289 C 630.6666666666667,288.1333333333333 809.3333333333335,291.4666666666667 974,294 C 1138.6666666666665,296.5333333333333 1289.3333333333333,298.26666666666665 1440,300 C 1440,300 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+    </svg>
     <section class="spot">
 
         <!-- 上下の境界線上に動く波を入れる -->
-        <div class="canvas-wrapper">
-            <canvas class="wave-bar" data-color1="#96D601" data-color2="#00BA89"></canvas>
-            <canvas class="wave-bar flipped" data-color1="#96D601" data-color2="#00BA89"></canvas>
-        </div>
 
-        <!-- 波形は3つまで表示可能で、波形の色は、canvas要素の data-color1, data-color2, data-color3 属性で指定します。
-            この data-color[n] の数が波形の数に一致します。
 
-            境界の波形(canvas)とメインコンテンツ(.inner)が同化して見えるようにするために、メインコンテンツ要素には data-bgcolor で背景カラー、data-color でフォントカラーを指定できるようにしておきます。
-            これらのカラーコードを、Javascript側で取得してメインコンテンツのスタイルに反映させます。 -->
-
-        <!-- <div class="canvas-wrapper">
-                <canvas class="wave-bar" data-color1="#43c0e4" data-color2="#43c0e4" data-color3="#43c0e4"></canvas>
-                <div class="inner" data-bgcolor="rgba(67, 193, 236, 0.72)" data-color="#fff">Waveform Canvas<br />Three waves</div>
-            </div> -->
         <!-- 動く波ここまで -->
 
         <!-- 吹き出しPICKUP！文字 -->
@@ -301,7 +315,34 @@
         </div>
         <!-- 動く波の下部分 -->
 
+
     </section>
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+
+        <defs>
+            <linearGradient id="gradient" x1="7%" y1="25%" x2="93%" y2="75%">
+                <stop offset="5%" stop-color="#d4ebec"></stop>
+                <stop offset="95%" stop-color="#d4ebec"></stop>
+            </linearGradient>
+        </defs>
+        <path d="M 0,400 C 0,400 0,100 0,100 C 122.17224880382778,112.18181818181819 244.34449760765557,124.36363636363636 325,126 C 405.65550239234443,127.63636363636364 444.7942583732057,118.72727272727272 526,103 C 607.2057416267943,87.27272727272728 730.4784688995217,64.72727272727272 834,67 C 937.5215311004783,69.27272727272728 1021.291866028708,96.36363636363636 1119,106 C 1216.708133971292,115.63636363636364 1328.354066985646,107.81818181818181 1440,100 C 1440,100 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
+
+        <defs>
+            <linearGradient id="gradient" x1="7%" y1="25%" x2="93%" y2="75%">
+                <stop offset="5%" stop-color="#d4ebec"></stop>
+                <stop offset="95%" stop-color="#d4ebec"></stop>
+            </linearGradient>
+        </defs>
+        <path d="M 0,400 C 0,400 0,200 0,200 C 98.01913875598089,202.87081339712918 196.03827751196178,205.74162679425837 293,201 C 389.9617224880382,196.25837320574163 485.86602870813397,183.9043062200957 571,177 C 656.133971291866,170.0956937799043 730.4976076555025,168.64114832535887 826,183 C 921.5023923444975,197.35885167464113 1038.1435406698565,227.5311004784689 1144,233 C 1249.8564593301435,238.4688995215311 1344.9282296650717,219.23444976076556 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 200)"></path>
+
+        <defs>
+            <linearGradient id="gradient" x1="7%" y1="25%" x2="93%" y2="75%">
+                <stop offset="5%" stop-color="#d4ebec"></stop>
+                <stop offset="95%" stop-color="#d4ebec"></stop>
+            </linearGradient>
+        </defs>
+        <path d="M 0,400 C 0,400 0,300 0,300 C 70.74641148325358,280.1913875598086 141.49282296650716,260.38277511961724 255,263 C 368.50717703349284,265.61722488038276 524.775119617225,290.6602870813397 622,304 C 719.224880382775,317.3397129186603 757.4066985645933,318.97607655502395 826,318 C 894.5933014354067,317.02392344497605 993.598086124402,313.4354066985646 1101,310 C 1208.401913875598,306.5645933014354 1324.200956937799,303.28229665071774 1440,300 C 1440,300 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 200)"></path>
+    </svg>
 
     <!-- INSTAGRAMここから -->
 
