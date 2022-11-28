@@ -12,6 +12,28 @@
 	font-weight: normal;
 	text-align: center;
 }
+
+/* キービジュアルの設定 */
+.course_key_visual {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 32px;
+}
+@media screen and (min-width: 1024px) {
+	.course_key_visual {
+		height: 400px;
+	}
+}
+.course_key_visual_img {
+	height: 80px;
+	width: 100%;
+	object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+	.course_key_visual_img {
+		height: 400px;
+	}
+}
 /*------------------- コース選択時ボタンの設定----------- */
 .course_nav_list {
 	display: flex;
@@ -22,6 +44,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
 @media screen and (min-width: 1024px) {
 	.course_nav_list {
@@ -157,9 +180,7 @@
 }
 .dl-btn:hover {
 	transform: translate3d(8px, 8px, 0);
-	/* color: #007db9; */
 	box-shadow: none;
-	/* background: #fff; */
 }
 
 /*--------- コース情報 -------------------------------------*/
@@ -215,8 +236,8 @@
 	.inner {
 		/* 文字を配置する起点となる親要素 */
 		position: relative;
-		width: 128px; /* この親要素自体は1文字が収まる程度の小さいサイズ */
-		height: 128px;
+		width: 104px; /* この親要素自体は1文字が収まる程度の小さいサイズ */
+		height: 104px;
 		border-radius: 50%;
 		animation: rotateAnim 15s linear infinite; /* 円形テキストを回転 */
 		z-index: -1;
@@ -236,7 +257,7 @@
 	.info_cycle_deco {
 		position: absolute;
 		font-weight: bold;
-		font-size: 128px;
+		font-size: 104px;
 		/* 縁取り文字にするための設定 */
 		text-shadow: -1px -1px 0 #ef6000, -1px 0 0 #fdacac, -1px 1px 0 #fdacac,
 			0 -1px 0 #fdacac, 0 1px 0 #fdacac, 1px -1px 0 #fdacac, 1px 0 0 #fdacac,
@@ -282,6 +303,7 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+/* 真ん中に入る青い縦線の装飾 */
 @media screen and (min-width: 1024px) {
 	.info_list:before {
 		content: "";
@@ -296,11 +318,14 @@
 		margin: auto;
 	}
 }
+
+/* 見出しを太字に */
 .info_item {
 	width: 50%;
 	font-weight: bold;
 }
 
+/* コメント部分の設定 */
 .comment_text {
 	line-height: 1.5rem;
 	padding-bottom: 40px;
@@ -315,6 +340,7 @@
 }
 /* ----------------------------------------- */
 
+/* コース上スポット全体の表示設定 */
 .course_spot_cate_list {
 	margin-left: auto;
 	margin-right: auto;
@@ -332,6 +358,8 @@
 	}
 }
 
+/* コース上スポットの小見出し(h3)の設定----------------------- */
+
 .course_spot_cate_headline {
 	position: relative;
 	margin-top: 40px;
@@ -346,6 +374,7 @@
 	left: 50%;
 	transform: translate(-50%);
 }
+/* 装飾の設定 */
 .course_spot_cate_headline:before {
 	content: "";
 	display: inline-block;
@@ -363,6 +392,8 @@
 	right: -1px;
 }
 
+/* 小見出し(h3)の固有の装飾 */
+/* 食べる */
 .eat {
 	border: solid 1px #fdacac;
 }
@@ -373,6 +404,7 @@
 	background: #fdacac;
 }
 
+/* 楽しむ */
 .enjoy {
 	border: solid 1px #ffe55b;
 }
@@ -383,6 +415,7 @@
 	background: #ffe55b;
 }
 
+/* 買う */
 .shopping {
 	border: solid 1px #c0db8c;
 }
@@ -393,6 +426,7 @@
 	background: #c0db8c;
 }
 
+/* サイクルスポット */
 .cyclespot {
 	border: solid 1px #d391f2;
 }
@@ -409,6 +443,35 @@
 	gap: 32px;
 }
 
+/* デフォルトのカード表示の設定 */
+/* スマートフォンの場合は3件表示 */
+
+.card_container:nth-child(n + 4) {
+	display: none;
+}
+/* タブレットの場合は4件表示 */
+@media screen and (min-width: 671px) {
+	.card_container:nth-child(n + 4) {
+		display: inline-block;
+	}
+	.card_container:nth-child(n + 5) {
+		display: none;
+	}
+}
+/* PCの場合は6件表示 */
+@media screen and (min-width: 1024px) {
+	.card_container:nth-child(n + 5) {
+		display: inline-block;
+	}
+	.card_container:nth-child(n + 7) {
+		display: none;
+	}
+}
+
+/* スポットのもっと見るボタンの設定 */
+.spot_more_btn {
+	margin: 32px auto 60px;
+}
 section + section {
 	margin-top: 160px;
 }

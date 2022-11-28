@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/mypage.css" />
     <!-- googlefont本体ここから2行 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- 全体用font↓ -->
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
 
     <!-- h1のfont↓ -->
 
@@ -29,7 +30,7 @@
     <!-- ファビコン↓() -->
 </head>
 <body>
-    <div class="mypage_wrap">
+    <div class="body_wrap">
         <header class="header flex">
             <h1 class="header_logo"><a href="#"><img src="https://placehold.jp/320x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
             <nav>
@@ -75,10 +76,10 @@
                     <section class="mypage_about">
                         <h3 class="mypage_h3">マイページについて</h3>
                         <ul class="mypage_about_list">
-                            <li>本マイページは周辺スポット検索またはスポット詳細ページでブックマークした情報が表示されます。</li>
-                            <li>ブックマークした場所をgoogleマップで参照できます。</li>
-                            <li>ブックマークにはcookieを使用しています。</li>
-                            <li>cookieの削除に伴いブックマークした情報も削除されます。</li>
+                            <li>・本マイページは周辺スポット検索またはスポット詳細ページでブックマークした情報が表示されます。</li>
+                            <li>・ブックマークした場所をgoogleマップで参照できます。</li>
+                            <li>・ブックマークにはcookieを使用しています。</li>
+                            <li>・cookieの削除に伴いブックマークした情報も削除されます。</li>
                         </ul>
                     </section>
 
@@ -297,6 +298,9 @@
 
                     <section class="mypage_map">
                         <h3 class="mypage_h3">マップ</h3>
+                        <div class="iframe_wrapper ">
+                            <iframe class="course_iframe" src="https://www.google.com/maps/d/u/0/embed?mid=1U-au0BIPQuKPq7I5h3-k2B5TPSR7aLk&ehbc=2E312F"></iframe>
+                        </div>
                     </section>
         </main>
 
@@ -330,7 +334,7 @@
             <p class="copyright"></p>
         </footer>
     </div>
-    <script src="./js/mypage.js"></script>
+    <script src="./js/common.js"></script>
 </body>
 </html>
 <!-- フッター切り取りここまで -->
