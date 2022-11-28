@@ -76,7 +76,7 @@ main {}
 .key_logo {
     position: relative;
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 50px;
 }
 
@@ -100,7 +100,7 @@ main {}
     height: 267px;
 
     position: absolute;
-    top: 545px;
+    top: 365px;
     left: 50px;
 }
 
@@ -115,7 +115,7 @@ main {}
     }
 
     .key_msg {
-        font-size: 8em;
+        font-size: 6em;
         /* line-height: em; */
         font-family: "Josefin Sans", sans-serif;
         /* background-position: center; */
@@ -125,7 +125,7 @@ main {}
 
     .key_man {
         position: absolute;
-        top: 545px;
+        top: 365px;
         left: 100px;
     }
 }
@@ -202,6 +202,9 @@ main {}
     }
 }
 
+.newe_top_more_btn {
+    margin: 32px;
+}
 
 /* ulニュースの配列 */
 .news_top_list {}
@@ -239,6 +242,10 @@ main {}
     height: 100vh;
 }
 
+.howto_top {
+    margin-block-start: 32px;
+}
+
 .howto_blue_box {
     background-color: #005EA7;
     text-align: center;
@@ -248,10 +255,10 @@ main {}
 @media screen and (min-width: 1024px) {
     .howto_blue_container {
         position: absolute;
-        width: 614px;
-        height: 607px;
+        width: 550px;
+        height: 550px;
         left: 176px;
-        top: 1024px;
+        top: 900px;
     }
 
     .howto_blue_box {
@@ -262,7 +269,7 @@ main {}
         position: absolute;
         width: 720px;
         height: 480px;
-        left: 500px;
+        left: 450px;
         top: 70px;
     }
 }
@@ -271,14 +278,18 @@ main {}
 .howto_top_txt {
     text-align: center;
     line-height: 150%;
-    padding: 32px;
+    padding-bottom: 40px;
+}
 
+/* サイクリングについてのボタン */
+.howto_top_btn {
+    margin-bottom: 32px;
 }
 
 /* サイクリングについての画像 */
 .howto_top_img {
     width: 100%;
-    height: 480px;
+    height: 60vh;
     object-fit: cover;
 }
 
@@ -311,17 +322,42 @@ main {}
 
 
 /* コースを選ぶの枠と文字設定 */
-.course_top_choice {
-    font-size: 16px;
-    width: 240px;
-    height: 60px;
-    background: #fff;
-    border: 2px solid #005ea7;
-    text-align: center;
-    line-height: 60px;
+.course_top_ribbon {
     position: relative;
-    margin: auto;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 2rem;
+    border-top: 2px dashed;
+    border-bottom: 2px dashed;
+    background-color: #D4EBEC;
+    color: #005EA7;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
+
+.course_top_ribbon::before,
+.course_top_ribbon::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 0px;
+    height: 0px;
+    border-color: transparent #fff;
+    border-style: solid;
+}
+
+.course_top_ribbon::before {
+    left: 0;
+    border-width: 25px 0px 25px 10px;
+}
+
+.course_top_ribbon::after {
+    right: 0;
+    border-width: 25px 10px 25px 0px;
+}
+
 
 /* ulコースを選ぶリスト */
 .course_top_choice_list li {
