@@ -18,7 +18,7 @@ section {
     }
 }
 
-*/ .mypage_h2 {
+.mypage_h2 {
     font-size: 48px;
     font-weight: 900;
     text-align: center;
@@ -125,8 +125,6 @@ section {
 .mypage_map {
     margin-bottom: 60px;
 }
-
-
 
 /* マップ */
 /*------------------- 地図のサイズの設定---- */

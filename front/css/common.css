@@ -213,6 +213,8 @@ body {
 
 /* カテゴリラベル */
 .spot_item_cate {
+	width: 48px;
+	height: 64px;
 	position: absolute;
 	left: 0;
 	top: 0;
