@@ -10,6 +10,13 @@ body {
 	background-color: #f3f0e8;
 }
 
+/* サイト全体を包むwrap */
+.body_wrap {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
 /* テーマ青の背景 */
 .bg_blue {
 	background-color: #005ea7;
@@ -157,12 +164,10 @@ body {
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {
-}
+@media screen and (min-width: 599px) {}
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
 
 /* moreボタン設定 */
 .common_btn {
@@ -177,6 +182,7 @@ body {
 	position: relative;
 	margin: auto;
 }
+
 .common_btn:hover {
 	transform: translate3d(8px, 8px, 0);
 	box-shadow: none;

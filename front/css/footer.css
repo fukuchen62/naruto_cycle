@@ -6,6 +6,20 @@
         flex-direction: row;
         justify-content: center;
     }
+
+    .fnav_menu {
+        /* メニューを横に */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .fnav_item {
+        /* メニュー項目を縦に */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
@@ -42,7 +56,10 @@
 .fnav_list {}
 
 /* ulフッターナビメニューリストの項目 */
-.fnav_item {}
+.fnav_item {
+    display: flex;
+    flex-direction: column;
+}
 
 /* SNSアイコン置き場 */
 .sns_container {
