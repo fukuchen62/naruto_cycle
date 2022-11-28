@@ -173,10 +173,34 @@ main {}
     height: 100vh;
 }
 
-.howto_bg_box {
+.howto_blue_box {
     background-color: #005EA7;
     text-align: center;
 }
+
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
+@media screen and (min-width: 1024px) {
+    .howto_blue_container {
+        position: absolute;
+        width: 614px;
+        height: 607px;
+        left: 176px;
+        top: 1024px;
+    }
+
+    .howto_blue_box {
+        background-position: 50% 50%;
+    }
+
+    .howto_top_img {
+        position: absolute;
+        width: 720px;
+        height: 480px;
+        left: 648px;
+        top: 1111px;
+    }
+}
+
 
 /* h2サイクリングについて見出し */
 .howto_top {}
@@ -360,9 +384,7 @@ main {}
 .spot_top_btn {}
 
 /* sectionインスタ */
-.insta {
-    padding-top: 100px;
-}
+.insta {}
 
 /* imgでインスタロゴ */
 .insta_logo {
