@@ -189,7 +189,7 @@ main {}
     }
 
     .howto_blue_box {
-        background-position: 50% 50%;
+        margin: 100px 100px 100px 0px;
     }
 
     .howto_top_img {
@@ -210,12 +210,9 @@ main {}
     text-align: center;
 }
 
-/* サイクリングについてもっと読むボタン */
-.howto_top_btn {}
-
 /* サイクリングについての画像 */
 .howto_top_img {
-    width: 720px;
+    width: 100%;
     height: 480px;
     object-fit: cover;
 }

@@ -205,7 +205,6 @@ body {
 	margin: 32px auto 60px;
 }
 
-
 /* ---------------------------- */
 /* -------- カードの設定 -------- */
 /* ---------------------------- */
@@ -312,3 +311,31 @@ body {
 }
 
 /* --------------------------- */
+
+
+/* コースを選ぶボタンリストここから */
+.course_top_choice_list li {
+	/* デバッグ用 */
+	/* border: 1px solid #000; */
+
+	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 120px;
+	height: 60px;
+	margin: 8px;
+	border-radius: 50%;
+}
+
+.course_top_choice_list a {
+	display: block;
+	padding: 10px;
+}
+
+.course_top_choice_list p {
+	font-size: small;
+}
+
+/* コースを選ぶボタンリストここまで */
