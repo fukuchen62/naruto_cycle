@@ -18,24 +18,7 @@ section {
     }
 }
 
-/* なぜか効かない！ */
-/* section+section {
-    margin-bottom: 60px;
-}
-
-section:first-child {
-    margin-top: 32px;
-}
-
-section:last-child {
-    margin-bottom: 60px;
-} */
-
-
-
-
-
-.mypage_h2 {
+*/ .mypage_h2 {
     font-size: 48px;
     font-weight: 900;
     text-align: center;
@@ -77,6 +60,7 @@ section:last-child {
     width: 320px;
     margin-top: 32px;
     padding: 20px;
+    margin: 0 auto;
     border: solid 1px #EF6000;
     background-color: rgba(255, 255, 252, 0.5);
     border-radius: 3px;
