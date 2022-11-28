@@ -17,11 +17,15 @@
 }
 
 /* ヘッダーロゴの設定 */
+/* サイズはwidthを大きくするほどサイズも大きくできる */
 .header_logo {
     position: fixed;
     border: 1px solid #fff;
     /* 最前面に */
     z-index: 101;
+    width: 100px;
+    height: 80px;
+    /* flex-basis: 100%; */
 }
 
 /* ハンバーガーメニューの設定ここから */

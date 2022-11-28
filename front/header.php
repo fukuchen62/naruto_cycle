@@ -33,7 +33,9 @@
 
 <body>
     <header class="header flex">
-        <h1 class="header_logo"><a href="#"><img class="img" src="https://placehold.jp/320x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+        <div class="header_logo">
+            <h1><a href="#"><img class="img" src="./image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+        </div>
         <nav>
             <ul class="menu">
                 <li class="menu-list font_edge_white">
