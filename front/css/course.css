@@ -236,8 +236,8 @@
 	.inner {
 		/* 文字を配置する起点となる親要素 */
 		position: relative;
-		width: 128px; /* この親要素自体は1文字が収まる程度の小さいサイズ */
-		height: 128px;
+		width: 104px; /* この親要素自体は1文字が収まる程度の小さいサイズ */
+		height: 104px;
 		border-radius: 50%;
 		animation: rotateAnim 15s linear infinite; /* 円形テキストを回転 */
 		z-index: -1;
@@ -257,7 +257,7 @@
 	.info_cycle_deco {
 		position: absolute;
 		font-weight: bold;
-		font-size: 128px;
+		font-size: 104px;
 		/* 縁取り文字にするための設定 */
 		text-shadow: -1px -1px 0 #ef6000, -1px 0 0 #fdacac, -1px 1px 0 #fdacac,
 			0 -1px 0 #fdacac, 0 1px 0 #fdacac, 1px -1px 0 #fdacac, 1px 0 0 #fdacac,
