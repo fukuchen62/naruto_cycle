@@ -173,6 +173,50 @@ body {
 
 
 
+/* ----------下層ページキービジュアル設定---------- */
+.key_bg_under_img {
+	width: 100%;
+	height: 80px;
+	object-fit: cover;
+}
+
+/* スクリーンサイズが600px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 599px) {
+	.key_bg_under_img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+	}
+}
+
+.key_bg_under {
+	margin-bottom: 32px;
+}
+
+/* スクリーンサイズが600px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 599px) {
+	.key_bg_under {
+		margin-bottom: 0;
+	}
+}
+
+/* ----------パンくずリスト設定---------- */
+.bradcrumbs {
+	display: none;
+}
+
+/* リストはTB以上で表示 */
+/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
+@media screen and (min-width: 599px) {
+	.bradcrumbs {
+		display: block;
+		font-size: 16px;
+		margin-top: 8px;
+		margin-bottom: 32px;
+	}
+}
+
+
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
