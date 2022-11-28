@@ -10,18 +10,14 @@
     <nav class="fnav_container bg_blue debug">
 
         <!-- フッターナビ -->
-        <ul class="fnav debug">
+        <ul class="fnav">
 
             <!-- フッターナビメニューの見出し -->
             <!-- リストがないものはこのliのみ -->
             <li class="fnav_menu">
-                <p>ニュース</p>
-
                 <!-- フッターナビメニューのリスト -->
-                <ul class="fnav_list">
-
+                <ul class="fnav_list between gap32_16 ">
                     <!-- リストの内容 -->
-                    <!-- sectionによって数が違う -->
                     <!-- フッターNEWS/HOWTO/MYPAGE -->
                     <li class="fnav_menu">
                         <!-- フッターナビメニューのリスト -->
@@ -30,10 +26,10 @@
                             <li class="fnav_item n_h_m">
                                 <a href="news.html">ニュース</a>
                             </li>
-                            <li class="fnav_menu">
+                            <li class="fnav_item">
                                 <a href="howto.html">鳴門サイクリングについて</a>
                             </li>
-                            <li class="fnav_menu">
+                            <li class="fnav_item">
                                 <a href="mypage.html">マイページ</a>
                             </li>
                         </ul>
@@ -111,9 +107,10 @@
     </div>
     <p class="copyright">AllCopyRight©なるとサイくるっと！</p>
 </footer>
-<script src="./js/index.js"></script>
+<script src="./js/common.js"></script>
 <script src="js/jquery.bgswitcher.js"></script>
 <script src="js/bgswitcher.js"></script>
+</div>
 </body>
 
 </html>

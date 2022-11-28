@@ -131,7 +131,7 @@
                 </p>
 
 
-                <div class="common_btn">
+                <div class="common_btn common_btn_margin">
                     <a href="cycling.html">もっと読む→</a>
                 </div>
                 <img class="howto_top_img img" src="./image/index_about_img.jpg" alt="鳴門サイクリングの写真">
@@ -140,8 +140,9 @@
 
     <!-- COURSEここから -->
     <section class="course">
-        <h2 class="course_top headline"><ruby>COURSE<rt>サイクリングコース</rt></ruby></h2>
-        <div class="course_top_container">
+
+        <div class="course_top_container m_top160">
+            <h2 class="course_top headline"><ruby>COURSE<rt>サイクリングコース</rt></ruby></h2>
             <img class="img map_top_img" src="image/index_course_img.png" alt="サイクリングコースマップ">
             <!-- サイクリングコース選択エリアのコンテナ -->
             <div class="course_top_choice_container">
@@ -186,23 +187,12 @@
     <!-- SPOTここから-->
     <section class="spot">
 
-        <!-- 上下の境界線上に動く波を入れる -->
-        <div class="canvas-wrapper">
+        <!-- 動く波上部ここから -->
+        <!-- <div class="canvas-wrapper">
             <canvas class="wave-bar" data-color1="#96D601" data-color2="#00BA89"></canvas>
             <canvas class="wave-bar flipped" data-color1="#96D601" data-color2="#00BA89"></canvas>
-        </div>
-
-        <!-- 波形は3つまで表示可能で、波形の色は、canvas要素の data-color1, data-color2, data-color3 属性で指定します。
-            この data-color[n] の数が波形の数に一致します。
-
-            境界の波形(canvas)とメインコンテンツ(.inner)が同化して見えるようにするために、メインコンテンツ要素には data-bgcolor で背景カラー、data-color でフォントカラーを指定できるようにしておきます。
-            これらのカラーコードを、Javascript側で取得してメインコンテンツのスタイルに反映させます。 -->
-
-        <!-- <div class="canvas-wrapper">
-                <canvas class="wave-bar" data-color1="#43c0e4" data-color2="#43c0e4" data-color3="#43c0e4"></canvas>
-                <div class="inner" data-bgcolor="rgba(67, 193, 236, 0.72)" data-color="#fff">Waveform Canvas<br />Three waves</div>
-            </div> -->
-        <!-- 動く波ここまで -->
+        </div> -->
+        <!-- 動く波上部ここまで -->
 
         <!-- 吹き出しPICKUP！文字 -->
         <div class="pickup txt_c">＼PICK UP!／</div>
@@ -281,11 +271,22 @@
                 </ui>
             </ul>
             <!-- スポットもっと見るボタン -->
-            <div class="common_btn">
+            <div class="common_btn common_btn_margin">
                 <a class="spot_top_btn" href="search.html">スポット検索へ⇒</a>
             </div>
         </div>
-        <!-- 動く波の下部分 -->
+
+        <!-- 動かない波の仕切り -->
+        <div class="container">
+            <div class="wave"></div>
+        </div>
+
+        <!-- 動く波の下部分ここから -->
+        <!-- <div class="canvas-wrapper">
+            <canvas class="wave-bar" data-color1="#96D601" data-color2="#00BA89"></canvas>
+            <canvas class="wave-bar flipped" data-color1="#96D601" data-color2="#00BA89"></canvas>
+        </div> -->
+        <!-- 動く波の下部分ここまで -->
 
     </section>
 
@@ -293,13 +294,13 @@
 
     <section class="insta">
         <!-- アイコンフォントでインスタロゴ -->
-        <div class="txt_c">
+        <div class="insta_logo_box txt_c">
             <img class="insta_logo" src="./image/instagram_logo.png" alt="インスタグラムのロゴ">
         </div>
         <h2 class="insta_top headline"><ruby>INSTAGRAM<rt>公式インスタグラム</rt></ruby></h2>
         <!-- モバイルで消える自転車のあしらい -->
         <img src="image\index_insta_img.png" alt="装飾" class="index_insta_img img_pc_only">
-        <div class="insta_slide"><img src="https://placehold.jp/1440x250.png" alt="インスタスライドの仮画像"></div>
+        <div class="insta_slide"><img class="img" src="https://placehold.jp/1440x250.png" alt="インスタスライドの仮画像"></div>
     </section>
     </main>
 

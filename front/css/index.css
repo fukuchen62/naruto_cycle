@@ -190,7 +190,11 @@ main {}
 .howto_top_btn {}
 
 /* サイクリングについての画像 */
-.howto_top_img {}
+.howto_top_img {
+    width: 720px;
+    height: 480px;
+    object-fit: cover;
+}
 
 /* sectionコース */
 .course {}
@@ -209,6 +213,7 @@ main {}
 /* マップ下のコースチョイスコンテナ */
 .course_top_choice_container {
     background-color: #fff;
+    padding: 32px;
 }
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
@@ -270,6 +275,45 @@ main {}
 
 /* ここに動く波の上部が入ります */
 
+/* 動かない波の仕切り */
+.container {
+    position: relative;
+    background: #D4EBEC;
+    height: 60px;
+
+}
+
+.wave {
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    background: #D4EBEC;
+    bottom: 0;
+}
+
+.wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+
+.wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #f3f0e8;
+    right: -1.5%;
+    top: 60%;
+}
+
+.wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: #D4EBEC;
+    left: -1.5%;
+    top: 40%;
+}
+
 /* PICK UPの文字あしらい */
 .pickup {
     color: #EF6000;
@@ -316,7 +360,9 @@ main {}
 .spot_top_btn {}
 
 /* sectionインスタ */
-.insta {}
+.insta {
+    padding-top: 100px;
+}
 
 /* imgでインスタロゴ */
 .insta_logo {

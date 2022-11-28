@@ -81,6 +81,11 @@ body {
 	/* margin: auto; */
 }
 
+/* トピック間のマージン */
+.m_top160 {
+	margin-top: 160px;
+}
+
 /* marginをauto */
 .m_auto {
 	margin: auto;
@@ -166,6 +171,8 @@ body {
 	height: 267px;
 }
 
+
+
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
@@ -186,12 +193,18 @@ body {
 	line-height: 60px;
 	position: relative;
 	margin: auto;
+	transition: 0.25s;
 }
 
 .common_btn:hover {
 	transform: translate3d(8px, 8px, 0);
 	box-shadow: none;
 }
+
+.common_btn_margin {
+	margin: 32px auto 60px;
+}
+
 
 /* ---------------------------- */
 /* -------- カードの設定 -------- */
