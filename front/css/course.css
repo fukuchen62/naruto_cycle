@@ -108,12 +108,12 @@
 	flex-wrap: wrap;
 	row-gap: 8px;
 }
-/* @media screen and (min-width: 599px) {
+@media screen and (min-width: 599px) {
 	.icon_list {
 		width: auto;
 		gap: 8px;
 	}
-} */
+}
 @media screen and (min-width: 1024px) {
 	.icon_list {
 		width: auto;
@@ -126,13 +126,13 @@
 	text-align: left;
 	line-height: 40px;
 }
-/* @media screen and (min-width: 599px) {
+@media screen and (min-width: 599px) {
 	.icon {
 		margin: 8px;
 		width: auto;
 		text-align: center;
 	}
-} */
+}
 @media screen and (min-width: 1024px) {
 	.icon {
 		margin: 8px;
@@ -321,21 +321,20 @@
 	width: 320px;
 }
 /* タブレット時2カラムにする場合 */
-/* @media screen and (min-width: 599px) {
+@media screen and (min-width: 671px) {
 	.course_spot_cate_list {
 		width: 672px;
-	} */
+	}
+}
 @media screen and (min-width: 1024px) {
 	.course_spot_cate_list {
 		width: 1024px;
 	}
 }
-.course_spot_cate_item + .course_spot_cate_item {
-	margin: 40px;
-}
 
 .course_spot_cate_headline {
 	position: relative;
+	margin-top: 40px;
 	margin-bottom: 40px;
 	font-size: 32px;
 	font-weight: bold;
