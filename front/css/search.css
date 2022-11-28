@@ -163,7 +163,7 @@ width: 928px;
 height: 813px;
 border: 1px solid #74C7F0;
 background-color: #D4EBEC;
-margin: auto;
+margin: auto auto 112px auto;
 position: relative;
 }
 /* 自転車のあしらい */
@@ -226,15 +226,37 @@ margin: 0px 40px;
   margin: auto 16px;
 }
 
-/* .reccomend_wrap{
+.reccomend_wrap{
   width: 421px;
+  height: 144px;
+  background-color: #F3F0E8;
+  margin: auto;
   position: relative;
-} */
+}
 
 .pickup{
+  white-space: nowrap;
   transform: rotate(-15deg);
-  /* position: absolute;
-  right: auto; */
+  position: absolute;
+  bottom: 70px;
+  right: 260px;
+}
+
+.reccomend_title_jp{
+  position: absolute;
+  top: 48px;
+  left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+.reccomend_title{
+  position: absolute;
+  top: 59px;
+  left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
 }
 
 }
