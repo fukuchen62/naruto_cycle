@@ -1,16 +1,19 @@
-<footer>
-    <nav>フッターとサイトマップ
-        <ul>
-            <?php
-            $args = array(
-                'menu' => 'footer-navigation', //作成したメニュー名
-                'menu_class' => '', //メニューに使うクラス名
-                'container' => false, //ulタグを囲んでいるdivを削除
-            );
-            wp_nav_menu($args);
-            ?>
+<footer class="footer">
+    <div class="container">
+        <div class="footer_inner">
 
-            <!-- <li>about</li>
+            <nav>フッターとサイトマップ
+                <ul>
+                    <?php
+                    $args = array(
+                        'menu' => 'footer-navigation', //作成したメニュー名
+                        'menu_class' => '', //メニューに使うクラス名
+                        'container' => false, //ulタグを囲んでいるdivを削除
+                    );
+                    wp_nav_menu($args);
+                    ?>
+
+                    <!-- <li>about</li>
             <li>course</li>
             <li>search</li>
             <li>Q&A</li>
@@ -19,8 +22,10 @@
             <li>サイト制作に当たって</li>
             <li>おといあわせ</li>
             <li>プライバシーポリシ</li> -->
-        </ul>
-    </nav>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </footer>
 
 <?php wp_footer(); ?>

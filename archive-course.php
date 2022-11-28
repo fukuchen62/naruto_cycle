@@ -11,7 +11,7 @@
 
 <div class="col-md-3">
 
-    <?php get_template_part('template-parts/loop', 'course') ?>
+    <?php get_template_part('template-parts/loop', 'news') ?>
 
 </div>
 <?php endwhile; ?>
