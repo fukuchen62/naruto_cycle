@@ -37,33 +37,44 @@
 
     =======
 
-    <h1>なるとサイくるっと！</h1>
-    <h2><a href=""> ニュース</a> </h2>
-    <h2><a href=""> サイクリングについて</a> </h2>
-    <h2><a href=""> サイクリングコース</a></h2>
-    <h2><a href=""> スポット 検索</a></h2>
-    <h2><a href=""> Ｑ＆Ａ</a></h2>
-    <h2><a href=""> マイページ</a></h2>
+    <!-- サイクリングについて -->
+    <?php
+    $args = array(
+        'page_id'      => '2',
+    );
+    $top_about = new WP_Query($args);
+    if ($top_about->have_posts()) : while ($top_about->have_posts()) : $top_about->the_post();
+    ?>
+    <!-- 繰り返し処理する内容 -->
+    <h2><span><?php the_title(); ?></span> ABOUT</h2>
+    <p><?php the_excerpt(); ?></p>
+    <?php
+        endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
 
-    <!-- <footer>
-    <nav>フッターとサイトマップ
-        <ul>
-            <li>about</li>
-            <li>course</li>
-            <li>search</li>
-            <li>Q&A</li>
-            <li>my page</li>
-            <li>contact</li>
-            <li>サイト制作に当たって</li>
-            <li>おといあわせ</li>
-            <li>プライバシーポリシ</li>
-        </ul>
-    </nav>
-</footer>
+    <p><a href="<?php echo get_permalink(2); ?>">もっと読む</a></p>
+
+    <!-- 全体コースマップ -->
+    <img src="./assets/img/noimage_600x400.png" alt="">
+    <h2> コースを選ぶ</h2>
+    <ul>
+        <li><a href="<?php echo get_permalink(142); ?>">初心者コース</a></li>
+        <li><a href="<?php echo  get_permalink(183); ?>">短距離コース</a></li>
+        <li><a href="<?php echo get_permalink(184); ?>">中距離コース</a></li>
+        <li><a href="<?php echo  get_permalink(185); ?>">長距離コース</a></li>
+    </ul>
 
 
-</body>
+    <h2><span>pickup</span><span>周辺スポット</span> SPOT</h2>
+    <!-- リコメンド記事ランダムで表示 -->
 
-</html> -->
+
+    <p><a href="">スポット一覧</a></p>
+
+
+    <!-- インスタ表示 -->
+
 
     <?php get_footer(); ?>
