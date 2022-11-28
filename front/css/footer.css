@@ -36,31 +36,6 @@
     padding-top: 32px;
 }
 
-/* フッターナビのコンテナ */
-.fnav_container {}
-
-/* navフッターナビ */
-.fnav {
-    padding: 32px;
-    margin: 16px;
-}
-
-.fnav ul li {
-    border: 1px solid #000;
-}
-
-/* ulフッターナビのメニュー */
-.fnav_menu {}
-
-/* liフッターナビメニューのリスト */
-.fnav_list {}
-
-/* ulフッターナビメニューリストの項目 */
-.fnav_item {
-    display: flex;
-    flex-direction: column;
-}
-
 /* SNSアイコン置き場 */
 .sns_container {
     margin: 10px 5px;

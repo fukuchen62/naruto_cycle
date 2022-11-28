@@ -52,6 +52,11 @@ body {
 	color: #fff;
 }
 
+/* 文字色をテーマ青にする */
+.blue {
+	color: #005ea7;
+}
+
 /* 文字をセンター配置 */
 .txt_c {
 	text-align: center;
