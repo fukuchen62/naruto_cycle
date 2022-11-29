@@ -1,22 +1,26 @@
 @charset "UTF-8";
 
-/* ニュースカード全体の設定 */
+/* 全体の設定 */
 .news_card_container {
-
     width: 320px;
+    height: 440px;
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 599px) {
     .news_card_container {
-        flex-direction: row;
+        width: 600px;
     }
 }
 
-
+@media screen and (min-width: 1024px) {
+    .news_card_container {
+        width: 1024px;
+    }
+}
 
 /* 記事全体の設定（画面左側） */
 .news_card_article {
@@ -27,20 +31,20 @@
     margin-bottom: 80px;
 }
 
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 599px) {
     .news_card_article {
-        width: 804px;
-        flex-direction: row;
-    }
-} */
-
-@media screen and (min-width: 1024px) {
-    .news_card_article {
-        width: 804px;
-        flex-direction: row;
-        justify-content: center;
+        width: 600px;
+        height: 280;
     }
 }
+
+/* @media screen and (min-width: 1024px) {
+    .news_detail_article {
+        width: 804px;
+        height: 280px;
+        margin-bottom: auto;
+    }
+} */
 
 /* 記事本文の設定 */
 .card_article_body {
@@ -50,8 +54,31 @@
 .card_article_body img {
     margin: 16px auto;
     width: 280px;
-    height: 220px;
+    height: 240px;
 }
+
+/* 写真の設定
+.news_article_body img {
+    margin: 16px auto;
+    width: 280px;
+    height: 240px;
+    object-fit: cover;
+} */
+
+/*
+@media screen and (min-width: 599px) {
+    .article_body img {
+        width: 560px;
+        height: 294px;
+    }
+} */
+
+/* @media screen and (min-width: 1024px) {
+    .article_body img {
+        width: 280px;
+        height: 240px;
+    }
+} */
 
 /*-----------------------カード表示の設定----------------------- */
 /* スマートフォンの場合は3件表示 */
