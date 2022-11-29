@@ -4,15 +4,28 @@
 
         <a href="<?php the_permalink(); ?>">
 
+            <!-- フィールドのアイキャッチ画像使用 -->
+            <?php
+            $pic = get_field('eyecatch');
+            $pic_url = $pic['sizes']['medium'];
+            $width = $pic['sizes']['medium-width'];
+            $height = $pic['sizes']['medium-height'];
 
+
+            ?>
+            <img src="<?php echo $pic_url; ?>" width=" <?php echo $width; ?>" height="<?php echo $height; ?>" alt="">
+
+
+            <!-- デフォルトのアイキャッチ画像使用の場合 -->
+            <!--
             <?php if (has_post_thumbnail()) : ?>
 
-            <?php the_post_thumbnail('medium'); ?>
+                <?php the_post_thumbnail('medium'); ?>
 
             <?php else : ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage_600x400.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage_600x400.png" alt="">
 
-            <?php endif; ?>
+            <?php endif; ?> -->
 
         </a>
     </div>
