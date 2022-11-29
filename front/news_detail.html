@@ -61,22 +61,23 @@
     </header>
     <!-- ヘッダー切り取りここまで -->
     <main>
-        <!-- キービジュアル -->
-        <div class="key_bg_under">
-            <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
-        </div>
+        <div class="news_detail_wrap">
+            <!-- キービジュアル -->
+            <div class="key_bg_under">
+                <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+            </div>
 
-        <!-- パンくずリスト -->
-        <div class="bradcrumbs">
-            TOP＞お知らせ＞記事タイトルが入ります
-        </div>
-        <section class="news_detail">
-            <div class="news_detail_container flex">
-                <article class="news_detail_article">
-                    <header class="article_header">
+            <!-- パンくずリスト -->
+            <div class="bradcrumbs">
+                TOP＞お知らせ＞記事タイトルが入ります
+            </div>
+            <div class="news_detail">
+                <div class="news_detail_container flex">
+                    <article class="news_detail_article">
+
                         <h2 class="article_title">記事タイトルが入ります。</h2>
                         <div class="article_meta flex">
-                            <time datetime="2019-1-1">2019年1月1日</time>
+                            <time datetime="2022-12-01">2022年12月1日</time>
                             <div class="post-categories">
                                 <a href="#">カテゴリ名</a>
                             </div>
@@ -99,61 +100,40 @@
                             <div class="post_link post_link_prev"><a href="#"><i class="fas fa-chevron-left"></i>前の記事のタイトル</a></div>
                             <div class="post_link post_link_next"><a href="#">次の記事のタイトル<i class="fas fa-chevron-right"></i></a></div>
                         </div>
-                </article>
+                    </article>
 
-                <aside class="news_detail_archive_wrap">
-                    <div class="news_detail_archive">
-                        <h2 class="news_detail_archive_title">カテゴリ一覧</h2>
-                        <ul class="news_detail_archive_list">
-                            <li><a href="#">お知らせ</a></li>
-                            <li><a href="#">イベント</a></li>
-                            <li><a href="#">コラム</a></li>
-                        </ul>
-                    </div>
-                    <div class="news_detail_archive">
-                        <h2 class="news_detail_archive_title">月別アーカイブ</h2>
-                        <ul class="news_detail_archive_list">
-                            <li><a href="#">2022年11月</a></li>
-                            <li><a href="#">2022年12月</a></li>
-                        </ul>
-                    </div>
-                </aside>
+                    <aside class="news_detail_archive_wrap">
+                        <div class="news_detail_archive no1">
+                            <h2 class="news_detail_archive_title">カテゴリ一覧</h2>
+                            <ul class="news_detail_archive_list">
+                                <li><a href="#">お知らせ</a></li>
+                                <li><a href="#">イベント</a></li>
+                                <li><a href="#">コラム</a></li>
+                            </ul>
+                        </div>
+                        <div class="news_detail_archive">
+                            <h2 class="news_detail_archive_title">月別アーカイブ</h2>
+                            <ul class="news_detail_archive_list">
+                                <li><a href="#">2022年11月</a></li>
+                                <li><a href="#">2022年12月</a></li>
+
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
             </div>
-        </section>
-        <div class="news_bottom_img">
-            <img src="image/news_img.png" alt="ニュース下部装飾">
+            <img class="news_bottom_img" src="image/news_img.png" alt="ニュース下部装飾">
         </div>
     </main>
     <!-- フッター切り取りここから -->
 
-    <footer class="footer">
-        <ul class="banner_list">
-            <!-- asaなどのバナーがliで入ります -->
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-        </ul>
-        <nav class="fnav_container">
-            <ul class="fnav">
-                <li class="fnav_menu">
-                    <ul class="fnav_list">
-                        <!-- リストの数はそれぞれ -->
-                        <li class="fnav_item">
-                            <a href=""></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="sns">
-            <!-- twitter -->
-            <a href=""></a>
-            <!-- facebook -->
-            <a href=""></a>
-        </div>
-        <p class="copyright"></p>
+    <footer class="footer bg_blue white txt_c debug">
+
     </footer>
-    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script src="js/bgswitcher.js"></script>
 </body>
+
 </html>
 <!-- フッター切り取りここまで -->
