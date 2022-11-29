@@ -207,128 +207,214 @@ main {}
 }
 
 /* ---------------section：サイクリングについて---------------  */
-
-/* テキストボックス */
-.index_howto_txtbox {
+.index_howto {
     width: 100%;
-    padding: 32px auto;
-    margin: ;
+    height: 100%;
+}
+
+/* コンテンツボックス（見出し、概要、ボタン） */
+.index_howto_content {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 32px;
     background-color: #005EA7;
 }
 
+/* TB表示 */
+@media screen and (min-width: 600px) {
+    .index_howto_content {
+        height: 500px;
+    }
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_howto_content {
+        width: 614px;
+        height: 600px;
+        position: absolute;
+        padding-top: 120px;
+        left: calc(100%*0.125);
+
+    }
+}
+
+/* テキストボックス */
+.index_howto_txtbox {
+    width: calc(100%*0.82051282);
+    margin: 32px auto 0;
+    color: #FFFFFC;
+    text-align: left;
+    line-height: 1.2em;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_howto_txtbox {
+        width: 400px;
+        margin-left: 32px;
+    }
+}
+
+/* 見出し */
+.index_howto_top {
+    width: 100%;
+    padding-top: 32px;
+    margin: 0 0 16px;
+}
+
+
+
 /* キャプション */
 .index_howto_txt {
-    width: 320px;
     margin: 0 auto;
     text-align: left;
 }
 
-
-/* 写真ボックス */
-.index_howto_imgbox {
-    width: 100%;
+/* ボタン */
+.index_howto_btn {
+    color: #000000;
+    margin: 32px auto;
+    position: absolute;
+    right: 0;
 }
 
-.howto_img_1 {
+/* 写真 */
+.index_howto_img {
     width: 100%;
-    height: 260px;
     object-fit: cover;
+    margin: 0 auto;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_howto_img {
+        width: 720px;
+        height: 480px;
+        object-fit: cover;
+        z-index: 2;
+    }
 }
 
 
 /* ---------------section：コースマップ---------------  */
-.course {}
+.index_course {
+    margin: 0 auto;
+}
 
-/* h2コースの見出し */
-/* .course_top {} */
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_course {
+        margin: 300px auto 0;
+    }
+}
 
-/* コースのコンテナ */
-.course_top_container {}
+.index_map_imgbox {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_map_imgbox {
+        width: 1024px;
+    }
+}
 
 /* コースマップの画像 */
-.map_top_img {
+.index_map_img {
+    width: 100%;
     border: 10px solid #E1D6B8;
 }
 
-/* マップ下のコースチョイスコンテナ */
-.course_top_choice_container {
-    background-color: #fff;
-    padding: 32px;
-}
-
-/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-/* @media screen and (min-width: 1024px) {
-    .course_top_choice_container {
-        margin: 100px;
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_map_img {
+        width: 1024px;
+        height: 800px;
+        margin: 0 auto;
     }
-} */
+}
 
-
-/* コースを選ぶの枠と文字設定 */
-.course_top_ribbon {
-    position: relative;
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 2rem;
-    border-top: 2px dashed;
-    border-bottom: 2px dashed;
-    background-color: #D4EBEC;
-    color: #005EA7;
-    font-size: 20px;
-    font-weight: bold;
+/* コースを選ぶ見出し */
+.index_couse_selecttop {
+    width: 200px;
+    margin: 24px auto 0;
     text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: dashed 2px #EF6000;
 }
 
-.course_top_ribbon::before,
-.course_top_ribbon::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-color: transparent #fff;
-    border-style: solid;
+/* ボタンボックス */
+.index_course_btnbox {
+    width: 256px;
+    margin: 16px auto 0;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-.course_top_ribbon::before {
-    left: 0;
-    border-width: 25px 0px 25px 10px;
+/* TB表示 */
+@media screen and (min-width: 600px) {
+    .index_course_btnbox {
+        width: 528px;
+    }
 }
 
-.course_top_ribbon::after {
-    right: 0;
-    border-width: 25px 10px 25px 0px;
+/* TB表示 */
+@media screen and (min-width: 1024px) {
+    .index_course_btnbox {
+        width: 688px;
+    }
 }
 
 
-/* ulコースを選ぶリスト */
-.course_top_choice_list li {
-    /* デバッグ用 */
-    /* border: 1px solid #000; */
-
-    display: inline-block;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* ボタン共通スタイル */
+.index_course_selectbtn {
     width: 120px;
     height: 60px;
-    margin: 8px;
     border-radius: 50%;
+    text-align: center;
+    color: #FFFFFC;
 }
 
-.course_top_choice_list a {
-    display: block;
-    padding: 10px;
+.index_course_btntxt {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.course_top_choice_list p {
-    font-size: small;
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_course_selectbtn {
+        width: 160px;
+        height: 80px;
+    }
 }
 
-/* .course_top_choice_cate
-.course_top_choice_km */
+/* ボタン個別スタイル */
+/* 初心者コース */
+.beginner {
+    background-color: #96C85C;
+}
+
+/* 短距離コース */
+.short {
+    background-color: #EF6000;
+}
+
+/* 中距離コース */
+.middle {
+    background-color: #0018EF;
+}
+
+/* 長距離コース */
+.long {
+    background-color: #F00000;
+}
 
 /* ---------------section：スポット---------------  */
 .spot {
@@ -384,43 +470,6 @@ main {}
     font-weight: bold;
 }
 
-/* h2スポットの見出し */
-.spot_top {}
-
-/* スポットカードのコンテナ */
-/* .card_container {
-    display: grid;
-    gap: 32px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-} */
-
-/* ulスポットリスト */
-.spot_list {
-    display: grid;
-    gap: 32px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-/* liスポットカード */
-.spot_item {
-    width: 320px;
-    height: 400px;
-}
-
-/* カードの中の写真 */
-.spot_item_img {
-    width: 280px;
-    height: 240px;
-}
-
-/* カードのスポット名 */
-.spot_item_name {}
-
-/* dlカードのスポット情報 */
-.spot_item_info {}
-
-/* スポットのもっと見るボタン */
-.spot_top_btn {}
 
 /* ---------------section：インスタグラム---------------  */
 .insta {}

@@ -31,7 +31,7 @@
     <!-- ファビコン↓() -->
 </head>
 <body>
-    <div body_wrap>
+    <div class="wrap">
         <header class="header flex">
             <div class="header_logo">
                 <h1><a href="#"><img class="img" src="./image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
@@ -65,8 +65,10 @@
         <!-- ヘッダー切り取りここまで -->
         <main class="main">
 
+            <!-- キービジュアル＋ニュースのボックス -->
             <div class="key_news_wrap relative">
-                <!----------------- section：キービジュアル ----------------->
+
+                <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：キービジュアル ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
                 <section class="index_key_visual relative">
                     <!-- キービジュアル画像 -->
@@ -85,7 +87,7 @@
                     <img class="key_man" src="./image/index_top_img.png" alt="サイクリングマン">
                 </section>
 
-                <!----------------- section：ニュース ----------------->
+                <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：ニュース ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
                 <section class="index_news flex">
 
@@ -122,8 +124,8 @@
                                     </time>
                                 </div>
                                 <h3 class="index_news_title">
-                                                                <a href="#">ここにタイトルが入ります</a>
-                                                            </h3>
+                                <a href="#">ここにタイトルが入ります</a>
+                                </h3>
                             </article>
 
                         </div>
@@ -141,46 +143,104 @@
                 </section>
             </div>
 
-            <!----------------- section：ハウツー ----------------->
+            <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：ハウツー ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
             <section class="index_howto">
 
-                <!-- テキスト用ボックス -->
-                <div class="index_howto_txtbox">
-                    <!-- 見出し -->
-                    <h2 class="index_howto_top headline">
+                <!-- コンテンツボックス -->
+                <div class="index_howto_content">
+                    <!-- テキスト用ボックス -->
+                    <div class="index_howto_txtbox relative">
+                        <!-- 見出し -->
+                        <h2 class="index_howto_top headline">
                             <ruby>HOW TO<rt>鳴門のサイクリングについて</rt></ruby>
                         </h2>
 
-                    <!-- キャプション -->
-                    <p class="index_howto_txt ">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                        <!-- キャプション -->
+                        <p class="index_howto_txt ">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
 
-                    <!-- もっと読むボタン -->
-                    <div class="common_btn howto_top_btn">
-                        <a href="cycling.html">もっと読む→</a>
+                        <!-- もっと読むボタン -->
+                        <div class="common_btn index_howto_btn">
+                            <a href="cycling.html">もっと読む→</a>
+                        </div>
                     </div>
                 </div>
+                <!-- 写真 -->
+                <img src="./image/index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="index_howto_img">
 
-                <!-- 写真用ボックス -->
-                <div class="index_howto_imgbox">
-                    <img src="./image/index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="howto_img_1">
-                </div>
 
             </section>
 
-            <!----------------- section：コースマップ ----------------->
-            <!----------------- section：スポット一覧 ----------------->
-            <!----------------- section：インスタ ----------------->
+            <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：コースマップ ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+            <section class="index_course">
 
+                <!-- 見出し -->
+                <h2 class="index_course_top headline">
+                    <ruby>COURSE<rt>サイクリングコース</rt></ruby>
+                </h2>
+
+                <!-- コンテンツボックス -->
+                <div class="index_course_content">
+
+                    <!-- マップ -->
+                    <div class="index_map_imgbox">
+                        <img class="index_map_img" src="image/index_course_img.png" alt="サイクリングコースマップ">
+                    </div>
+
+                    <!-- サイクリングコース選択エリアのコンテナ -->
+                    <div class="course_top_choice_container">
+
+                        <!-- コース選択見出し -->
+                        <h3 class="index_couse_selecttop">コースを選ぶ</h3>
+
+                        <!-- コース選択ボタンボックス -->
+                        <div class="index_course_btnbox flex">
+
+                            <!-- 初心者コース -->
+                            <div class="index_course_selectbtn beginner relative">
+                                <div class="index_course_btntxt">
+                                    <p>初心者コース</p>
+                                    <p>00km</p>
+                                </div>
+                            </div>
+
+                            <!-- 短距離コース -->
+                            <div class="index_course_selectbtn short relative">
+                                <div class="index_course_btntxt">
+                                    <p>短距離コース</p>
+                                    <p>00km</p>
+                                </div>
+                            </div>
+
+                            <!-- 中距離コース -->
+                            <div class="index_course_selectbtn middle relative">
+                                <div class="index_course_btntxt">
+                                    <p>中距離コース</p>
+                                    <p>00km</p>
+                                </div>
+                            </div>
+
+                            <!-- 長距離コース -->
+                            <div class="index_course_selectbtn long relative">
+                                <div class="index_course_btntxt">
+                                    <p>長距離コース</p>
+                                    <p>00km</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：スポット ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
+
+            <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：インスタ ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        </main>
     </div>
-
-    </div>
-
     <script src="./js/index.js"></script>
     <script src="./js/common.js"></script>
-    <script src="js/jquery.bgswitcher.js"></script>
-    <script src="js/bgswitcher.js"></script>
-    </div>
 </body>
 
 </html>
