@@ -114,18 +114,22 @@
 	background-color: #fff;
 }
 
-/* 下部装飾画像（自転車をこぐ女性） */
+/* 下部装飾画像用（自転車をこぐ女性） */
+.news_detail_wrap {
+	position: relative;
+	padding-bottom: 60px;
+}
 .news_bottom_img {
-	/* display: none; */
+	display: none;
 }
 @media screen and (min-width: 1024px) {
 	.news_bottom_img {
-		/* display: inline; */
+		display: block;
 		position: absolute;
-		bottom: 0%;
+		bottom: 0px;
 		right: 100px;
+		width: 238px;
+		height: 292px;
+		z-index: -1;
 	}
-}
-main {
-	padding-bottom: 60px;
 }
