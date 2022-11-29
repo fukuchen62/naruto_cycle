@@ -1,12 +1,17 @@
-@charset "utf-8";
 
+/* 横並び */
 .spot_list {
 	display: flex;
 	flex-wrap: wrap;
     justify-content: center;
 	gap: 32px;
+  margin: auto auto 64px auto;
 }
 
+/* お気に入りボタン位置修正 */
+.spot_like_icon{
+  margin: 30px auto auto 10px;
+}
 
 
 /* -----------デフォルトのカード表示の設定------------ */
@@ -38,11 +43,9 @@
 
 /* スポットのもっと見るボタンの設定----------- */
 .spot_more_btn {
-	margin: 32px auto 60px;
+	margin: 32px auto 60px auto;
 }
-section + section {
-	margin-top: 160px;
-}
+
 
 /* コース上スポット全体の表示設定 */
 .course_spot_cate_list {
