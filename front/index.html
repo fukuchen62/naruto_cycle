@@ -10,17 +10,18 @@
     <meta name="format-detection" content="telephone=no" />
     <title>なるとサイくるっと！</title>
     <!-- 外部css -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/wave.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/wave.css">
+
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- 全体用font↓ -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
     <!-- h1のfont↓ -->
 
     <!-- FontAwesome↓ -->
@@ -63,360 +64,120 @@
         </header>
         <!-- ヘッダー切り取りここまで -->
         <main class="main">
-            <div class="bg-slider">
-                <section class="key_visual">
-                    <!-- <div class="key_bg_movie"><img class="img" src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像"> -->
-                    <div class="key_top_container relative debug">
-                        <div class="key_msg_box">
-                            <h2 class="key_logo key_msg">
+
+            <div class="key_news_wrap relative">
+                <!----------------- section：キービジュアル ----------------->
+
+                <section class="index_key_visual relative">
+                    <!-- キービジュアル画像 -->
+                    <div class="key_img_box">
+                        <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像" class="key_img">
+                    </div>
+
+                    <!-- 装飾＞文字 -->
+                    <h2 class="key_msg">
                     RIDE ON <br>
                     THE UZU <br>
-                    WAVES!!</h2>
+                    WAVES!!
+                </h2>
+
+                    <!-- 装飾＞画像 -->
+                    <img class="key_man" src="./image/index_top_img.png" alt="サイクリングマン">
+                </section>
+
+                <!----------------- section：ニュース ----------------->
+
+                <section class="index_news flex">
+
+                    <div class="index_news_content flex">
+                        <!-- 見出し -->
+                        <h2 class="index_news_top headline">NEWS</h2>
+
+                        <!-- 記事ボックス -->
+                        <div class="index_news_article_box">
+
+                            <!-- 記事① -->
+                            <article class="index_news_article">
+                                <div class="index_news_meta flex">
+                                    <ul class="index_news_categories">
+                                        <li><a href="#">お知らせ</a></li>
+                                    </ul>
+                                    <time class="index_news_time" datetime="2019-00-00">
+                                        2022.00.00
+                                    </time>
+                                </div>
+                                <h3 class="index_news_title">
+                                    <a href="#">ここにタイトルが入りますここにタイトルが入ります</a>
+                                </h3>
+                            </article>
+
+                            <!-- 記事② -->
+                            <article class="index_news_article">
+                                <div class="index_news_meta flex">
+                                    <ul class="index_news_categories">
+                                        <li><a href="#">お知らせ</a></li>
+                                    </ul>
+                                    <time class="index_news_time" datetime="2019-00-00">
+                                        2022.00.00
+                                    </time>
+                                </div>
+                                <h3 class="index_news_title">
+                                                                <a href="#">ここにタイトルが入ります</a>
+                                                            </h3>
+                            </article>
+
                         </div>
-                        <!-- <img class="key_onpu" src="" alt=""> -->
-                        <!-- <div class="debug"> -->
-                        <img class="img key_man" src="./image/index_top_img.png" alt="サイクリングマン">
-                        <!-- </div> -->
+
                     </div>
+
+                    <!-- 記事一覧ボタン -->
+                    <div class="index_news_btn flex">
+                        <a href="news.html">
+                            <img src="./image/index_news_img.png" alt="ニュース一覧への矢印" class="news_btn_img">
+                            <div class="news_to_detail">一覧へ</div>
+                        </a>
+                    </div>
+
+                </section>
             </div>
+
+            <!----------------- section：ハウツー ----------------->
+
+            <section class="index_howto">
+
+                <!-- テキスト用ボックス -->
+                <div class="index_howto_txtbox">
+                    <!-- 見出し -->
+                    <h2 class="index_howto_top headline">
+                            <ruby>HOW TO<rt>鳴門のサイクリングについて</rt></ruby>
+                        </h2>
+
+                    <!-- キャプション -->
+                    <p class="index_howto_txt ">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+
+                    <!-- もっと読むボタン -->
+                    <div class="common_btn howto_top_btn">
+                        <a href="cycling.html">もっと読む→</a>
+                    </div>
+                </div>
+
+                <!-- 写真用ボックス -->
+                <div class="index_howto_imgbox">
+                    <img src="./image/index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="howto_img_1">
+                </div>
+
             </section>
+
+            <!----------------- section：コースマップ ----------------->
+            <!----------------- section：スポット一覧 ----------------->
+            <!----------------- section：インスタ ----------------->
+
     </div>
 
-    <!-- NEWSここから -->
-    <section class="news debug">
-        <div class="flex just_center gap32_16 align_items_c blue">
-            <h2 class="news_top headline  debug">NEWS</h2>
-            <div class="news_top_article column">
-                <ul class="news_top_list">
-                    <li class="news_top_item">
-                        <a href="#">
-                            <p class="date">2022.11.30</p>
-                            <p class="category"><span class="bg_blue white">お知らせ</span></p>
-                            <p class="title">周辺スポットを追加しました！</p>
-                        </a>
-                    </li>
-                    <li class="news_top_item">
-                        <a href="#">
-                            <p class="date">2022.11.30</p>
-                            <p class="category"><span class="bg_blue white">お知らせ</span></p>
-                            <p class="title">周辺スポットを追加しました！</p>
-                        </a>
-                    </li>
-                </ul>
-                <!-- <ul class="news_top_list debug">
-                <li class="news_top_item">
-                    <a href="">
-                        <p class="news_top_item_cate">コラム</p>
-                        <p class="news_top_item_date">2022.11.30</p>
-                        <p class="news_top_item_txt">周辺スポットを追加しました！</p>
-                    </a>
-                </li>
-                <li class="news_top_item">
-                    <a href="">
-                        <p class="news_top_item_cate">コラム</p>
-                        <p class="news_top_item_date">2022.11.30</p>
-                        <p class="news_top_item_txt">周辺スポットを追加しました！</p>
-                    </a>
-                </li>
-            </ul> -->
-                <div class="common_btn top_more_btn">
-                    <a href="news.html">一覧へ→
-                        <!-- <ul class="news_more_btn_inner">
-                        <li class="arrow_right">⇒</li>
-                        <li class="news_more">一覧へ</li>
-                    </ul> -->
-                        <!-- <div class="contents flex column bg_blue white debug">
-                        <i class="fa-sharp fa-solid fa-right">⇒</i>
-                        一覧へ
-                    </div> -->
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- HOWTOここから -->
-    <section class="howto">
-        <div class="howto_blue_container bg_blue debug">
-            <div class="howto_blue_box">
-                <h2 class="howto_top headline white debug"><ruby>HOW TO<rt>鳴門のサイクリングについて</rt></ruby></h2>
-                <p class="howto_top_txt white">
-                ここにテキストが入ります<br>
-                ここにテキストが入ります<br>
-                ここにテキストが入ります<br>
-                ここにテキストが入ります<br>
-                ここにテキストが入ります<br>
-                </p>
-
-
-                <div class="common_btn howto_top_btn">
-                    <a href="cycling.html">もっと読む→</a>
-                </div>
-                <img class="howto_top_img img" src="./image/index_about_img.jpg" alt="鳴門サイクリングの写真">
-            </div>
-    </section>
-
-    <!-- COURSEここから -->
-    <section class="course m_top160">
-        <h2 class="course_top headline"><ruby>COURSE<rt>サイクリングコース</rt></ruby></h2>
-        <div class="course_top_container">
-            <img class="img map_top_img" src="image/index_course_img.png" alt="サイクリングコースマップ">
-            <!-- サイクリングコース選択エリアのコンテナ -->
-            <div class="course_top_choice_container">
-                <div class="course_top_ribbon_box flex just_center">
-                    <h3 class="course_top_ribbon txt_c">コースを選ぶ</h3>
-                </div>
-                <ul class="course_top_choice_list flex just_center f_wrap white">
-                    <a href="">
-                        <li class="course_top_choice_btn bg_lightgreen">
-                            <p class="course_top_choice_cate">初心者コース</p>
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="course_top_choice_btn bg_orange">
-                            <p class="course_top_choice_cate">短距離コース</p>
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="course_top_choice_btn bg_vividblue">
-                            <p class="course_top_choice_cate">中距離コース</p>
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="course_top_choice_btn bg_red">
-                            <p class="course_top_choice_cate">長距離コース</p>
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </li>
-                    </a>
-
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- SPOTここから-->
-
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-
-        <defs>
-            <linearGradient id="gradient" x1="13%" y1="16%" x2="87%" y2="84%">
-                <stop offset="5%" stop-color="#d4ebec"></stop>
-                <stop offset="95%" stop-color="#d4ebec"></stop>
-            </linearGradient>
-        </defs>
-        <path d="M 0,400 C 0,400 0,100 0,100 C 179.86666666666667,117.6 359.73333333333335,135.2 538,129 C 716.2666666666667,122.8 892.9333333333334,92.8 1043,84 C 1193.0666666666666,75.2 1316.5333333333333,87.6 1440,100 C 1440,100 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-
-        <defs>
-            <linearGradient id="gradient" x1="13%" y1="16%" x2="87%" y2="84%">
-                <stop offset="5%" stop-color="#d4ebec"></stop>
-                <stop offset="95%" stop-color="#d4ebec"></stop>
-            </linearGradient>
-        </defs>
-        <path d="M 0,400 C 0,400 0,200 0,200 C 103.19999999999999,204.53333333333333 206.39999999999998,209.06666666666666 395,205 C 583.6,200.93333333333334 857.6000000000001,188.26666666666668 1046,186 C 1234.3999999999999,183.73333333333332 1337.1999999999998,191.86666666666667 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
-
-        <defs>
-            <linearGradient id="gradient" x1="13%" y1="16%" x2="87%" y2="84%">
-                <stop offset="5%" stop-color="#d4ebec"></stop>
-                <stop offset="95%" stop-color="#d4ebec"></stop>
-            </linearGradient>
-        </defs>
-        <path d="M 0,400 C 0,400 0,300 0,300 C 150.66666666666663,294.93333333333334 301.33333333333326,289.8666666666667 466,289 C 630.6666666666667,288.1333333333333 809.3333333333335,291.4666666666667 974,294 C 1138.6666666666665,296.5333333333333 1289.3333333333333,298.26666666666665 1440,300 C 1440,300 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
-    </svg>
-    <section class="spot">
-
-        <!-- 上下の境界線上に動く波を入れる -->
-
-
-        <!-- 動く波ここまで -->
-
-        <!-- 吹き出しPICKUP！文字 -->
-        <div class="pickup txt_c">＼PICK UP!／</div>
-        <!-- SPOT見出し -->
-        <h2 class="spot_top headline"><ruby>SPOT<rt>周辺スポット</rt></ruby></h2>
-        <!-- カード全てのコンテナ -->
-        <div class="card_container m_bottom40">
-
-            <!-- カード全体の入れ物 -->
-            <ul class="spot_list">
-                <ui class="card_container">
-                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                    <a href="spot.html">
-                        <!-- カード１枚の入れ物-->
-                        <li class="spot_item relative ">
-                            <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
-                            <!-- スポット写真 -->
-                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                            <!-- スポット名 -->
-                            <h3 class="spot_item_name">味処 あらし</h3>
-                            <!-- スポット情報の表 -->
-                            <dl class="spot_item_info flex">
-                                <dt>営業時間</dt>
-                                <dd>11:00～21:00</dd>
-                                <dt>住所</dt>
-                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                <dt>電話番号</dt>
-                                <dd">088-686-0005</dd>
-                            </dl>
-                        </li>
-                    </a>
-                </ui>
-                <ui class="card_container">
-                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                    <a href="spot.html">
-                        <!-- カード１枚の入れ物-->
-                        <li class="spot_item relative">
-                            <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
-                            <!-- スポット写真 -->
-                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                            <!-- スポット名 -->
-                            <h3 class="spot_item_name">味処 あらし</h3>
-                            <!-- スポット情報の表 -->
-                            <dl class="spot_item_info flex">
-                                <dt>営業時間</dt>
-                                <dd>11:00～21:00</dd>
-                                <dt>住所</dt>
-                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                <dt>電話番号</dt>
-                                <dd">088-686-0005</dd>
-                            </dl>
-                        </li>
-                    </a>
-                </ui>
-                <ui class="card_container">
-                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                    <a href="spot.html">
-                        <!-- カード１枚の入れ物-->
-                        <li class="spot_item relative">
-                            <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
-                            <!-- スポット写真 -->
-                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                            <!-- スポット名 -->
-                            <h3 class="spot_item_name">味処 あらし</h3>
-                            <!-- スポット情報の表 -->
-                            <dl class="spot_item_info flex">
-                                <dt>営業時間</dt>
-                                <dd>11:00～21:00</dd>
-                                <dt>住所</dt>
-                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                <dt>電話番号</dt>
-                                <dd">088-686-0005</dd>
-                            </dl>
-                        </li>
-                    </a>
-                </ui>
-            </ul>
-        </div>
-        <!-- スポットもっと見るボタン -->
-        <div class="common_btn">
-            <a class="spot_top_btn" href="search.html">スポット検索へ⇒</a>
-        </div>
-
-        <!-- 動く波の下部分 -->
-
-
-    </section>
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-
-        <defs>
-            <linearGradient id="gradient" x1="7%" y1="25%" x2="93%" y2="75%">
-                <stop offset="5%" stop-color="#d4ebec"></stop>
-                <stop offset="95%" stop-color="#d4ebec"></stop>
-            </linearGradient>
-        </defs>
-        <path d="M 0,400 C 0,400 0,100 0,100 C 122.17224880382778,112.18181818181819 244.34449760765557,124.36363636363636 325,126 C 405.65550239234443,127.63636363636364 444.7942583732057,118.72727272727272 526,103 C 607.2057416267943,87.27272727272728 730.4784688995217,64.72727272727272 834,67 C 937.5215311004783,69.27272727272728 1021.291866028708,96.36363636363636 1119,106 C 1216.708133971292,115.63636363636364 1328.354066985646,107.81818181818181 1440,100 C 1440,100 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
-
-        <defs>
-            <linearGradient id="gradient" x1="7%" y1="25%" x2="93%" y2="75%">
-                <stop offset="5%" stop-color="#d4ebec"></stop>
-                <stop offset="95%" stop-color="#d4ebec"></stop>
-            </linearGradient>
-        </defs>
-        <path d="M 0,400 C 0,400 0,200 0,200 C 98.01913875598089,202.87081339712918 196.03827751196178,205.74162679425837 293,201 C 389.9617224880382,196.25837320574163 485.86602870813397,183.9043062200957 571,177 C 656.133971291866,170.0956937799043 730.4976076555025,168.64114832535887 826,183 C 921.5023923444975,197.35885167464113 1038.1435406698565,227.5311004784689 1144,233 C 1249.8564593301435,238.4688995215311 1344.9282296650717,219.23444976076556 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-1" transform="rotate(-180 720 200)"></path>
-
-        <defs>
-            <linearGradient id="gradient" x1="7%" y1="25%" x2="93%" y2="75%">
-                <stop offset="5%" stop-color="#d4ebec"></stop>
-                <stop offset="95%" stop-color="#d4ebec"></stop>
-            </linearGradient>
-        </defs>
-        <path d="M 0,400 C 0,400 0,300 0,300 C 70.74641148325358,280.1913875598086 141.49282296650716,260.38277511961724 255,263 C 368.50717703349284,265.61722488038276 524.775119617225,290.6602870813397 622,304 C 719.224880382775,317.3397129186603 757.4066985645933,318.97607655502395 826,318 C 894.5933014354067,317.02392344497605 993.598086124402,313.4354066985646 1101,310 C 1208.401913875598,306.5645933014354 1324.200956937799,303.28229665071774 1440,300 C 1440,300 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 200)"></path>
-    </svg>
-
-    <!-- INSTAGRAMここから -->
-
-    <section class="insta m_top160">
-        <!-- アイコンフォントでインスタロゴ -->
-        <div class="txt_c">
-            <img class="insta_logo" src="./image/instagram_logo.png" alt="インスタグラムのロゴ">
-        </div>
-        <h2 class="insta_top headline"><ruby>INSTAGRAM<rt>公式インスタグラム</rt></ruby></h2>
-        <!-- モバイルで消える自転車のあしらい -->
-        <img src="image\index_insta_img.png" alt="装飾" class="index_insta_img img_pc_only">
-        <div class="insta_slide"><img class="img" src="https://placehold.jp/1440x250.png" alt="インスタスライドの仮画像"></div>
-    </section>
-    </main>
-
-    <!-- フッター切り取りここから -->
-
-    <footer class="footer bg_blue white txt_c debug">
-        <ul class="banner_list gap32_16">
-            <!-- asaなどのバナーがliで入ります -->
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-        </ul>
-        <nav class="fnav_container bg_blue debug">
-
-            <!-- フッターナビ -->
-            <!-- 近藤追加分 -->
-            <ul class="fnav">
-                <ul class="fnav_w_list">
-                    <li class="footer_headline"><a href="news.html">ニュース</a>
-                        <ul class="footer_list">
-                            <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
-                            <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
-                        </ul>
-                    </li>
-                    <li class="footer_headline "><a href="course.html">サイクリングコース</a>
-                        <ul class="footer_list">
-                            <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
-                            <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
-                            <li class="footer_nav_item"><a href=".html">中距離コース</a></li>
-                            <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
-                        </ul>
-                    </li>
-                    <li class="footer_headline"><a href=".html">周辺スポット検索</a>
-                        <ul class="footer_list">
-                            <li class="footer_nav_item"><a href=".html">食べる</a></li>
-                            <li class="footer_nav_item"><a href=".html">見る</a></li>
-                            <li class="footer_nav_item"><a href=".html">買う</a></li>
-                            <li class="footer_nav_item"><a href=".html">楽しむ</a></li>
-                            <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
-                        </ul>
-                    </li>
-                    <li class="footer_headline">その他
-                        <ul class="footer_list">
-                            <li class="footer_nav_item bold"><a href="question.html">Q＆A・その他</a></li>
-                            <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
-                            <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
-                            <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- 追加分ここまで -->
-
-                <div class="sns_container flex gap32_16">
-                    <!-- twitter -->
-                    <a href=""><img class="sns_icon" src="./image/Twitter social icons - circle - blue.png" alt="ツイッターアイコン"></a>
-                    <!-- facebook -->
-                    <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
-                </div>
-                <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
-    </footer>
     <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
     <script src="js/jquery.bgswitcher.js"></script>
     <script src="js/bgswitcher.js"></script>
     </div>
