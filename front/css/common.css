@@ -319,7 +319,6 @@ body {
 
 /* カード一覧の設定 */
 .spot_list {
-	display: flex;
 	flex-wrap: wrap;
 	gap: 32px;
 }
