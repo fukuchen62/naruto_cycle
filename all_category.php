@@ -5,6 +5,10 @@ Template Name: 全記事一覧テスト
 ?>
 
 <?php get_header(); ?>
+
+<!-- パンくず -->
+<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
+
 <h2><?php the_title(); ?></h2>
 <?php
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;

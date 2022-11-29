@@ -43,6 +43,17 @@ function naruto_cycle_pre_get_posts($query)
 }
 add_action('pre_get_posts', 'naruto_cycle_pre_get_posts');
 
+//記事ランダム表示
+function sortpost_rand($query)
+{
+    if (is_admin() || !$query->is_post_type_archive()) {
+        return;
+    }
+    $query->set('orderby', 'rand');
+}
+add_action('pre_get_posts', 'sortpost_rand');
+
+
 add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
 function add_common_stylesheet_script()
 {
