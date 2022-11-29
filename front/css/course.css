@@ -3,16 +3,6 @@
 	font-family: "Noto Sans JP";
 	font-size: 16px;
 }
-.headline {
-	font-size: 48px;
-	font-weight: bold;
-	text-align: center;
-}
-.headline rt {
-	font-size: 16px;
-	font-weight: normal;
-	text-align: center;
-}
 
 /*------------------- コース選択時ボタンの設定----------- */
 .course_nav_list {
@@ -318,7 +308,7 @@
 	bottom: 8px;
 	font-size: 12px;
 }
-/* ----------------------------------------- */
+/* 周辺スポットのCSS----------------------------------------- */
 
 /* コース上スポット全体の表示設定 */
 .course_spot_cate_list {
@@ -423,7 +413,7 @@
 	gap: 32px;
 }
 
-/* デフォルトのカード表示の設定 */
+/* -----------デフォルトのカード表示の設定------------ */
 /* スマートフォンの場合は3件表示 */
 
 .card_container:nth-child(n + 4) {
@@ -448,7 +438,7 @@
 	}
 }
 
-/* スポットのもっと見るボタンの設定 */
+/* スポットのもっと見るボタンの設定----------- */
 .spot_more_btn {
 	margin: 32px auto 60px;
 }
