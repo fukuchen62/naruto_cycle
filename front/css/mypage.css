@@ -17,7 +17,7 @@ section {
 
 .mypage_h3 {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0 auto 32px;
     text-align: center;
 }
@@ -32,7 +32,7 @@ section {
     margin-top: 32px;
     padding: 20px;
     margin: 0 auto;
-    border: solid 1px #EF6000;
+    border: dashed 2px #EF6000;
     background-color: rgba(255, 255, 252, 0.5);
     border-radius: 3px;
 }
@@ -77,18 +77,24 @@ section {
 }
 
 .mypage_spot_list {
-    display: flex;
+
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 32px 32px;
-    margin: 0 auto;
+    margin: 0 auto; */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
 }
 
-.mypage_spot_list::after {
+/* .mypage_spot_list::after {
     display: block;
     content: "";
-    width: 320px;
-}
+    width: 640px;
+} */
 
 /* スポットのもっと見るボタンの設定 */
 .spot_more_btn {

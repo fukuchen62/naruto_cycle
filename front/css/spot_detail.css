@@ -4,7 +4,7 @@
     font-size: 16px;
     margin: 12px auto auto auto;
   }
-  
+
   /* ページタイトル */
   .search_title{
     font-family: 'Noto Sans JP';
@@ -12,7 +12,7 @@
     font-size: 48px;
     margin: auto auto 20px auto;
   }
-  
+
   /* 真ん中にする */
   .wrap_search_container{
     text-align: center;
@@ -31,68 +31,97 @@
   }
 
 
-/* アクティブな画像の枠線を変更 */
-.sub-img li.current img {
-    border: 1px solid red;
-    transition: border .5s;
-  }
   /* 画像レイアウトのためのスタイル */
   .container {
-    margin: 50px auto 0;
+    /* margin: 20px auto 5px 0; */
     max-width: 500px;
   }
-  .main-img {
-    width: 280px;
-    height: 199px;
-    margin: auto;
-  }
-  .main-img img {
-    height: auto;
-    width: 100%;
-  }
-  .sub-img {
-    display: flex;
-    margin-top: 10px;
-  }
-  .sub-img li {
-    margin-right: 2%;
-    width: calc(96% / 3);
-  }
-  .sub-img li:nth-child(3n) {
-    margin-right: 0;
-  }
-  .sub-img li img {
-    border: 2px solid transparent;
-    transition: border .5s;
-  }
-  .sub-img img {
-    cursor: pointer;
-    width: 100%;
+
+
+  /* メイン画像 */
+  .main-img{
+    margin: 12px auto 5px auto;
   }
 
+/* サムネイル画像 */
+  .sub-img{
+    display: flex;
+    justify-content: center;
+
+  }
+  .current{
+    margin: auto 5px 16px 0px;
+  }
+  .current:last-of-type{
+    margin: 0px;
+  }
+
+  /* 詳細 */
+  .spot_date{
+    align-items: left;
+    margin: auto;
+    width: 281px;
+  }
+  /* 施設名 */
 .spot_name{
     font-size: 32px;
     text-align: left;
+    font-weight:bold;
 }
-
-.info_item{
-    margin: 8px 19px ;
-    text-align: left;
-}
-
-.info_item p{
-    text-align: right;
+/* 施設説明 */
+.spot_text{
+  text-align: left;
+  margin: 8px auto 20px auto;
 }
 
 /* テーブル */
 .info_item{
-    border-spacing: 8px;
-    margin: 20px;
+  border-spacing: 8px;
+    margin: auto -6px ;
+    text-align: left;
+    border-collapse: separate;
+  border-spacing: 8px;
 }
 
+/* フォント変更 */
 th{
-    font-weight: normal;
-    margin: 8px auto;
+      font-weight: normal;
+}
+td{
+  white-space: nowrap;
 }
 
+/* SNS */
+.spot_icon{
+  display: flex;
+gap: 8px 20px; /* 余白 */
+}
 
+.info_remark{
+  margin: 8px;
+}
+/* 施設サービスアイコン */
+.spot_date_icon{
+  display: flex;
+    flex-wrap: wrap;
+gap:20px; /* 余白 */
+margin: auto auto 32px auto;
+}
+
+/* タグ */
+.spot_typetag{
+  display: inline;
+  font-weight: bold;
+}
+span{
+  background-color: #D4EBEC;
+}
+
+/* コースの案内 */
+.spot_apply{
+  font-weight: bold;
+  margin: 32px auto 22px auto;
+border-bottom: 5px dashed #74C7F0;
+width: 200px;
+white-space: nowrap
+}
