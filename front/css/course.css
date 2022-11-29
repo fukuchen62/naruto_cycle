@@ -35,19 +35,23 @@
 	box-sizing: border-box;
 	cursor: pointer;
 }
+
 /* コースのボタンごとに異なる設定 */
 .beginner {
 	background-color: #96c85c;
 	border: solid 4px #96c85c;
 }
+
 .short {
 	background-color: #ef6000;
 	border: solid 4px #ef6000;
 }
+
 .middle {
 	background-color: #0018ef;
 	border: solid 4px #0018ef;
 }
+
 .long {
 	background-color: #f00000;
 	border: solid 4px #f00000;
@@ -61,6 +65,7 @@
 	width: 100%;
 	pointer-events: none;
 }
+
 /*------------------- 地図のサイズの設定---- */
 .iframe_wrapper {
 	position: relative;
@@ -71,6 +76,7 @@
 	margin-right: auto;
 	margin-bottom: 40px;
 }
+
 .iframe_wrapper iframe {
 	position: absolute;
 	top: 0;
@@ -78,12 +84,12 @@
 	width: 100%;
 	height: 100%;
 }
+
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {
-}
+@media screen and (min-width: 599px) {}
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
 
 /* 地図上アイコンの説明 */
 .icon_list_wrap {
@@ -96,6 +102,7 @@
 	margin-right: auto;
 	margin-bottom: 40px;
 }
+
 .icon_list {
 	width: 320px;
 	margin: auto;
@@ -103,24 +110,28 @@
 	flex-wrap: wrap;
 	row-gap: 8px;
 }
+
 @media screen and (min-width: 599px) {
 	.icon_list {
 		width: auto;
 		gap: 8px;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.icon_list {
 		width: auto;
 		gap: 8px;
 	}
 }
+
 .icon {
 	width: 50%;
 	height: 40px;
 	text-align: left;
 	line-height: 40px;
 }
+
 @media screen and (min-width: 599px) {
 	.icon {
 		margin: 8px;
@@ -128,6 +139,7 @@
 		text-align: center;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.icon {
 		margin: 8px;
@@ -150,6 +162,7 @@
 	margin: auto;
 	transition: 0.25s;
 }
+
 .dl-btn:hover {
 	transform: translate3d(8px, 8px, 0);
 	box-shadow: none;
@@ -165,6 +178,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
 @media screen and (min-width: 1024px) {
 	.info_wrap {
 		padding-top: 48px;
@@ -172,6 +186,7 @@
 		width: 1024px;
 	}
 }
+
 /* 後ろの茶色の装飾 */
 .info_bg_deco {
 	background-color: #e1d6b8;
@@ -180,6 +195,7 @@
 	right: 0;
 	transform: rotateZ(3deg);
 }
+
 /* 前の白い部分 */
 .info_main {
 	background-color: #fff;
@@ -195,6 +211,7 @@
 .circle {
 	display: none;
 }
+
 @media screen and (min-width: 1024px) {
 	.circle {
 		display: inline-block;
@@ -205,26 +222,33 @@
 		height: 760px;
 		border-radius: 50%;
 	}
+
 	.inner {
 		/* 文字を配置する起点となる親要素 */
 		position: relative;
-		width: 104px; /* この親要素自体は1文字が収まる程度の小さいサイズ */
+		width: 104px;
+		/* この親要素自体は1文字が収まる程度の小さいサイズ */
 		height: 104px;
 		border-radius: 50%;
-		animation: rotateAnim 15s linear infinite; /* 円形テキストを回転 */
+		animation: rotateAnim 15s linear infinite;
+		/* 円形テキストを回転 */
 		z-index: -1;
 	}
+
 	@keyframes rotateAnim {
 		0% {
 			transform: rotate(0deg);
 		}
+
 		50% {
 			transform: rotate(180deg);
 		}
+
 		100% {
 			transform: rotate(360deg);
 		}
 	}
+
 	/* テキストの設定 */
 	.info_cycle_deco {
 		position: absolute;
@@ -237,12 +261,15 @@
 		color: #f3f0e8;
 	}
 }
+
 .course_info_pic_woman {
 	display: none;
 }
+
 .course_info_pic_man {
 	display: none;
 }
+
 @media screen and (min-width: 1024px) {
 	.course_info_pic_woman {
 		display: inline-block;
@@ -250,6 +277,7 @@
 		right: 0;
 		top: -20px;
 	}
+
 	.course_info_pic_man {
 		display: inline-block;
 		position: absolute;
@@ -265,6 +293,7 @@
 	left: 40px;
 	transform: rotateZ(-15deg);
 }
+
 /* テキストが入る部分の設定 */
 .info_content {
 	width: 250px;
@@ -275,6 +304,7 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
 /* 真ん中に入る青い縦線の装飾 */
 @media screen and (min-width: 1024px) {
 	.info_list:before {
@@ -310,6 +340,7 @@
 	bottom: 8px;
 	font-size: 12px;
 }
+
 /* 周辺スポットのCSS----------------------------------------- */
 
 /* コース上スポット全体の表示設定 */
@@ -318,12 +349,14 @@
 	margin-right: auto;
 	width: 320px;
 }
+
 /* タブレット時2カラムにする場合 */
 @media screen and (min-width: 671px) {
 	.course_spot_cate_list {
 		width: 672px;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.course_spot_cate_list {
 		width: 1024px;
@@ -346,6 +379,7 @@
 	left: 50%;
 	transform: translate(-50%);
 }
+
 /* 装飾の設定 */
 .course_spot_cate_headline:before {
 	content: "";
@@ -355,6 +389,7 @@
 	position: absolute;
 	left: 0;
 }
+
 .course_spot_cate_headline:after {
 	content: "";
 	display: inline-block;
@@ -369,9 +404,11 @@
 .eat {
 	border: solid 1px #fdacac;
 }
+
 .eat:before {
 	background: #fdacac;
 }
+
 .eat:after {
 	background: #fdacac;
 }
@@ -380,9 +417,11 @@
 .enjoy {
 	border: solid 1px #ffe55b;
 }
+
 .enjoy:before {
 	background: #ffe55b;
 }
+
 .enjoy:after {
 	background: #ffe55b;
 }
@@ -391,9 +430,11 @@
 .shopping {
 	border: solid 1px #c0db8c;
 }
+
 .shopping:before {
 	background: #c0db8c;
 }
+
 .shopping:after {
 	background: #c0db8c;
 }
@@ -402,17 +443,13 @@
 .cyclespot {
 	border: solid 1px #d391f2;
 }
+
 .cyclespot:before {
 	background: #d391f2;
 }
+
 .cyclespot:after {
 	background: #d391f2;
-}
-
-.spot_list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 32px;
 }
 
 /* -----------デフォルトのカード表示の設定------------ */
@@ -421,20 +458,24 @@
 .card_container:nth-child(n + 4) {
 	display: none;
 }
+
 /* タブレットの場合は4件表示 */
 @media screen and (min-width: 671px) {
 	.card_container:nth-child(n + 4) {
 		display: inline-block;
 	}
+
 	.card_container:nth-child(n + 5) {
 		display: none;
 	}
 }
+
 /* PCの場合は6件表示 */
 @media screen and (min-width: 1024px) {
 	.card_container:nth-child(n + 5) {
 		display: inline-block;
 	}
+
 	.card_container:nth-child(n + 7) {
 		display: none;
 	}
@@ -444,6 +485,7 @@
 .spot_more_btn {
 	margin: 32px auto 60px;
 }
-section + section {
+
+section+section {
 	margin-top: 160px;
 }

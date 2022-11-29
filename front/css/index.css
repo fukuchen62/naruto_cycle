@@ -417,13 +417,18 @@ main {}
 }
 
 /* ---------------section：スポット---------------  */
-.spot {
+.index_spot {
     background-color: #D4EBEC;
 }
 
-/* ---------------波アニメーション---------------  */
-/* ここに動く波の上部が入ります */
+.index_spot_deco {
+    font-size: 32px;
+    font-weight: 900;
+    color: #EF6000;
+    text-align: center;
+}
 
+/* ---------------波アニメーション---------------  */
 /* 動かない波の仕切り */
 .container {
     position: relative;
@@ -463,12 +468,7 @@ main {}
     top: 40%;
 }
 
-/* PICK UPの文字あしらい */
-.pickup {
-    color: #EF6000;
-    font-size: 32px;
-    font-weight: bold;
-}
+
 
 
 /* ---------------section：インスタグラム---------------  */
