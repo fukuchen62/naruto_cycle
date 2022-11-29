@@ -104,9 +104,9 @@ section {
 /*-----------------------カード表示の設定----------------------- */
 /* スマートフォンの場合は3件表示 */
 
-.card_container {
+/* .card_container {
     margin: 0 auto;
-}
+} */
 
 .card_container:nth-child(n + 4) {
     display: none;
