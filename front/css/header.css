@@ -1,20 +1,22 @@
 /* ヘッダー */
-.header {}
+/* .header {} */
+
+/* ヘッダーのJS用 */
+.header.change-color {
+    /* スクロールしたあとのヘッダー背景色 */
+    background-color: #005EA7;
+    /* スクロールしたあとの文字の色 */
+    color: #fff;
+    transition: 0.3s;
+}
 
 /* ヘッダーのロゴ */
-.header_logo {}
+/* .header_logo {} */
 
 /* ヘッダーのグローバルナビ */
-.gnav {}
+/* .gnav {} */
 
 /* ヘッダーの設定 */
-/* headerの設定 */
-.header {
-    /* align-items: center; */
-    /* background-color: transparent; */
-    /* height: 50px; */
-    /* padding: 20px; */
-}
 
 /* ヘッダーロゴの設定 */
 /* サイズはwidthを大きくするほどサイズも大きくできる */
