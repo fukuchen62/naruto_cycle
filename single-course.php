@@ -5,17 +5,13 @@
 <h2>コース紹介</h2>
 <h1>COURSE</h1>
 
-
-
 <!-- ワードプレスループ始まり -->
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
-<!--
-        <h2><?php the_title(); ?></h2>
+<!-- コースIDを取得 -->
+<?php $cid = get_the_ID(); ?>
 
-        <?php the_content(); ?> -->
 <?php the_field('map'); ?>
-
 <h３>コース情報</h３>
 <h2>INFOMATION</h2>
 <article id="<?php the_ID(); ?>">
@@ -35,14 +31,33 @@
 <?php endwhile; ?>
 <?php endif; ?>
 
-
+<h3>食べる</h3>
 <?php
 $args = array(
     'post_type' => 'shop', //カスタム投稿タイプを指定
-    'taxonomy' => 'cafe', //カスタムタクソノミーを指定
     'posts_per_page' => -1, //表示する記事数
 );
+$taxquerysp = array('relation' => 'AND ');
+$taxquerysp[] = array(
+    'taxonomy' => 'shop_type',
+    'terms' => array('eat'),
+    'field' => 'slug',
+);
+
+$metaquerysp = array('relation' => 'AND ');
+$metaquerysp[] = array(
+    'key' => 'course_id',
+    'value' => $cid,
+    'compare' => 'LIKE',
+);
+
+$args['tax_query'] = $taxquerysp;
+$args['meta_query'] = $metaquerysp;
+
+print_r($args);
+
 $spot_query = new WP_Query($args); //サブループを変数に格納
+
 if ($spot_query->have_posts()) :
     while ($spot_query->have_posts()) :
         $spot_query->the_post();
