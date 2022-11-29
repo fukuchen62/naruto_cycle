@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
+.m_8 {
+	margin: 8px;
+}
+
 /* 全体の設定 */
+/* この中の物はラップで折り返す */
 .news_detail_container {
 	width: 320px;
 	margin-left: auto;
@@ -8,16 +13,19 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+
 @media screen and (min-width: 599px) {
 	.news_detail_container {
 		width: 600px;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.news_detail_container {
 		width: 1024px;
 	}
 }
+
 /* 記事全体の設定（画面左側） */
 .news_detail_article {
 	width: 100%;
@@ -26,11 +34,15 @@
 	background-color: #fffffc;
 	margin-bottom: 80px;
 }
+
 @media screen and (min-width: 599px) {
 	.news_detail_article {
 		width: 600px;
+		flex-direction: column;
+		align-items: center;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.news_detail_article {
 		width: 804px;
@@ -67,12 +79,14 @@
 	height: 220px;
 	object-fit: cover;
 }
+
 @media screen and (min-width: 599px) {
 	.article_body img {
 		width: 560px;
 		height: 294px;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.article_body img {
 		width: 764px;
@@ -80,24 +94,17 @@
 	}
 }
 
-/* 記事下部の別ページへのリンク */
-.post_links {
-	margin-top: 32px;
-}
-.post_link {
-	width: 50%;
-}
-.post_link_prev {
-	text-align: left;
-}
-.post_link_next {
-	text-align: right;
+.news_more_btn {
+	width: 125px;
+	object-fit: cover;
+	margin-top: 16px;
 }
 
 /* アーカイブ部分の設定 */
 .news_detail_archive_wrap {
 	width: 320px;
 }
+
 @media screen and (min-width: 599px) {
 	.news_detail_archive_wrap {
 		width: 600px;
@@ -106,6 +113,7 @@
 		align-items: flex-start;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.news_detail_archive_wrap {
 		display: inline-block;
@@ -119,6 +127,7 @@
 	border: solid 1px #74c7f0;
 	margin-bottom: 24px;
 }
+
 @media screen and (min-width: 599px) {
 	.news_detail_archive {
 		height: auto;
@@ -126,6 +135,7 @@
 		margin-bottom: 40px;
 	}
 }
+
 @media screen and (min-width: 1024px) {
 	.news_detail_archive {
 		width: auto;
@@ -140,14 +150,17 @@
 	background-color: #d4ebec;
 	padding-left: 10px;
 }
+
 .news_detail_archive_list li {
 	height: 40px;
 	line-height: 40px;
 	padding-left: 10px;
 }
+
 .news_detail_archive_list li:nth-child(even) {
 	background-color: #d4ebec;
 }
+
 .news_detail_archive_list li:nth-child(odd) {
 	background-color: #fff;
 }
@@ -157,9 +170,11 @@
 	position: relative;
 	padding-bottom: 60px;
 }
+
 .news_bottom_img {
 	display: none;
 }
+
 @media screen and (min-width: 1024px) {
 	.news_bottom_img {
 		display: block;
