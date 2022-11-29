@@ -11,13 +11,13 @@ body {
 }
 
 /* ページタイトルの日本語ルビ */
-.search_title_jp{
+h2.search_title_jp{
   font-size: 16px;
   margin: 12px auto auto auto;
 }
 
 /* ページタイトル */
-.search_title{
+h2.search_title{
   font-family: 'Noto Sans JP';
   font-weight: bold;
   font-size: 48px;
@@ -166,7 +166,10 @@ line-height: 70px;
 }
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
-
+  /* パンくずリスト */
+.bradcrumbs{
+  margin: 8px auto 94px auto;
+}
 
 /* ページタイトルの日本語ルビ */
 .search_title_jp{
@@ -279,12 +282,20 @@ margin: 0px 40px;
     -ms-transform: translateX(-50%);
 }
 
-.spot_item_wrap{
+/* カード位置 */
+/* .spot_item_wrap{ */
+  .spot_list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px 32px;
-    margin: auto;
-    text-align: center;
+    margin: auto auto 160px auto;
+    text-align: left;
 }
+/* お気に入りボタン位置修正 */
+.spot_like_icon{
+  margin: 30px auto auto 10px;
+
+}
+
 }

@@ -6,310 +6,430 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <title>search</title>
-  <link rel="stylesheet" href="css\reset.css">
-  <link rel="stylesheet" href="css\common.css">
-  <link rel="stylesheet" href="css\mypage.css">
-  <link rel="stylesheet" href="css\search.css">
+  <title>なるとサイくるっと！</title>
+  <!-- 外部CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/search.css">
+  <!-- googlefont本体ここから2行 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+  <!-- 全体用font↓ -->
+
+  <!-- h1のfont↓ -->
+
+  <!-- FontAwesome↓ -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
+  <!-- jQuery本体↓ -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- ファビコン↓() -->
 </head>
 <body>
+  <header class="header flex">
+    <h1 class="header_logo"><a href="#"><img class="img" src="https://placehold.jp/320x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+    <nav>
+      <ul class="menu">
+        <li class="menu-list font_edge_white">
+          <a href="news.html">NEWS</a>
+        </li>
+        <li class="menu-list font_edge_white">
+          <a href="howto.html">HOWTO</a>
+        </li>
+        <li class="menu-list font_edge_white">
+          <a href="course.html">COURSE</a>
+        </li>
+        <li class="menu-list font_edge_white">
+          <a href="spot.html">SPOT</a>
+        </li>
+        <li class="menu-list font_edge_white">
+          <a href="mypage.html">MYPAGE</a>
+        </li>
+        <li class="menu-list font_edge_white">
+          <a href="question.html">Q&A</a>
+        </li>
+      </ul>
+      <button type="button" class="btn js-btn">
+        <span class="btn-line"></span>
+      </button>
+    </nav>
+  </header>
+  <!-- ヘッダー切り取りここまで -->
+  <main>
+    <!-- キービジュアル -->
+    <div class="key_bg_under">
+      <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+    </div>
 
-  <div class="wrap">
+    <!-- パンくずリスト -->
+    <div class="bradcrumbs">
+      ここに＞パンくずリストが＞入ります
+    </div>
+    <div class="wrap">
 
-    <!-- ページタイトル -->
-    <h2><div class="search_title_jp">スポットを探す</div>
-    <div class="search_title">SEARCH</div></h2>
-    <div class="wrap_search_container">
+      <!-- ページタイトル -->
+      <h2 class="search_title_jp">スポットを探す</h2>
+      <h2 class="search_title">SEARCH</h2>
+      <div class="wrap_search_container">
+        <!-- 検索ボックス -->
+        <div class="search_container">
+          <!-- 自転車のあしらい -->
+          <img src="image/index_insta_img.png" alt="装飾" class="index_insta_img img_pc_only">
+          <!-- ｈ３検索カテゴリ -->
+          <div class="search_cate_box">
+            <h3 class="search_cate">コース</h3>
+            <!-- チェックボックス -->
+            <div class="radio-box">
+              <!-- 初心者コース -->
+              <ul class="item_box">
+                <li class="choice_item">
+                  <input type="checkbox" name="spot_type[]" value="beginner" id="beginner" class="checkbox_list">
+                  <label for="beginner" class="s-search-btn">初心者</label>
+                </li>
+              </ul>
+
+              <!-- 短距離コース -->
+              <ul class="item_box">
+                <li class="choice_item">
+                  <input type="checkbox" name="spot_type[]" value="short" id="short" class="checkbox_list">
+                  <label for="short" class="s-search-btn">
+                    短距離</label>
+                </li>
+              </ul>
+              <!-- 中距離 -->
+              <ul class="item_box">
+                <li class="choice_item">
+                  <input type="checkbox" name="spot_type[]" value="medium" id="medium" class="checkbox_list">
+                  <label for="medium" class="s-search-btn">中距離</label>
+                </li>
+              </ul>
+              <!-- 長距離 -->
+              <ul class="item_box">
+                <li class="choice_item">
+                  <input type="checkbox" name="spot_type[]" value="long" id="long" class="checkbox_list">
+                  <label for="long" class="s-search-btn">長距離</label>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 検索タイトル -->
+            <div class="search_cate_box">
+              <h3 class="search_cate">食べる</h3>
+              <ul class="radio-box">
+                <li>
+                  <!-- カフェ -->
+                  <ul class="item_box">
+                    <li class="choice_item"><input type="checkbox" name="spot_type[]" value="cafe" id="cafe" class="checkbox_list">
+                      <label for="cafe" class="s-search-btn">カフェ</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- レストラン -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="restaurant" id="restaurant" class="checkbox_list">
+                      <label for="restaurant" class="s-search-btn">レストラン</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- 食堂 -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="dining" id="dining" class="checkbox_list">
+                      <label for="dining" class="s-search-btn">食堂</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- ラーメン -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="ramen" id="ramen" class="checkbox_list">
+                      <label for="ramen" class="s-search-btn">ラーメン</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 検索タイトル -->
+            <div class="search_cate_box">
+              <h3 class="search_cate">買う</h3>
+              <ul class="radio-box">
+                <li>
+                  <!-- お土産 -->
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="souvenir" id="souvenir" class="checkbox_list">
+                      <label for="souvenir" class="s-search-btn">お土産</label>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- 道の駅 -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="roadsidestation" id="roadsidestation" class="checkbox_list">
+                      <label for="roadsidestation" class="s-search-btn">道の駅</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 検索タイトル -->
+            <div class="search_cate_box">
+              <h3 class="search_cate">楽しむ</h3>
+              <ul class="radio-box">
+                <li>
+                  <!-- 歴史・文化 -->
+                  <ul class="item_box">
+                    <li class="choice_item"><input type="checkbox" name="spot_type[]" value="history" id="history" class="checkbox_list">
+                      <label for="history" class="s-search-btn">歴史・文化</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- 体験 -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="experience" id="experience" class="checkbox_list">
+                      <label for="experience" class="s-search-btn">体験</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- ホテル・温泉 -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="hotel" id="hotel" class="checkbox_list">
+                      <label for="hotel" class="s-search-btn">ホテル・温泉</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- ビュースポット -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="vie-spot" id="vie-spot" class="checkbox_list">
+                      <label for="vie-spot" class="s-search-btn">ビュースポット</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 検索タイトル -->
+            <div class="search_cate_box">
+              <h3 class="search_cate">サイクルスポット</h3>
+              <ul class="radio-box">
+                <li>
+                  <!-- レンタルショップ -->
+                  <ul class="item_box">
+                    <li class="choice_item"><input type="checkbox" name="spot_type[]" value="rental" id="rental" class="checkbox_list">
+                      <label for="rental" class="s-search-btn">レンタルショップ</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- サイクルショップ -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="bicycle" id="bicycle" class="checkbox_list">
+                      <label for="bicycle" class="s-search-btn">サイクルショップ</label>
+                    </li>
+                  </ul>
+                </li>
+                <!-- サイクルビット -->
+                <li>
+                  <ul class="item_box">
+                    <li class="choice_item">
+                      <input type="checkbox" name="spot_type[]" value="cyclebit" id="cyclebit" class="checkbox_list">
+                      <label for="cyclebit" class="s-search-btn">サイクルビット</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
 
 
-      <!-- 検索ボックス -->
-      <div class="search_container">
-        <!-- 自転車のあしらい -->
-        <img src="image\index_insta_img.png" alt="装飾" class="index_insta_img img_pc_only">
-        <!-- ｈ３検索カテゴリ -->
-        <div class="search_cate_box">
-          <h3 class="search_cate">コース</h3>
-          <!-- チェックボックス -->
-          <ul class="radio-box">
-            <!-- 初心者コース -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="beginner" id="beginner" class="checkbox_list">
-                <label for="beginner" class="s-search-btn">初心者</label>
-              </li>
-            </ul>
+            <!-- 検索ボタン -->
+            <div class="btn-inner-box radio-box">
+              <ul class="btn-inner">
+                <!-- ボタン内文字変更-->
+                <!-- <input type="submit" value="検索" id="search-btn"> -->
+                <li class="search-btn">検索</li>
+              </ul>
 
-            <!-- 短距離コース -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="short" id="short" class="checkbox_list">
-                <label for="short" class="s-search-btn">
-                  短距離</label>
-              </li>
-            </ul>
-            <!-- 中距離 -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="medium" id="medium" class="checkbox_list">
-                <label for="medium" class="s-search-btn">中距離</label>
-              </li>
-            </ul>
-            <!-- 長距離 -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="long" id="long" class="checkbox_list">
-                <label for="long" class="s-search-btn">長距離</label>
-              </li>
-            </ul>
+              <!-- リセットボタン -->
+              <ul class="btn-inner">
+                <!-- <input type="checkbox" value="リセット" id="reset-btn"><label for="reset-btn" class="reset-btn">リセット</label> -->
+                <li class="search-btn">リセット</li>
+              </ul>
+            </div>
+          </div>
+          <!-- PC表示の人のあしらい１ -->
+          <img src="image/search_form_img1.png" alt="装飾" class="search_img1_pc img_pc_only">
+          <!-- PC表示の人のあしらい２ -->
+          <img src="image/search_form_img2.png" alt="装飾" class="search_img2_pc img_pc_only">
         </div>
-        </ul>
-        <!-- 検索タイトル -->
-        <div class="search_cate_box">
-          <h3 class="search_cate">食べる</h3>
-          <ul class="radio-box">
-            <!-- カフェ -->
-            <ul class="item_box">
-              <li class="choice_item"><input type="checkbox" name="spot_type[]" value="cafe" id="cafe" class="checkbox_list">
-                <label for="cafe" class="s-search-btn">カフェ</label>
-              </li>
-            </ul>
-            <!-- レストラン -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="restaurant" id="restaurant" class="checkbox_list">
-                <label for="restaurant" class="s-search-btn">レストラン</label>
-              </li>
-            </ul>
-            <!-- 食堂 -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="dining" id="dining" class="checkbox_list">
-                <label for="dining" class="s-search-btn">食堂</label>
-              </li>
-            </ul>
-            <!-- ラーメン -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="ramen" id="ramen" class="checkbox_list">
-                <label for="ramen" class="s-search-btn">ラーメン</label>
-              </li>
-            </ul>
-        </div>
-        </ul>
-        <!-- 検索タイトル -->
-        <div class="search_cate_box">
-          <h3 class="search_cate">買う</h3>
-          <ul class="radio-box">
-            <!-- お土産 -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="souvenir" id="souvenir" class="checkbox_list">
-                <label for="souvenir" class="s-search-btn">お土産</label>
-              </li>
-            </ul>
 
-            <!-- 道の駅 -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="roadsidestation" id="roadsidestation" class="checkbox_list">
-                <label for="roadsidestation" class="s-search-btn">道の駅</label>
-              </li>
-            </ul>
-        </div>
-        </ul>
-        <!-- 検索タイトル -->
-        <div class="search_cate_box">
-          <h3 class="search_cate">楽しむ</h3>
-          <ul class="radio-box">
-            <!-- 歴史・文化 -->
-            <ul class="item_box">
-              <li class="choice_item"><input type="checkbox" name="spot_type[]" value="history" id="history" class="checkbox_list">
-                <label for="history" class="s-search-btn">歴史・文化</label>
-              </li>
-            </ul>
-            <!-- 体験 -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="experience" id="experience" class="checkbox_list">
-                <label for="experience" class="s-search-btn">体験</label>
-              </li>
-            </ul>
-            <!-- ホテル・温泉 -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="hotel" id="hotel" class="checkbox_list">
-                <label for="hotel" class="s-search-btn">ホテル・温泉</label>
-              </li>
-            </ul>
-            <!-- ビュースポット -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="vie-spot" id="vie-spot" class="checkbox_list">
-                <label for="vie-spot" class="s-search-btn">ビュースポット</label>
-              </li>
-            </ul>
-        </div>
-        </ul>
-        <!-- 検索タイトル -->
-        <div class="search_cate_box">
-          <h3 class="search_cate">サイクルスポット</h3>
-          <ul class="radio-box">
-            <!-- レンタルショップ -->
-            <ul class="item_box">
-              <li class="choice_item"><input type="checkbox" name="spot_type[]" value="rental" id="rental" class="checkbox_list">
-                <label for="rental" class="s-search-btn">レンタルショップ</label>
-              </li>
-            </ul>
-            <!-- サイクルショップ -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="bicycle" id="bicycle" class="checkbox_list">
-                <label for="bicycle" class="s-search-btn">サイクルショップ</label>
-              </li>
-            </ul>
-            <!-- サイクルビット -->
-            <ul class="item_box">
-              <li class="choice_item">
-                <input type="checkbox" name="spot_type[]" value="cyclebit" id="cyclebit" class="checkbox_list">
-                <label for="cyclebit" class="s-search-btn">サイクルビット</label>
-              </li>
-            </ul>
-        </div>
-        </ul>
+      </div>
+      <!-- スマホ表示の人のあしらい -->
+      <img src="image/search_form_img1.png" alt="装飾" class="search_img1_sp">
 
-        <!-- 検索ボタン -->
-        <div class="btn-inner-box radio-box">
-          <ul class="btn-inner">
-            <!-- ボタン内文字変更-->
-            <!-- <input type="submit" value="検索" id="search-btn"> -->
-            <li class="search-btn">検索</li>
-          </ul>
+      <div class="reccomend_wrap">
+        <div class="pickup">＼ PICK UP! ／ </div>
+        <!-- ピックアップタイトル -->
 
-          <!-- リセットボタン -->
-          <ul class="btn-inner">
-            <!-- <input type="checkbox" value="リセット" id="reset-btn"><label for="reset-btn" class="reset-btn">リセット</label> -->
-            <li class="search-btn">リセット</li>
-          </ul>
-
-        </div>
-        <!-- PC表示の人のあしらい１ -->
-        <img src="image\search_form_img1.png" alt="装飾" class="search_img1_pc img_pc_only">
-        <!-- PC表示の人のあしらい２ -->
-        <img src="image\search_form_img2.png" alt="装飾" class="search_img2_pc img_pc_only">
+        <h2 class="reccomend_title_jp">こちらもいかがですか？</h2>
+        <h2 class="reccomend_title">RECCOMEND</h2>
       </div>
 
+      <!-- カード全体の入れ物 -->
+      <ul class="spot_list">
+        <li class="card_container">
+          <!-- カード -->
+          <div class="spot_card relative">
+            <!-- お気に入りボタン -->
+            <div class="spot_like_icon">
+              <i class="far fa-heart LikesIcon-fa-heart"></i>
+            </div>
+            <!-- カード１枚にかかるスポット一覧へのリンク -->
+            <a href="spot.html">
+              <!-- カード全体の入れ物 -->
+              <ul class="spot_list">
+                <!-- カード１枚の入れ物-->
+                <li class="spot_item relative">
+                  <!-- カテゴリーのラベル -->
+                  <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+
+                  <!-- スポット写真 -->
+                  <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                  <!-- スポット名 -->
+                  <h3 class="spot_item_name">味処 あらし</h3>
+                  <!-- スポット情報の表 -->
+                  <dl class="spot_item_info flex">
+                    <dt>営業時間</dt>
+                    <dd>11:00～21:00</dd>
+                    <dt>住所</dt>
+                    <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                    <dt>電話番号</dt>
+                    <dd>088-686-0005</dd>
+                  </dl>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+        <li class="card_container">
+          <!-- カード -->
+          <div class="spot_card relative">
+            <!-- お気に入りボタン -->
+            <div class="spot_like_icon">
+              <i class="far fa-heart LikesIcon-fa-heart"></i>
+            </div>
+            <!-- カード１枚にかかるスポット一覧へのリンク -->
+            <a href="spot.html">
+              <!-- カード全体の入れ物 -->
+              <ul class="spot_list">
+                <!-- カード１枚の入れ物-->
+                <li class="spot_item relative">
+                  <!-- カテゴリーのラベル -->
+                  <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+
+                  <!-- スポット写真 -->
+                  <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                  <!-- スポット名 -->
+                  <h3 class="spot_item_name">味処 あらし</h3>
+                  <!-- スポット情報の表 -->
+                  <dl class="spot_item_info flex">
+                    <dt>営業時間</dt>
+                    <dd>11:00～21:00</dd>
+                    <dt>住所</dt>
+                    <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                    <dt>電話番号</dt>
+                    <dd>088-686-0005</dd>
+                  </dl>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+        <li class="card_container">
+          <!-- カード -->
+          <div class="spot_card relative">
+            <!-- お気に入りボタン -->
+            <div class="spot_like_icon">
+              <i class="far fa-heart LikesIcon-fa-heart"></i>
+            </div>
+            <!-- カード１枚にかかるスポット一覧へのリンク -->
+            <a href="spot.html">
+              <!-- カード全体の入れ物 -->
+              <ul class="spot_list">
+                <!-- カード１枚の入れ物-->
+                <li class="spot_item relative">
+                  <!-- カテゴリーのラベル -->
+                  <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+
+                  <!-- スポット写真 -->
+                  <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                  <!-- スポット名 -->
+                  <h3 class="spot_item_name">味処 あらし</h3>
+                  <!-- スポット情報の表 -->
+                  <dl class="spot_item_info flex">
+                    <dt>営業時間</dt>
+                    <dd>11:00～21:00</dd>
+                    <dt>住所</dt>
+                    <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                    <dt>電話番号</dt>
+                    <dd>088-686-0005</dd>
+                  </dl>
+                </li>
+              </ul>
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <!-- スマホ表示の人のあしらい -->
-    <img src="image\search_form_img1.png" alt="装飾" class="search_img1_sp">
 
-    <ul class="reccomend_wrap">
-      <li class="pickup">＼ PICK UP! ／ </li>
-      <!-- ピックアップタイトル -->
-      <h2>
+  </main>
+  <!-- フッター切り取りここから -->
 
-      <div class="reccomend_title_jp">こちらもいかがですか？</div>
-<div class="reccomend_title">RECCOMEND</div></h2>
+  <footer class="footer">
+    <ul class="banner_list">
+      <!-- asaなどのバナーがliで入ります -->
+      <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+      <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+      <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
     </ul>
-    <div class="spot_item_wrap">
-      <!-- カード -->
-      <div class="relative">
-        <!-- お気に入りボタン -->
-        <div class="spot_like_icon">
-          <i class="far fa-heart LikesIcon-fa-heart"></i>
-        </div>
-        <!-- カード１枚にかかるスポット一覧へのリンク -->
-        <a href="spot.html">
-          <!-- カード全体の入れ物 -->
-          <ul class="spot_list">
-            <!-- カード１枚の入れ物-->
-            <li class="spot_item relative">
-              <!-- カテゴリーのラベル -->
-              <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-              <!-- スポット写真 -->
-              <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-              <!-- スポット名 -->
-              <h3 class="spot_item_name">味処 あらし</h3>
-              <!-- スポット情報の表 -->
-              <dl class="spot_item_info flex">
-                <dt>営業時間</dt>
-                <dd>11:00～21:00</dd>
-                <dt>住所</dt>
-                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                <dt>電話番号</dt>
-                <dd>088-686-0005</dd>
-              </dl>
+    <nav class="fnav_container">
+      <ul class="fnav">
+        <li class="fnav_menu">
+          <ul class="fnav_list">
+            <!-- リストの数はそれぞれ -->
+            <li class="fnav_item">
+              <a href=""></a>
             </li>
           </ul>
-        </a>
-      </div>
-
-      <!-- カード -->
-      <div class="relative">
-        <!-- お気に入りボタン -->
-        <div class="spot_like_icon">
-          <i class="far fa-heart LikesIcon-fa-heart"></i>
-        </div>
-        <!-- カード１枚にかかるスポット一覧へのリンク -->
-        <a href="spot.html">
-          <!-- カード全体の入れ物 -->
-          <ul class="spot_list">
-            <!-- カード１枚の入れ物-->
-            <li class="spot_item relative">
-              <!-- カテゴリーのラベル -->
-              <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-              <!-- スポット写真 -->
-              <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-              <!-- スポット名 -->
-              <h3 class="spot_item_name">味処 あらし</h3>
-              <!-- スポット情報の表 -->
-              <dl class="spot_item_info flex">
-                <dt>営業時間</dt>
-                <dd>11:00～21:00</dd>
-                <dt>住所</dt>
-                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                <dt>電話番号</dt>
-                <dd>088-686-0005</dd>
-              </dl>
-            </li>
-          </ul>
-        </a>
-      </div>
-
-      <!-- カード -->
-
-      <div class="relative">
-        <!-- お気に入りボタン -->
-        <div class="spot_like_icon">
-          <i class="far fa-heart LikesIcon-fa-heart"></i>
-        </div>
-        <!-- カード１枚にかかるスポット一覧へのリンク -->
-        <a href="spot.html">
-          <!-- カード全体の入れ物 -->
-          <ul class="spot_list">
-            <!-- カード１枚の入れ物-->
-            <li class="spot_item relative">
-              <!-- カテゴリーのラベル -->
-              <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-              <!-- スポット写真 -->
-              <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-              <!-- スポット名 -->
-              <h3 class="spot_item_name">味処 あらし</h3>
-              <!-- スポット情報の表 -->
-              <dl class="spot_item_info flex">
-                <dt>営業時間</dt>
-                <dd>11:00～21:00</dd>
-                <dt>住所</dt>
-                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                <dt>電話番号</dt>
-                <dd>088-686-0005</dd>
-              </dl>
-            </li>
-          </ul>
-        </a>
-      </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="sns">
+      <!-- twitter -->
+      <a href=""></a>
+      <!-- facebook -->
+      <a href=""></a>
     </div>
+    <p class="copyright"></p>
+  </footer>
+
+  <script src="./js/common.js"></script>
+  <script src="./js/mypage.js"></script>
 </body>
 </html>
