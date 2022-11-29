@@ -26,8 +26,8 @@
     /* アクセント4 */
     border: 8px solid #96C85C;
     width: 320px;
-    height: 1201px;
-    margin: auto;
+    height: 1220px;
+    margin: auto auto 49px auto;
   }
 
 
@@ -124,4 +124,86 @@ span{
 border-bottom: 5px dashed #74C7F0;
 width: 200px;
 white-space: nowrap
+}
+
+/* コース案内位置 */
+.f_wrap{
+  flex-wrap: nowrap;
+  margin: -10px;
+}
+.course_top_choice_list a{
+  padding: 2px;
+}
+.course_top_choice_list li{
+  margin: 0px auto 20px auto;
+}
+/*--------- コース情報 -------------------------------------*/
+
+/* コース情報を囲う色付きの部分の設定 */
+.info_wrap {
+	padding-top: 80px;
+	width: 320px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media screen and (min-width: 1024px) {
+	.info_wrap {
+		padding-top: 48px;
+		height: 389px;
+		width: 665.45px;
+	}
+}
+
+/* メモ */
+/* 後ろの茶色の装飾 */
+.info_bg_deco {
+	background-color: #e1d6b8;
+	position: absolute;
+	left: 0;
+	right: 0;
+	transform: rotateZ(3deg);
+}
+/* 前の白い部分 */
+.info_main {
+	background-color: #fff;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 64px;
+	justify-content: center;
+}
+
+
+/* 装飾 */
+.course_info_pic_clip {
+	position: absolute;
+	top: -15px;
+	left: 40px;
+	transform: rotateZ(-15deg);
+}
+
+.course_info_pic_boy{
+  position:absolute;
+  width: 91px;
+  height: 210px;
+  top: 275px;
+  right: 0px;
+}
+
+/* テキストが入る部分の設定 */
+.info_content {
+	width: 250px;
+	line-height: 2rem;
+}
+.info_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.font_bold{
+  font-weight: bold;
+}
+.info_list li{
+  text-align: left;
+margin: auto -10px;
 }

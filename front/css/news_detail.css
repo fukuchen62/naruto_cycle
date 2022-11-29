@@ -8,6 +8,11 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+@media screen and (min-width: 599px) {
+	.news_detail_container {
+		width: 600px;
+	}
+}
 @media screen and (min-width: 1024px) {
 	.news_detail_container {
 		width: 1024px;
@@ -20,6 +25,11 @@
 	border: dashed 2px #ef6000;
 	background-color: #fffffc;
 	margin-bottom: 80px;
+}
+@media screen and (min-width: 599px) {
+	.news_detail_article {
+		width: 600px;
+	}
 }
 @media screen and (min-width: 1024px) {
 	.news_detail_article {
@@ -38,9 +48,7 @@
 .article_meta {
 	gap: 16px;
 }
-.article_meta:nth-child() {
-	width: 200px;
-}
+
 .post-categories {
 	background-color: #d4ebec;
 	border: solid 1px #005ea7;
@@ -51,18 +59,27 @@
 .article_body {
 	margin-bottom: 32px;
 }
+
+/* 写真の設定 */
 .article_body img {
 	margin: 16px auto;
 	width: 280px;
 	height: 220px;
+	object-fit: cover;
 }
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 599px) {
 	.article_body img {
-		width: auto;
-		height: auto;
+		width: 560px;
+		height: 294px;
 	}
 }
+@media screen and (min-width: 1024px) {
+	.article_body img {
+		width: 764px;
+		height: 400px;
+	}
+}
+
 /* 記事下部の別ページへのリンク */
 .post_links {
 	margin-top: 32px;
@@ -77,35 +94,56 @@
 	text-align: right;
 }
 
-/* 右側に来るアーカイブ */
+/* アーカイブ部分の設定 */
 .news_detail_archive_wrap {
 	width: 320px;
 }
+@media screen and (min-width: 599px) {
+	.news_detail_archive_wrap {
+		width: 600px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
 @media screen and (min-width: 1024px) {
 	.news_detail_archive_wrap {
+		display: inline-block;
 		width: 180px;
 	}
 }
 
+/* サイズと縁取り（要素の増減に対応） */
 .news_detail_archive {
 	color: #005ea7;
 	border: solid 1px #74c7f0;
 	margin-bottom: 24px;
 }
+@media screen and (min-width: 599px) {
+	.news_detail_archive {
+		height: auto;
+		width: 284px;
+		margin-bottom: 40px;
+	}
+}
 @media screen and (min-width: 1024px) {
 	.news_detail_archive {
+		width: auto;
 		margin-bottom: 40px;
 	}
 }
 
+/* 背景色（要素の増減に対応） */
 .news_detail_archive_title {
 	height: 40px;
 	line-height: 40px;
 	background-color: #d4ebec;
+	padding-left: 10px;
 }
 .news_detail_archive_list li {
 	height: 40px;
 	line-height: 40px;
+	padding-left: 10px;
 }
 .news_detail_archive_list li:nth-child(even) {
 	background-color: #d4ebec;
