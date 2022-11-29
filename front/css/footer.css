@@ -26,10 +26,10 @@
 @media screen and (min-width: 599px) {}
 
 /* フッター */
-.footer {}
+/* .footer {} */
 
 /* ulバナーリスト */
-.banner_list {}
+/* .banner_list {} */
 
 /* liバナー */
 .banner_item {
@@ -145,19 +145,19 @@
 }
 
 .fnav_w_list {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     width: 1024px;
     justify-content: space-between;
 }
 
-.fotter_headline {
+.footer_headline {
     font-weight: bold;
     font-size: 16px;
     line-height: 8px;
 }
 
-.fotter_list {
+.footer_list {
     flex-direction: row;
 }
 
