@@ -65,49 +65,6 @@
 /* 著作権表示 */
 .copyright {
     font-size: small;
-}
-
-/* フッターの設定ここから */
-
-.footer_logo_and_nav {
-    padding: 1em;
-}
-
-/* フッターナビの設定 */
-
-.footer_nav li {
-    /* 罫線なくしてスッキリバージョン */
-    /* border: 1px solid rgba(73, 52, 52, 0.2);
-    border-left: none;
-    border-right: none; */
-    list-style-type: none;
-    /* display: inline-block; */
-    width: 200px;
-    text-align: center;
-    font-size: 150%;
-}
-
-/* footer_navのリンク（押せる部分）の設定 */
-.footer_nav a {
-    justify-items: center;
-    display: block;
-    padding: 5px;
-}
-
-.footer_nav a:hover {
-    background: rgb(73, 52, 52);
-}
-
-@media screen and (min-width: 640px) {
-    .menu {
-        /* メニューを横に */
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-/* コピーライトの設定 */
-.copyright {
     padding-bottom: 20px;
 }
 
