@@ -58,9 +58,7 @@ main {}
 } */
 
 /* キービジュアル全面用コンテナ */
-.key_top_container {
-    position: relative;
-}
+.key_top_container {}
 
 /* キーメッセージ枠１（位置用） */
 .key_msg_box {
