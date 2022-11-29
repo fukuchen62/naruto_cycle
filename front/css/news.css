@@ -13,12 +13,14 @@
 @media screen and (min-width: 599px) {
     .news_card_container {
         width: 600px;
+        height: 280px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .news_card_container {
         width: 1024px;
+        height: 280px;
     }
 }
 
