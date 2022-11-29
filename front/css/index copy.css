@@ -258,7 +258,7 @@ main {}
         width: 550px;
         height: 550px;
         left: 176px;
-        top: 900px;
+        /* top: 1100px; */
     }
 
     .howto_blue_box {
@@ -270,7 +270,7 @@ main {}
         width: 720px;
         height: 480px;
         left: 450px;
-        top: 70px;
+        top: 50px;
     }
 }
 
