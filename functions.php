@@ -53,6 +53,14 @@ function sortpost_rand($query)
 }
 add_action('pre_get_posts', 'sortpost_rand');
 
+// 検索の独自ＧＥＴパラメータ
+function theme_query_vars($vars)
+{
+    $vars[] = 'shop'; // 必要に応じて追加.
+    return $vars;
+}
+add_filter('query_vars', 'theme_query_vars');
+
 
 add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
 function add_common_stylesheet_script()
