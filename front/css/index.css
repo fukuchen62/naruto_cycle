@@ -1,6 +1,9 @@
 /* index本体 */
-main {}
-
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
 /* moreボタンのスタイルここから */
 
@@ -428,6 +431,25 @@ main {}
     text-align: center;
 }
 
+/* コース上スポット全体の表示設定 */
+.spot_card_box {
+    margin: 0 auto 32px;
+    width: 320px;
+}
+
+/* タブレット時2カラムにする場合 */
+@media screen and (min-width: 671px) {
+    .spot_card_box {
+        width: 672px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .spot_card_box {
+        width: 1024px;
+    }
+}
+
 /* ---------------波アニメーション---------------  */
 /* 動かない波の仕切り */
 .container {
@@ -472,16 +494,85 @@ main {}
 
 
 /* ---------------section：インスタグラム---------------  */
-.insta {}
-
-/* imgでインスタロゴ */
-.insta_logo {
-    width: 100px;
-    height: 100px;
-    flex-basis: 100%;
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_insta_content {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
 }
 
-.insta_slide {}
 
-/* h2 インスタの見出し*/
-.insta_top {}
+
+.index_insta_txtbox {
+    width: 380px;
+    margin: 0 auto;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_insta_txtbox {
+        margin: 0;
+    }
+}
+
+/* TB表示 */
+@media screen and (min-width: 600px) {
+    .index_insta_txtbox {
+        display: inline-block;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+
+/* 見出し */
+.index_insta_top {
+    margin-bottom: 0;
+}
+
+/* インスタロゴ */
+.insta_logo_img {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin: 0 auto 16px;
+}
+
+/* TB表示 */
+@media screen and (min-width: 600px) {
+    .insta_logo_img {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* TB表示 */
+@media screen and (min-width: 600px) {
+    .tb_pc_flex {
+        display: flex;
+    }
+}
+
+/* キャプション */
+.index_insta_caption {
+    width: 320px;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 32px auto;
+}
+
+.index_insta_img {
+    display: none;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+    .index_insta_img {
+        display: block;
+        width: 440px;
+        height: 263px;
+        transform: scale(-1, 1);
+        object-fit: cover;
+    }
+}

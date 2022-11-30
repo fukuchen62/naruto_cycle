@@ -1,4 +1,3 @@
-<!-- ヘッダー切り取りここから -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -32,6 +31,8 @@
 </head>
 <body>
     <div class="wrap">
+
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
         <header class="header flex">
             <div class="header_logo">
                 <h1><a href="#"><img class="img" src="./image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
@@ -62,7 +63,8 @@
                 </button>
             </nav>
         </header>
-        <!-- ヘッダー切り取りここまで -->
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
         <main class="main">
 
             <!-- キービジュアル＋ニュースのボックス -->
@@ -274,221 +276,224 @@
                     <ruby>SPOT<rt>周辺スポット</rt></ruby>
                 </h2>
 
-                <!-- カード一覧 -->
-                <ul class="spot_list">
+                <!-- 全てのカード入りの箱 -->
+                <div class="spot_card_box">
+                    <!-- カード一覧 -->
+                    <ul class="spot_list flex">
 
-                    <!-- カード -->
-                    <li class="card_container">
-                        <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <i class="far fa-heart LikesIcon-fa-heart"></i>
+                        <!-- カード -->
+                        <li class="card_container">
+                            <div class="spot_card relative">
+                                <!-- お気に入りボタン -->
+                                <div class="spot_like_icon">
+                                    <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                </div>
+                                <!-- カード１枚にかかるスポット一覧へのリンク -->
+                                <a href="spot.html">
+                                    <!-- カード全体の入れ物 -->
+                                    <ul class="spot_list">
+                                        <!-- カード１枚の入れ物-->
+                                        <li class="spot_item">
+                                            <!-- カテゴリーのラベル -->
+                                            <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+
+                                            <!-- スポット写真 -->
+                                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                            <!-- スポット名 -->
+                                            <h3 class="spot_item_name">味処 あらし</h3>
+                                            <!-- スポット情報の表 -->
+                                            <dl class="spot_item_info flex">
+                                                <dt>営業時間</dt>
+                                                <dd>11:00～21:00</dd>
+                                                <dt>住所</dt>
+                                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                                <dt>電話番号</dt>
+                                                <dd>088-686-0005</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </a>
                             </div>
-                            <!-- カード１枚にかかるスポット一覧へのリンク -->
-                            <a href="spot.html">
-                                <!-- カード全体の入れ物 -->
-                                <ul class="spot_list">
-                                    <!-- カード１枚の入れ物-->
-                                    <li class="spot_item">
-                                        <!-- カテゴリーのラベル -->
-                                        <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                        </li>
 
-                                        <!-- スポット写真 -->
-                                        <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                        <!-- スポット名 -->
-                                        <h3 class="spot_item_name">味処 あらし</h3>
-                                        <!-- スポット情報の表 -->
-                                        <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd>11:00～21:00</dd>
-                                            <dt>住所</dt>
-                                            <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                            <dt>電話番号</dt>
-                                            <dd>088-686-0005</dd>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </li>
+                        <!-- カード -->
+                        <li class="card_container">
+                            <div class="spot_card relative">
+                                <!-- お気に入りボタン -->
+                                <div class="spot_like_icon">
+                                    <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                </div>
+                                <!-- カード１枚にかかるスポット一覧へのリンク -->
+                                <a href="spot.html">
+                                    <!-- カード全体の入れ物 -->
+                                    <ul class="spot_list">
+                                        <!-- カード１枚の入れ物-->
+                                        <li class="spot_item">
+                                            <!-- カテゴリーのラベル -->
+                                            <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
-                    <!-- カード -->
-                    <li class="card_container">
-                        <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                            <!-- スポット写真 -->
+                                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                            <!-- スポット名 -->
+                                            <h3 class="spot_item_name">味処 あらし</h3>
+                                            <!-- スポット情報の表 -->
+                                            <dl class="spot_item_info flex">
+                                                <dt>営業時間</dt>
+                                                <dd>11:00～21:00</dd>
+                                                <dt>住所</dt>
+                                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                                <dt>電話番号</dt>
+                                                <dd>088-686-0005</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </a>
                             </div>
-                            <!-- カード１枚にかかるスポット一覧へのリンク -->
-                            <a href="spot.html">
-                                <!-- カード全体の入れ物 -->
-                                <ul class="spot_list">
-                                    <!-- カード１枚の入れ物-->
-                                    <li class="spot_item">
-                                        <!-- カテゴリーのラベル -->
-                                        <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                        </li>
 
-                                        <!-- スポット写真 -->
-                                        <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                        <!-- スポット名 -->
-                                        <h3 class="spot_item_name">味処 あらし</h3>
-                                        <!-- スポット情報の表 -->
-                                        <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd>11:00～21:00</dd>
-                                            <dt>住所</dt>
-                                            <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                            <dt>電話番号</dt>
-                                            <dd>088-686-0005</dd>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </li>
+                        <!-- カード -->
+                        <li class="card_container">
+                            <div class="spot_card relative">
+                                <!-- お気に入りボタン -->
+                                <div class="spot_like_icon">
+                                    <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                </div>
+                                <!-- カード１枚にかかるスポット一覧へのリンク -->
+                                <a href="spot.html">
+                                    <!-- カード全体の入れ物 -->
+                                    <ul class="spot_list">
+                                        <!-- カード１枚の入れ物-->
+                                        <li class="spot_item">
+                                            <!-- カテゴリーのラベル -->
+                                            <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
-                    <!-- カード -->
-                    <li class="card_container">
-                        <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                            <!-- スポット写真 -->
+                                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                            <!-- スポット名 -->
+                                            <h3 class="spot_item_name">味処 あらし</h3>
+                                            <!-- スポット情報の表 -->
+                                            <dl class="spot_item_info flex">
+                                                <dt>営業時間</dt>
+                                                <dd>11:00～21:00</dd>
+                                                <dt>住所</dt>
+                                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                                <dt>電話番号</dt>
+                                                <dd>088-686-0005</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </a>
                             </div>
-                            <!-- カード１枚にかかるスポット一覧へのリンク -->
-                            <a href="spot.html">
-                                <!-- カード全体の入れ物 -->
-                                <ul class="spot_list">
-                                    <!-- カード１枚の入れ物-->
-                                    <li class="spot_item">
-                                        <!-- カテゴリーのラベル -->
-                                        <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                        </li>
 
-                                        <!-- スポット写真 -->
-                                        <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                        <!-- スポット名 -->
-                                        <h3 class="spot_item_name">味処 あらし</h3>
-                                        <!-- スポット情報の表 -->
-                                        <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd>11:00～21:00</dd>
-                                            <dt>住所</dt>
-                                            <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                            <dt>電話番号</dt>
-                                            <dd>088-686-0005</dd>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </li>
+                        <!-- カード -->
+                        <li class="card_container">
+                            <div class="spot_card relative">
+                                <!-- お気に入りボタン -->
+                                <div class="spot_like_icon">
+                                    <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                </div>
+                                <!-- カード１枚にかかるスポット一覧へのリンク -->
+                                <a href="spot.html">
+                                    <!-- カード全体の入れ物 -->
+                                    <ul class="spot_list">
+                                        <!-- カード１枚の入れ物-->
+                                        <li class="spot_item">
+                                            <!-- カテゴリーのラベル -->
+                                            <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
-                    <!-- カード -->
-                    <li class="card_container">
-                        <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                            <!-- スポット写真 -->
+                                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                            <!-- スポット名 -->
+                                            <h3 class="spot_item_name">味処 あらし</h3>
+                                            <!-- スポット情報の表 -->
+                                            <dl class="spot_item_info flex">
+                                                <dt>営業時間</dt>
+                                                <dd>11:00～21:00</dd>
+                                                <dt>住所</dt>
+                                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                                <dt>電話番号</dt>
+                                                <dd>088-686-0005</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </a>
                             </div>
-                            <!-- カード１枚にかかるスポット一覧へのリンク -->
-                            <a href="spot.html">
-                                <!-- カード全体の入れ物 -->
-                                <ul class="spot_list">
-                                    <!-- カード１枚の入れ物-->
-                                    <li class="spot_item">
-                                        <!-- カテゴリーのラベル -->
-                                        <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                        </li>
 
-                                        <!-- スポット写真 -->
-                                        <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                        <!-- スポット名 -->
-                                        <h3 class="spot_item_name">味処 あらし</h3>
-                                        <!-- スポット情報の表 -->
-                                        <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd>11:00～21:00</dd>
-                                            <dt>住所</dt>
-                                            <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                            <dt>電話番号</dt>
-                                            <dd>088-686-0005</dd>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </li>
+                        <!-- カード -->
+                        <li class="card_container">
+                            <div class="spot_card relative">
+                                <!-- お気に入りボタン -->
+                                <div class="spot_like_icon">
+                                    <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                </div>
+                                <!-- カード１枚にかかるスポット一覧へのリンク -->
+                                <a href="spot.html">
+                                    <!-- カード全体の入れ物 -->
+                                    <ul class="spot_list">
+                                        <!-- カード１枚の入れ物-->
+                                        <li class="spot_item">
+                                            <!-- カテゴリーのラベル -->
+                                            <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
-                    <!-- カード -->
-                    <li class="card_container">
-                        <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                            <!-- スポット写真 -->
+                                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                            <!-- スポット名 -->
+                                            <h3 class="spot_item_name">味処 あらし</h3>
+                                            <!-- スポット情報の表 -->
+                                            <dl class="spot_item_info flex">
+                                                <dt>営業時間</dt>
+                                                <dd>11:00～21:00</dd>
+                                                <dt>住所</dt>
+                                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                                <dt>電話番号</dt>
+                                                <dd>088-686-0005</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </a>
                             </div>
-                            <!-- カード１枚にかかるスポット一覧へのリンク -->
-                            <a href="spot.html">
-                                <!-- カード全体の入れ物 -->
-                                <ul class="spot_list">
-                                    <!-- カード１枚の入れ物-->
-                                    <li class="spot_item">
-                                        <!-- カテゴリーのラベル -->
-                                        <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-                                        <!-- スポット写真 -->
-                                        <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                        <!-- スポット名 -->
-                                        <h3 class="spot_item_name">味処 あらし</h3>
-                                        <!-- スポット情報の表 -->
-                                        <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd>11:00～21:00</dd>
-                                            <dt>住所</dt>
-                                            <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                            <dt>電話番号</dt>
-                                            <dd>088-686-0005</dd>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </li>
+                        </li>
 
 
-                    <!-- カード -->
-                    <li class="card_container">
-                        <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <i class="far fa-heart LikesIcon-fa-heart"></i>
+                        <!-- カード -->
+                        <li class="card_container">
+                            <div class="spot_card relative">
+                                <!-- お気に入りボタン -->
+                                <div class="spot_like_icon">
+                                    <i class="far fa-heart LikesIcon-fa-heart"></i>
+                                </div>
+                                <!-- カード１枚にかかるスポット一覧へのリンク -->
+                                <a href="spot.html">
+                                    <!-- カード全体の入れ物 -->
+                                    <ul class="spot_list">
+                                        <!-- カード１枚の入れ物-->
+                                        <li class="spot_item">
+                                            <!-- カテゴリーのラベル -->
+                                            <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+
+                                            <!-- スポット写真 -->
+                                            <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                            <!-- スポット名 -->
+                                            <h3 class="spot_item_name">味処 あらし</h3>
+                                            <!-- スポット情報の表 -->
+                                            <dl class="spot_item_info flex">
+                                                <dt>営業時間</dt>
+                                                <dd>11:00～21:00</dd>
+                                                <dt>住所</dt>
+                                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                                <dt>電話番号</dt>
+                                                <dd>088-686-0005</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </a>
                             </div>
-                            <!-- カード１枚にかかるスポット一覧へのリンク -->
-                            <a href="spot.html">
-                                <!-- カード全体の入れ物 -->
-                                <ul class="spot_list">
-                                    <!-- カード１枚の入れ物-->
-                                    <li class="spot_item">
-                                        <!-- カテゴリーのラベル -->
-                                        <img src="./image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                        </li>
 
-                                        <!-- スポット写真 -->
-                                        <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                        <!-- スポット名 -->
-                                        <h3 class="spot_item_name">味処 あらし</h3>
-                                        <!-- スポット情報の表 -->
-                                        <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd>11:00～21:00</dd>
-                                            <dt>住所</dt>
-                                            <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                            <dt>電話番号</dt>
-                                            <dd>088-686-0005</dd>
-                                        </dl>
-                                    </li>
-                                </ul>
-                            </a>
-                        </div>
-                    </li>
-
-                </ul>
+                    </ul>
+                </div>
                 <!-- スポットもっと見るボタン -->
                 <div class="common_btn">
                     <a class="spot_top_btn" href="search.html">スポット検索へ⇒</a>
@@ -527,10 +532,100 @@
             <!-- 波アニメーション（下）ここまで -->
 
             <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：インスタ ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
+            <section class="index_insta">
+
+                <div class="index_insta_content flex">
+                    <div class="index_insta_txtbox">
+                        <!-- 見出しボックス -->
+                        <div class="index_insta_txtbox tb_pc_flex">
+                            <!-- インスタロゴ -->
+                            <img class="insta_logo_img" src="./image/Instagram_logo_img.png" alt="インスタグラムのロゴ">
+                            <!-- 見出し -->
+                            <h2 class="index_insta_top headline">
+                    <ruby>INSTAGRAM<rt>インスタグラム</rt></ruby>
+                    </h2>
+                        </div>
+
+                        <!-- キャプション -->
+                        <div class="index_insta_caption">
+                            <p>＃なるとサイくるっと！をチェックしてね！</p>
+                            <p>鳴門サイクリングの思い出をシェアしよう！</p>
+                        </div>
+                    </div>
+
+                    <!-- 自転車のあしらい（SP非表示） -->
+                    <img src="./image/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
+                </div>
+                <!-- SnapWidget -->
+                <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:1750px; height:250px"></iframe>
+            </section>
         </main>
+
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <footer class="footer bg_blue white txt_c debug">
+            <ul class="banner_list gap32_16">
+                <!-- asaなどのバナーがliで入ります -->
+                <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+                <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+                <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+            </ul>
+            <nav class="fnav_container bg_blue debug">
+
+                <!-- フッターナビ -->
+                <!-- 近藤追加分 -->
+                <ul class="fnav">
+                    <ul class="fnav_w_list">
+                        <li class="footer_headline"><a href="news.html">ニュース</a>
+                            <ul class="footer_list">
+                                <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
+                                <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer_headline "><a href="course.html">サイクリングコース</a>
+                            <ul class="footer_list">
+                                <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
+                                <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
+                                <li class="footer_nav_item"><a href=".html">中距離コース</a></li>
+                                <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer_headline"><a href=".html">周辺スポット検索</a>
+                            <ul class="footer_list">
+                                <li class="footer_nav_item"><a href=".html">食べる</a></li>
+                                <li class="footer_nav_item"><a href=".html">見る</a></li>
+                                <li class="footer_nav_item"><a href=".html">買う</a></li>
+                                <li class="footer_nav_item"><a href=".html">楽しむ</a></li>
+                                <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer_headline">その他
+                            <ul class="footer_list">
+                                <li class="footer_nav_item bold"><a href="question.html">Q＆A・その他</a></li>
+                                <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
+                                <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
+                                <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 追加分ここまで -->
+
+                    <div class="sns_container flex gap32_16">
+                        <!-- twitter -->
+                        <a href=""><img class="sns_icon" src="./image/Twitter social icons - circle - blue.png" alt="ツイッターアイコン"></a>
+                        <!-- facebook -->
+                        <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
+                    </div>
+                    <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
+        </footer>
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
     </div>
+
+    <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ jsファイル読み込み ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
     <script src="./js/index.js"></script>
     <script src="./js/common.js"></script>
+
 </body>
 
 </html>
