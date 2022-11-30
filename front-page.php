@@ -76,5 +76,6 @@
 
     <!-- インスタ表示 -->
 
+    <?php echo do_shortcode('[instagram-feed feed=1] '); ?>
 
     <?php get_footer(); ?>
