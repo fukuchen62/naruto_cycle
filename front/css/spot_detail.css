@@ -207,3 +207,7 @@ white-space: nowrap
   text-align: left;
 margin: auto -10px;
 }
+
+.info_headline{
+  margin: 128px auto auto auto;
+}
