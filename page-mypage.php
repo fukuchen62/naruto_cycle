@@ -129,6 +129,62 @@ $courses[] = [
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJpkrA0wadpGsq26hNJcnFOoZiKpeOTfM&callback=initMap">
     </script>
 
+    <!-- お気に入り記事表示 -->
+    <!-- <?php
+
+            $favorites = get_user_favorites();
+            if (isset($favorites) && !empty($favorites)) :
+                foreach ($favorites as $favorite) :
+                    echo '<div>' . get_the_title($favorite) . get_favorites_button($favorite) . '</div>';
+
+                endforeach;
+            else :
+                // No Favorites
+                echo '<p class="text-center">お気に入りがありません。</p>';
+            endif;
+
+            ?> -->
+
+
+    <?php
+    $favorites = get_user_favorites();
+    if ($favorites) : // This is important: if an empty array is passed into the WP_Query parameters, all posts will be returned
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // If you want to include pagination
+        $favorites_query = new WP_Query(array(
+            'post_type' => 'any', // If you have multiple post types, pass an array
+            'posts_per_page' => -1,
+            // 'ignore_sticky_posts' => true,
+            'post__in' => $favorites,
+            // 'paged' => $paged, // If you want to include pagination, and have a specific posts_per_page set
+            // 'meta_query' => array(
+            //     array(
+            //         'key' => 'contracts',
+            //         'value' => '空'
+            //     )
+            // ),
+        ));
+
+
+        if ($favorites_query->have_posts()) : while ($favorites_query->have_posts()) : $favorites_query->the_post();
+
+                echo '<div>' . get_the_title(get_the_ID()) . get_favorites_button(get_the_ID()) . '</div>';
+                echo the_ID();
+
+            endwhile;
+
+
+            next_posts_link('Older Favorites', $favorites_query->max_num_pages);
+            previous_posts_link('Newer Favorites');
+        endif;
+        wp_reset_postdata();
+    else :
+        // No Favorites
+        echo '
+    <p class="text-center">お気に入りがありません。</p>';
+    endif;
+    ?>
+
+
 </body>
 
 </html>
