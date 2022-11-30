@@ -1,5 +1,4 @@
 /* ヘッダー */
-/* .header {} */
 
 /* ヘッダーのJS用 */
 .header.change-color {
@@ -10,24 +9,16 @@
     transition: 0.3s;
 }
 
-/* ヘッダーのロゴ */
-/* .header_logo {} */
-
-/* ヘッダーのグローバルナビ */
-/* .gnav {} */
-
 /* ヘッダーの設定 */
 
 /* ヘッダーロゴの設定 */
 /* サイズはwidthを大きくするほどサイズも大きくできる */
 .header_logo {
     position: fixed;
-    border: 1px solid #fff;
     /* 最前面に */
     z-index: 101;
     width: 100px;
     height: 80px;
-    /* flex-basis: 100%; */
 }
 
 /* ハンバーガーメニューの設定ここから */
@@ -64,8 +55,6 @@ button {
 }
 
 .menu-list {
-    /* デバック用 */
-    border: 1px solid #000;
     width: 100%;
     /* margin: 10px; */
     /* padding: 10px; */
@@ -87,9 +76,6 @@ button {
     display: block;
     padding: 24px;
     height: 100%;
-    /* border-radius: 10px; 角丸むつごいので消し*/
-
-    /* background: rosybrown; */
 }
 
 .menu a:hover {
