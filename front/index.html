@@ -106,12 +106,12 @@
                                     <ul class="index_news_categories">
                                         <li><a href="#">お知らせ</a></li>
                                     </ul>
-                                    <time class="index_news_time" datetime="2019-00-00">
-                                        2022.00.00
+                                    <time class="index_news_time" datetime="2022-11-30">
+                                        2022.11.30
                                     </time>
                                 </div>
                                 <h3 class="index_news_title">
-                                    <a href="#">ここにタイトルが入りますここにタイトルが入ります</a>
+                                    <a href="#">ここにタイトルが入ります</a>
                                 </h3>
                             </article>
 
@@ -121,8 +121,8 @@
                                     <ul class="index_news_categories">
                                         <li><a href="#">お知らせ</a></li>
                                     </ul>
-                                    <time class="index_news_time" datetime="2019-00-00">
-                                        2022.00.00
+                                    <time class="index_news_time" datetime="2022-11-30">
+                                        2022.11.30
                                     </time>
                                 </div>
                                 <h3 class="index_news_title">
@@ -150,7 +150,7 @@
             <section class="index_howto">
 
                 <!-- コンテンツボックス -->
-                <div class="index_howto_content">
+                <div class="index_howto_content flex_pc">
                     <!-- テキスト用ボックス -->
                     <div class="index_howto_txtbox relative">
                         <!-- 見出し -->
@@ -166,9 +166,11 @@
                             <a href="cycling.html">もっと読む→</a>
                         </div>
                     </div>
+                    <!-- 写真 -->
+                    <div class="index_howto_imgbox">
+                        <img src="./image/index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="index_howto_img">
+                    </div>
                 </div>
-                <!-- 写真 -->
-                <img src="./image/index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="index_howto_img">
 
 
             </section>
@@ -269,12 +271,14 @@
 
             <section class="index_spot">
 
-                <!-- 吹き出しPICKUP！文字 -->
-                <div class="index_spot_deco">＼PICK UP!／</div>
-                <!-- SPOT見出し -->
-                <h2 class="index_spot_top headline">
+                <div class="index_spot_headlinebox relative">
+                    <!-- 吹き出しPICKUP！文字 -->
+                    <div class="index_spot_deco">＼PICK UP!／</div>
+                    <!-- SPOT見出し -->
+                    <h2 class="index_spot_top headline">
                     <ruby>SPOT<rt>周辺スポット</rt></ruby>
                 </h2>
+                </div>
 
                 <!-- 全てのカード入りの箱 -->
                 <div class="spot_card_box">
@@ -538,12 +542,12 @@
                 <div class="index_insta_content flex">
                     <div class="index_insta_txtbox">
                         <!-- 見出しボックス -->
-                        <div class="index_insta_txtbox tb_pc_flex">
+                        <div class="index_insta_headline tb_pc_flex">
                             <!-- インスタロゴ -->
                             <img class="insta_logo_img" src="./image/Instagram_logo_img.png" alt="インスタグラムのロゴ">
                             <!-- 見出し -->
                             <h2 class="index_insta_top headline">
-                    <ruby>INSTAGRAM<rt>インスタグラム</rt></ruby>
+                    <ruby>INSTAGRAM<rt>なるとサイくるっと！公式インスタグラム</rt></ruby>
                     </h2>
                         </div>
 
@@ -557,14 +561,18 @@
                     <!-- 自転車のあしらい（SP非表示） -->
                     <img src="./image/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
                 </div>
-                <!-- SnapWidget -->
-                <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:1750px; height:250px"></iframe>
+
+                <div class="index_insta_SWbox">
+                    <!-- SnapWidget -->
+                    <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget index_insta_SW insta_PC" style="border:none; overflow:hidden; width:1250px; height:250px"></iframe>
+                </div>
             </section>
         </main>
 
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
         <footer class="footer bg_blue white txt_c debug">
-            <ul class="banner_list gap32_16">
+            <ul class="banner_list gap32_16 m_bottom40">
                 <!-- asaなどのバナーがliで入ります -->
                 <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
                 <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
@@ -575,14 +583,15 @@
                 <!-- フッターナビ -->
                 <!-- 近藤追加分 -->
                 <ul class="fnav">
-                    <ul class="fnav_w_list">
-                        <li class="footer_headline"><a href="news.html">ニュース</a>
+                    <ul class="fnav_w_list flex">
+                        <li class="footer_headline">
                             <ul class="footer_list">
+                                <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
                                 <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
                                 <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
                             </ul>
                         </li>
-                        <li class="footer_headline "><a href="course.html">サイクリングコース</a>
+                        <li class="footer_headline"><a href="course.html">サイクリングコース</a>
                             <ul class="footer_list">
                                 <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
                                 <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
@@ -599,33 +608,31 @@
                                 <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
                             </ul>
                         </li>
-                        <li class="footer_headline">その他
+                        <li class="footer_headline">Q＆A・その他
                             <ul class="footer_list">
-                                <li class="footer_nav_item bold"><a href="question.html">Q＆A・その他</a></li>
+                                <li class="footer_nav_item"><a href="question.html">Q＆A</a></li>
                                 <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
                                 <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
                                 <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <!-- 追加分ここまで -->
+            </nav>
+            <!-- 追加分ここまで -->
 
-                    <div class="sns_container flex gap32_16">
-                        <!-- twitter -->
-                        <a href=""><img class="sns_icon" src="./image/Twitter social icons - circle - blue.png" alt="ツイッターアイコン"></a>
-                        <!-- facebook -->
-                        <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
-                    </div>
-                    <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
+            <div class="sns_container flex gap32_16">
+                <!-- twitter -->
+                <a href=""><img class="sns_icon" src="./image/Twitter social icons - circle - blue.png" alt="ツイッターアイコン"></a>
+                <!-- facebook -->
+                <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
+            </div>
+            <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
         </footer>
+
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-
+        <script src="./js/index.js"></script>
+        <script src="./js/common.js"></script>
     </div>
-
-    <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ jsファイル読み込み ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-    <script src="./js/index.js"></script>
-    <script src="./js/common.js"></script>
-
 </body>
 
 </html>
