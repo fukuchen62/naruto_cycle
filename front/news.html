@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/news.css" />
-    <link rel="stylesheet" href="css/news_detail.css">
-
+    <link rel="stylesheet" href="css/news_detail.css" />
+    <link rel="stylesheet" href="">
 
     <!-- googlefont本体ここから2行 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
     <!-- 全体用font↓ -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,500&family=Economica:wght@700&family=Josefin+Sans:ital,wght@1,700&family=Montserrat:wght@200&family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
 
     <!-- h1のfont↓ -->
 
@@ -33,158 +33,114 @@
     <!-- ファビコン↓() -->
 </head>
 <body>
-    <div body_wrap>
-        <header class="header flex">
-            <div class="header_logo">
-                <h1><a href="#"><img class="img" src="./image/" alt="なるとサイくるっと！のロゴ"></a></h1>
-            </div>
-            <nav>
-                <ul class="menu">
-                    <li class="menu-list font_edge_white">
-                        <a href="news.html">NEWS</a>
-                    </li>
-                    <li class="menu-list font_edge_white">
-                        <a href="howto.html">HOWTO</a>
-                    </li>
-                    <li class="menu-list font_edge_white">
-                        <a href="course.html">COURSE</a>
-                    </li>
-                    <li class="menu-list font_edge_white">
-                        <a href="spot.html">SPOT</a>
-                    </li>
-                    <li class="menu-list font_edge_white">
-                        <a href="mypage.html">MYPAGE</a>
-                    </li>
-                    <li class="menu-list font_edge_white">
-                        <a href="question.html">Q&A</a>
-                    </li>
-                </ul>
-                <button type="button" class="btn js-btn">
-                    <span class="btn-line"></span>
-                </button>
-            </nav>
-        </header>
-        <!-- ヘッダー切り取りここまで -->
-
-        <main class="main">
+    <header class="header flex">
+        <h1 class="header_logo"><a href="#"><img class="img" src="/image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+        <nav>
+            <ul class="menu">
+                <li class="menu-list font_edge_white">
+                    <a href="news.html">NEWS</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="howto.html">HOWTO</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="course.html">COURSE</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="spot.html">SPOT</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="mypage.html">MYPAGE</a>
+                </li>
+                <li class="menu-list font_edge_white">
+                    <a href="question.html">Q&A</a>
+                </li>
+            </ul>
+            <button type="button" class="btn js-btn">
+                <span class="btn-line"></span>
+            </button>
+        </nav>
+    </header>
+    <!-- ヘッダー切り取りここまで -->
+    <main>
+        <div class="news_detail_wrap">
             <!-- キービジュアル -->
             <div class="key_bg_under">
-                <img src="https://placehold.jp/1440x400.png" alt="ニュース一覧キービジュアル" class="key_bg_under_img">
+                <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
             </div>
 
             <!-- パンくずリスト -->
             <div class="bradcrumbs">
-                ここに＞パンくずリストが＞入ります
+                TOP＞お知らせ＞記事タイトルが入ります
             </div>
-
-            <section class="news">
-                <!-- ページ見出し -->
-                <h2 class="news_top headline"><ruby>NEWS<rt>ニュース</rt></ruby></h2>
-                <!-- ulニュース記事一覧 -->
-                <ul class="news_card_container flex">
-                    <!-- ニュース記事カードここから -->
-                    <li class="news_card_article">
-                        <h3 class="article_title">記事タイトルが入ります。</h3>
-                        <div class="article_meta flex">
-                            <time datetime="2019-1-1">2019年1月1日</time>
-                            <div class="post-categories">
-                                <a href="#">カテゴリ名</a>
-                            </div>
-                        </div>
-
-                        <div class="card_article_body">
-                            <div class="news_detail_content">
-
-                                <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_detail_img1">
-                                <p>
-                                            BISTRO CALME では、新しいメニューを開発中です。
+            <div class="news_detail">
+                <div class="news_detail_container flex">
+                    <!-- ニュース記事１つ分の入れ物 -->
+                    <div class="news_card">
+                        <!-- ニュース記事１つ分の枠の設定 -->
+                        <div class="news_card_item">
+                            <!-- 記事の写真 -->
+                            <!-- <div class="news_news_article_img_container flex"> -->
+                            <!-- ニュース記事の写真 -->
+                            <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_card_item_img">
+                            <!-- </div> -->
+                            <div class="news_article_info_container debug">
+                                <!-- ニュース記事テキストの入れ物 -->
+                                <div class="news_article_info_box flex column debug">
+                                    <!-- 日付とカテゴリ名 -->
+                                    <div class="article_meta flex">
+                                        <time datetime="2022-12-01">2022.12.1</time>
+                                        <div class="post-categories">
+                                            <a href="#">カテゴリ名</a>
+                                        </div>
+                                    </div>
+                                    <!-- 記事タイトル -->
+                                    <h2 class="news_card_item_name">初心者モデルコース</h2>
+                                    <!-- 記事見出しの入れ物 -->
+                                    <div class="news_card_txt_container">
+                                        <div class="news_card_txt">
+                                            <p>
+                                        先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。
                                         </p>
-                                <p>
-                                            新しいメニューを提供するために、開店後に練習中です。スタッフから大好評のメニューもできてきました。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                        </p>
+                                            <!-- スポットもっと見るボタン -->
+                                            <!-- <div class="news_card_item_btn">続きを読む</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- スポットもっと見るボタン -->
+                                <div class="news_card_item_btn">続きを読む</div>
                             </div>
                         </div>
-                    </li>
-                    <!-- ニュース記事カードここまで -->
-                    <!-- ニュース記事カードここから -->
-                    <li class="news_card_article">
-                        <h3 class="article_title">記事タイトルが入ります。</h3>
-                        <div class="article_meta flex">
-                            <time datetime="2019-1-1">2019年1月1日</time>
-                            <div class="post-categories">
-                                <a href="#">カテゴリ名</a>
-                            </div>
-                        </div>
-
-                        <div class="card_article_body">
-                            <div class="news_detail_content">
-
-                                <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_detail_img1">
-                                <p>
-                                            BISTRO CALME では、新しいメニューを開発中です。
-                                        </p>
-                                <p>
-                                            新しいメニューを提供するために、開店後に練習中です。スタッフから大好評のメニューもできてきました。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                        </p>
-                            </div>
-                        </div>
-                        </header>
-                    </li>
-                    <!-- ニュース記事カードここまで -->
-                    <!-- ニュース記事カードここから -->
-                    <li class="news_card_article">
-                        <h3 class="article_title">記事タイトルが入ります。</h3>
-                        <div class="article_meta flex">
-                            <time datetime="2019-1-1">2019年1月1日</time>
-                            <div class="post-categories">
-                                <a href="#">カテゴリ名</a>
-                            </div>
-                        </div>
-
-                        <div class="card_article_body">
-                            <div class="news_detail_content">
-
-                                <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_detail_img1">
-                                <p>
-                                            BISTRO CALME では、新しいメニューを開発中です。
-                                            </p>
-                                <p>
-                                            新しいメニューを提供するために、開店後に練習中です。スタッフから大好評のメニューもできてきました。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                        </p>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- ニュース記事カードここまで -->
-                </ul>
-
-                <aside class="news_detail_archive_wrap ">
-                    <div class="news_detail_archive">
-                        <h2 class="news_detail_archive_title">カテゴリ一覧</h2>
-                        <ul class="news_detail_archive_list">
-                            <li><a href="#">お知らせ</a></li>
-                            <li><a href="#">イベント</a></li>
-                            <li><a href="#">コラム</a></li>
-                        </ul>
                     </div>
-                    <div class="news_detail_archive">
-                        <h2 class="news_detail_archive_title">月別アーカイブ</h2>
-                        <ul class="news_detail_archive_list">
-                            <li><a href="#">2022年11月</a></li>
-                            <li><a href="#">2022年12月</a></li>
-                        </ul>
-                    </div>
-                </aside>
+                    <aside class="news_detail_archive_wrap">
+                        <div class="news_detail_archive no1">
+                            <h2 class="news_detail_archive_title">カテゴリ一覧</h2>
+                            <ul class="news_detail_archive_list">
+                                <li><a href="#">お知らせ</a></li>
+                                <li><a href="#">イベント</a></li>
+                                <li><a href="#">コラム</a></li>
+                            </ul>
+                        </div>
+                        <div class="news_detail_archive">
+                            <h2 class="news_detail_archive_title">月別アーカイブ</h2>
+                            <ul class="news_detail_archive_list">
+                                <li><a href="#">2022年11月</a></li>
+                                <li><a href="#">2022年12月</a></li>
 
-            </section>
-            <div>
-                <img class="news_bottom_img" src="image/news_img.png" alt="ニュース下部装飾">
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
             </div>
-        </main>
-
-        <!-- フッターナビ -->
-        <!-- 近藤追加分 -->
-        <ul class="fnav bg_blue">
-            <ul class="fnav_w_list flex column">
+            <img class="news_bottom_img" src="image/news_img.png" alt="ニュース下部装飾">
+        </div>
+    </main>
+    <!-- フッターナビ -->
+    <footer class="footer bg_blue white txt_c debug">
+        <nav class="fnav_container bg_blue debug">
+            <!-- 近藤追加分 -->
+            <!-- <ul class="fnav bg_blue"> -->
+            <ul class="fnav_w_list flex ">
                 <li class="footer_headline">
                     <ul class="footer_list">
                         <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
@@ -192,7 +148,7 @@
                         <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
                     </ul>
                 </li>
-                <li class="footer_headline"><a href="course.html">サイクリングコース</a>
+                <li class="footer_headline white"><a href="course.html">サイクリングコース</a>
                     <ul class="footer_list">
                         <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
                         <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
@@ -200,7 +156,7 @@
                         <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
                     </ul>
                 </li>
-                <li class="footer_headline"><a href=".html">周辺スポット検索</a>
+                <li class="footer_headline white"><a href=".html">周辺スポット検索</a>
                     <ul class="footer_list">
                         <li class="footer_nav_item"><a href=".html">食べる</a></li>
                         <li class="footer_nav_item"><a href=".html">見る</a></li>
@@ -209,7 +165,7 @@
                         <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
                     </ul>
                 </li>
-                <li class="footer_headline">Q＆A・その他
+                <li class="footer_headline white">Q＆A・その他
                     <ul class="footer_list">
                         <li class="footer_nav_item"><a href="question.html">Q＆A</a></li>
                         <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
@@ -218,20 +174,21 @@
                     </ul>
                 </li>
             </ul>
-            </nav>
-            <!-- 追加分ここまで -->
+            <!-- </ul> -->
+        </nav>
+        <!-- 追加分ここまで -->
 
-            <div class="sns_container flex gap32_16">
-                <!-- twitter -->
-                <a href=""><img class="sns_icon" src="./image/Twitter social icons - circle - blue.png" alt="ツイッターアイコン"></a>
-                <!-- facebook -->
-                <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
-            </div>
-            <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
-            </footer>
-            <script src="./js/index.js"></script>
-            <script src="js/jquery.bgswitcher.js"></script>
-            <script src="js/bgswitcher.js"></script>
+        <div class="sns_container flex gap32_16">
+            <!-- twitter -->
+            <a href=""><img class="sns_icon" src="./image/twitter_social_icons_circle_blue.png" alt="ツイッターアイコン"></a>
+            <!-- facebook -->
+            <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
+        </div>
+        <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="js/jquery.bgswitcher.js"></script>
+    <script src="js/bgswitcher.js"></script>
     </div>
 </body>
 
