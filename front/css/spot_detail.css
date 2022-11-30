@@ -43,6 +43,7 @@
     margin: 12px auto 5px auto;
   }
 
+
 /* サムネイル画像 */
   .sub-img{
     display: flex;
@@ -109,11 +110,19 @@ margin: auto auto 32px auto;
 }
 
 /* タグ */
+.spot_typetag_wrap{
+  display: flex;
+}
 .spot_typetag{
-  display: inline;
+    white-space: nowrap;
+  margin: auto 28px 0px 0px;
   font-weight: bold;
 }
+
 span{
+  width: 75px;
+  height: 28px;
+  border-radius: 4px;
   background-color: #D4EBEC;
 }
 
@@ -137,7 +146,13 @@ white-space: nowrap
 .course_top_choice_list li{
   margin: 0px auto 20px auto;
 }
-/*--------- コース情報 -------------------------------------*/
+
+/* 更新日 */
+.update{
+  margin: 8px -150px auto auto;
+}
+
+/*--------- メモ欄 -------------------------------------*/
 
 /* コース情報を囲う色付きの部分の設定 */
 .info_wrap {
@@ -182,7 +197,6 @@ white-space: nowrap
 	left: 40px;
 	transform: rotateZ(-15deg);
 }
-
 .course_info_pic_boy{
   position:absolute;
   width: 91px;
@@ -196,6 +210,12 @@ white-space: nowrap
 	width: 250px;
 	line-height: 2rem;
 }
+@media screen and (min-width: 1024px) {
+	.info_content {
+		width: 300px;
+    word-wrap: break-word;
+	}
+}
 .info_list {
 	display: flex;
 	flex-wrap: wrap;
@@ -208,6 +228,56 @@ white-space: nowrap
 margin: auto -10px;
 }
 
+/* RECCOMENDの見出し */
 .info_headline{
-  margin: 128px auto auto auto;
+  margin: 128px auto 32px auto;
+}
+
+/* カード横並び */
+.spot_list {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+	gap: 32px;
+  margin: auto auto 64px auto;
+}
+/* カード内文字左寄せ */
+.spot_item_info{
+  text-align: left;
+}
+.spot_item_name{
+  text-align: left;
+}
+
+
+/* お気に入りボタン位置修正 */
+/* .spot_like_icon{
+  margin: 30px auto auto 10px;
+} */
+
+
+
+/* スポットのもっと見るボタンの設定----------- */
+.common_btn{
+	margin: -32px auto 60px auto;
+}
+
+
+/* コース上スポット全体の表示設定 */
+.course_spot_cate_list {
+	margin-left: auto;
+	margin-right: auto;
+	width: 320px;
+}
+
+/* タブレット時2カラムにする場合 */
+@media screen and (min-width: 671px) {
+	.course_spot_cate_list {
+		width: 672px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.course_spot_cate_list {
+		width: 1024px;
+	}
 }
