@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+.search_title_jp{
+    font-size: 16px;
+    margin: 12px auto auto auto;
+  }
+
+  /* ページタイトル */
+  .search_title{
+    font-family: 'Noto Sans JP';
+    font-weight: bold;
+    font-size: 48px;
+    margin: auto auto 20px auto;
+  }
+
+  /* 真ん中にする */
+  .wrap_search_container{
+    text-align: center;
+    margin: auto;
+  }
+
+  /* 詳細ボックス */
+  .box_spot_info{
+    box-sizing: border-box;
+    background: #FFFFFC;
+    /* アクセント4 */
+    border: 8px solid #96C85C;
+    width: 320px;
+    height: 1220px;
+    margin: auto auto 49px auto;
+  }
+
+
+  /* 画像レイアウトのためのスタイル */
+  .container {
+    /* margin: 20px auto 5px 0; */
+    max-width: 500px;
+  }
+
+
+  /* メイン画像 */
+  .main-img{
+    margin: 12px auto 5px auto;
+  }
+
+
+/* サムネイル画像 */
+  .sub-img{
+    display: flex;
+    justify-content: center;
+
+  }
+  .current{
+    margin: auto 5px 16px 0px;
+  }
+  .current:last-of-type{
+    margin: 0px;
+  }
+
+  /* 詳細 */
+  .spot_date{
+    align-items: left;
+    margin: auto;
+    width: 281px;
+  }
+  /* 施設名 */
+.spot_name{
+    font-size: 32px;
+    text-align: left;
+    font-weight:bold;
+}
+/* 施設説明 */
+.spot_text{
+  text-align: left;
+  margin: 8px auto 20px auto;
+}
+
+/* テーブル */
+.info_item{
+  border-spacing: 8px;
+    margin: auto -6px ;
+    text-align: left;
+    border-collapse: separate;
+  border-spacing: 8px;
+}
+
+/* フォント変更 */
+th{
+      font-weight: normal;
+}
+td{
+  white-space: nowrap;
+}
+
+/* SNS */
+.spot_icon{
+  display: flex;
+gap: 8px 20px; /* 余白 */
+}
+
+.info_remark{
+  margin: 8px;
+}
+/* 施設サービスアイコン */
+.spot_date_icon{
+  display: flex;
+    flex-wrap: wrap;
+gap:20px; /* 余白 */
+margin: auto auto 32px auto;
+}
+
+/* タグ */
+.spot_typetag_wrap{
+  display: flex;
+}
+.spot_typetag{
+    white-space: nowrap;
+  margin: auto 28px 0px 0px;
+  font-weight: bold;
+}
+
+span{
+  width: 75px;
+  height: 28px;
+  border-radius: 4px;
+  background-color: #D4EBEC;
+}
+
+/* コースの案内 */
+.spot_apply{
+  font-weight: bold;
+  margin: 32px auto 22px auto;
+border-bottom: 5px dashed #74C7F0;
+width: 200px;
+white-space: nowrap
+}
+
+/* コース案内位置 */
+.f_wrap{
+  flex-wrap: nowrap;
+  margin: -10px;
+}
+.course_top_choice_list a{
+  padding: 2px;
+}
+.course_top_choice_list li{
+  margin: 0px auto 20px auto;
+}
+
+/* 更新日 */
+.update{
+  margin: 8px -150px auto auto;
+}
+
+/*--------- メモ欄 -------------------------------------*/
+
+/* コース情報を囲う色付きの部分の設定 */
+.info_wrap {
+	padding-top: 80px;
+	width: 320px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media screen and (min-width: 1024px) {
+	.info_wrap {
+		padding-top: 48px;
+		height: 389px;
+		width: 665.45px;
+	}
+}
+
+/* メモ */
+/* 後ろの茶色の装飾 */
+.info_bg_deco {
+	background-color: #e1d6b8;
+	position: absolute;
+	left: 0;
+	right: 0;
+	transform: rotateZ(3deg);
+}
+/* 前の白い部分 */
+.info_main {
+	background-color: #fff;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 64px;
+	justify-content: center;
+}
+
+
+/* 装飾 */
+.course_info_pic_clip {
+	position: absolute;
+	top: -15px;
+	left: 40px;
+	transform: rotateZ(-15deg);
+}
+.course_info_pic_boy{
+  position:absolute;
+  width: 91px;
+  height: 210px;
+  top: 275px;
+  right: 0px;
+}
+
+/* テキストが入る部分の設定 */
+.info_content {
+	width: 250px;
+	line-height: 2rem;
+}
+@media screen and (min-width: 1024px) {
+	.info_content {
+		width: 300px;
+    word-wrap: break-word;
+	}
+}
+.info_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.font_bold{
+  font-weight: bold;
+}
+.info_list li{
+  text-align: left;
+margin: auto -10px;
+}
+
+/* RECCOMENDの見出し */
+.info_headline{
+  margin: 128px auto 32px auto;
+}
+
+/* カード横並び */
+.spot_list {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+	gap: 32px;
+  margin: auto auto 64px auto;
+}
+/* カード内文字左寄せ */
+.spot_item_info{
+  text-align: left;
+}
+.spot_item_name{
+  text-align: left;
+}
+
+
+/* お気に入りボタン位置修正 */
+/* .spot_like_icon{
+  margin: 30px auto auto 10px;
+} */
+
+
+
+/* スポットのもっと見るボタンの設定----------- */
+.common_btn{
+	margin: -32px auto 60px auto;
+}
+
+
+/* コース上スポット全体の表示設定 */
+.course_spot_cate_list {
+	margin-left: auto;
+	margin-right: auto;
+	width: 320px;
+}
+
+/* タブレット時2カラムにする場合 */
+@media screen and (min-width: 671px) {
+	.course_spot_cate_list {
+		width: 672px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.course_spot_cate_list {
+		width: 1024px;
+	}
+}
