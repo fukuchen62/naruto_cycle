@@ -1,4 +1,9 @@
 <!-- フッター切り取りここから -->
+<!-- フッターの波ここから -->
+<div class="wave">
+    <canvas id="waveCanvas"></canvas>
+</div>
+<!-- フッターの波ここまで -->
 
 <footer class="footer bg_blue white txt_c debug">
     <ul class="banner_list gap32_16 m_bottom40">
@@ -12,7 +17,7 @@
         <!-- フッターナビ -->
         <!-- 近藤追加分 -->
         <ul class="fnav">
-            <ul class="fnav_w_list flex column">
+            <ul class="fnav_w_list flex">
                 <li class="footer_headline">
                     <ul class="footer_list">
                         <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
@@ -60,6 +65,7 @@
 <script src="./js/index.js"></script>
 <script src="js/jquery.bgswitcher.js"></script>
 <script src="js/bgswitcher.js"></script>
+
 </div>
 </body>
 
