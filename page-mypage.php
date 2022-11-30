@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php get_header();
+//マップ表示するための情報保存用
+// lat:緯度, lng:経度, text:表示名
+
+$maps = [];
+?>
+
+<!-- パンくず -->
+<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
+
 <h2>マイページ</h2>
 
 <?php
@@ -130,57 +139,57 @@ $courses[] = [
     </script>
 
     <!-- お気に入り記事表示 -->
-    <!-- <?php
 
-            $favorites = get_user_favorites();
-            if (isset($favorites) && !empty($favorites)) :
-                foreach ($favorites as $favorite) :
-                    echo '<div>' . get_the_title($favorite) . get_favorites_button($favorite) . '</div>';
+    <?php
+    if (function_exists('get_user_favorites')) :
+        $favorites = get_user_favorites();
+        if ($favorites) : // This is important: if an empty array is passed into the WP_Query parameters, all posts will be returned
+            // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // If you want to include pagination
+            $favorites_query = new WP_Query(array(
+                'post_type' => 'any', // If you have multiple post types, pass an array
+                'posts_per_page' => -1,
+                'ignore_sticky_posts' => true,
+                'post__in' => $favorites,
+                // 'paged' => $paged, // If you want to include pagination, and have a specific posts_per_page set
+                // 'meta_query' => array(
+                //     array(
+                //         'key' => 'contracts',
+                //         'value' => '空'
+                //     )
+                // ),
+            ));
 
-                endforeach;
-            else :
-                // No Favorites
-                echo '<p class="text-center">お気に入りがありません。</p>';
-            endif;
+            // お気に入りのループの開始
+            if ($favorites_query->have_posts()) : while ($favorites_query->have_posts()) : $favorites_query->the_post();
 
-            ?> -->
+                    $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                    $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                    $text = esc_html(get_the_title()); // 体験の名前のフィールド名event_name
+
+                    $events['lat'][] = $latitude;
+                    $events['lng'][] = $longitude;
+                    $events['text'][] = $text;
+
+                    echo '<div>' . get_the_title(get_the_ID()) . get_favorites_button(get_the_ID()) . '</div>';
+
+
+    ?>
+    <?php get_template_part('template-parts/loop', 'spot') ?>
 
 
     <?php
-    $favorites = get_user_favorites();
-    if ($favorites) : // This is important: if an empty array is passed into the WP_Query parameters, all posts will be returned
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // If you want to include pagination
-        $favorites_query = new WP_Query(array(
-            'post_type' => 'any', // If you have multiple post types, pass an array
-            'posts_per_page' => -1,
-            // 'ignore_sticky_posts' => true,
-            'post__in' => $favorites,
-            // 'paged' => $paged, // If you want to include pagination, and have a specific posts_per_page set
-            // 'meta_query' => array(
-            //     array(
-            //         'key' => 'contracts',
-            //         'value' => '空'
-            //     )
-            // ),
-        ));
+                endwhile;
 
 
-        if ($favorites_query->have_posts()) : while ($favorites_query->have_posts()) : $favorites_query->the_post();
-
-                echo '<div>' . get_the_title(get_the_ID()) . get_favorites_button(get_the_ID()) . '</div>';
-                echo the_ID();
-
-            endwhile;
-
-
-            next_posts_link('Older Favorites', $favorites_query->max_num_pages);
-            previous_posts_link('Newer Favorites');
-        endif;
-        wp_reset_postdata();
-    else :
-        // No Favorites
-        echo '
+                next_posts_link('Older Favorites', $favorites_query->max_num_pages);
+                previous_posts_link('Newer Favorites');
+            endif;
+            wp_reset_postdata();
+        else :
+            // No Favorites
+            echo '
     <p class="text-center">お気に入りがありません。</p>';
+        endif;
     endif;
     ?>
 
