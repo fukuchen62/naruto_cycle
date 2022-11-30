@@ -7,9 +7,9 @@
             <!-- フィールドのアイキャッチ画像使用 -->
             <?php
             $pic = get_field('eyecatch');
-            $pic_url = $pic['sizes']['medium'];
-            $width = $pic['sizes']['medium-width'];
-            $height = $pic['sizes']['medium-height'];
+            $pic_url = $pic['sizes']['thumbnail'];
+            $width = $pic['sizes']['thumbnail-width'];
+            $height = $pic['sizes']['thumbnail-height'];
 
 
             ?>
