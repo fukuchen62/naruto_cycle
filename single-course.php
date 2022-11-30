@@ -12,7 +12,7 @@
 <?php $cid = get_the_ID(); ?>
 
 <?php the_field('map'); ?>
-<h３>コース情報</h３>
+<h3>コース情報</h3>
 <h2>INFOMATION</h2>
 <article id="<?php the_ID(); ?>">
     <!-- タイトル -->
@@ -31,7 +31,7 @@
 <?php endwhile; ?>
 <?php endif; ?>
 
-<h3>食べる</h3>
+<h2>食べる</h2>
 <?php
 $args = array(
     'post_type' => 'shop', //カスタム投稿タイプを指定
@@ -54,7 +54,7 @@ $metaquerysp[] = array(
 $args['tax_query'] = $taxquerysp;
 $args['meta_query'] = $metaquerysp;
 
-print_r($args);
+// print_r($args);
 
 $spot_query = new WP_Query($args); //サブループを変数に格納
 
@@ -73,5 +73,131 @@ endif;
 wp_reset_postdata(); //サブループを抜ける
 ?>
 
+<h2>楽しむ</h2>
+<?php
+$args = array(
+    'post_type' => 'spot', //カスタム投稿タイプを指定
+    'posts_per_page' => -1, //表示する記事数
+);
+$taxquerysp = array('relation' => 'AND ');
+$taxquerysp[] = array(
+    'taxonomy' => 'spot_type',
+    'terms' => array('enjoy'),
+    'field' => 'slug',
+);
+
+$metaquerysp = array('relation' => 'AND ');
+$metaquerysp[] = array(
+    'key' => 'course_id',
+    'value' => $cid,
+    'compare' => 'LIKE',
+);
+
+$args['tax_query'] = $taxquerysp;
+$args['meta_query'] = $metaquerysp;
+
+// print_r($args);
+
+$spot_query = new WP_Query($args); //サブループを変数に格納
+
+if ($spot_query->have_posts()) :
+    while ($spot_query->have_posts()) :
+        $spot_query->the_post();
+?>
+
+<!-- ここにhtml -->
+<div class="col-md-3">
+    <?php get_template_part('template-parts/loop', 'spot') ?>
+</div>
+
+<?php endwhile;
+endif;
+wp_reset_postdata(); //サブループを抜ける
+?>
+
+
+<h2>買う</h2>
+<?php
+$args = array(
+    'post_type' => 'shop', //カスタム投稿タイプを指定
+    'posts_per_page' => -1, //表示する記事数
+);
+$taxquerysp = array('relation' => 'AND ');
+$taxquerysp[] = array(
+    'taxonomy' => 'shop_type',
+    'terms' => array('buy'),
+    'field' => 'slug',
+);
+
+$metaquerysp = array('relation' => 'AND ');
+$metaquerysp[] = array(
+    'key' => 'course_id',
+    'value' => $cid,
+    'compare' => 'LIKE',
+);
+
+$args['tax_query'] = $taxquerysp;
+$args['meta_query'] = $metaquerysp;
+
+// print_r($args);
+
+$spot_query = new WP_Query($args); //サブループを変数に格納
+
+if ($spot_query->have_posts()) :
+    while ($spot_query->have_posts()) :
+        $spot_query->the_post();
+?>
+
+<!-- ここにhtml -->
+<div class="col-md-3">
+    <?php get_template_part('template-parts/loop', 'spot') ?>
+</div>
+
+<?php endwhile;
+endif;
+wp_reset_postdata(); //サブループを抜ける
+?>
+
+<h2>サイクルスポット</h2>
+<?php
+$args = array(
+    'post_type' => 'cycle', //カスタム投稿タイプを指定
+    'posts_per_page' => -1, //表示する記事数
+);
+$taxquerysp = array('relation' => 'AND ');
+$taxquerysp[] = array(
+    'taxonomy' => 'shop_type',
+    'terms' => array('cycle'),
+    'field' => 'slug',
+);
+
+$metaquerysp = array('relation' => 'AND ');
+$metaquerysp[] = array(
+    'key' => 'course_id',
+    'value' => $cid,
+    'compare' => 'LIKE',
+);
+
+$args['tax_query'] = $taxquerysp;
+$args['meta_query'] = $metaquerysp;
+
+// print_r($args);
+
+$spot_query = new WP_Query($args); //サブループを変数に格納
+
+if ($spot_query->have_posts()) :
+    while ($spot_query->have_posts()) :
+        $spot_query->the_post();
+?>
+
+<!-- ここにhtml -->
+<div class="col-md-3">
+    <?php get_template_part('template-parts/loop', 'spot') ?>
+</div>
+
+<?php endwhile;
+endif;
+wp_reset_postdata(); //サブループを抜ける
+?>
 
 <?php get_footer(); ?> -->
