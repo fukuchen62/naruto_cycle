@@ -419,6 +419,7 @@
     background-color: #F00000;
 }
 
+
 /* ---------------section：スポット---------------  */
 .index_spot {
     background-color: #D4EBEC;
@@ -428,7 +429,6 @@
     width: 230px;
     margin: 0 auto;
 }
-
 
 .index_spot_deco {
     font-size: 32px;
@@ -467,6 +467,7 @@
         width: 1024px;
     }
 }
+
 
 /* ---------------波アニメーション---------------  */
 /* 動かない波の仕切り */
@@ -509,8 +510,6 @@
 }
 
 
-
-
 /* ---------------section：インスタグラム---------------  */
 .index_insta_content {
     width: 100%;
@@ -526,8 +525,6 @@
     }
 }
 
-
-
 .index_insta_txtbox {
     width: 380px;
     margin: 0 auto;
@@ -542,7 +539,6 @@
     }
 }
 
-
 /* PC表示 */
 @media screen and (min-width: 1024px) {
     .index_insta_txtbox {
@@ -550,8 +546,6 @@
         margin: 0;
     }
 }
-
-
 
 /* 見出し */
 .index_insta_top {
@@ -573,8 +567,6 @@
         margin-bottom: 0;
     }
 }
-
-
 
 /* キャプション */
 .index_insta_caption {
@@ -634,7 +626,6 @@
     animation: rotateAnim 10s linear infinite;
 }
 
-
 @keyframes rotateAnim {
     0% {
         transform: rotate(0deg);
@@ -663,8 +654,6 @@ span {
     color: rgba(0, 0, 0, 0);
 }
 
-
-
 /* SnapWidgetの設定 */
 .index_insta_SWbox {
     text-align: center;
@@ -674,4 +663,19 @@ span {
     background: transparent;
     border: none;
     overflow: hidden;
+}
+
+/* ---------------波アニメーション---------------  */
+
+.wave {
+    position: relative;
+    height: 200px;
+    /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+}
+
+canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
