@@ -32,21 +32,32 @@
 
     <div class="">
 
-
+        <!-- 店名 -->
+        <!-- <li><b>店名</b><span><?php the_field('shop_name'); ?></span></li> -->
         <!-- 投稿日時 -->
 
-        <time class="news_time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-    </div>
-    <!-- カテゴリ -->
-    <?php the_category() ?>
+        <!-- <time class="news_time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+    </div> -->
+        <!-- カテゴリ -->
+        <!-- <?php the_category() ?> -->
 
-    <!-- 記事のタイトル -->
-    <h2 class="news_title">
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </h2>
-    <!-- 記事の概要 -->
-    <div class="news_desc">
+        <!-- 記事のタイトル （店名）-->
+        <h2 class="news_title">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </h2>
+        <!-- 営業時間 -->
+        <li><b>営業時間</b><span><?php the_field('open_time'); ?></span></li>
+
+        <!-- 住所 -->
+        <li><b>住所</b><span><?php the_field('address'); ?></span></li>
+
+        <!-- 電話番号 -->
+        <li><b>tel</b><span><?php the_field('telephone'); ?></span></li>
+
+        <!-- 記事の概要 -->
+
+        <!-- <div class="news_desc">
         <p><?php the_excerpt(); ?></p>
         <p><a href="<?php the_permalink(); ?>">[続きを読む]</a></p>
-    </div>
+    </div> -->
 </article>
