@@ -7,7 +7,6 @@
 }
 
 /* moreボタンのスタイルここから */
-
 .more_btn {
     margin: 48px auto auto auto;
 }
@@ -195,8 +194,13 @@
 }
 
 /* ニュースタイトル */
-.index_news_title {
+.index_news_headline {
+    width: 100%;
+    height: 16px;
     margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -610,55 +614,55 @@
     display: none;
 }
 
-@media screen and (min-width: 1024px) {
-    .circle {
-        display: inline-block;
-        position: absolute;
-        left: 200px;
-        margin: 20px auto;
-        width: 760px;
-        height: 760px;
-        border-radius: 50%;
+.circle {
+    position: absolute;
+    top: -75px;
+    right: 55px;
+    margin: 0 auto;
+    width: 168px;
+    height: 168px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.inner {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: rotateAnim 10s linear infinite;
+}
+
+
+@keyframes rotateAnim {
+    0% {
+        transform: rotate(0deg);
     }
 
-    .inner {
-        /* 文字を配置する起点となる親要素 */
-        position: relative;
-        width: 104px;
-        /* この親要素自体は1文字が収まる程度の小さいサイズ */
-        height: 104px;
-        border-radius: 50%;
-        animation: rotateAnim 15s linear infinite;
-        /* 円形テキストを回転 */
-        z-index: -1;
+    50% {
+        transform: rotate(180deg);
     }
 
-    @keyframes rotateAnim {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        50% {
-            transform: rotate(180deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    /* テキストの設定 */
-    .info_cycle_deco {
-        position: absolute;
-        font-weight: bold;
-        font-size: 104px;
-        /* 縁取り文字にするための設定 */
-        text-shadow: -1px -1px 0 #ef6000, -1px 0 0 #fdacac, -1px 1px 0 #fdacac,
-            0 -1px 0 #fdacac, 0 1px 0 #fdacac, 1px -1px 0 #fdacac, 1px 0 0 #fdacac,
-            1px 1px 0 #fdacac;
-        color: #f3f0e8;
+    100% {
+        transform: rotate(360deg);
     }
 }
+
+span {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+}
+
+.index_insta_decotxt {
+    font-size: 24px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #EF6000;
+    text-stroke: 1px #EF6000;
+    color: rgba(0, 0, 0, 0);
+}
+
 
 
 /* SnapWidgetの設定 */
