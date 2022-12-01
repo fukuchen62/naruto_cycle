@@ -15,7 +15,7 @@ function init() {
     colorList = [];
     // canvas1個めの色指定
     canvasList.push(document.getElementById("waveCanvas"));
-    colorList.push(['#005EA7', '#74C7F0', '#D4EBEC']);//重ねる波の色設定、最前列#74C7F0・最奥#D4EBEC・中間ちょい見え#005EA7
+    colorList.push(['#74C7F0', '#005EA7', '#D4EBEC']);//重ねる波の色設定、最前列#74C7F0・最奥#D4EBEC・中間ちょい見え#005EA7
 	// 各キャンバスの初期化
 for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
@@ -54,7 +54,7 @@ function draw(canvas, color) {
 
     //波の重なりを描画 drawWave(canvas, color[数字（波の数を0から数えて指定）], 透過, 波の幅のzoom,波の開始位置の遅れ )
     drawWave(canvas, color[0], 0.8, 3, 0);//0.5⇒透過具合50%、3⇒数字が大きいほど波がなだらか
-    drawWave(canvas, color[1], 0.8, 2, 250);
+    drawWave(canvas, color[1], 0.8,3, 250);
     drawWave(canvas, color[2], 1, 1.6, 100);
 }
 

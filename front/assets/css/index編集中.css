@@ -441,6 +441,7 @@
 /* ---------------section：スポット---------------  */
 .index_spot {
     background-color: #D4EBEC;
+    margin-block-end: 100px;
 }
 
 .index_spot_headlinebox {
@@ -488,45 +489,6 @@
 
 
 /* ---------------波アニメーション---------------  */
-/* 動かない波の仕切り */
-.container {
-    position: relative;
-    background: #D4EBEC;
-    height: 60px;
-
-}
-
-.wave {
-    position: absolute;
-    height: 150px;
-    width: 100%;
-    background: #D4EBEC;
-    bottom: 0;
-}
-
-.wave::before, .wave::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-}
-
-.wave::before {
-    width: 55%;
-    height: 109%;
-    background-color: #f3f0e8;
-    right: -1.5%;
-    top: 60%;
-}
-
-.wave::after {
-    width: 55%;
-    height: 100%;
-    background-color: #D4EBEC;
-    left: -1.5%;
-    top: 40%;
-}
-
 
 /* ---------------section：インスタグラム---------------  */
 .index_insta_content {

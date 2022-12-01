@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/footer編集中.css" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/index編集中.css" />
     <link rel="stylesheet" href="./assets/css/3wave.css">
 
     <!-- googlefont本体ここから2行 -->
@@ -248,14 +248,13 @@
 
             <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：スポット ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
-            <!-- 波アニメーション（上）ここから -->
-            <div class="wave">
-                <canvas id="waveCanvas"></canvas>
-            </div>
-            <!-- 波アニメーション（上）ここまで -->
 
             <section class="index_spot relative">
-
+                <!-- 波アニメーション（上）ここから -->
+                <div class="wave">
+                    <canvas id="waveCanvas"></canvas>
+                </div>
+                <!-- 波アニメーション（上）ここまで -->
                 <div class="index_spot_headlinebox relative">
                     <!-- 吹き出しPICKUP！文字 -->
                     <div class="index_spot_deco">＼PICK UP!／</div>
@@ -487,13 +486,14 @@
                 <div class="common_btn">
                     <a class="spot_top_btn" href="search.html">スポット検索へ⇒</a>
                 </div>
+                <!-- 波アニメーション（下）ここから -->
+                <!-- <div class="wave reflect-y">
+                    <canvas id="waveCanvas"></canvas>
+                </div> -->
+                <!-- 波アニメーション（下）ここまで -->
             </section>
 
-            <!-- 波アニメーション（下）ここから -->
-            <!-- <div class="wave">
-                <canvas id="waveCanvas"></canvas>
-            </div> -->
-            <!-- 波アニメーション（下）ここまで -->
+
 
             <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：インスタ ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
@@ -539,10 +539,14 @@
                 </div>
             </section>
         </main>
-        <div class="wave">
-            <canvas id="waveCanvas"></canvas>
-        </div>
+
+
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+
+        <!-- フッター用の波、付けるときはclassを変更 -->
+        <!-- <div class="wave">
+                    <canvas id="waveCanvas"></canvas>
+                </div> -->
 
         <footer class="footer bg_blue white txt_c">
             <ul class="banner_list gap32_16 m_bottom40">
