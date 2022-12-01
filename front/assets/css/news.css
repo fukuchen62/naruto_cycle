@@ -235,8 +235,6 @@
 	object-fit: cover;
 }
 
-.news_article_info_box {}
-
 /* ニュース記事の見出しタイトル */
 .news_card_item_name {
 	font-weight: bold;
