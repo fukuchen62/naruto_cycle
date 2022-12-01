@@ -150,17 +150,24 @@ button {
 	z-index: 100;
 }
 
+.hanberg {
+	position: relative;
+	top: 0;
+	right: 100px;
+}
+
 /* 真ん中のバーガー線 */
 .btn-line {
-	position: relative;
+	/* display: inline-block; */
+	position: absolute;
 	/* バーガー線の位置基準として設定 */
 	width: 100%;
 	/* 線の長さと高さ */
 	height: 4px;
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(255, 55, 0);
 	/* バーガー線の色 */
 	transition: 0.2s;
-	z-index: 100;
+	z-index: 120;
 }
 
 /* 上下のバーガー線 */
