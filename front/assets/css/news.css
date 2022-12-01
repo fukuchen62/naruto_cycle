@@ -170,7 +170,7 @@
 }
 
 /* 下部装飾画像用（自転車をこぐ女性） */
-.news_detail_wrap {
+.news_main_wrap {
 	position: relative;
 	padding-bottom: 60px;
 }
@@ -179,15 +179,32 @@
 	display: none;
 }
 
+.news_bottom_bg_img {
+	display: none;
+}
+
 @media screen and (min-width: 1024px) {
+	.news_main_wrap {
+		padding-bottom: 300px;
+	}
+
 	.news_bottom_cycle_img {
 		display: block;
 		position: absolute;
 		bottom: 0px;
 		right: 0px;
-		width: 238px;
-		height: 292px;
+		width: 20%;
+		/* height: 292px; */
 		z-index: -1;
+	}
+
+	.news_bottom_bg_img {
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		z-index: -2;
+
 	}
 }
 
@@ -259,7 +276,7 @@
 	box-shadow: 4px 4px #ef6000;
 	border: 2px solid #005ea7;
 	text-align: center;
-	line-height: 40px;
+	line-height: 34px;
 	position: relative;
 	margin-left: 168px;
 	margin-top: 10px;
