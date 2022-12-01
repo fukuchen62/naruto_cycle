@@ -170,7 +170,7 @@
 }
 
 /* 下部装飾画像用（自転車をこぐ女性） */
-.news_detail_wrap {
+.news_main_wrap {
 	position: relative;
 	padding-bottom: 60px;
 }
@@ -179,15 +179,32 @@
 	display: none;
 }
 
+/* 下部アニメーション背景 */
+.news_bottom_bg_img {
+	display: none;
+}
+
 @media screen and (min-width: 1024px) {
+	.news_main_wrap {
+		padding-bottom: 180px;
+	}
+
 	.news_bottom_cycle_img {
 		display: block;
 		position: absolute;
 		bottom: 0px;
-		right: 0px;
-		width: 238px;
-		height: 292px;
+		right: 100px;
+		width: 20%;
+		/* height: 292px; */
 		z-index: -1;
+	}
+
+	.news_bottom_bg_img {
+		display: block;
+		position: absolute;
+		/* bottom: -200px; */
+		width: 100%;
+		z-index: -2;
 	}
 }
 
@@ -217,8 +234,6 @@
 	height: 240px;
 	object-fit: cover;
 }
-
-.news_article_info_box {}
 
 /* ニュース記事の見出しタイトル */
 .news_card_item_name {
@@ -259,19 +274,17 @@
 	box-shadow: 4px 4px #ef6000;
 	border: 2px solid #005ea7;
 	text-align: center;
-	line-height: 40px;
+	line-height: 34px;
 	position: relative;
 	margin-left: 168px;
 	margin-top: 10px;
 	transition: 0.25s;
-
 }
 
 .news_card_item_btn:hover {
 	transform: translate3d(8px, 8px, 0);
 	box-shadow: none;
 }
-
 
 @media screen and (min-width: 599px) {
 	.news_card {
@@ -310,7 +323,6 @@
 		position: relative;
 		margin-left: 148px;
 		margin-top: 90px;
-
 	}
 }
 
@@ -358,10 +370,6 @@
 
 .news_pagination_container {
 	margin: auto auto 60px;
-	/* padding: auto; */
-	/* position: absolute;
-	right: 200px;
-	bottom: 200px */
 }
 
 .page_box {
@@ -376,4 +384,80 @@
 		right: 240px;
 		bottom: -100px;
 	}
+}
+
+/* ニュース下部の入れ物 */
+.news_bottom_container {
+	position: relative;
+	margin-bottom: 0;
+
+}
+
+/* 下部自転車のアニメーション */
+.buruburu {
+	display: inline-block;
+	animation: hurueru .1s infinite;
+}
+
+@keyframes hurueru {
+	0% {
+		transform: translate(0px, 0px) rotateZ(0deg)
+	}
+
+	25% {
+		transform: translate(0.5px, 0.5px) rotateZ(0.5deg)
+	}
+
+	50% {
+		/* transform: translate(0px, 2px) rotateZ(0deg) */
+	}
+
+	75% {
+		transform: translate(0.5px, 0px) rotateZ(-0.5deg)
+	}
+
+	100% {
+		transform: translate(0px, 0px) rotateZ(0deg)
+	}
+}
+
+/* 下部背景のアニメーション */
+.loop_wrap {
+	display: flex;
+	width: 100vw;
+	/* height: 300px; */
+	overflow: hidden;
+}
+
+.loop_wrap img {
+	width: auto;
+	height: 100%;
+}
+
+@keyframes loop {
+	0% {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes loop2 {
+	0% {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-200%);
+	}
+}
+
+.loop_wrap img:first-child {
+	animation: loop 50s -25s linear infinite;
+}
+
+.loop_wrap img:last-child {
+	animation: loop2 50s linear infinite;
 }

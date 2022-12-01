@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1024px) {
+	.not_pc {
+		display: none;
+	}
+}
+.not_sp {
+	display: none;
+}
+@media screen and (min-width: 1024px) {
+	.not_sp {
+		display: inline-block;
+	}
+}
+
+.howto {
+	position: relative;
+}
+
+.howto_container {
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media screen and (min-width: 599px) {
+	.howto_container {
+		width: 600px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.howto_container {
+		width: 1024px;
+	}
+}
+.howto_img {
+	width: 300px;
+	height: 448px;
+}
+.howto_naruto {
+	width: 320px;
+}
+@media screen and (min-width: 600px) {
+	.howto_naruto {
+		width: 600px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.howto_naruto {
+		width: 560px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.howto_text {
+		text-align: left;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.howto_text {
+		text-align: center;
+	}
+}
+
+.list_container {
+	margin-top: 80px;
+	text-align: center;
+}
+.howto_list_headline {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 24px;
+	text-align: center;
+}
+.cycle_item_list {
+	margin-top: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	width: 320px;
+	justify-content: center;
+}
+@media screen and (min-width: 599px) {
+	.cycle_item_list {
+		width: 600px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.cycle_item_list {
+		width: 1024px;
+	}
+}
+.cycle_item_list li {
+	text-align: center;
+	/* width: 25%; */
+}
+.list_img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+@media screen and (min-width: 1024px) {
+	.list_img {
+		width: 200px;
+		height: 200px;
+	}
+}
+.list_img.carry {
+	border: solid 2px green;
+}
+.list_img.wear {
+	border: solid 2px orange;
+}
+@media screen and (min-width: 600px) {
+	.attention_text {
+		text-align: left;
+	}
+}
+/* もっと鳴門について知るには */
+.more_naruto_card_item {
+	margin-top: 64px;
+	position: relative;
+	width: 320px;
+	height: 480px;
+	box-shadow: -40px -40px blue;
+	background-color: rgb(44, 44, 44);
+	transition: 1s;
+}
+.more_naruto_card_item img {
+	width: 320px;
+	height: 480px;
+	object-fit: cover;
+}
+.more_naruto_num {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	font-size: 64px;
+	color: #fff;
+}
+.more_naruto_caption {
+	position: absolute;
+	bottom: 16px;
+	left: auto;
+	text-align: left;
+	margin: 16px;
+	color: #fff;
+}
+@media screen and (min-width: 600px) {
+	.more_naruto_card_item:hover img {
+		opacity: 0.8;
+	}
+	.more_naruto_caption {
+		opacity: 0;
+		transition: 1s;
+	}
+	.more_naruto_card_item:hover .more_naruto_caption {
+		opacity: 1;
+	}
+}
+.more_naruto_title {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}

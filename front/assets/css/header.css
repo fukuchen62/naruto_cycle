@@ -14,11 +14,25 @@
 /* ヘッダーロゴの設定 */
 /* サイズはwidthを大きくするほどサイズも大きくできる */
 .header_logo {
+<<<<<<< HEAD
 	position: fixed;
 	/* 最前面に */
 	z-index: 101;
 	width: 100px;
 	height: 80px;
+=======
+    position: fixed;
+    /* 最前面に */
+    z-index: 101;
+    width: 80px;
+}
+
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 600px) {
+    .header_logo {
+        width: 160px;
+    }
+>>>>>>> b7c3467a9448b0794330a78f372130d3edd86a05
 }
 
 /* ハンバーガーメニューの設定ここから */
@@ -43,6 +57,7 @@ button {
 }
 
 .menu {
+<<<<<<< HEAD
 	position: fixed;
 	right: -1000%;
 	width: 40%;
@@ -62,6 +77,23 @@ button {
 	/* メニューテキスト位置をリスト内中心に */
 	font-size: 24px;
 	text-align: center;
+=======
+    position: fixed;
+    right: -1000%;
+    width: 40%;
+    margin-left: auto;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    z-index: 9;
+    transition: 0.3s;
+}
+
+.menu-list {
+    width: 100%;
+    /* メニューテキスト位置をリスト内中心に */
+    font-size: 24px;
+    text-align: center;
+>>>>>>> b7c3467a9448b0794330a78f372130d3edd86a05
 }
 
 /* gnavの文字、白枠線付けようとするとなぜかSPOTだけ効かない */
