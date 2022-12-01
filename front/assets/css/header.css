@@ -17,8 +17,8 @@
     position: fixed;
     /* 最前面に */
     z-index: 101;
-    width: 100px;
-    height: 80px;
+    width: 160px;
+    /* height: 80px; */
 }
 
 /* ハンバーガーメニューの設定ここから */

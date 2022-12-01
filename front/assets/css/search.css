@@ -87,10 +87,21 @@ border-radius: 10px;
   left: 12px;
   top:9px;
   bottom: 9px;
+  text-align: left;
 }
-
 .btn-inner-box{
   margin: 48px auto auto auto;
+}
+/* 要素いっぱいまでチェックを適用 */
+.item_box label {
+  display: block;
+  width: 200px;
+  height: 100%;
+    cursor: pointer;
+}
+
+.s-search-btn {
+
 }
 
 /* 検索ボタン装飾 */
@@ -114,6 +125,11 @@ position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+/* 要素いっぱいまで適用 */
+button{
+  width: 100%;
+  height: 100%;
 }
 
 /* あしらい（PC）非表示 */
@@ -239,13 +255,17 @@ margin: 0px 32px;
 
 /* 検索ボタンの配置 */
 .btn-inner-box{
-  margin:72px 208px 28px auto;
-  width: 512px;
+  /* margin:72px 208px 28px auto; */
+  margin:72px 192px 28px auto;
+  width: 544px;
 }
 /* 検索ボタン */
 .btn-inner{
   margin: auto 16px;
 }
+
+
+
 
 /* reccomendのあしらいを囲む箱 */
 .reccomend_wrap{
