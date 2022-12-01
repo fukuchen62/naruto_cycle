@@ -1,7 +1,7 @@
 // <!-- TOPに戻るボタン用 -->
 
 $(function(){
-  var topBtn=$('#pagetop');
+  var topBtn=$('.pagetop');
   topBtn.hide();
 
   //ボタンの表示設定
@@ -18,7 +18,7 @@ $(function(){
   //ボタンをクリックしたら、スクロールして上に戻る
   topBtn.click(function(){
     $('body,html').animate({
-    scrollTop: 0},500);
+    scrollTop: 0},200);
     return false;
   });
 });
