@@ -21,7 +21,7 @@ h2.search_title{
   font-family: 'Noto Sans JP';
   font-weight: bold;
   font-size: 48px;
-  margin: auto auto 20px auto;
+  margin: auto auto 32px auto;
 }
 
 /* 真ん中にする */
@@ -227,8 +227,9 @@ position: relative;
 /* 要素を横並びにする */
 .radio-box{
 display:flex;
-width: 848px;
-margin: 0px 40px;
+/* width: 848px; */
+width: 864px;
+margin: 0px 32px;
 }
 
 /* チェックボックスの幅*/
@@ -249,7 +250,7 @@ margin: 0px 40px;
 /* reccomendのあしらいを囲む箱 */
 .reccomend_wrap{
   width: 421px;
-  height: 144px;
+  height: 122px;
   background-color: #F3F0E8;
   margin: auto;
   position: relative;
@@ -260,7 +261,7 @@ margin: 0px 40px;
   white-space: nowrap;
   transform: rotate(-15deg);
   position: absolute;
-  bottom: 70px;
+  bottom: 50px;
   right: 260px;
 }
 

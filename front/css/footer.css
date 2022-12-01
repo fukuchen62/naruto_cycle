@@ -148,7 +148,6 @@
 @media screen and (min-width: 599px) {
 	.fnav_container {
 		width: 600px;
-		text-align: left;
 	}
 }
 
@@ -156,7 +155,6 @@
 @media screen and (min-width: 1024px) {
 	.fnav_container {
 		width: 1024px;
-		text-align: left;
 	}
 }
 
@@ -199,7 +197,6 @@
 }
 
 .footer_list {
-	flex-direction: row;
 	margin-top: 10px;
 	margin-bottom: 16px;
 }
