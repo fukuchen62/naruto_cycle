@@ -60,6 +60,7 @@ button {
     /* padding: 10px; */
     /* height: 100%; */
     /* メニューテキスト位置をリスト内中心に */
+    font-size: 24px;
     text-align: center;
 }
 
@@ -73,8 +74,8 @@ button {
 
 .menu-list a {
     justify-items: center;
-    display: block;
-    padding: 24px;
+    display: inline-block;
+    /* padding: 24px; */
     height: 100%;
 }
 
