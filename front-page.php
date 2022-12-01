@@ -38,6 +38,8 @@
     =======
 
     <!-- サイクリングについて -->
+
+    <!-- 固定ページ（id=2)のループ処理 -->
     <?php
     $args = array(
         'page_id'      => '2',
@@ -75,6 +77,6 @@
 
 
     <!-- インスタ表示 -->
-
+    <?php echo do_shortcode('[instagram-feed feed=1] '); ?>
 
     <?php get_footer(); ?>

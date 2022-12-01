@@ -48,7 +48,6 @@
   .sub-img{
     display: flex;
     justify-content: center;
-
   }
   .current{
     margin: auto 5px 16px 0px;
@@ -56,6 +55,12 @@
   .current:last-of-type{
     margin: 0px;
   }
+  .container_pc{
+    display: none;
+  }
+
+
+
 
   /* 詳細 */
   .spot_date{
@@ -165,8 +170,8 @@ white-space: nowrap
 @media screen and (min-width: 1024px) {
 	.info_wrap {
 		padding-top: 48px;
-		height: 389px;
-		width: 665.45px;
+		height: 320px;
+		width: 640px;
 	}
 }
 
@@ -202,7 +207,15 @@ white-space: nowrap
   width: 91px;
   height: 210px;
   top: 275px;
-  right: 0px;
+  right: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .course_info_pic_boy{
+    width: 127px;
+    height: 293px;
+    top:50px;
+    right: -px;
+  }
 }
 
 /* テキストが入る部分の設定 */
@@ -210,16 +223,7 @@ white-space: nowrap
 	width: 250px;
 	line-height: 2rem;
 }
-@media screen and (min-width: 1024px) {
-	.info_content {
-		width: 300px;
-    word-wrap: break-word;
-	}
-}
-.info_list {
-	display: flex;
-	flex-wrap: wrap;
-}
+
 .font_bold{
   font-weight: bold;
 }
@@ -250,13 +254,6 @@ margin: auto -10px;
 }
 
 
-/* お気に入りボタン位置修正 */
-/* .spot_like_icon{
-  margin: 30px auto auto 10px;
-} */
-
-
-
 /* スポットのもっと見るボタンの設定----------- */
 .common_btn{
 	margin: -32px auto 60px auto;
@@ -281,3 +278,59 @@ margin: auto -10px;
 		width: 1024px;
 	}
 }
+
+  @media screen and (min-width: 1024px) {
+    /* 詳細箱の大きさ */
+.box_spot_info{
+  width: 1024px;
+  height: 785px;
+}
+/* 画像位置 */
+    .container_pc{
+    display: block;
+    text-align: left;
+    margin: 12px 28px 0px 12px;
+  }
+.sub_img_pc{
+  display: flex;
+  gap:15px;
+  margin: 15px auto;
+}
+
+  /* SP版画像非表示 */
+  .container{
+    display: none;
+    float: left;
+  }
+
+/* 地図サイズ */
+iframe{
+  width: 475px;
+  height: 160px;
+}
+/* 詳細 */
+  .spot_date{
+    align-items: center;
+    margin: -550px 518px;
+    width: 476px;
+  }
+/* コースの詳細 */
+.this_course{
+  margin-top:400px ;
+  margin-right: 500px;
+}
+/* データ更新日 */
+.update{
+  margin-top: 80px;
+  margin-left: 698px;
+}
+
+	.info_content {
+		width: 300px;
+    word-wrap: break-word;
+    text-align: left;
+    margin-right: 250px;
+
+}
+
+  }
