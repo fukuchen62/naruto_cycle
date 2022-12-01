@@ -63,7 +63,10 @@ button {
 	font-size: 24px;
 	text-align: center;
 }
-
+.menu-list rt {
+	font-weight: normal;
+	text-align: center;
+}
 /* gnavの文字、白枠線付けようとするとなぜかSPOTだけ効かない */
 .font_edge_white {
 	font-weight: bold;
