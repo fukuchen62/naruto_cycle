@@ -197,7 +197,6 @@
 .news_card {
 	width: 320px;
 	height: 440px;
-	/* margin: 0, 0, 80px, 0; */
 	margin-bottom: 32px;
 }
 
@@ -358,5 +357,16 @@
 	}
 }
 
-/* タブレット以上で news_article_info_boxを上部に*/
-@media screen and (min-width: 599px) {}
+.news_pagination_container {
+	margin: auto auto 60px;
+	/* padding: auto; */
+	/* position: absolute;
+	right: 200px;
+	bottom: 200px */
+}
+
+.page_box {
+	border: 1px solid #005ea7;
+	margin: 8px;
+	padding: 8px;
+}
