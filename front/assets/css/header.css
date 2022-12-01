@@ -17,8 +17,14 @@
     position: fixed;
     /* 最前面に */
     z-index: 101;
-    width: 160px;
-    /* height: 80px; */
+    width: 80px;
+}
+
+/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用*/
+@media screen and (min-width: 600px) {
+    .header_logo {
+        width: 160px;
+    }
 }
 
 /* ハンバーガーメニューの設定ここから */
@@ -47,7 +53,6 @@ button {
     right: -1000%;
     width: 40%;
     margin-left: auto;
-    font-size: 100%;
     color: rgb(0, 0, 0);
     background-color: transparent;
     z-index: 9;
@@ -56,9 +61,6 @@ button {
 
 .menu-list {
     width: 100%;
-    /* margin: 10px; */
-    /* padding: 10px; */
-    /* height: 100%; */
     /* メニューテキスト位置をリスト内中心に */
     font-size: 24px;
     text-align: center;
