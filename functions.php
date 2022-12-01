@@ -76,8 +76,8 @@ function add_common_stylesheet_script()
     // 02.『common.css』
     wp_enqueue_style('naruto_cycle-common-style', get_template_directory_uri() . '/assets/css/common.css', array(), false);
 
-    // 03.『ヘッダーのCSS（template-header.css）』
-    wp_enqueue_style('naruto_cycle-template_header', get_template_directory_uri() . '/assets/css/template_header.css', array(), false);
+    // 03.『ヘッダーのCSS（header.css）』
+    wp_enqueue_style('naruto_cycle-template_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
 
 
 
