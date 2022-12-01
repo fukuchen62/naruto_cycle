@@ -62,14 +62,27 @@ function theme_query_vars($vars)
 add_filter('query_vars', 'theme_query_vars');
 
 
+// ファイルを読み込む
+//
+//   01.リセットCSSと共通のCSS，JSを読み込む
+//   02.ページごとのCSSとJSを読み込む
+
 add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
 function add_common_stylesheet_script()
 {
 
     //font-awesomeを読み込む
-    wp_enqueue_style('naruto_cycle-fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+    wp_enqueue_style('naruto_cycle-fontawesome', '"https://use.fontawesome.com/releases/v5.6.1/css/all.css" ');
+
+    //googlefontを読み込む
+    wp_enqueue_style('naruto_cycle-fontawesome_a', "https://fonts.googleapis.com");
+    wp_enqueue_style('naruto_cycle-fontawesome_b', "https://fonts.gstatic.com");
+    wp_enqueue_style('naruto_cycle-fontawesome_c', "https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap");
+
+
 
     //共通のCSS（common.css）を読み込む
+
     // 01.『リセットCSS（reset.css）』
     wp_enqueue_style('naruto_cycle-reset', get_template_directory_uri() . '/assets/css/reset.css', array(), false);
 
@@ -79,10 +92,8 @@ function add_common_stylesheet_script()
     // 03.『ヘッダーのCSS（header.css）』
     wp_enqueue_style('naruto_cycle-template_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
 
-
-
-    // 04.『フッターのCSS（template-footer.css）』
-    wp_enqueue_style('naruto_cycle-template_footer', get_template_directory_uri() . '/assets/css/template_footer.css', array(), false);
+    // 04.『フッターのCSS（footer.css）』
+    wp_enqueue_style('naruto_cycle-template_footer', get_template_directory_uri() . '/assets/css/footer.css', array(), false);
 
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
@@ -93,26 +104,45 @@ function add_common_stylesheet_script()
     // wp_deregister_script('jquery');
 
     //GoogleCDNから読み込む
-    wp_enqueue_script(
-        'jquery-min.js',
-        '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
-    );
+    // wp_enqueue_script(
+    //     'jquery-min.js',
+    //     '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+    // );
 
     // 01.『common.js』
     wp_enqueue_script('naruto_cycle-common-script', get_template_directory_uri() . '/assets/js/common.js', '', '', true);
 
-    // 02.『template-header.js』
-    wp_enqueue_script('naruto_cycle-header-script', get_template_directory_uri() . '/assets/js/template_header.js', '', '', true);
+    // 02.『header.js』
+    wp_enqueue_script('naruto_cycle-header-script', get_template_directory_uri() . '/assets/js/header.js', '', '', true);
 
     // 03.『template-footer.js』
-    wp_enqueue_script('naruto_cycle-footer-script', get_template_directory_uri() . '/assets/js/template_footer.js', '', '', true);
+    // wp_enqueue_script('naruto_cycle-footer-script', get_template_directory_uri() . '/assets/js/footer.js', '', '', true);
 
-    //slickCSSを読み込む
-    wp_enqueue_style('slick', get_template_directory_uri() . '/assets/slick/slick.css', false);
+}
 
-    //slick-themeCSSを読み込む
-    wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css', false);
 
-    //slickのJSを読み込み
-    wp_enqueue_script('slick-min', get_template_directory_uri() . '/assets/slick/slick.min.js', '', '', true);
+// 02.ページごとの読み込み
+// 02-A:トップページ
+
+
+
+add_action('wp_enqueue_scripts', 'add_individual_stylesheet_script');
+function add_individual_stylesheet_script()
+{
+
+    // 02-A:トップページ
+    if (is_home()) {
+        //トップページのCSS（top.css）を読み込む
+        wp_enqueue_style(
+            'naruto_cycle-top',
+            get_template_directory_uri() . '/assets/css/index.css',
+            array(),
+            false
+        );
+        //トップページのヘッダーのCSS（template_top_header.css）を読み込む
+        // wp_enqueue_style('naruto_cycle-template_top_header', get_template_directory_uri() . '/assets/css/template_top_header.css', array(), false);
+
+        // トップページ用のJS（top.js）を読み込む
+        wp_enqueue_script('naruto_cycle-top-script', get_template_directory_uri() . '/assets/js/index.js', '', '', true);
+    }
 }

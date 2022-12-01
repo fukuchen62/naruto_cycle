@@ -1,12 +1,12 @@
 /* ヘッダー */
-
+/* コメント追加 */
 /* ヘッダーのJS用 */
 .header.change-color {
-    /* スクロールしたあとのヘッダー背景色 */
-    background-color: #005EA7;
-    /* スクロールしたあとの文字の色 */
-    color: #fff;
-    transition: 0.3s;
+	/* スクロールしたあとのヘッダー背景色 */
+	background-color: #005ea7;
+	/* スクロールしたあとの文字の色 */
+	color: #fff;
+	transition: 0.3s;
 }
 
 /* ヘッダーの設定 */
@@ -14,170 +14,173 @@
 /* ヘッダーロゴの設定 */
 /* サイズはwidthを大きくするほどサイズも大きくできる */
 .header_logo {
-    position: fixed;
-    /* 最前面に */
-    z-index: 101;
-    width: 100px;
-    height: 80px;
+	position: fixed;
+	/* 最前面に */
+	z-index: 101;
+	width: 100px;
+	height: 80px;
 }
 
 /* ハンバーガーメニューの設定ここから */
 ::before,
 ::after {
-    /* 親要素と同じ大きさに */
-    box-sizing: inherit;
+	/* 親要素と同じ大きさに */
+	box-sizing: inherit;
 }
 
 button {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    color: inherit;
-    vertical-align: middle;
-    text-align: inherit;
-    font: inherit;
-    -webkit-appearance: none;
-    appearance: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 .menu {
-    position: fixed;
-    right: -1000%;
-    width: 40%;
-    margin-left: auto;
-    font-size: 100%;
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    z-index: 9;
-    transition: 0.3s;
+	position: fixed;
+	right: -1000%;
+	width: 40%;
+	margin-left: auto;
+	font-size: 100%;
+	color: rgb(0, 0, 0);
+	background-color: transparent;
+	z-index: 9;
+	transition: 0.3s;
 }
 
 .menu-list {
-    width: 100%;
-    /* margin: 10px; */
-    /* padding: 10px; */
-    /* height: 100%; */
-    /* メニューテキスト位置をリスト内中心に */
-    font-size: 24px;
-    text-align: center;
+	width: 100%;
+	/* margin: 10px; */
+	/* padding: 10px; */
+	/* height: 100%; */
+	/* メニューテキスト位置をリスト内中心に */
+	font-size: 24px;
+	text-align: center;
 }
-
+.menu-list rt {
+	font-weight: normal;
+	text-align: center;
+}
 /* gnavの文字、白枠線付けようとするとなぜかSPOTだけ効かない */
 .font_edge_white {
-    font-weight: bold;
-    /* color: #000; */
-    /* -webkit-text-stroke: 0.8px #FFF; */
-    /* text-stroke: 0.8px #FFF; */
+	font-weight: bold;
+	/* color: #000; */
+	/* -webkit-text-stroke: 0.8px #FFF; */
+	/* text-stroke: 0.8px #FFF; */
 }
 
 .menu-list a {
-    justify-items: center;
-    display: inline-block;
-    /* padding: 24px; */
-    height: 100%;
+	justify-items: center;
+	display: inline-block;
+	/* padding: 24px; */
+	height: 100%;
 }
 
 .menu a:hover {
-    background: rgb(162, 148, 255);
+	background: rgb(162, 148, 255);
 }
 
 .btn {
-    /* ボタンの配置位置  */
-    position: fixed;
-    top: 12px;
-    right: 16px;
-    /* ボタンの大きさ  */
-    width: 48px;
-    height: 48px;
-    /* 最前面に */
-    z-index: 100;
+	/* ボタンの配置位置  */
+	position: fixed;
+	top: 12px;
+	right: 16px;
+	/* ボタンの大きさ  */
+	width: 48px;
+	height: 48px;
+	/* 最前面に */
+	z-index: 100;
 }
 
 /* 真ん中のバーガー線 */
 .btn-line {
-    display: block;
-    position: relative;
-    /* バーガー線の位置基準として設定 */
-    width: 100%;
-    /* 線の長さと高さ */
-    height: 4px;
-    background-color: rgb(255, 255, 255);
-    /* バーガー線の色 */
-    transition: 0.2s;
+	display: block;
+	position: relative;
+	/* バーガー線の位置基準として設定 */
+	width: 100%;
+	/* 線の長さと高さ */
+	height: 4px;
+	background-color: rgb(255, 255, 255);
+	/* バーガー線の色 */
+	transition: 0.2s;
 }
 
 /* 上下のバーガー線 */
 .btn-line::before,
 .btn-line::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    transition: 0.5s;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	transition: 0.5s;
 }
 
 .btn-line::before {
-    /* 上の線の位置 */
-    transform: translateY(-16px);
+	/* 上の線の位置 */
+	transform: translateY(-16px);
 }
 
 .btn-line::after {
-    /* 下の線の位置 */
-    transform: translateY(16px);
+	/* 下の線の位置 */
+	transform: translateY(16px);
 }
 
 .menu.open {
-    right: 0;
-    /*右端にくっつける*/
+	right: 0;
+	/*右端にくっつける*/
 }
 
 /* 1025px以上はハンバーガーボタン非表示、ヘッダー固定 */
 @media screen and (min-width: 1025px) {
-    .btn {
-        display: none;
-    }
+	.btn {
+		display: none;
+	}
 
-    .menu {
-        /* メニューを横に */
-        display: flex;
-        flex-direction: row;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 65%;
-        height: 76.79px;
-        font-size: 100%;
-    }
+	.menu {
+		/* メニューを横に */
+		display: flex;
+		flex-direction: row;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 65%;
+		height: 76.79px;
+		font-size: 100%;
+	}
 
-    .menu-list a {
-        padding-top: 25px;
-    }
+	.menu-list a {
+		padding-top: 25px;
+	}
 }
 
 /*　メニューオープン時の線の動き　*/
 .btn-line.open {
-    background-color: transparent;
-    /* 真ん中の線を透明に */
+	background-color: transparent;
+	/* 真ん中の線を透明に */
 }
 
 .btn-line.open::before,
 .btn-line.open::after {
-    content: "";
-    /* background-color: #333; 上下の線の色を変える */
-    transition: 0.2s;
+	content: "";
+	/* background-color: #333; 上下の線の色を変える */
+	transition: 0.2s;
 }
 
 .btn-line.open::before {
-    transform: rotate(45deg);
-    /* 上の線を傾ける */
+	transform: rotate(45deg);
+	/* 上の線を傾ける */
 }
 
 .btn-line.open::after {
-    transform: rotate(-45deg);
-    /* 下の線を傾ける */
+	transform: rotate(-45deg);
+	/* 下の線を傾ける */
 }
 
 /* ハンバーガーメニューの設定ここまで */

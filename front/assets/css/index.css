@@ -44,13 +44,31 @@
     height: 100%;
 }
 
+/* 動画 */
+.index_video_wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.index_video_wrapper>video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
 /* キービジュアル画像 */
-.key_img {
+/* .key_img {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
     object-fit: cover;
-}
+} */
 
 /* キービジュ：装飾文字 */
 .key_msg {

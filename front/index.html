@@ -34,44 +34,26 @@
 
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
         <header class="header flex">
-            <div class="header_logo">
-                <h1>
-                    <a href="#">
-                    <img class="img" src="./assets/image/header_logo_img.png" alt="なるとサイくるっと！のロゴ">
-                </a>
-            </h1>
-            </div>
+            <h1 class="header_logo"><a href="#"><img class="img" src="./image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
             <nav>
                 <ul class="menu">
                     <li class="menu-list font_edge_white">
-                        <a href="news.html">
-                            <ruby>NEWS<rt>お知らせ</rt></ruby>
-                        </a>
+                        <a href="news.html">NEWS</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="howto.html">
-                            <ruby>HOW TO<rt>鳴門でサイクリング</rt></ruby>
-                        </a>
+                        <a href="howto.html">HOWTO</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="course.html">
-                            <ruby>COURSE<rt>コース紹介</rt></ruby>
-                        </a>
+                        <a href="course.html">COURSE</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="spot.html">
-                            <ruby>SPOT<rt>周辺スポット</rt></ruby>
-                        </a>
+                        <a href="spot.html">SPOT</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="mypage.html">
-                            <ruby>MY PAGE<rt>マイページ</rt></ruby>
-                        </a>
+                        <a href="mypage.html">MYPAGE</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="question.html">
-                            <ruby>Q&A<rt>よくある質問</rt></ruby>
-                        </a>
+                        <a href="question.html">Q&A</a>
                     </li>
                 </ul>
                 <button type="button" class="btn js-btn">
@@ -89,9 +71,19 @@
                 <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：キービジュアル ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
                 <section class="index_key_visual relative">
-                    <!-- キービジュアル画像 -->
+
                     <div class="key_img_box">
-                        <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像" class="key_img">
+                        <!-- キービジュアル画像 -->
+                        <!-- <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像" class="key_img"> -->
+
+                        <!-- 動画 -->
+                        <div class="index_video_wrapper">
+                            <video autoplay muted playsinline loop>
+                                <source src="./assets/image/index_keymovie.mp4" type="video/mp4">
+                                <img src="https://placehold.jp/1440x1024.png">
+                            </video>
+                        </div>
+
                     </div>
 
                     <!-- 装飾＞文字 -->
@@ -99,7 +91,7 @@
                     RIDE ON <br>
                     THE UZU <br>
                     WAVES!!
-                </h2>
+                    </h2>
 
                     <!-- 装飾＞画像 -->
                     <img class="key_man" src="./assets/image/index_top_img.png" alt="サイクリングマン">
@@ -512,7 +504,7 @@
                         <!-- 見出しボックス -->
                         <div class="index_insta_headline tb_pc_flex">
                             <!-- インスタロゴ -->
-                            <img class="insta_logo_img" src="./assets/image/Instagram_logo_img.png" alt="インスタグラムのロゴ">
+                            <img class="insta_logo_img" src="./assets/image/index_insta_logo_img.png" alt="インスタグラムのロゴ">
                             <!-- 見出し -->
                             <h2 class="index_insta_top headline">
                     <ruby>INSTAGRAM<rt>なるとサイくるっと！公式インスタグラム</rt></ruby>
@@ -550,66 +542,66 @@
 
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
-        <footer class="footer bg_blue white txt_c debug">
+        <footer class="footer bg_blue white txt_c">
             <ul class="banner_list gap32_16 m_bottom40">
                 <!-- asaなどのバナーがliで入ります -->
                 <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
                 <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
                 <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
             </ul>
-            <nav class="fnav_container bg_blue debug">
 
+            <nav class="fnav_container bg_blue">
                 <!-- フッターナビ -->
                 <!-- 近藤追加分 -->
-                <ul class="fnav">
-                    <ul class="fnav_w_list flex">
-                        <li class="footer_headline">
-                            <ul class="footer_list">
-                                <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
-                                <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
-                                <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
-                            </ul>
-                        </li>
-                        <li class="footer_headline"><a href="course.html">サイクリングコース</a>
-                            <ul class="footer_list">
-                                <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
-                                <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
-                                <li class="footer_nav_item"><a href=".html">中距離コース</a></li>
-                                <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
-                            </ul>
-                        </li>
-                        <li class="footer_headline"><a href=".html">周辺スポット検索</a>
-                            <ul class="footer_list">
-                                <li class="footer_nav_item"><a href=".html">食べる</a></li>
-                                <li class="footer_nav_item"><a href=".html">見る</a></li>
-                                <li class="footer_nav_item"><a href=".html">買う</a></li>
-                                <li class="footer_nav_item"><a href=".html">楽しむ</a></li>
-                                <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
-                            </ul>
-                        </li>
-                        <li class="footer_headline">Q＆A・その他
-                            <ul class="footer_list">
-                                <li class="footer_nav_item"><a href="question.html">Q＆A</a></li>
-                                <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
-                                <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
-                                <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <ul class="fnav_w_list">
+                    <li class="footer_headline">
+                        <ul class="footer_list">
+                            <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
+                            <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
+                            <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer_headline"><a href="course.html">サイクリングコース</a>
+                        <ul class="footer_list">
+                            <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
+                            <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
+                            <li class="footer_nav_item"><a href=".html">中距離コース</a></li>
+                            <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer_headline"><a href=".html">周辺スポット検索</a>
+                        <ul class="footer_list">
+                            <li class="footer_nav_item"><a href=".html">食べる</a></li>
+                            <li class="footer_nav_item"><a href=".html">見る</a></li>
+                            <li class="footer_nav_item"><a href=".html">買う</a></li>
+                            <li class="footer_nav_item"><a href=".html">楽しむ</a></li>
+                            <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer_headline">Q＆A・その他
+                        <ul class="footer_list">
+                            <li class="footer_nav_item"><a href="question.html">Q＆A</a></li>
+                            <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
+                            <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
+                            <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
             <!-- 追加分ここまで -->
 
             <div class="sns_container flex gap32_16">
                 <!-- twitter -->
-                <a href=""><img class="sns_icon" src="./assets/image/Twitter social icons - circle - blue.png" alt="ツイッターアイコン"></a>
+                <a href=""><img class="sns_icon" src="./assets/image/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
                 <!-- facebook -->
-                <a href=""><img class="sns_icon" src="./assets/image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
+                <a href=""><img class="sns_icon" src="./assets/image/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
             </div>
             <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
         </footer>
 
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
         <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/header.js"></script>
         <script src="./assets/js/common.js"></script>
     </div>
 </body>
