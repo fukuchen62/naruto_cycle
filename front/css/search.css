@@ -227,7 +227,8 @@ position: relative;
 /* 要素を横並びにする */
 .radio-box{
 display:flex;
-width: 848px;
+/* width: 848px; */
+width: 864px;
 margin: 0px 40px;
 }
 
