@@ -27,7 +27,8 @@
     border: 8px solid #96C85C;
     width: 320px;
     height: 1220px;
-    margin: auto auto 49px auto;
+    /* margin: auto auto 49px auto; */
+    margin: auto;
   }
 
   /* 詳細 */
@@ -120,10 +121,32 @@ white-space: nowrap
 .course_top_choice_list li{
   margin: 0px auto 20px auto;
 }
+/* コースの位置 */
+.course_top_choice_list a {
+    /* border: 1px solid #000; */
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    /* margin: 8px; */
+    border-radius: 50%;
+
+}
+/* .flex {
+    display: flex;
+    gap:4px
+} */
+.course_top_choice_list li {
+    margin: 0px 2px;
+}
+
 
 /* 更新日 */
 .update{
-  margin: 10px -150px auto auto;
+  margin: 0px -150px 32px auto;
 }
 
 /*--------- メモ欄 -------------------------------------*/
@@ -236,6 +259,26 @@ margin: auto -10px;
 	width: 320px;
 }
 
+/* タブレット時サイズ変更 */
+@media screen and (min-width: 599px) {
+    /* 詳細箱の大きさ */
+.box_spot_info{
+  /* position: relative; */
+  width: 520px;
+  height: 1500px;
+}
+/* 地図サイズ */
+iframe{
+  width: 475px;
+  height: 160px;
+}
+.spot_date{
+  text-align: left;
+}
+
+}
+
+
 /* タブレット時2カラムにする場合 */
 @media screen and (min-width: 671px) {
 	.course_spot_cate_list {
@@ -255,11 +298,7 @@ margin: auto -10px;
   width: 1024px;
   height: 785px;
 }
-/* 地図サイズ */
-iframe{
-  width: 475px;
-  height: 160px;
-}
+
 /* 詳細 */
   .spot_date{
     align-items: center;
@@ -278,7 +317,7 @@ iframe{
 }
 /* データ更新日 */
 .update{
-  margin-top: 570px;
+  /* margin-top: 570px; */
   margin-left: 698px;
 }
 
@@ -296,7 +335,8 @@ iframe{
 .img_pc{
   display: none;
 }
-  @media screen and (min-width: 1024px) {
+  /* @media screen and (min-width: 1024px) { */
+@media screen and (min-width: 599px) {
     .img_sp{
       display: none;
     }
@@ -311,6 +351,7 @@ iframe{
   }
 
   }
+
   /* 画像レイアウトのためのスタイル */
   .container {
     max-width: 480px;

@@ -8,12 +8,19 @@ $(function () {
     $(this).parent().addClass("current");
 
     // fadeOutできたらsrc変更してfadeIn
-    $(".js-main-img img").fadeOut(500, function () {
-      $(".js-main-img img")
-        .attr("src", img)
-        .on("load", function () {
-          $(this).fadeIn(0);
-        });
-    });
+    // $(".js-main-img img").fadeOut(500, function () {
+    //   $(".js-main-img img")
+    //     .attr("src", img)
+    //     .on("load", function () {
+    //       $(this).fadeIn(500);
+    //     });
+    // });
+// 表示されているメイン画像をフェードアウト
+    // $(".js-main-img img").fadeOut(500);
+// 完全に消す
+    $(".js-main-img img").attr("src", img);
+    // フェードインで表示させる
+    $(".js-main-img img").fadeIn(500);
+
   });
 });
