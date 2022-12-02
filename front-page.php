@@ -24,7 +24,7 @@
                 <!-- 動画 -->
                 <div class="index_video_wrapper">
                     <video autoplay muted playsinline loop>
-                        <source src="<?php echo get_template_directory_uri(); ?>/assets/image/index_keymovie.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/assets/img/index_keymovie.mp4" type="video/mp4">
                         <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像">
                     </video>
                 </div>
@@ -39,7 +39,7 @@
             </h2>
 
             <!-- 装飾＞画像 -->
-            <img class="key_man" src="<?php echo get_template_directory_uri(); ?>/assets/image/index_top_img.png" alt="サイクリングマン">
+            <img class="key_man" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_top_img.png" alt="サイクリングマン">
         </section>
 
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：ニュース ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
@@ -54,19 +54,25 @@
                 <div class="index_news_article_box">
 
                     <!-- 記事① -->
+                    <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+
                     <article class="index_news_article">
                         <div class="index_news_meta flex">
                             <ul class="index_news_categories">
-                                <li><a href="#">お知らせ</a></li>
+                                <li><?php the_category(); ?></li>
                             </ul>
-                            <time class="index_news_time" datetime="2022-11-30">
-                                2022.11.30
+                            <time class="index_news_time" datetime="<?php the_time('Y-m-d'); ?>">
+                                <?php the_time('Y.m.d') ?>
                             </time>
                         </div>
                         <h3 class="index_news_headline">
-                            <a href="#">ここにタイトルが入りますここにタイトルが入ります</a>
-                        </h3>
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h3>
                     </article>
+
+                    <?php endwhile; ?>
+                    <?php endif; ?>
 
                     <!-- 記事② -->
                     <article class="index_news_article">
@@ -89,8 +95,8 @@
 
             <!-- 記事一覧ボタン -->
             <div class="index_news_btn flex">
-                <a href="news.html">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/image/index_news_img.png" alt="ニュース一覧への矢印" class="news_btn_img">
+                <a href="<?php echo home_url('/news/'); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_news_img.png" alt="ニュース一覧への矢印" class="news_btn_img">
                     <div class="news_to_detail">一覧へ</div>
                 </a>
             </div>
@@ -116,12 +122,12 @@
 
                 <!-- もっと読むボタン -->
                 <div class="common_btn index_howto_btn">
-                    <a href="cycling.html">もっと読む→</a>
+                    <a href="<?php echo get_permalink(2); ?>">もっと読む→</a>
                 </div>
             </div>
             <!-- 写真 -->
             <div class="index_howto_imgbox">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/image/index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="index_howto_img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="index_howto_img">
             </div>
         </div>
 
@@ -141,7 +147,7 @@
 
             <!-- マップ -->
             <div class="index_map_imgbox">
-                <img class="index_map_img" src="<?php echo get_template_directory_uri(); ?>/assets/image/index_course_img.png" alt="サイクリングコースマップ">
+                <img class="index_map_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_course_img.png" alt="サイクリングコースマップ">
             </div>
 
             <!-- サイクリングコース選択エリアのコンテナ -->
@@ -155,10 +161,12 @@
 
                     <!-- 初心者コース -->
                     <div class="index_course_selectbtn beginner">
-                        <div class="index_course_btntxt">
-                            <p>初心者コース</p>
-                            <p>00km</p>
-                        </div>
+                        <a href="<?php echo get_permalink(142); ?>">
+                            <div class="index_course_btntxt">
+                                <p>初心者コース</p>
+                                <p>00km</p>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- 短距離コース -->
@@ -229,7 +237,7 @@
                                 <!-- カード１枚の入れ物-->
                                 <li class="spot_item">
                                     <!-- カテゴリーのラベル -->
-                                    <img src="./assets/image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
                                     <!-- スポット写真 -->
                                     <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
@@ -447,7 +455,7 @@
                 <!-- 見出しボックス -->
                 <div class="index_insta_headline tb_pc_flex">
                     <!-- インスタロゴ -->
-                    <img class="insta_logo_img" src="./assets/image/index_insta_logo_img.png" alt="インスタグラムのロゴ">
+                    <img class="insta_logo_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_insta_logo_img.png" alt="インスタグラムのロゴ">
                     <!-- 見出し -->
                     <h2 class="index_insta_top headline">
                         <ruby>INSTAGRAM<rt>なるとサイくるっと！公式インスタグラム</rt></ruby>
@@ -473,7 +481,7 @@
                 </div>
 
                 <!-- 自転車のあしらい -->
-                <img src="./assets/image/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
             </div>
         </div>
         <div class="index_insta_SWbox">
@@ -483,71 +491,5 @@
     </section>
 </main>
 
-<!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-
-<footer class="footer bg_blue white txt_c">
-    <ul class="banner_list gap32_16 m_bottom40">
-        <!-- asaなどのバナーがliで入ります -->
-        <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-        <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-        <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-    </ul>
-
-    <nav class="fnav_container bg_blue">
-        <!-- フッターナビ -->
-        <!-- 近藤追加分 -->
-        <ul class="fnav_w_list">
-            <li class="footer_headline">
-                <ul class="footer_list">
-                    <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
-                    <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
-                    <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
-                </ul>
-            </li>
-            <li class="footer_headline"><a href="course.html">サイクリングコース</a>
-                <ul class="footer_list">
-                    <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
-                    <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
-                    <li class="footer_nav_item"><a href=".html">中距離コース</a></li>
-                    <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
-                </ul>
-            </li>
-            <li class="footer_headline"><a href=".html">周辺スポット検索</a>
-                <ul class="footer_list">
-                    <li class="footer_nav_item"><a href=".html">食べる</a></li>
-                    <li class="footer_nav_item"><a href=".html">見る</a></li>
-                    <li class="footer_nav_item"><a href=".html">買う</a></li>
-                    <li class="footer_nav_item"><a href=".html">楽しむ</a></li>
-                    <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
-                </ul>
-            </li>
-            <li class="footer_headline">Q＆A・その他
-                <ul class="footer_list">
-                    <li class="footer_nav_item"><a href="question.html">Q＆A</a></li>
-                    <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
-                    <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
-                    <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <!-- 追加分ここまで -->
-
-    <div class="sns_container flex gap32_16">
-        <!-- twitter -->
-        <a href=""><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/image/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
-        <!-- facebook -->
-        <a href=""><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/image/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
-    </div>
-    <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
-</footer>
-
-<!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-<script src="./assets/js/index.js"></script>
-<script src="./assets/js/header.js"></script>
-<script src="./assets/js/common.js"></script>
-</div>
-</body>
-
-</html>
 <!-- フッター切り取りここまで -->
+<?php get_footer(); ?>

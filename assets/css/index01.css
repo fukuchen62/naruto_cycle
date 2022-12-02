@@ -7,6 +7,7 @@
 }
 
 /* moreボタンのスタイルここから */
+
 .more_btn {
     margin: 48px auto auto auto;
 }
@@ -16,14 +17,14 @@
     width: 240px;
     height: 56px;
     background: #fff;
-    box-shadow: 4px 4px #ef6000;
-    border: 3px solid #005ea7;
+    box-shadow: 4px 4px #EF6000;
+    border: 3px solid #005EA7;
     position: relative;
 }
 
 /* 検索ボタンのテキスト */
 .top_more_btn {
-    color: #fffffc;
+    color: #FFFFFC;
     font-size: 24px;
     font-weight: bold;
     margin: auto;
@@ -35,47 +36,27 @@
 
 /* moreボタンのスタイルここまで */
 
-/* ---------------section：キービジュアル---------------  */
-.key_news_wrap {
-    position: relative;
-}
 
+
+/* ---------------section：キービジュアル---------------  */
 /* キービジュアルの箱 */
 .index_key_visual {
     width: 100%;
     height: 100%;
-    position: relative;
-}
-
-/* 動画 */
-.index_video_wrapper {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.index_video_wrapper > video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    min-width: 100%;
-    min-height: 100%;
 }
 
 /* キービジュアル画像 */
-/* .key_img {
+.key_img {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
     object-fit: cover;
-} */
+}
 
 /* キービジュ：装飾文字 */
 .key_msg {
-    font-family: "Arvo", serif;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: 'Arvo', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: 900;
     font-size: 80px;
     -webkit-text-stroke: 2px #fff;
@@ -137,8 +118,8 @@
     width: 100%;
     height: 140px;
     justify-content: space-between;
-    background-color: #f3f0e8;
-    color: #005ea7;
+    background-color: #F3F0E8;
+    color: #005EA7;
 }
 
 /* PC表示 */
@@ -158,8 +139,8 @@
     margin: 0;
     font-size: 24px;
     font-weight: 900;
-    -webkit-text-stroke: 1px #005ea7;
-    text-stroke: 1px #005ea7;
+    -webkit-text-stroke: 1px #005EA7;
+    text-stroke: 1px #005EA7;
     color: rgba(0, 0, 0, 0);
     text-align: left;
 }
@@ -173,12 +154,12 @@
 
 /* ニュースコンテンツ全部入り */
 .index_news_content {
-    width: calc(100% * 0.83589744);
+    width: calc(100%*0.83589744);
     margin: 10px;
     justify-content: space-between;
 }
 
-.index_news_content h2 + article {
+.index_news_content h2+article {
     margin-left: 16px;
 }
 
@@ -197,9 +178,10 @@
     margin-left: 16px;
 }
 
-.index_news_article_box article + article {
+.index_news_article_box article+article {
     margin-top: 16px;
 }
+
 
 /* カテゴリタグ＋日付ボックス */
 .index_news_meta {
@@ -213,23 +195,19 @@
 }
 
 /* ニュースタイトル */
-.index_news_headline {
-    width: 100%;
-    height: 16px;
+.index_news_title {
     margin-top: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
+
 
 /* 一覧へボタン */
 .index_news_btn {
-    width: calc(100% * 0.16410256);
+    width: calc(100%*0.16410256);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #005ea7;
-    color: #fffffc;
+    background-color: #005EA7;
+    color: #FFFFFC;
 }
 
 /* ---------------section：サイクリングについて---------------  */
@@ -237,7 +215,7 @@
     width: 100%;
     height: 100%;
     padding: 32px;
-    background-color: #005ea7;
+    background-color: #005EA7;
 }
 
 /* コンテンツボックス（見出し、概要、ボタン） */
@@ -257,12 +235,11 @@
 
 /* テキストボックス */
 .index_howto_txtbox {
-    width: calc(100% * 0.82051282);
+    width: calc(100%*0.82051282);
     margin: 0 auto;
-    color: #fffffc;
+    color: #FFFFFC;
     text-align: left;
     line-height: 1.2em;
-    position: relative;
 }
 
 /* PC表示 */
@@ -319,6 +296,7 @@
     }
 }
 
+
 /* ---------------section：コースマップ---------------  */
 .index_course {
     margin: 0 auto;
@@ -346,7 +324,7 @@
 /* コースマップの画像 */
 .index_map_img {
     width: 100%;
-    border: 10px solid #e1d6b8;
+    border: 10px solid #E1D6B8;
 }
 
 /* PC表示 */
@@ -365,7 +343,7 @@
     text-align: center;
     font-size: 24px;
     font-weight: 400;
-    border-bottom: dashed 2px #ef6000;
+    border-bottom: dashed 2px #EF6000;
 }
 
 /* ボタンボックス */
@@ -390,14 +368,14 @@
     }
 }
 
+
 /* ボタン共通スタイル */
 .index_course_selectbtn {
     width: 120px;
     height: 60px;
     border-radius: 50%;
     text-align: center;
-    color: #fffffc;
-    position: relative;
+    color: #FFFFFC;
 }
 
 .index_course_btntxt {
@@ -419,40 +397,39 @@
 /* ボタン個別スタイル */
 /* 初心者コース */
 .beginner {
-    background-color: #96c85c;
+    background-color: #96C85C;
 }
 
 /* 短距離コース */
 .short {
-    background-color: #ef6000;
+    background-color: #EF6000;
 }
 
 /* 中距離コース */
 .middle {
-    background-color: #0018ef;
+    background-color: #0018EF;
 }
 
 /* 長距離コース */
 .long {
-    background-color: #f00000;
+    background-color: #F00000;
 }
 
 /* ---------------section：スポット---------------  */
 .index_spot {
-    background-color: #d4ebec;
-    position: relative;
+    background-color: #D4EBEC;
 }
 
 .index_spot_headlinebox {
     width: 230px;
     margin: 0 auto;
-    position: relative;
 }
+
 
 .index_spot_deco {
     font-size: 32px;
     font-weight: 900;
-    color: #ef6000;
+    color: #EF6000;
     text-align: center;
 }
 
@@ -465,6 +442,7 @@
         top: -40px;
         left: -30px;
     }
+
 }
 
 /* コース上スポット全体の表示設定 */
@@ -486,31 +464,48 @@
     }
 }
 
-/* ---------------SPOT上部波アニメーション---------------  */
-
-/* 上の波の入れ物 */
-.wave {
-    /* display: none; */
+/* ---------------波アニメーション---------------  */
+/* 動かない波の仕切り */
+.container {
     position: relative;
-    height: 200px;
-    background-color: #f3f0e8;
-    /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+    background: #D4EBEC;
+    height: 60px;
+
 }
 
-/* 波の設定 */
-canvas {
+.wave {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    height: 150px;
     width: 100%;
+    background: #D4EBEC;
+    bottom: 0;
 }
 
-/* ---------------SPOT下部グラデーション---------------  */
-.bg_gradient {
-    width: 100%;
-    height: 150px;
-    background: linear-gradient(#d4ebec, #f3f0e8);
+.wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
 }
+
+.wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #f3f0e8;
+    right: -1.5%;
+    top: 60%;
+}
+
+.wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: #D4EBEC;
+    left: -1.5%;
+    top: 40%;
+}
+
+
+
 
 /* ---------------section：インスタグラム---------------  */
 .index_insta_content {
@@ -527,6 +522,8 @@ canvas {
     }
 }
 
+
+
 .index_insta_txtbox {
     width: 380px;
     margin: 0 auto;
@@ -541,6 +538,7 @@ canvas {
     }
 }
 
+
 /* PC表示 */
 @media screen and (min-width: 1024px) {
     .index_insta_txtbox {
@@ -548,6 +546,8 @@ canvas {
         margin: 0;
     }
 }
+
+
 
 /* 見出し */
 .index_insta_top {
@@ -569,6 +569,8 @@ canvas {
         margin-bottom: 0;
     }
 }
+
+
 
 /* キャプション */
 .index_insta_caption {
@@ -595,12 +597,8 @@ canvas {
 }
 
 /* 装飾画像 */
-.index_insta_decobox {
-    position: relative;
-}
-
 /* TB以上で表示かつflex */
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
     .tb_pc_flex {
         display: flex;
     }
@@ -614,54 +612,54 @@ canvas {
 
 @media screen and (min-width: 1024px) {
     .circle {
+        display: inline-block;
         position: absolute;
-        top: -75px;
-        right: 55px;
-        margin: 0 auto;
-        width: 168px;
-        height: 168px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        left: 200px;
+        margin: 20px auto;
+        width: 760px;
+        height: 760px;
         border-radius: 50%;
     }
-}
 
-.inner {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    animation: rotateAnim 10s linear infinite;
-    position: relative;
-}
-
-@keyframes rotateAnim {
-    0% {
-        transform: rotate(0deg);
+    .inner {
+        /* 文字を配置する起点となる親要素 */
+        position: relative;
+        width: 104px;
+        /* この親要素自体は1文字が収まる程度の小さいサイズ */
+        height: 104px;
+        border-radius: 50%;
+        animation: rotateAnim 15s linear infinite;
+        /* 円形テキストを回転 */
+        z-index: -1;
     }
 
-    50% {
-        transform: rotate(180deg);
+    @keyframes rotateAnim {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 
-    100% {
-        transform: rotate(360deg);
+    /* テキストの設定 */
+    .info_cycle_deco {
+        position: absolute;
+        font-weight: bold;
+        font-size: 104px;
+        /* 縁取り文字にするための設定 */
+        text-shadow: -1px -1px 0 #ef6000, -1px 0 0 #fdacac, -1px 1px 0 #fdacac,
+            0 -1px 0 #fdacac, 0 1px 0 #fdacac, 1px -1px 0 #fdacac, 1px 0 0 #fdacac,
+            1px 1px 0 #fdacac;
+        color: #f3f0e8;
     }
 }
 
-span {
-    position: absolute;
-    inset: 0;
-    text-align: center;
-}
-
-.index_insta_decotxt {
-    font-size: 24px;
-    font-weight: 900;
-    -webkit-text-stroke: 1px #ef6000;
-    text-stroke: 1px #ef6000;
-    color: rgba(0, 0, 0, 0);
-}
 
 /* SnapWidgetの設定 */
 .index_insta_SWbox {
@@ -672,19 +670,4 @@ span {
     background: transparent;
     border: none;
     overflow: hidden;
-}
-
-/* ---------------波アニメーション---------------  */
-
-.index_wave {
-    position: relative;
-    height: 200px;
-    /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
-}
-
-.index_wavs canvas {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
