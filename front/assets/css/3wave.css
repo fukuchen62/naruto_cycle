@@ -1,12 +1,29 @@
+/* 波の入れ物 */
 .wave {
+    /* display: none; */
     position: relative;
     height: 200px;
+    background-color: #F3F0E8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
+/* 波の設定 */
 canvas {
     position: absolute;
-    bottom: 0;
+    top: 100px;
     left: 0;
     width: 100%;
+    background-color: #F3F0E8;
+}
+
+@media screen and (max-width: 400px) {
+    canvas {
+        top: 120px;
+    }
+}
+
+
+/* 下の波設定 */
+.reflect-y {
+    transform: scaleY(-1);
 }

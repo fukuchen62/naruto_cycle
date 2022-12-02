@@ -73,18 +73,17 @@ $favorites_count = 0;
                                 'lng' => $longitude,
                                 'text' => $text,
                             ];
-                            // print_r($favorite_maps); //デバッグ
-                            // print_r($favorite_maps2); //デバッグ
+
             ?>
 
 
             <li class="card_container">
                 <div class="spot_card relative">
                     <!-- お気に入りボタン -->
-                    <div class="spot_like_icon">
+                    <!-- <div class="spot_like_icon">
 
                         <i class="far fa-heart LikesIcon-fa-heart"></i>
-                    </div>
+                    </div> -->
                     <!-- カード１枚にかかるスポット一覧へのリンク -->
                     <a href="<?php the_permalink(); ?>">
                         <!-- カード全体の入れ物 -->
@@ -134,12 +133,7 @@ $favorites_count = 0;
                 endif;
             endif;
             ?>
-
-
-
-
         </ul>
-
         <!-- スポットもっと見るボタン -->
         <div class="spot_more_btn common_btn">もっと見る</div>
 
@@ -160,12 +154,12 @@ $favorites_count = 0;
 function initMap() {
     //alert("lkjfks");
     const color = "black"; // ラベルの色
-    const font_family = 'Kosugi Maru' //ラベルのフォント
+    const font_family = 'Noto Sans JP' //ラベルのフォント
     const font_size = "14px" //ラベルのサイズ
     // 徳島全域が入るように
-    var latlng = new google.maps.LatLng(33.9220334, 134.2203203);
+    var latlng = new google.maps.LatLng(34.1724913, 134.5401272);
     var opts = {
-        zoom: 9.2, // 地図のズームを指定
+        zoom: 12.2, // 地図のズームを指定
         center: latlng, // 地図の中心を指定
         mapTypeId: google.maps.MapTypeId.ROADMAP // マップタイプの設定 ROADMAPは道路や建物などが表示される地図
     };
@@ -176,47 +170,16 @@ function initMap() {
 
     // マーカー生成
     // フォント変えられる
-    <?php
-        $course_count = 5;
-        $courses[] = [
-            'lat' => '34.07484208495771',
-            'lng' => '134.56078008740766',
-            'text' => '徳島文化公園',
-        ];
-        $courses[] = [
-            'lat' => '34.0205918980636',
-            'lng' => '134.52181634872622',
-            'text' => '徳島動物園',
-        ];
-        $courses[] = [
-            'lat' => '34.067091257403455',
-            'lng' => '134.51441197688902',
-            'text' => '眉山',
-        ];
-        $courses[] = [
-            'lat' => '34.04130682492074',
-            'lng' => '134.5265599154574',
-            'text' => '近代美術館',
-        ];
-        $courses[] = [
-            'lat' => '34.01502020583308',
-            'lng' => '134.5831266452008',
-            'text' => '日赤病院',
-        ];
-        ?>
 
-
-
-
-    let maps = [];
+    let favorite_maps = [];
     <?php
         for ($i = 0; $i < $favorites_count; $i++) {
-            echo "maps[${i}]={lat:";
-            echo $favorite_maps2[$i]['lat'];
+            echo "favorite_maps[${i}]={lat:";
+            echo $favorite_maps['lat'][$i];
             echo ', lng:';
-            echo $favorite_maps2[$i]['lng'];
+            echo $favorite_maps['lng'][$i];
             echo ', text:"';
-            echo $favorite_maps2[$i]['text'];
+            echo $favorite_maps['text'][$i];
             echo "\",
                 color: \"#AD7000\",
                 fontFamilt: 'Kosugi Maru',
@@ -225,35 +188,13 @@ function initMap() {
             echo "\n";
         }
         ?>
-
-    let courses = [];
-
-    <?php
-        for ($i = 0; $i < $course_count; $i++) {
-            echo "courses[${i}]={lat:";
-            echo $courses[$i]['lat'];
-            echo ', lng:';
-            echo $courses[$i]['lng'];
-            echo ', text:"';
-            echo $courses[$i]['text'];
-            echo "\",
-                color: \"#AD7000\",
-                fontFamilt: 'Kosugi Maru',
-                    fontSize: \"14px\",
-                fontWeight: \"bold\",};";
-            echo "\n";
-        }
-        ?>
-
-
-
 
 
     var marker = new google.maps.Marker();
-    for (let i = 0; i < courses.length; i++) {
+    for (let i = 0; i < favorite_maps.length; i++) {
         marker = new google.maps.Marker({
-            position: $courses[i],
-            label: $courses[i],
+            position: favorite_maps[i],
+            label: favorite_maps[i],
             map: map,
         });
     }
