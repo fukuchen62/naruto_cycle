@@ -49,22 +49,22 @@
             <nav>
                 <ul class="menu">
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo home_url('/news/'); ?>">NEWS</a>
+                        <a href="<?php echo home_url('/news/'); ?>"><ruby>NEWS<rt>新着情報</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo get_permalink(2); ?>">HOWTO</a>
+                        <a href="<?php echo get_permalink(2); ?>"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo get_permalink(183); ?>">COURSE</a>
+                        <a href="<?php echo get_permalink(183); ?>"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo home_url('/spot/'); ?>">SPOT</a>
+                        <a href="<?php echo home_url('/spot/'); ?>"><ruby>SPOT<rt>スポット検索</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo home_url('/mypage/'); ?>">MYPAGE</a>
+                        <a href="<?php echo home_url('/mypage/'); ?>"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo home_url('/question/'); ?>">Q&A</a>
+                        <a href="<?php echo home_url('/question/'); ?>"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
                     </li>
                 </ul>
                 <button type="button" class="btn js-btn">
@@ -73,7 +73,3 @@
             </nav>
         </header>
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-    </div>
-</body>
-
-</html>
