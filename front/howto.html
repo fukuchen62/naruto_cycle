@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/wave.css">
     <link rel="stylesheet" href="./assets/css/howto.css" />
-
+    <!-- slickのCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,6 +31,8 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" />
     <!-- jQuery本体↓ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- slickのJavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- ファビコン↓() -->
 </head>
 <body>
@@ -37,22 +41,22 @@
         <nav>
             <ul class="menu">
                 <li class="menu-list font_edge_white">
-                    <a href="news.html">NEWS</a>
+                    <a href="news.html"><ruby>NEWS<rt>新着情報</rt></ruby></a>
                 </li>
                 <li class="menu-list font_edge_white">
-                    <a href="howto.html">HOWTO</a>
+                    <a href="howto.html"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
                 </li>
                 <li class="menu-list font_edge_white">
-                    <a href="course.html">COURSE</a>
+                    <a href="course.html"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
                 </li>
                 <li class="menu-list font_edge_white">
-                    <a href="spot.html">SPOT</a>
+                    <a href="spot.html"><ruby>SPOT<rt>スポット検索</rt></ruby></a>
                 </li>
                 <li class="menu-list font_edge_white">
-                    <a href="mypage.html">MYPAGE</a>
+                    <a href="mypage.html"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
                 </li>
                 <li class="menu-list font_edge_white">
-                    <a href="question.html">Q&A</a>
+                    <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
                 </li>
             </ul>
             <button type="button" class="btn js-btn">
@@ -72,7 +76,7 @@
             ここに＞パンくずリストが＞入ります
         </div>
         <div class="howto">
-            <h2 class="huwto_headline headline"><ruby>HOW TO<rt>鳴門でのサイクリングについて</rt></ruby></h2>
+            <h2 class="huwto_headline headline"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></h2>
             <div class="howto_container">
                 <img class="howto_img not_sp" src="./assets/image/howto_about_img1.png" alt="阿波踊り装飾">
                 <div class="howto_naruto">
@@ -156,7 +160,7 @@
             </div>
             <div class="more_naruto list_container">
                 <h3 class="howto_list_headline">もっと鳴門について知るには</h3>
-                <ul class="more_naruto_card_list">
+                <ul class="more_naruto_card_list slider">
                     <li class="more_naruto_card_item">
                         <a>
                             <img class="" src="https://placehold.jp/500x480.png" alt="">
@@ -170,7 +174,7 @@
                     <li class="more_naruto_card_item">
                         <a>
                             <img class="" src="https://placehold.jp/500x480.png" alt="">
-                            <p class="more_naruto_num">01</p>
+                            <p class="more_naruto_num">02</p>
                             <div class="more_naruto_caption">
                                 <h3 class="more_naruto_title">01|インタビュー</h3>
                                 カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -180,7 +184,7 @@
                     <li class="more_naruto_card_item">
                         <a>
                             <img class="" src="https://placehold.jp/500x480.png" alt="">
-                            <p class="more_naruto_num">01</p>
+                            <p class="more_naruto_num">03</p>
                             <div class="more_naruto_caption">
                                 <h3 class="more_naruto_title">01|インタビュー</h3>
                                 カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -190,7 +194,7 @@
                     <li class="more_naruto_card_item">
                         <a>
                             <img class="" src="https://placehold.jp/500x480.png" alt="">
-                            <p class="more_naruto_num">01</p>
+                            <p class="more_naruto_num">04</p>
                             <div class="more_naruto_caption">
                                 <h3 class="more_naruto_title">01|インタビュー</h3>
                                 カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -200,7 +204,37 @@
                     <li class="more_naruto_card_item">
                         <a>
                             <img class="" src="https://placehold.jp/500x480.png" alt="">
-                            <p class="more_naruto_num">01</p>
+                            <p class="more_naruto_num">05</p>
+                            <div class="more_naruto_caption">
+                                <h3 class="more_naruto_title">01|インタビュー</h3>
+                                カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </div>
+                        </a>
+                    </li>
+                    <li class="more_naruto_card_item">
+                        <a>
+                            <img class="" src="https://placehold.jp/500x480.png" alt="">
+                            <p class="more_naruto_num">06</p>
+                            <div class="more_naruto_caption">
+                                <h3 class="more_naruto_title">01|インタビュー</h3>
+                                カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </div>
+                        </a>
+                    </li>
+                    <li class="more_naruto_card_item">
+                        <a>
+                            <img class="" src="https://placehold.jp/500x480.png" alt="">
+                            <p class="more_naruto_num">07</p>
+                            <div class="more_naruto_caption">
+                                <h3 class="more_naruto_title">01|インタビュー</h3>
+                                カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            </div>
+                        </a>
+                    </li>
+                    <li class="more_naruto_card_item">
+                        <a>
+                            <img class="" src="https://placehold.jp/500x480.png" alt="">
+                            <p class="more_naruto_num">08</p>
                             <div class="more_naruto_caption">
                                 <h3 class="more_naruto_title">01|インタビュー</h3>
                                 カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
