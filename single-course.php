@@ -34,7 +34,7 @@
 
 <body>
     <header class="header flex">
-        <h1 class="header_logo"><a href="#"><img class="img" src="https://placehold.jp/320x80.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+        <h1 class="header_logo"><a href="#"><img class="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
         <nav>
             <ul class="menu">
                 <li class="menu-list font_edge_white">
@@ -80,15 +80,19 @@
                     <ul class="course_nav_list">
                         <li class="course_nav beginner">
                             <span class="course_nav_text">初心者</span>
+                            <a href="<?php echo get_permalink(142); ?>"></a>
                         </li>
                         <li class="course_nav short">
                             <span class="course_nav_text">短距離</span>
+                            <a href="<?php echo get_permalink(183); ?>"></a>
                         </li>
                         <li class="course_nav middle">
                             <span class="course_nav_text">中距離</span>
+                            <a href="<?php echo get_permalink(184); ?>"></a>
                         </li>
                         <li class="course_nav long">
                             <span class="course_nav_text">長距離</span>
+                            <a href="<?php echo get_permalink(185); ?>"></a>
                         </li>
                     </ul>
                 </nav>
@@ -99,7 +103,7 @@
                     <div class="icon_list_wrap">
                         <ul class="icon_list">
                             <li class="icon">
-                                <img src="image/spot_cate_grume_img.png" alt="グルメアイコン" class="icon_pic" />グルメ
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="グルメアイコン" class="icon_pic" />グルメ
                             </li>
                             <li class="icon">
                                 <img src="https://placehold.jp/40x40.png" alt="買い物アイコン" class="icon_pic" />買い物
@@ -563,36 +567,4 @@
     </main>
     <!-- フッター切り取りここから -->
 
-    <footer class="footer">
-        <ul class="banner_list">
-            <!-- asaなどのバナーがliで入ります -->
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-        </ul>
-        <nav class="fnav_container">
-            <ul class="fnav">
-                <li class="fnav_menu">
-                    <ul class="fnav_list">
-                        <!-- リストの数はそれぞれ -->
-                        <li class="fnav_item">
-                            <a href=""></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="sns">
-            <!-- twitter -->
-            <a href=""></a>
-            <!-- facebook -->
-            <a href=""></a>
-        </div>
-        <p class="copyright"></p>
-    </footer>
-    <script src="./js/course.js"></script>
-    <script src="./js/common.js"></script>
-</body>
-
-</html>
-<!-- フッター切り取りここまで -->
+    <?php get_footer(); ?>
