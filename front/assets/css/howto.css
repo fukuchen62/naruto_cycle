@@ -128,10 +128,9 @@
 }
 
 /* 走行の注意については左寄せ */
-@media screen and (min-width: 600px) {
-	.attention_text {
-		text-align: left;
-	}
+
+.attention_text {
+	text-align: left;
 }
 
 /* もっと鳴門について知るには */
@@ -140,21 +139,21 @@
 	position: relative;
 	width: 320px;
 	height: 480px;
-	box-shadow: -40px -40px #005ea7;
+	box-shadow: -32px -40px #005ea7;
 	background-color: rgb(44, 44, 44);
 	transition: 1s;
-	margin: 80px 80px;
+	margin: 80px 32px;
 }
 
-/* スマホでは非ホバー時から透過をかける */
+/* pc以外では非ホバー時から透過をかける */
 .more_naruto_card_item img {
 	width: 320px;
 	height: 480px;
 	object-fit: cover;
 	opacity: 0.7;
 }
-/* スマホ以外では普通に表示 */
-@media screen and (min-width: 600px) {
+/* pcでは普通に表示 */
+@media screen and (min-width: 1024px) {
 	.more_naruto_card_item img {
 		opacity: 1;
 	}
@@ -169,7 +168,7 @@
 	color: #fff;
 }
 
-/* 画像下のテキスト。スマホ以外は非ホバー時は非表示 */
+/* 画像下のテキスト。pxは非ホバー時は非表示 */
 .more_naruto_caption {
 	position: absolute;
 	bottom: 16px;
@@ -179,14 +178,14 @@
 	color: #fff;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
 	.more_naruto_caption {
 		opacity: 0;
 	}
 }
 
-/* pc,spサイズでホバー時に文字表示 */
-@media screen and (min-width: 600px) {
+/* pcサイズでホバー時に文字表示 */
+@media screen and (min-width: 1024px) {
 	.more_naruto_card_item:hover img {
 		opacity: 0.7;
 	}

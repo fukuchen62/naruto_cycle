@@ -85,12 +85,6 @@
 	height: 100%;
 }
 
-/* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {}
-
-/* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {}
-
 /* 地図上アイコンの説明 */
 .icon_list_wrap {
 	background-color: #d4ebec;
@@ -111,7 +105,7 @@
 	row-gap: 8px;
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 	.icon_list {
 		width: auto;
 		gap: 8px;
@@ -132,7 +126,7 @@
 	line-height: 40px;
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 	.icon {
 		margin: 8px;
 		width: auto;
@@ -486,6 +480,6 @@
 	margin: 32px auto 60px;
 }
 
-section+section {
+section + section {
 	margin-top: 160px;
 }
