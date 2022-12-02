@@ -73,73 +73,75 @@
             <!-- ここに＞パンくずリストが＞入ります -->
             <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
         </div>
+
         <section class="course">
             <h2 class="course_headline headline"><ruby><?php the_title(); ?><rt>コース詳細</rt></ruby></h2>
+
             <div class="course_container">
                 <nav>
                     <ul class="course_nav_list">
                         <li class="course_nav beginner">
-                            <span class="course_nav_text">初心者</span>
-                            <a href="<?php echo get_permalink(142); ?>"></a>
+                            <a href="<?php echo get_permalink(142); ?>"><span class="course_nav_text">初心者</span></a>
                         </li>
                         <li class="course_nav short">
-                            <span class="course_nav_text">短距離</span>
-                            <a href="<?php echo get_permalink(183); ?>"></a>
+                            <a href="<?php echo get_permalink(183); ?>"><span class="course_nav_text">短距離</span></a>
                         </li>
                         <li class="course_nav middle">
-                            <span class="course_nav_text">中距離</span>
-                            <a href="<?php echo get_permalink(184); ?>"></a>
+                            <a href="<?php echo get_permalink(184); ?>"><span class="course_nav_text">中距離</span></a>
                         </li>
                         <li class="course_nav long">
-                            <span class="course_nav_text">長距離</span>
-                            <a href="<?php echo get_permalink(185); ?>"></a>
+                            <a href="<?php echo get_permalink(185); ?>"><span class="course_nav_text">長距離</span></a>
                         </li>
                     </ul>
                 </nav>
                 <div class="iframe_wrapper beginner">
-                    <iframe class="course_iframe" src="https://www.google.com/maps/d/u/0/embed?mid=1U-au0BIPQuKPq7I5h3-k2B5TPSR7aLk&ehbc=2E312F"></iframe>
+                    <?php the_field('map'); ?>
+
+                    <!-- <iframe class="course_iframe" src="</iframe> -->
+                    <!-- <iframe class=" course_iframe" src="https://www.google.com/maps/d/u/0/embed?mid=1U-au0BIPQuKPq7I5h3-k2B5TPSR7aLk&ehbc=2E312F"></iframe> -->
                 </div>
                 <div>
                     <div class="icon_list_wrap">
                         <ul class="icon_list">
                             <li class="icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="グルメアイコン" class="icon_pic" />グルメ
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_gourmet_img.png" alt="グルメアイコン" class="icon_pic" />グルメ
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="買い物アイコン" class="icon_pic" />買い物
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_shop_img.png" alt="買い物アイコン" class="icon_pic" />買い物
+                                <!-- <img src="https://placehold.jp/40x40.png" alt="買い物アイコン" class="icon_pic" />買い物 -->
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="道の駅アイコン" class="icon_pic" />道の駅
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_michinoeki_img .png" alt="道の駅アイコン" class="icon_pic" />道の駅
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="体験アイコン" class="icon_pic" />体験
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_exp_img.png" alt="体験アイコン" class="icon_pic" />体験
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="宿泊アイコン" class="icon_pic" />宿泊
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_hotel_img.png" alt="宿泊アイコン" class="icon_pic" />宿泊
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="入浴アイコン" class="icon_pic" />入浴
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_onsen_img.png" alt="入浴アイコン" class="icon_pic" />入浴
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="トイレアイコン" class="icon_pic" />トイレ
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_toilet_img .png" alt="トイレアイコン" class="icon_pic" />トイレ
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="駐車場アイコン" class="icon_pic" />駐車場
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_parking_img.png" alt="駐車場アイコン" class="icon_pic" />駐車場
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="ビュースポットアイコン" class="icon_pic" />ビュースポット
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_view_img.png" alt="ビュースポットアイコン" class="icon_pic" />ビュースポット
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="レンタサイクルアイコン" class="icon_pic" />レンタサイクル
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_rent_img.png" alt="レンタサイクルアイコン" class="icon_pic" />レンタサイクル
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="サイクルショップアイコン" class="icon_pic" />サイクルショップ
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_onsen_img.png" alt="サイクルショップアイコン" class="icon_pic" />サイクルショップ
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="コンビニアイコン" class="icon_pic" />コンビニ
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_convini_img.png" alt="コンビニアイコン" class="icon_pic" />コンビニ
                             </li>
                             <li class="icon">
-                                <img src="https://placehold.jp/40x40.png" alt="その他アイコン" class="icon_pic" />その他
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_icon_others_img.png" alt="その他アイコン" class="icon_pic" />その他
                             </li>
                         </ul>
                     </div>
@@ -260,7 +262,7 @@
                                         <!-- カード１枚の入れ物-->
                                         <li class="spot_item relative">
                                             <!-- カテゴリーのラベル -->
-                                            <img src="https://placehold.jp/48x64.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_imgs.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
                                             <!-- スポット写真 -->
                                             <?php
@@ -537,18 +539,6 @@
                                                 <dt>電話番号</dt>
                                                 <dd><?php the_field('telephone'); ?></dd>
                                             </dl>
-                                            <!-- <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真"> -->
-                                            <!-- スポット名 -->
-                                            <!-- <h3 class="spot_item_name">味処 あらし</h3> -->
-                                            <!-- スポット情報の表 -->
-                                            <!-- <dl class="spot_item_info flex">
-                                                <dt>営業時間</dt>
-                                                <dd>11:00～21:00</dd>
-                                                <dt>住所</dt>
-                                                <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                                <dt>電話番号</dt>
-                                                <dd>088-686-0005</dd>
-                                            </dl> -->
                                         </li>
                                     </ul>
                                 </a>
