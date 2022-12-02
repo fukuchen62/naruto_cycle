@@ -198,7 +198,7 @@ button {
 }
 
 /* 1025px以上はハンバーガーボタン非表示、ヘッダー固定 */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 	.btn {
 		display: none;
 	}
