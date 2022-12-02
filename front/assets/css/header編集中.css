@@ -1,7 +1,5 @@
 /* ヘッダー */
 
-/* ヘッダーの設定 */
-
 /* ヘッダーロゴの設定 */
 /* サイズはwidthを大きくするほどサイズも大きくできる */
 .header_logo {
@@ -11,13 +9,6 @@
 	width: 100px;
 	margin: 10px;
 }
-
-/* PC表示 ←これ編集中で消しました！！*/
-/* @media screen and (min-width: 1024px) {
-	.header_logo {
-		width: 160px;
-	}
-} */
 
 /* ハンバーガーメニューの設定ここから */
 ::before,

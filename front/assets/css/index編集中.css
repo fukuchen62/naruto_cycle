@@ -7,7 +7,6 @@
 .header_logo {
     position: absolute;
     top: 0;
-
 }
 
 .fix_menu {
@@ -22,22 +21,8 @@
 
 .fixed_menu {
     background: #005EA7;
-    color: #fff;
 }
 
-/* .box-height {
-    height: 5000px;
-    padding-top: 200px;
-}
-
-.box-height p {
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    font-size: 30px;
-    margin: auto;
-} */
-
-/* スクロールでヘッダーの色を変えるここまで */
 
 /* index本体 */
 .wrap {
