@@ -23,7 +23,8 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {}
+@media screen and (min-width: 600px) {
+}
 
 /* フッター */
 /* .footer {} */
@@ -89,7 +90,7 @@
 	opacity: 1;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 600px) {
 	.pagetop {
 		bottom: 20px;
 		right: 20px;
@@ -112,7 +113,7 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 	.fnav_container {
 		width: 600px;
 	}
@@ -125,7 +126,7 @@
 	}
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 	.fnav_w_list {
 		width: 600px;
 		text-align: left;
@@ -151,7 +152,7 @@
 	line-height: 18px;
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 	.footer_headline {
 		width: 50%;
 	}
