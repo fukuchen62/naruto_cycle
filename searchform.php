@@ -15,7 +15,7 @@
         <li>
 
 
-            <input type="checkbox" name="shop[]" value="<?php echo $term->slug; ?>"><label><?php echo $term->name; ?>
+            <input type="checkbox" name="type[]" value="<?php echo $term->slug; ?>"><label><?php echo $term->name; ?>
             </label>
         </li>
         <?php endforeach; ?>

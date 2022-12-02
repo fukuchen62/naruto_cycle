@@ -16,7 +16,7 @@
         <li>
 
 
-            <input type="checkbox" name="shop[]" value="<?php echo $term->slug; ?>"><label><?php echo $term->name; ?>
+            <input type="checkbox" name="shop_type[]" value="<?php echo $term->slug; ?>"><label><?php echo $term->name; ?>
             </label>
         </li>
         <?php endforeach; ?>
@@ -27,9 +27,9 @@
 
 <!-- 結果1 -->
 <?php
-$name = get_query_var('s');
+$name = get_query_var('shop_type');
 // searchform.phpから送られてきたパラメーターを取得
-$selected_terms = get_query_var('shop'); //searchform.phpの<input>のname属性の値と合わせる
+$selected_terms = get_query_var('type'); //searchform.phpの<input>のname属性の値と合わせる
 print_r($selected_terms);
 echo 'name:' . $name;
 // searchform.phpで絞り込み条件がある場合

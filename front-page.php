@@ -75,7 +75,7 @@
                     <?php endif; ?>
 
                     <!-- 記事② -->
-                    <article class="index_news_article">
+                    <!-- <article class="index_news_article">
                         <div class="index_news_meta flex">
                             <ul class="index_news_categories">
                                 <li><a href="#">お知らせ</a></li>
@@ -87,7 +87,7 @@
                         <h3 class="index_news_title">
                             <a href="#">ここにタイトルが入ります</a>
                         </h3>
-                    </article>
+                    </article> -->
 
                 </div>
 
@@ -118,7 +118,8 @@
                 </h2>
 
                 <!-- キャプション -->
-                <p class="index_howto_txt ">ここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入りますここにテキストが入ります</p>
+                <p class="index_howto_txt ">徳島県鳴門市は四国の東端に位置し、鳴門海峡を隔てて淡路島と向かい合う四国の玄関口です。
+                    鳴門市の気候は温暖な瀬戸内気候で年間を通して降雨量は少なく、平均気温は16度前後と過ごしやすいのが特徴です。</p>
 
                 <!-- もっと読むボタン -->
                 <div class="common_btn index_howto_btn">
@@ -224,6 +225,25 @@
             <ul class="spot_list flex">
 
                 <!-- カード -->
+                <?php
+                $args = array(
+                    'post_type' => array('shop', 'spot', 'cycle'), //カスタム投稿タイプを指定
+                    // 'taxonomy' => 'restaurant', //カスタムタクソノミーを指定
+                    'orderby' => 'rand', // ランダムで表示
+                    'posts_per_page' => 6, //表示する記事数
+                    // 'post__not_in' => array($post->ID) // 現在表示している記事を除外
+                );
+
+
+
+                $spot_query = new WP_Query($args); //サブループを変数に格納
+                if ($spot_query->have_posts()) :
+                    while ($spot_query->have_posts()) :
+                        $spot_query->the_post();
+                ?>
+
+
+
                 <li class="card_container">
                     <div class="spot_card relative">
                         <!-- お気に入りボタン -->
@@ -231,7 +251,7 @@
                             <i class="far fa-heart LikesIcon-fa-heart"></i>
                         </div>
                         <!-- カード１枚にかかるスポット一覧へのリンク -->
-                        <a href="spot.html">
+                        <a href="<?php the_permalink(); ?>">
                             <!-- カード全体の入れ物 -->
                             <ul class="spot_list">
                                 <!-- カード１枚の入れ物-->
@@ -240,17 +260,25 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
                                     <!-- スポット写真 -->
-                                    <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
+                                    <?php
+                                            $pic = get_field('eyecatch');
+                                            $pic_url = $pic['sizes']['thumbnail'];
+                                            $width = $pic['sizes']['thumbnail-width'];
+                                            $height = $pic['sizes']['thumbnail-height'];
+
+
+                                            ?>
+                                    <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
                                     <!-- スポット名 -->
-                                    <h3 class="spot_item_name">味処 あらし</h3>
+                                    <h3 class="spot_item_name"><?php the_field('shop_name'); ?></h3>
                                     <!-- スポット情報の表 -->
                                     <dl class="spot_item_info flex">
                                         <dt>営業時間</dt>
-                                        <dd>11:00～21:00</dd>
+                                        <dd><?php the_field('open_time'); ?></dd>
                                         <dt>住所</dt>
-                                        <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
+                                        <dd><?php the_field('address'); ?></dd>
                                         <dt>電話番号</dt>
-                                        <dd>088-686-0005</dd>
+                                        <dd><?php the_field('telephone'); ?></dd>
                                     </dl>
                                 </li>
                             </ul>
@@ -258,187 +286,20 @@
                     </div>
                 </li>
 
-                <!-- カード -->
-                <li class="card_container">
-                    <div class="spot_card relative">
-                        <!-- お気に入りボタン -->
-                        <div class="spot_like_icon">
-                            <i class="far fa-heart LikesIcon-fa-heart"></i>
-                        </div>
-                        <!-- カード１枚にかかるスポット一覧へのリンク -->
-                        <a href="spot.html">
-                            <!-- カード全体の入れ物 -->
-                            <ul class="spot_list">
-                                <!-- カード１枚の入れ物-->
-                                <li class="spot_item">
-                                    <!-- カテゴリーのラベル -->
-                                    <img src="./assets/image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-                                    <!-- スポット写真 -->
-                                    <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                    <!-- スポット名 -->
-                                    <h3 class="spot_item_name">味処 あらし</h3>
-                                    <!-- スポット情報の表 -->
-                                    <dl class="spot_item_info flex">
-                                        <dt>営業時間</dt>
-                                        <dd>11:00～21:00</dd>
-                                        <dt>住所</dt>
-                                        <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                        <dt>電話番号</dt>
-                                        <dd>088-686-0005</dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </li>
-
-                <!-- カード -->
-                <li class="card_container">
-                    <div class="spot_card relative">
-                        <!-- お気に入りボタン -->
-                        <div class="spot_like_icon">
-                            <i class="far fa-heart LikesIcon-fa-heart"></i>
-                        </div>
-                        <!-- カード１枚にかかるスポット一覧へのリンク -->
-                        <a href="spot.html">
-                            <!-- カード全体の入れ物 -->
-                            <ul class="spot_list">
-                                <!-- カード１枚の入れ物-->
-                                <li class="spot_item">
-                                    <!-- カテゴリーのラベル -->
-                                    <img src="./assets/image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-                                    <!-- スポット写真 -->
-                                    <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                    <!-- スポット名 -->
-                                    <h3 class="spot_item_name">味処 あらし</h3>
-                                    <!-- スポット情報の表 -->
-                                    <dl class="spot_item_info flex">
-                                        <dt>営業時間</dt>
-                                        <dd>11:00～21:00</dd>
-                                        <dt>住所</dt>
-                                        <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                        <dt>電話番号</dt>
-                                        <dd>088-686-0005</dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </li>
-
-                <!-- カード -->
-                <li class="card_container">
-                    <div class="spot_card relative">
-                        <!-- お気に入りボタン -->
-                        <div class="spot_like_icon">
-                            <i class="far fa-heart LikesIcon-fa-heart"></i>
-                        </div>
-                        <!-- カード１枚にかかるスポット一覧へのリンク -->
-                        <a href="spot.html">
-                            <!-- カード全体の入れ物 -->
-                            <ul class="spot_list">
-                                <!-- カード１枚の入れ物-->
-                                <li class="spot_item">
-                                    <!-- カテゴリーのラベル -->
-                                    <img src="./assets/image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-                                    <!-- スポット写真 -->
-                                    <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                    <!-- スポット名 -->
-                                    <h3 class="spot_item_name">味処 あらし</h3>
-                                    <!-- スポット情報の表 -->
-                                    <dl class="spot_item_info flex">
-                                        <dt>営業時間</dt>
-                                        <dd>11:00～21:00</dd>
-                                        <dt>住所</dt>
-                                        <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                        <dt>電話番号</dt>
-                                        <dd>088-686-0005</dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </li>
-
-                <!-- カード -->
-                <li class="card_container">
-                    <div class="spot_card relative">
-                        <!-- お気に入りボタン -->
-                        <div class="spot_like_icon">
-                            <i class="far fa-heart LikesIcon-fa-heart"></i>
-                        </div>
-                        <!-- カード１枚にかかるスポット一覧へのリンク -->
-                        <a href="spot.html">
-                            <!-- カード全体の入れ物 -->
-                            <ul class="spot_list">
-                                <!-- カード１枚の入れ物-->
-                                <li class="spot_item">
-                                    <!-- カテゴリーのラベル -->
-                                    <img src="./assets/image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
-
-                                    <!-- スポット写真 -->
-                                    <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                    <!-- スポット名 -->
-                                    <h3 class="spot_item_name">味処 あらし</h3>
-                                    <!-- スポット情報の表 -->
-                                    <dl class="spot_item_info flex">
-                                        <dt>営業時間</dt>
-                                        <dd>11:00～21:00</dd>
-                                        <dt>住所</dt>
-                                        <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                        <dt>電話番号</dt>
-                                        <dd>088-686-0005</dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </li>
+                <?php endwhile;
+                endif;
+                wp_reset_postdata(); //サブループを抜ける
+                ?>
 
 
-                <!-- カード -->
-                <li class="card_container">
-                    <div class="spot_card relative">
-                        <!-- お気に入りボタン -->
-                        <div class="spot_like_icon">
-                            <i class="far fa-heart LikesIcon-fa-heart"></i>
-                        </div>
-                        <!-- カード１枚にかかるスポット一覧へのリンク -->
-                        <a href="spot.html">
-                            <!-- カード全体の入れ物 -->
-                            <ul class="spot_list">
-                                <!-- カード１枚の入れ物-->
-                                <li class="spot_item">
-                                    <!-- カテゴリーのラベル -->
-                                    <img src="./assets/image/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
 
-                                    <!-- スポット写真 -->
-                                    <img class="spot_item_img" src="https://placehold.jp/280x240.png" alt="スポットの写真">
-                                    <!-- スポット名 -->
-                                    <h3 class="spot_item_name">味処 あらし</h3>
-                                    <!-- スポット情報の表 -->
-                                    <dl class="spot_item_info flex">
-                                        <dt>営業時間</dt>
-                                        <dd>11:00～21:00</dd>
-                                        <dt>住所</dt>
-                                        <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                        <dt>電話番号</dt>
-                                        <dd>088-686-0005</dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </li>
 
             </ul>
         </div>
         <!-- スポットもっと見るボタン -->
         <div class="common_btn">
-            <a class="spot_top_btn" href="search.html">スポット検索へ⇒</a>
+            <a class="spot_top_btn" href="<?php echo home_url('/spot/'); ?>
+">スポット検索へ⇒</a>
         </div>
     </section>
 

@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: 全記事一覧テスト
-*/
-?>
-
 <!-- ヘッダー切り取りここから -->
 
 <?php get_header(); ?>
@@ -28,6 +22,9 @@ Template Name: 全記事一覧テスト
         </section>
         <div class="news_detail">
             <div class="news_detail_container flex">
+
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
                 <!-- ニュース記事１つ分の入れ物 -->
                 <div class="news_card">
                     <!-- ニュース記事１つ分の枠の設定 -->
@@ -35,174 +32,47 @@ Template Name: 全記事一覧テスト
                         <!-- 記事の写真 -->
                         <!-- <div class="news_news_article_img_container flex"> -->
                         <!-- ニュース記事の写真 -->
-                        <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_card_item_img">
-                        <!-- </div> -->
-                        <div class="news_article_info_container">
-                            <!-- ニュース記事テキストの入れ物 -->
-                            <div class="news_article_info_box flex column">
-                                <!-- 日付とカテゴリ名 -->
-                                <div class="article_meta flex">
-                                    <time datetime="2022-12-01">2022.12.1</time>
-                                    <div class="post-categories">
-                                        <a href="#">カテゴリ名</a>
+                        <a href="<?php the_permalink(); ?>">
+
+
+                            <?php if (has_post_thumbnail()) : ?>
+
+                            <?php the_post_thumbnail('thumbnail'); ?>
+
+                            <?php else : ?>
+                            <img src="<?php echo $pic_url; ?>" alt="ニュース写真" class="news_card_item_img">
+                            <?php endif; ?>
+                            <!-- </div> -->
+                            <div class="news_article_info_container">
+                                <!-- ニュース記事テキストの入れ物 -->
+                                <div class="news_article_info_box flex column">
+                                    <!-- 日付とカテゴリ名 -->
+                                    <div class="article_meta flex">
+                                        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                                        <div class="post-categories">
+                                            <?php the_category() ?>
+                                        </div>
+                                    </div>
+                                    <!-- 記事タイトル -->
+                                    <h2 class="news_card_item_name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                    <!-- 記事見出しの入れ物 -->
+                                    <div class="news_card_txt_container">
+                                        <div class="news_card_txt">
+                                            <p><?php the_excerpt(); ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- 記事タイトル -->
-                                <h2 class="news_card_item_name">初心者モデルコース</h2>
-                                <!-- 記事見出しの入れ物 -->
-                                <div class="news_card_txt_container">
-                                    <div class="news_card_txt">
-                                        <p>
-                                            先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。
-                                        </p>
-                                    </div>
-                                </div>
+                                <!-- スポットもっと見るボタン -->
+                                <div class="news_card_item_btn"><a href="<?php the_permalink(); ?>">[続きを読む]</a></div>
                             </div>
-                            <!-- スポットもっと見るボタン -->
-                            <div class="news_card_item_btn">続きを読む</div>
-                        </div>
                     </div>
                 </div>
-                <!-- ニュース記事１つ分の入れ物 -->
-                <div class="news_card">
-                    <!-- ニュース記事１つ分の枠の設定 -->
-                    <div class="news_card_item">
-                        <!-- 記事の写真 -->
-                        <!-- <div class="news_news_article_img_container flex"> -->
-                        <!-- ニュース記事の写真 -->
-                        <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_card_item_img">
-                        <!-- </div> -->
-                        <div class="news_article_info_container">
-                            <!-- ニュース記事テキストの入れ物 -->
-                            <div class="news_article_info_box flex column">
-                                <!-- 日付とカテゴリ名 -->
-                                <div class="article_meta flex">
-                                    <time datetime="2022-12-01">2022.12.1</time>
-                                    <div class="post-categories">
-                                        <a href="#">カテゴリ名</a>
-                                    </div>
-                                </div>
-                                <!-- 記事タイトル -->
-                                <h2 class="news_card_item_name">初心者モデルコース</h2>
-                                <!-- 記事見出しの入れ物 -->
-                                <div class="news_card_txt_container">
-                                    <div class="news_card_txt">
-                                        <p>
-                                            先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- スポットもっと見るボタン -->
-                            <div class="news_card_item_btn">続きを読む</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ニュース記事１つ分の入れ物 -->
-                <div class="news_card">
-                    <!-- ニュース記事１つ分の枠の設定 -->
-                    <div class="news_card_item">
-                        <!-- 記事の写真 -->
-                        <!-- <div class="news_news_article_img_container flex"> -->
-                        <!-- ニュース記事の写真 -->
-                        <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_card_item_img">
-                        <!-- </div> -->
-                        <div class="news_article_info_container">
-                            <!-- ニュース記事テキストの入れ物 -->
-                            <div class="news_article_info_box flex column">
-                                <!-- 日付とカテゴリ名 -->
-                                <div class="article_meta flex">
-                                    <time datetime="2022-12-01">2022.12.1</time>
-                                    <div class="post-categories">
-                                        <a href="#">カテゴリ名</a>
-                                    </div>
-                                </div>
-                                <!-- 記事タイトル -->
-                                <h2 class="news_card_item_name">初心者モデルコース</h2>
-                                <!-- 記事見出しの入れ物 -->
-                                <div class="news_card_txt_container">
-                                    <div class="news_card_txt">
-                                        <p>
-                                            先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- スポットもっと見るボタン -->
-                            <div class="news_card_item_btn">続きを読む</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ニュース記事１つ分の入れ物 -->
-                <div class="news_card">
-                    <!-- ニュース記事１つ分の枠の設定 -->
-                    <div class="news_card_item">
-                        <!-- 記事の写真 -->
-                        <!-- <div class="news_news_article_img_container flex"> -->
-                        <!-- ニュース記事の写真 -->
-                        <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_card_item_img">
-                        <!-- </div> -->
-                        <div class="news_article_info_container">
-                            <!-- ニュース記事テキストの入れ物 -->
-                            <div class="news_article_info_box flex column">
-                                <!-- 日付とカテゴリ名 -->
-                                <div class="article_meta flex">
-                                    <time datetime="2022-12-01">2022.12.1</time>
-                                    <div class="post-categories">
-                                        <a href="#">カテゴリ名</a>
-                                    </div>
-                                </div>
-                                <!-- 記事タイトル -->
-                                <h2 class="news_card_item_name">初心者モデルコース</h2>
-                                <!-- 記事見出しの入れ物 -->
-                                <div class="news_card_txt_container">
-                                    <div class="news_card_txt">
-                                        <p>
-                                            先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- スポットもっと見るボタン -->
-                            <div class="news_card_item_btn">続きを読む</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ニュース記事１つ分の入れ物 -->
-                <div class="news_card">
-                    <!-- ニュース記事１つ分の枠の設定 -->
-                    <div class="news_card_item">
-                        <!-- 記事の写真 -->
-                        <!-- <div class="news_news_article_img_container flex"> -->
-                        <!-- ニュース記事の写真 -->
-                        <img src="https://placehold.jp/280x240.png" alt="ニュース写真" class="news_card_item_img">
-                        <!-- </div> -->
-                        <div class="news_article_info_container">
-                            <!-- ニュース記事テキストの入れ物 -->
-                            <div class="news_article_info_box flex column">
-                                <!-- 日付とカテゴリ名 -->
-                                <div class="article_meta flex">
-                                    <time datetime="2022-12-01">2022.12.1</time>
-                                    <div class="post-categories">
-                                        <a href="#">カテゴリ名</a>
-                                    </div>
-                                </div>
-                                <!-- 記事タイトル -->
-                                <h2 class="news_card_item_name">初心者モデルコース</h2>
-                                <!-- 記事見出しの入れ物 -->
-                                <div class="news_card_txt_container">
-                                    <div class="news_card_txt">
-                                        <p>
-                                            先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。先日、初心者モデルコースをコンテンツ班で実際に走ってみました。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- スポットもっと見るボタン -->
-                            <div class="news_card_item_btn">続きを読む</div>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                <?php endif; ?>
+
+
+
+
                 <!-- ページネーション -->
                 <div class="news_pagination_container flex">
                     <p class="page_box">1</p>
