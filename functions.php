@@ -163,6 +163,26 @@ function add_individual_stylesheet_script()
             true
         );
     }
+    // カテゴリー別一覧
+    else if (is_category()) {
+        wp_enqueue_style('naruto_cycle-archive_news', get_template_directory_uri() . '/assets/css/news.css', array(), false);
+        wp_enqueue_style('naruto_cycle-archive_news2', get_template_directory_uri() . '/assets/css/news_detail.css', array(), false);
+
+        wp_enqueue_style('naruto_cycle-template_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
+
+        // js
+        wp_enqueue_script('naruto_cycle-archive_news-script1', get_template_directory_uri() . '/assets/js/index.js', '', '', true);
+        wp_enqueue_script('naruto_cycle-archive_news_script2', get_template_directory_uri() . '/assets/js/jquery.bgswitcher.js', '', '', true);
+        wp_enqueue_script(
+            'naruto_cycle-archive_news_script3',
+            get_template_directory_uri() . '/assets/js/bgswitcher.js',
+            '',
+            '',
+            true
+        );
+    }
+
+
     // 詳細ページCSS（news.css）
     else if (is_single()) {
         wp_enqueue_style('naruto_cycle-news_content', get_template_directory_uri() . '/assets/css/news_detail.css', array(), false);
