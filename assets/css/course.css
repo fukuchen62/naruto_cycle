@@ -33,7 +33,6 @@
 	text-align: center;
 	position: relative;
 	box-sizing: border-box;
-	cursor: pointer;
 }
 
 /* コースのボタンごとに異なる設定 */
@@ -63,7 +62,6 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
-	pointer-events: none;
 }
 
 /*------------------- 地図のサイズの設定---- */
@@ -86,10 +84,12 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {}
+@media screen and (min-width: 599px) {
+}
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
 /* 地図上アイコンの説明 */
 .icon_list_wrap {
@@ -486,6 +486,6 @@
 	margin: 32px auto 60px;
 }
 
-section+section {
+section + section {
 	margin-top: 160px;
 }
