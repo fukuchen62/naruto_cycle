@@ -8,6 +8,8 @@ $(function () {
     });
 });
 
+
+
 // お気に入りボタン用
 $('.spot_like_icon').on('click', function () {
     let $btn = $(this);

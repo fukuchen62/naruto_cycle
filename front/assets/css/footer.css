@@ -23,8 +23,7 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {
-}
+@media screen and (min-width: 599px) {}
 
 /* フッター */
 /* .footer {} */
@@ -70,70 +69,38 @@
 }
 
 /* TOPに戻るボタンの設定 */
-.gotop {
+.pagetop {
 	display: none;
-	/*最初は非表示で*/
-	width: 60px;
-	height: 60px;
-	box-sizing: border-box;
-	border-radius: 50%;
-	background: rgb(255, 255, 255);
-	border: 1px solid rgb(153, 153, 153);
-	padding-top: 30px;
-	text-align: center;
-	letter-spacing: -1px;
-	font-size: 100%;
-	text-decoration: none;
-	color: rgb(128, 0, 0);
-	font-size: 120%;
-	opacity: 0.5;
-	/*背景を半透明に*/
 	position: fixed;
-	/*表示場所を下記に固定*/
-	bottom: 20px;
-	right: 20px;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
 	z-index: 100;
-	/*一番手前に*/
 }
 
-/*三角の矢印マーク*/
-.gotop::before {
-	content: "";
-	display: block;
-	border-top: 2px solid rgb(128, 0, 0);
-	border-right: 2px solid rgb(128, 0, 0);
-	width: 25%;
-	height: 25%;
-	top: 25%;
-	left: 0;
-	right: 0;
-	margin: auto;
-	position: absolute;
-	transform: rotate(-45deg);
-	/*角を回転させて上向きに*/
+/* ボタンの画像はこちら */
+.pagetop img {
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
 }
 
-.gotop:hover {
+.pagetop:hover {
 	opacity: 1;
 }
 
-@media (max-width: 750px) {
-	.gotop {
-		width: 40px;
-		height: 40px;
-		text-indent: -9999px;
-		opacity: 1;
-		border: none;
-		background-color: rgba(255, 255, 255, 0.5);
-		border-radius: 50%;
-		bottom: 10px;
-		right: 10px;
+@media (min-width: 599px) {
+	.pagetop {
+		bottom: 20px;
+		right: 20px;
 	}
 
-	.gotop::before {
-		bottom: 0;
+	.pagetop img {
+		width: 60px;
+		height: 60px;
 	}
 }
+
 /* 以下近藤追加分 */
 .fnav_container {
 	position: relative;

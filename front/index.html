@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/wave.css">
+    <link rel="stylesheet" href="./assets/css/3wave.css">
 
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,7 +57,7 @@
                         <a href="mypage.html"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a></a>
+                        <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
                     </li>
                 </ul>
                 <button type="button" class="btn js-btn debug">
@@ -65,28 +65,29 @@
                 </button>
             </nav>
         </header>
+
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
         <main class="main">
 
             <!-- キービジュアル＋ニュースのボックス -->
-            <div class="key_news_wrap relative">
+            <div class="key_news_wrap">
 
                 <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：キービジュアル ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
-                <section class="index_key_visual relative">
+                <section class="index_key_visual">
 
                     <div class="key_img_box">
                         <!-- キービジュアル画像 -->
-                        <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像" class="key_img">
+                        <!-- <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像" class="key_img"> -->
 
                         <!-- 動画 -->
-                        <!-- <div class="index_video_wrapper">
+                        <div class="index_video_wrapper">
                             <video autoplay muted playsinline loop>
                                 <source src="./assets/image/index_keymovie.mp4" type="video/mp4">
-                                <img src="https://placehold.jp/1440x1024.png">
+                                <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像">
                             </video>
-                        </div> -->
+                        </div>
 
                     </div>
 
@@ -164,7 +165,7 @@
                 <!-- コンテンツボックス -->
                 <div class="index_howto_content flex_pc">
                     <!-- テキスト用ボックス -->
-                    <div class="index_howto_txtbox relative">
+                    <div class="index_howto_txtbox">
                         <!-- 見出し -->
                         <h2 class="index_howto_top headline">
                             <ruby>HOW TO<rt>鳴門のサイクリングについて</rt></ruby>
@@ -213,7 +214,7 @@
                         <div class="index_course_btnbox flex">
 
                             <!-- 初心者コース -->
-                            <div class="index_course_selectbtn beginner relative">
+                            <div class="index_course_selectbtn beginner">
                                 <div class="index_course_btntxt">
                                     <p>初心者コース</p>
                                     <p>00km</p>
@@ -221,7 +222,7 @@
                             </div>
 
                             <!-- 短距離コース -->
-                            <div class="index_course_selectbtn short relative">
+                            <div class="index_course_selectbtn short">
                                 <div class="index_course_btntxt">
                                     <p>短距離コース</p>
                                     <p>00km</p>
@@ -229,7 +230,7 @@
                             </div>
 
                             <!-- 中距離コース -->
-                            <div class="index_course_selectbtn middle relative">
+                            <div class="index_course_selectbtn middle">
                                 <div class="index_course_btntxt">
                                     <p>中距離コース</p>
                                     <p>00km</p>
@@ -237,7 +238,7 @@
                             </div>
 
                             <!-- 長距離コース -->
-                            <div class="index_course_selectbtn long relative">
+                            <div class="index_course_selectbtn long">
                                 <div class="index_course_btntxt">
                                     <p>長距離コース</p>
                                     <p>00km</p>
@@ -252,15 +253,15 @@
 
             <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：スポット ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
-            <!-- 波アニメーション（上）ここから -->
-            <div class="wave">
-                <canvas id="waveCanvas"></canvas>
-            </div>
-            <!-- 波アニメーション（上）ここまで -->
+            <section class="index_spot">
 
-            <section class="index_spot relative">
+                <!-- 波アニメーション（上）ここから -->
+                <div class="wave">
+                    <canvas id="waveCanvas"></canvas>
+                </div>
+                <!-- 波アニメーション（上）ここまで -->
 
-                <div class="index_spot_headlinebox relative">
+                <div class="index_spot_headlinebox">
                     <!-- 吹き出しPICKUP！文字 -->
                     <div class="index_spot_deco">＼PICK UP!／</div>
                     <!-- SPOT見出し -->
@@ -493,11 +494,9 @@
                 </div>
             </section>
 
-            <!-- 波アニメーション（下）ここから -->
-            <!-- <div class="wave">
-                <canvas id="waveCanvas"></canvas>
-            </div> -->
-            <!-- 波アニメーション（下）ここまで -->
+            <!-- グラデーションの箱 -->
+            <div class="bg_gradient"></div>
+
 
             <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：インスタ ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
@@ -522,20 +521,21 @@
                         </div>
                     </div>
 
+                    <!-- ※ハンバーガーメニューに悪影響を及ぼすため現状コメントアウトで対応 -->
                     <!-- 自転車のあしらい＋回転アニメーション（SP非表示） -->
-                    <div class="index_insta_decobox relative">
+                    <!-- <div class="index_insta_decobox"> -->
 
-                        <!-- 回転アニメーション -->
-                        <div class="circle">
-                            <div class="inner relative">
-                                <!-- 文字配置の基準となる親要素 -->
+                    <!-- 回転アニメーション -->
+                    <!-- <div class="circle">
+                            <div class="inner">
                                 <p class="text index_insta_decotxt">HAVE A NICE BIKE TRIP! </p>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <!-- 自転車のあしらい -->
-                        <img src="./assets/image/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
-                    </div>
+                    <!-- 自転車のあしらい -->
+                    <img src="./assets/image/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
+                    <!-- </div> -->
+
                 </div>
                 <div class="index_insta_SWbox">
                     <!-- SnapWidget -->
@@ -603,10 +603,17 @@
             <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
         </footer>
 
+        <!-- トップに戻るボタン -->
+        <div class="pagetop debug">
+            <!-- 戻るボタン画像 -->
+            <img src="./assets/image/aboutsite_sudachi_img.jpg" alt="トップに戻るボタン">
+        </div>
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
         <script src="./assets/js/index.js"></script>
         <script src="./assets/js/header.js"></script>
+        <script src="./assets/js/footer.js"></script>
         <script src="./assets/js/common.js"></script>
+        <script src="./assets/js/3wave.js"></script>
     </div>
 </body>
 

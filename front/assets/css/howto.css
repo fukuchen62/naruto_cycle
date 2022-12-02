@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
+/* pcサイズ以外の時は非表示 */
 @media screen and (min-width: 1024px) {
 	.not_pc {
 		display: none;
 	}
 }
+/* スマホサイズは非表示 */
 .not_sp {
 	display: none;
 }
@@ -14,16 +16,17 @@
 	}
 }
 
+/* 全体の設定 */
 .howto {
 	position: relative;
 }
-
+/* 鳴門市についての全体設定 */
 .howto_container {
 	width: 320px;
 	margin-left: auto;
 	margin-right: auto;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 	.howto_container {
 		width: 600px;
 		display: flex;
@@ -36,6 +39,8 @@
 		width: 1024px;
 	}
 }
+
+/* 鳴門市について、左側の画像の設定 */
 .howto_img {
 	width: 300px;
 	height: 448px;
@@ -53,7 +58,7 @@
 		width: 560px;
 	}
 }
-
+/* 鳴門市についてのテキスト */
 @media screen and (min-width: 600px) {
 	.howto_text {
 		text-align: left;
@@ -65,16 +70,19 @@
 	}
 }
 
+/* 服装と携行品についての全体設定 */
 .list_container {
 	margin-top: 80px;
 	text-align: center;
 }
+/* 服装と携行品についての見出し */
 .howto_list_headline {
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 24px;
 	text-align: center;
 }
+/* 服装と携行品の画像の設定*/
 .cycle_item_list {
 	margin-top: 24px;
 	display: flex;
@@ -83,7 +91,7 @@
 	width: 320px;
 	justify-content: center;
 }
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 	.cycle_item_list {
 		width: 600px;
 	}
@@ -93,10 +101,11 @@
 		width: 1024px;
 	}
 }
+/* 画像下のテキスト */
 .cycle_item_list li {
 	text-align: center;
-	/* width: 25%; */
 }
+/* 画像サイズはpcで200x200、pc以外は120x120  */
 .list_img {
 	width: 120px;
 	height: 120px;
@@ -109,32 +118,49 @@
 		height: 200px;
 	}
 }
-.list_img.carry {
-	border: solid 2px green;
-}
+/* 服装の画像はオレンジで囲う */
 .list_img.wear {
 	border: solid 2px orange;
 }
+/* 携行品の画像は緑で囲う */
+.list_img.carry {
+	border: solid 2px green;
+}
+
+/* 走行の注意については左寄せ */
 @media screen and (min-width: 600px) {
 	.attention_text {
 		text-align: left;
 	}
 }
+
 /* もっと鳴門について知るには */
 .more_naruto_card_item {
 	margin-top: 64px;
 	position: relative;
 	width: 320px;
 	height: 480px;
-	box-shadow: -40px -40px blue;
+	box-shadow: -40px -40px #005ea7;
 	background-color: rgb(44, 44, 44);
 	transition: 1s;
+	margin: 80px 80px;
 }
+
+/* スマホでは非ホバー時から透過をかける */
 .more_naruto_card_item img {
 	width: 320px;
 	height: 480px;
 	object-fit: cover;
+	opacity: 0.7;
 }
+/* スマホ以外では普通に表示 */
+@media screen and (min-width: 600px) {
+	.more_naruto_card_item img {
+		opacity: 1;
+	}
+}
+
+/* 左上の数字の設定 */
 .more_naruto_num {
 	position: absolute;
 	top: 16px;
@@ -142,6 +168,8 @@
 	font-size: 64px;
 	color: #fff;
 }
+
+/* 画像下のテキスト。スマホ以外は非ホバー時は非表示 */
 .more_naruto_caption {
 	position: absolute;
 	bottom: 16px;
@@ -150,13 +178,23 @@
 	margin: 16px;
 	color: #fff;
 }
+
 @media screen and (min-width: 600px) {
-	.more_naruto_card_item:hover img {
-		opacity: 0.8;
-	}
 	.more_naruto_caption {
 		opacity: 0;
-		transition: 1s;
+	}
+}
+
+/* pc,spサイズでホバー時に文字表示 */
+@media screen and (min-width: 600px) {
+	.more_naruto_card_item:hover img {
+		opacity: 0.7;
+	}
+	.more_naruto_card_item:hover .more_naruto_num {
+		opacity: 0;
+	}
+	.more_naruto_card_item:hover .more_naruto_caption {
+		opacity: 0;
 	}
 	.more_naruto_card_item:hover .more_naruto_caption {
 		opacity: 1;

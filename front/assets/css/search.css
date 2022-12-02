@@ -143,7 +143,7 @@ position: relative;
 }
 
 .pickup{
-  margin: 160px auto auto;
+  margin: 128px auto auto;
 font-weight: 900;
 font-size: 32px;
 line-height: 39px;
@@ -175,8 +175,58 @@ line-height: 70px;
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
 @media screen and (min-width: 599px) {
+  /* 検索ボックス */
+  .search_container{
+    width: 599px;
+    height: 985px;
+  }
+  /* 要素を横並びにする */
+.radio-box{
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 500px;
+margin: auto auto;
+}
+/* チェックボックスの幅*/
+.item_box{
+  margin: 16px 8px auto;
+}
+.btn-inner{
+  margin: 72px auto 28px auto;
+  /* width: 300px; */
+}
 
 }
+
+/* タブレット時カードを2カラムにする */
+@media screen and (min-width: 671px) {
+	.spot_list {
+    display: flex;
+    flex-wrap: wrap;
+justify-content: center;
+    gap: 32px;
+    margin: auto auto 160px auto;
+    text-align: left;
+	}
+  /* 疑似要素を作成し2列目を左寄せ */
+.spot_list::after{
+  content:"";
+  display: block;
+  width: 320px;
+}
+/* お気に入りボタン位置修正 */
+.spot_like_icon{
+  margin: 30px auto auto 10px;
+}
+}
+/* 画面幅が1375以上の時、疑似要素を消す */
+@media screen and (min-width: 1375px) {
+  .spot_list::after{
+    display: none;
+  }
+  }
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
   /* パンくずリスト */
@@ -240,6 +290,8 @@ position: relative;
 /* 要素を横並びにする */
 .radio-box{
 display:flex;
+/* タブレットの中央表示を修正 */
+justify-content: left;
 /* width: 848px; */
 width: 864px;
 margin: 0px 32px;
@@ -260,9 +312,6 @@ margin: 0px 32px;
 .btn-inner{
   margin: auto 16px;
 }
-
-
-
 
 /* reccomendのあしらいを囲む箱 */
 .reccomend_wrap{
@@ -309,11 +358,6 @@ margin: 0px 32px;
     gap: 32px 32px;
     margin: auto auto 160px auto;
     text-align: left;
-}
-/* お気に入りボタン位置修正 */
-.spot_like_icon{
-  margin: 30px auto auto 10px;
-
 }
 
 }

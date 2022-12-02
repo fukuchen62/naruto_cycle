@@ -104,10 +104,6 @@ ruby rt {
 	margin: auto;
 }
 
-/* paddingをauto */
-.p_auto {
-	padding: auto;
-}
 
 /* 親要素にflex */
 .flex {
