@@ -23,8 +23,7 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {
-}
+@media screen and (min-width: 600px) {}
 
 /* フッター */
 /* .footer {} */
@@ -81,8 +80,8 @@
 
 /* ボタンの画像はこちら */
 .pagetop img {
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
 	object-fit: cover;
 }
 
@@ -97,8 +96,8 @@
 	}
 
 	.pagetop img {
-		width: 60px;
-		height: 60px;
+		width: 100px;
+		height: 100px;
 	}
 }
 
