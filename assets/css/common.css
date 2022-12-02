@@ -62,6 +62,10 @@ body {
 	text-align: center;
 }
 
+ruby rt {
+	font-weight: 400;
+}
+
 /* ブロック要素にする */
 .block {
 	display: block;
@@ -365,12 +369,14 @@ body {
 	font-size: 30px;
 }
 
+/* クリックでお気に入りする時のCSS */
 .LikesIcon-fa-heart.heart {
 	/* heartAnimationアニメーションを200ミリ秒かけて実行する */
 	animation: heartAnimation .2s;
 	/* アイコン色を黒から赤へ変更する */
 	color: #e2264d;
 }
+
 
 /* --------------------------- */
 

@@ -38,10 +38,16 @@
 
 
 /* ---------------section：キービジュアル---------------  */
+.key_news_wrap {
+    position: relative;
+}
+
+
 /* キービジュアルの箱 */
 .index_key_visual {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 /* 動画 */
@@ -262,6 +268,7 @@
     color: #FFFFFC;
     text-align: left;
     line-height: 1.2em;
+    position: relative;
 }
 
 /* PC表示 */
@@ -398,6 +405,7 @@
     border-radius: 50%;
     text-align: center;
     color: #FFFFFC;
+    position: relative;
 }
 
 .index_course_btntxt {
@@ -441,12 +449,15 @@
 /* ---------------section：スポット---------------  */
 .index_spot {
     background-color: #D4EBEC;
+    position: relative;
 }
 
 .index_spot_headlinebox {
     width: 230px;
     margin: 0 auto;
+    position: relative;
 }
+
 
 .index_spot_deco {
     font-size: 32px;
@@ -464,7 +475,6 @@
         top: -40px;
         left: -30px;
     }
-
 }
 
 /* コース上スポット全体の表示設定 */
@@ -486,47 +496,32 @@
     }
 }
 
+/* ---------------SPOT上部波アニメーション---------------  */
 
-/* ---------------波アニメーション---------------  */
-/* 動かない波の仕切り */
-.container {
-    position: relative;
-    background: #D4EBEC;
-    height: 60px;
-
-}
-
+/* 上の波の入れ物 */
 .wave {
+    /* display: none; */
+    position: relative;
+    height: 200px;
+    background-color: #F3F0E8;
+    /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+}
+
+/* 波の設定 */
+canvas {
     position: absolute;
-    height: 150px;
-    width: 100%;
-    background: #D4EBEC;
     bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
-.wave::before, .wave::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-}
 
-.wave::before {
-    width: 55%;
-    height: 109%;
-    background-color: #f3f0e8;
-    right: -1.5%;
-    top: 60%;
+/* ---------------SPOT下部グラデーション---------------  */
+.bg_gradient {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(#D4EBEC, #F3F0E8);
 }
-
-.wave::after {
-    width: 55%;
-    height: 100%;
-    background-color: #D4EBEC;
-    left: -1.5%;
-    top: 40%;
-}
-
 
 /* ---------------section：インスタグラム---------------  */
 .index_insta_content {
@@ -611,8 +606,12 @@
 }
 
 /* 装飾画像 */
+.index_insta_decobox {
+    position: relative;
+}
+
 /* TB以上で表示かつflex */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 599px) {
     .tb_pc_flex {
         display: flex;
     }
@@ -624,24 +623,29 @@
     display: none;
 }
 
-.circle {
-    position: absolute;
-    top: -75px;
-    right: 55px;
-    margin: 0 auto;
-    width: 168px;
-    height: 168px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+@media screen and (min-width: 1024px) {
+    .circle {
+        position: absolute;
+        top: -75px;
+        right: 55px;
+        margin: 0 auto;
+        width: 168px;
+        height: 168px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
 }
+
+
 
 .inner {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     animation: rotateAnim 10s linear infinite;
+    position: relative;
 }
 
 @keyframes rotateAnim {
@@ -686,11 +690,14 @@ span {
 /* ---------------波アニメーション---------------  */
 
 .wave {
+    /* display: none; */
     position: relative;
     height: 200px;
+    background-color: #F3F0E8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
+/* 波の設定 */
 canvas {
     position: absolute;
     bottom: 0;

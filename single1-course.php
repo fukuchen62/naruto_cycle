@@ -57,7 +57,7 @@ $args['meta_query'] = $metaquerysp;
 // print_r($args);
 
 $spot_query = new WP_Query($args); //サブループを変数に格納
-
+s
 if ($spot_query->have_posts()) :
     while ($spot_query->have_posts()) :
         $spot_query->the_post();

@@ -30,42 +30,10 @@
     margin: auto auto 49px auto;
   }
 
-
-  /* 画像レイアウトのためのスタイル */
-  .container {
-    /* margin: 20px auto 5px 0; */
-    max-width: 500px;
-  }
-
-
-  /* メイン画像 */
-  .main-img{
-    margin: 12px auto 5px auto;
-  }
-
-
-/* サムネイル画像 */
-  .sub-img{
-    display: flex;
-    justify-content: center;
-  }
-  .current{
-    margin: auto 5px 16px 0px;
-  }
-  .current:last-of-type{
-    margin: 0px;
-  }
-  .container_pc{
-    display: none;
-  }
-
-
-
-
   /* 詳細 */
   .spot_date{
     align-items: left;
-    margin: auto;
+    margin: 16px auto;
     width: 281px;
   }
   /* 施設名 */
@@ -135,6 +103,7 @@ span{
 .spot_apply{
   font-weight: bold;
   margin: 32px auto 22px auto;
+  /* text-align: center; */
 border-bottom: 5px dashed #74C7F0;
 width: 200px;
 white-space: nowrap
@@ -154,7 +123,7 @@ white-space: nowrap
 
 /* 更新日 */
 .update{
-  margin: 8px -150px auto auto;
+  margin: 10px -150px auto auto;
 }
 
 /*--------- メモ欄 -------------------------------------*/
@@ -207,14 +176,14 @@ white-space: nowrap
   width: 91px;
   height: 210px;
   top: 275px;
-  right: 30px;
+  right: 0px;
 }
 @media screen and (min-width: 1024px) {
   .course_info_pic_boy{
     width: 127px;
     height: 293px;
     top:50px;
-    right: -px;
+    right: 30px;
   }
 }
 
@@ -234,7 +203,7 @@ margin: auto -10px;
 
 /* RECCOMENDの見出し */
 .info_headline{
-  margin: 128px auto 32px auto;
+  margin: 160px auto 32px auto;
 }
 
 /* カード横並び */
@@ -282,27 +251,10 @@ margin: auto -10px;
   @media screen and (min-width: 1024px) {
     /* 詳細箱の大きさ */
 .box_spot_info{
+  position: relative;
   width: 1024px;
   height: 785px;
 }
-/* 画像位置 */
-    .container_pc{
-    display: block;
-    text-align: left;
-    margin: 12px 28px 0px 12px;
-  }
-.sub_img_pc{
-  display: flex;
-  gap:15px;
-  margin: 15px auto;
-}
-
-  /* SP版画像非表示 */
-  .container{
-    display: none;
-    float: left;
-  }
-
 /* 地図サイズ */
 iframe{
   width: 475px;
@@ -311,17 +263,22 @@ iframe{
 /* 詳細 */
   .spot_date{
     align-items: center;
-    margin: -550px 518px;
+    margin: -530px 518px;
     width: 476px;
   }
+
+
 /* コースの詳細 */
 .this_course{
-  margin-top:400px ;
-  margin-right: 500px;
+  /* margin-top:400px ;
+  margin-right: 500px; */
+  position: absolute;
+  top:570px;
+  right: 650px;
 }
 /* データ更新日 */
 .update{
-  margin-top: 80px;
+  margin-top: 570px;
   margin-left: 698px;
 }
 
@@ -334,3 +291,74 @@ iframe{
 }
 
   }
+
+/* 画像非表示 */
+.img_pc{
+  display: none;
+}
+  @media screen and (min-width: 1024px) {
+    .img_sp{
+      display: none;
+    }
+    .img_pc{
+      display: block;
+    }
+        .container_pc{
+    display: block;
+    text-align: left;
+    margin: 12px 28px 0px 12px;
+      max-width: 480px;
+  }
+
+  }
+  /* 画像レイアウトのためのスタイル */
+  .container {
+    max-width: 480px;
+  }
+  /* メイン画像 */
+  .main-img{
+    margin: 12px auto 5px auto;
+  }
+
+/* アクティブな画像の枠線を変更 */
+.sub-img li.current img {
+  border: 2px solid rgb(0, 0, 0);
+  transition: border .5s;
+}
+/* サムネイルコンテナ */
+.container {
+  margin: 0px auto 0;
+  max-width: 280px;
+}
+/* メインサムネイル */
+.main-img {
+  height: 199px;
+  width: 100%;
+}
+.main-img {
+  height: auto;
+  width: 100%;
+}
+
+/* サブサムネイル位置調整 */
+.sub-img {
+  display: flex;
+  /* margin-top: 10px; */
+}
+.sub-img li {
+  margin-right: 2%;
+  width: calc(96% / 3);
+}
+.sub-img li:nth-child(3n) {
+  margin-right: 0;
+}
+/* 切り替わり */
+.sub-img li img {
+  border: 2px solid transparent;
+transition: border .5s;
+}
+/* サブサムネイル設定 */
+.sub-img img {
+  cursor: pointer;
+  width: 100%;
+}

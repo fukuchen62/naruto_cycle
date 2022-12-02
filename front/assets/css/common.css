@@ -62,6 +62,10 @@ body {
 	text-align: center;
 }
 
+ruby rt {
+	font-weight: 400;
+}
+
 /* ブロック要素にする */
 .block {
 	display: block;
@@ -100,10 +104,6 @@ body {
 	margin: auto;
 }
 
-/* paddingをauto */
-.p_auto {
-	padding: auto;
-}
 
 /* 親要素にflex */
 .flex {
