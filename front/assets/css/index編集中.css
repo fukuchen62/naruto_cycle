@@ -1,3 +1,44 @@
+/* スクロールでヘッダーの色を変えるここから */
+.header {
+    position: relative;
+    height: 100px;
+}
+
+.header_logo {
+    position: absolute;
+    top: 0;
+
+}
+
+.fix_menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 30px 0;
+    transition: background .5s;
+}
+
+.fixed_menu {
+    background: #005EA7;
+    color: #fff;
+}
+
+/* .box-height {
+    height: 5000px;
+    padding-top: 200px;
+}
+
+.box-height p {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    margin: auto;
+} */
+
+/* スクロールでヘッダーの色を変えるここまで */
+
 /* index本体 */
 .wrap {
     width: 100%;
@@ -38,10 +79,16 @@
 
 
 /* ---------------section：キービジュアル---------------  */
+.key_news_wrap {
+    position: relative;
+}
+
+
 /* キービジュアルの箱 */
 .index_key_visual {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 /* 動画 */
@@ -262,6 +309,7 @@
     color: #FFFFFC;
     text-align: left;
     line-height: 1.2em;
+    position: relative;
 }
 
 /* PC表示 */
@@ -398,6 +446,7 @@
     border-radius: 50%;
     text-align: center;
     color: #FFFFFC;
+    position: relative;
 }
 
 .index_course_btntxt {
@@ -441,13 +490,15 @@
 /* ---------------section：スポット---------------  */
 .index_spot {
     background-color: #D4EBEC;
-    margin-block-end: 100px;
+    position: relative;
 }
 
 .index_spot_headlinebox {
     width: 230px;
     margin: 0 auto;
+    position: relative;
 }
+
 
 .index_spot_deco {
     font-size: 32px;
@@ -465,7 +516,6 @@
         top: -40px;
         left: -30px;
     }
-
 }
 
 /* コース上スポット全体の表示設定 */
@@ -487,8 +537,25 @@
     }
 }
 
-
 /* ---------------SPOT上部波アニメーション---------------  */
+
+/* 上の波の入れ物 */
+.wave {
+    /* display: none; */
+    position: relative;
+    height: 200px;
+    background-color: #F3F0E8;
+    /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+}
+
+/* 波の設定 */
+canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 
 /* ---------------SPOT下部グラデーション---------------  */
 .bg_gradient {
@@ -580,8 +647,12 @@
 }
 
 /* 装飾画像 */
+.index_insta_decobox {
+    position: relative;
+}
+
 /* TB以上で表示かつflex */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 599px) {
     .tb_pc_flex {
         display: flex;
     }
@@ -593,24 +664,29 @@
     display: none;
 }
 
-.circle {
-    position: absolute;
-    top: -75px;
-    right: 55px;
-    margin: 0 auto;
-    width: 168px;
-    height: 168px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+@media screen and (min-width: 1024px) {
+    .circle {
+        position: absolute;
+        top: -75px;
+        right: 55px;
+        margin: 0 auto;
+        width: 168px;
+        height: 168px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
 }
+
+
 
 .inner {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     animation: rotateAnim 10s linear infinite;
+    position: relative;
 }
 
 @keyframes rotateAnim {
@@ -655,11 +731,14 @@ span {
 /* ---------------波アニメーション---------------  */
 
 .wave {
+    /* display: none; */
     position: relative;
     height: 200px;
+    background-color: #F3F0E8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
+/* 波の設定 */
 canvas {
     position: absolute;
     bottom: 0;
