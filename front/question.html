@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/question.css" />
+    <link rel="stylesheet" href="./assets/css/question編集中.css" />
 
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,33 +33,31 @@
 
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
         <header class="header flex">
-            <h1 class="header_logo">
-                        <a href="#">
-                            <img class="img" src="./assets/image/header_logo_img.png" alt="なるとサイくるっと！のロゴ">
-                        </a>
-                    </h1>
+            <div class="header_logo">
+                <h1><a href="#"><img class="img" src="./assets/image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
+            </div>
             <nav>
                 <ul class="menu">
                     <li class="menu-list font_edge_white">
-                        <a href="news.html"><ruby>NEWS<rt>新着情報</rt></ruby></a>
+                        <a href="news.html">NEWS</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="howto.html"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
+                        <a href="howto.html">HOWTO</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="course.html"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
+                        <a href="course.html">COURSE</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="spot.html"><ruby>SPOT<rt>スポット検索</rt></ruby></a>
+                        <a href="spot.html">SPOT</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="mypage.html"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
+                        <a href="mypage.html">MYPAGE</a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a></a>
+                        <a href="question.html">Q&A</a>
                     </li>
                 </ul>
-                <button type="button" class="btn js-btn debug">
+                <button type="button" class="btn js-btn">
                     <span class="btn-line"></span>
                 </button>
             </nav>
@@ -91,15 +89,50 @@
                     <!-- 質問1 -->
                     <dl class="accordion-list">
                         <!-- 質問 -->
-                        <dt class="accordion-title js-accordion-title">自転車のレンタルはできますか？</dt>
+                        <dt class="accordion-title js-accordion-title"> <img class="question_q_img" src="./assets/image/question_q_img.svg" alt="質問アイコン画像">
+                            <p class="question_txt"> 自転車のレンタルはできますか？</p>
+                        </dt>
                         <!-- 回答 -->
                         <dd class="accordion-text">
-                            <p>A1.可能です。鳴門市には○件のレンタサイクル店があります。コース紹介画面からご確認いただくか、下記ページよりご覧ください。
+                            <img class="question_a_img" src="./assets/image/question_a_img.svg" alt="質問アイコン画像">
+                            <p class="question_txt">A1.可能です。鳴門市には○件のレンタサイクル店があります。コース紹介画面からご確認いただくか、下記ページよりご覧ください。
                             ▶︎周辺スポット検索：レンタサイクル</p>
                         </dd>
                     </dl>
 
                     <!-- 質問2 -->
+                    <dl class="accordion-list">
+                        <dt class="accordion-title js-accordion-title">テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2</dt><!-- /.accordion-title -->
+                        <dd class="accordion-text">
+                            <p>テキスト2テキスト2テキスト2テキスト2</p>
+                        </dd><!-- /.accordion-text -->
+                    </dl>
+
+                    <!-- 質問3 -->
+                    <dl class="accordion-list">
+                        <dt class="accordion-title js-accordion-title">テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2</dt><!-- /.accordion-title -->
+                        <dd class="accordion-text">
+                            <p>テキスト2テキスト2テキスト2テキスト2</p>
+                        </dd><!-- /.accordion-text -->
+                    </dl>
+
+                    <!-- 質問4 -->
+                    <dl class="accordion-list">
+                        <dt class="accordion-title js-accordion-title">テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2</dt><!-- /.accordion-title -->
+                        <dd class="accordion-text">
+                            <p>テキスト2テキスト2テキスト2テキスト2</p>
+                        </dd><!-- /.accordion-text -->
+                    </dl>
+
+                    <!-- 質問5 -->
+                    <dl class="accordion-list">
+                        <dt class="accordion-title js-accordion-title">テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2</dt><!-- /.accordion-title -->
+                        <dd class="accordion-text">
+                            <p>テキスト2テキスト2テキスト2テキスト2</p>
+                        </dd><!-- /.accordion-text -->
+                    </dl>
+
+                    <!-- 質問6 -->
                     <dl class="accordion-list">
                         <dt class="accordion-title js-accordion-title">テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2テキスト2</dt><!-- /.accordion-title -->
                         <dd class="accordion-text">
