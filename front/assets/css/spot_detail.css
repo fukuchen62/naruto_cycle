@@ -203,7 +203,7 @@ margin: auto -10px;
 
 /* RECCOMENDの見出し */
 .info_headline{
-  margin: 128px auto 32px auto;
+  margin: 160px auto 32px auto;
 }
 
 /* カード横並び */
@@ -278,7 +278,7 @@ iframe{
 }
 /* データ更新日 */
 .update{
-  margin-top: 60px;
+  margin-top: 570px;
   margin-left: 698px;
 }
 
