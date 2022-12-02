@@ -619,7 +619,7 @@ canvas {
 
 /* 装飾文字 */
 /* デスクトップサイズの時だけ表示する背景装飾 */
-.circle {
+/* .circle {
     display: none;
 }
 
@@ -636,7 +636,7 @@ canvas {
         align-items: center;
         border-radius: 50%;
     }
-}
+} */
 
 
 

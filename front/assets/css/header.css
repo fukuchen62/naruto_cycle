@@ -160,6 +160,7 @@ button {
 .btn-line {
 	/* display: inline-block; */
 	position: absolute;
+	top: 20px;
 	/* バーガー線の位置基準として設定 */
 	width: 100%;
 	/* 線の長さと高さ */
@@ -185,11 +186,13 @@ button {
 .btn-line::before {
 	/* 上の線の位置 */
 	transform: translateY(-16px);
+	right: 0;
 }
 
 .btn-line::after {
 	/* 下の線の位置 */
 	transform: translateY(16px);
+	right: 0;
 }
 
 .menu.open {
