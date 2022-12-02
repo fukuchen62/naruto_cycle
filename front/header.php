@@ -1,6 +1,5 @@
-<!-- ヘッダー切り取りここから -->
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,17 +10,18 @@
     <meta name="format-detection" content="telephone=no" />
     <title>なるとサイくるっと！</title>
     <!-- 外部css -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/wave.scss">
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/3wave.css">
+
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- 全体用font↓ -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
     <!-- h1のfont↓ -->
 
     <!-- FontAwesome↓ -->
@@ -32,34 +32,42 @@
 </head>
 
 <body>
-    <header class="header flex">
-        <div class="header_logo">
-            <h1><a href="#"><img class="img" src="./image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li class="menu-list font_edge_white">
-                    <a href="news.html">NEWS</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="howto.html">HOWTO</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="course.html">COURSE</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="spot.html">SPOT</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="mypage.html">MYPAGE</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="question.html">Q&A</a>
-                </li>
-            </ul>
-            <button type="button" class="btn js-btn">
-                <span class="btn-line"></span>
-            </button>
-        </nav>
-    </header>
-    <!-- ヘッダー切り取りここまで -->
+    <div class="wrap">
+
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <header class="header fix_menu flex">
+            <!-- サイトロゴ -->
+            <h1 class="header_logo">
+                <a href="#">
+                    <img class="img" src="./assets/image/header_log_svg.svg" alt="なるとサイくるっと！のロゴ">
+                </a>
+            </h1>
+            <!-- グローバルナビ -->
+            <nav>
+                <ul class="menu">
+                    <li class="menu-list font_edge_white">
+                        <a href="news.html"><ruby>NEWS<rt>新着情報</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="howto.html"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="course.html"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="spot.html"><ruby>SPOT<rt>スポット検索</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="mypage.html"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
+                    </li>
+                </ul>
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+            </nav>
+        </header>
+
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->

@@ -353,35 +353,6 @@
 .news_bottom_container {
 	position: relative;
 	margin-bottom: 0;
-
-}
-
-/* 下部自転車のアニメーション */
-.buruburu {
-	display: inline-block;
-	animation: hurueru .1s infinite;
-}
-
-@keyframes hurueru {
-	0% {
-		transform: translate(0px, 0px) rotateZ(0deg)
-	}
-
-	25% {
-		transform: translate(0.5px, 0.5px) rotateZ(0.5deg)
-	}
-
-	50% {
-		/* transform: translate(0px, 2px) rotateZ(0deg) */
-	}
-
-	75% {
-		transform: translate(0.5px, 0px) rotateZ(-0.5deg)
-	}
-
-	100% {
-		transform: translate(0px, 0px) rotateZ(0deg)
-	}
 }
 
 /* 下部背景のアニメーション */
