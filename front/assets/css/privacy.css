@@ -41,6 +41,7 @@
 .item_caption {
     margin-top: 16px;
     text-align: left;
+    line-height: 1.5em;
 }
 
 dl:first-child {
