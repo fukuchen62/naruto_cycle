@@ -53,13 +53,7 @@ function sortpost_rand($query)
 }
 add_action('pre_get_posts', 'sortpost_rand');
 
-// 検索の独自ＧＥＴパラメータ
-function theme_query_vars($vars)
-{
-    $vars[] = 'shop'; // 必要に応じて追加.
-    return $vars;
-}
-add_filter('query_vars', 'theme_query_vars');
+
 
 
 // ファイルを読み込む
@@ -75,9 +69,9 @@ function add_common_stylesheet_script()
     wp_enqueue_style('naruto_cycle-fontawesome', '"https://use.fontawesome.com/releases/v5.6.1/css/all.css" ');
 
     //googlefontを読み込む
-    wp_enqueue_style('naruto_cycle-fontawesome_a', "https://fonts.googleapis.com");
-    wp_enqueue_style('naruto_cycle-fontawesome_b', "https://fonts.gstatic.com");
-    wp_enqueue_style('naruto_cycle-fontawesome_c', "https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap");
+    wp_enqueue_style('naruto_cycle-googlefonts_a', "https://fonts.googleapis.com");
+    wp_enqueue_style('naruto_cycle-googlefonts_b', "https://fonts.gstatic.com");
+    wp_enqueue_style('naruto_cycle-googlefonts_c', "https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap");
 
 
 
@@ -123,6 +117,10 @@ function add_common_stylesheet_script()
 
 // 02.ページごとの読み込み
 // 02-A:トップページ
+// 02-B:newsページ
+// 02-C:howtoページ
+// 02-D:courseページ
+// 02-E:spot検索ページ
 
 
 
@@ -142,7 +140,103 @@ function add_individual_stylesheet_script()
         //トップページのヘッダーのCSS（template_top_header.css）を読み込む
         // wp_enqueue_style('naruto_cycle-template_top_header', get_template_directory_uri() . '/assets/css/template_top_header.css', array(), false);
 
-        // トップページ用のJS（top.js）を読み込む
+        // トップページ用のJS（index.js）を読み込む
         wp_enqueue_script('naruto_cycle-top-script', get_template_directory_uri() . '/assets/js/index.js', '', '', true);
+    }
+
+    // 02-B:newsページ
+    // 一覧ページCSS（news.css）
+    else if (is_page('news')) {
+        wp_enqueue_style('naruto_cycle-archive_news', get_template_directory_uri() . '/assets/css/news.css', array(), false);
+        wp_enqueue_style('naruto_cycle-archive_news2', get_template_directory_uri() . '/assets/css/news_detail.css', array(), false);
+
+        wp_enqueue_style('naruto_cycle-template_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
+
+        // js
+        wp_enqueue_script('naruto_cycle-archive_news-script1', get_template_directory_uri() . '/assets/js/index.js', '', '', true);
+        wp_enqueue_script('naruto_cycle-archive_news_script2', get_template_directory_uri() . '/assets/js/jquery.bgswitcher.js', '', '', true);
+        wp_enqueue_script(
+            'naruto_cycle-archive_news_script3',
+            get_template_directory_uri() . '/assets/js/bgswitcher.js',
+            '',
+            '',
+            true
+        );
+    }
+    // 詳細ページCSS（news.css）
+    else if (is_single()) {
+        wp_enqueue_style('naruto_cycle-news_content', get_template_directory_uri() . '/assets/css/news_detail.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-news_content-script', get_template_directory_uri() . '/assets/js/index.js', '', '', true);
+        wp_enqueue_script('naruto_cycle-news_content_script', get_template_directory_uri() . '/assets/js/jquery.bgswitcher.js', '', '', true);
+        wp_enqueue_script(
+            'naruto_cycle-news_content_script2',
+            get_template_directory_uri() . '/assets/js/bgswitcher.js',
+            '',
+            '',
+            true
+        );
+    }
+    // 02-C:howtoページ
+    else if (is_page('cycle')) {
+        wp_enqueue_style('naruto_cycle-howto', get_template_directory_uri() . '/assets/css/howto.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-howto-script', get_template_directory_uri() . '/assets/js/howto.js', '', '', true);
+    }
+    // 02-D:courseページ
+    else if (is_single('course')) {
+        wp_enqueue_style('naruto_cycle-course', get_template_directory_uri() . '/assets/css/course.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-course-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
+    }
+    // 02-E:spot検索ページ
+    elseif (is_post_type_archive(array('shop', 'spot', 'cycle'))) {
+        wp_enqueue_style('naruto_cycle-spot_search', get_template_directory_uri() . '/assets/css/search.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-spot_search-script', get_template_directory_uri() . '/assets/js/mypage.js', '', '', true);
+    }
+    // 検索結果ページ
+    elseif (is_search()) {
+        wp_enqueue_style('naruto_cycle-spot_search_result', get_template_directory_uri() . '/assets/css/search.css', array(), false);
+        wp_enqueue_style('naruto_cycle-spot_search_result2', get_template_directory_uri() . '/assets/css/search_result.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-spot_search_result-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
+    }
+    // spot詳細ページ
+    else if (is_single(array('course', 'spot', 'cycle'))) {
+        wp_enqueue_style('naruto_cycle-spot_detail', get_template_directory_uri() . '/assets/css/search.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-spot_spot_detail-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
+        wp_enqueue_script('naruto_cycle-spot_spot_detail-script2', get_template_directory_uri() . '/assets/js/spot.js', '', '', true);
+    }
+    //mypage
+    else if (is_page('mypage')) {
+        wp_enqueue_style('naruto_cycle-mypage', get_template_directory_uri() . '/assets/css/mypage.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-mypage-script', get_template_directory_uri() . '/assets/js/mypage.js', '', '', true);
+    }
+
+    // Q&A
+    else if (is_page('question')) {
+        wp_enqueue_style('naruto_cycle-question', get_template_directory_uri() . '/assets/css/question.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-question-script', get_template_directory_uri() . '/assets/js/question.js', '', '', true);
+    }
+    // お問い合わせ
+    else if (is_page('contact')) {
+        wp_enqueue_style('naruto_cycle-contact', get_template_directory_uri() . '/assets/css/question.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-contact-script', get_template_directory_uri() . '/assets/js/question.js', '', '', true);
+    }
+    // 制作に当たって
+    else if (is_page('aboutsite')) {
+        wp_enqueue_style('naruto_cycle-aboutsite', get_template_directory_uri() . '/assets/css/aboutsite.css', array(), false);
+        wp_enqueue_style('naruto_cycle-aboutsite2', get_template_directory_uri() . '/assets/css/index.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-aboutsite-script', get_template_directory_uri() . '/assets/js/question.js', '', '', true);
+    }
+    // プライバシーポリシー
+    else if (is_page('privacy')) {
+        wp_enqueue_style('naruto_cycle-privacy', get_template_directory_uri() . '/assets/css/privacy.css', array(), false);
     }
 }

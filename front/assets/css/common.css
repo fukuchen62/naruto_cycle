@@ -62,6 +62,10 @@ body {
 	text-align: center;
 }
 
+ruby rt {
+	font-weight: 400;
+}
+
 /* ブロック要素にする */
 .block {
 	display: block;

@@ -63,12 +63,12 @@
 
 
 /* キービジュアル画像 */
-/* .key_img {
+.key_img {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
     object-fit: cover;
-} */
+}
 
 /* キービジュ：装飾文字 */
 .key_msg {

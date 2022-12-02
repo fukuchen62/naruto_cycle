@@ -18,7 +18,14 @@
 	/* 最前面に */
 	z-index: 101;
 	width: 100px;
-	height: 80px;
+	margin: 10px;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+	.header_logo {
+		width: 160px;
+	}
 }
 
 /* ハンバーガーメニューの設定ここから */
@@ -49,10 +56,52 @@ button {
 	margin-left: auto;
 	font-size: 100%;
 	color: rgb(0, 0, 0);
-	background-color: transparent;
+	background-color: rgba(255, 255, 252, 0.8);
 	z-index: 9;
 	transition: 0.3s;
+	border-radius: 0 0 0 16px;
 }
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+	.menu {
+		background-color: transparent;
+	}
+}
+
+.menu li+li {
+	margin-top: 24px;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+	.menu li+li {
+		margin-top: 0;
+	}
+}
+
+.menu li:first-child {
+	margin-top: 80px;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+	.menu li:first-child {
+		margin-top: 0;
+	}
+}
+
+.menu li:last-child {
+	margin-bottom: 24px;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+	.menu li:last-child {
+		margin-top: 0;
+	}
+}
+
 
 .menu-list {
 	width: 100%;
@@ -63,10 +112,12 @@ button {
 	font-size: 24px;
 	text-align: center;
 }
+
 .menu-list rt {
 	font-weight: normal;
 	text-align: center;
 }
+
 /* gnavの文字、白枠線付けようとするとなぜかSPOTだけ効かない */
 .font_edge_white {
 	font-weight: bold;
@@ -83,7 +134,8 @@ button {
 }
 
 .menu a:hover {
-	background: rgb(162, 148, 255);
+	/* background: rgb(162, 148, 255); */
+	color: #EF6000;
 }
 
 .btn {
@@ -98,22 +150,30 @@ button {
 	z-index: 100;
 }
 
+.hanberg {
+	position: relative;
+	top: 0;
+	right: 100px;
+}
+
 /* 真ん中のバーガー線 */
 .btn-line {
-	display: block;
-	position: relative;
+	/* display: inline-block; */
+	position: absolute;
 	/* バーガー線の位置基準として設定 */
 	width: 100%;
 	/* 線の長さと高さ */
 	height: 4px;
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(255, 55, 0);
 	/* バーガー線の色 */
 	transition: 0.2s;
+	z-index: 120;
 }
 
 /* 上下のバーガー線 */
 .btn-line::before,
 .btn-line::after {
+	display: inline-block;
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -156,11 +216,11 @@ button {
 	}
 
 	.menu-list a {
-		padding-top: 25px;
+		padding-top: 24px;
 	}
 }
 
-/*　メニューオープン時の線の動き　*/
+/* メニューオープン時の線の動き */
 .btn-line.open {
 	background-color: transparent;
 	/* 真ん中の線を透明に */
