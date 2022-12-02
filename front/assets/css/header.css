@@ -137,6 +137,7 @@ button {
 	display: inline-block;
 	/* padding: 24px; */
 	height: 100%;
+	/* PC幅時gnavのheader内での位置 */
 	margin-top: 10px;
 }
 
@@ -150,6 +151,7 @@ button {
 	position: fixed;
 	top: 12px;
 	right: 16px;
+	/* ハンバーガーメニューのheader内での位置 */
 	margin-top: 10px;
 	/* ボタンの大きさ  */
 	width: 48px;
