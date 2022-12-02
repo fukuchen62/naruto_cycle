@@ -689,13 +689,16 @@ span {
 
 /* ---------------波アニメーション---------------  */
 
-.index_wave {
+.wave {
+    /* display: none; */
     position: relative;
     height: 200px;
+    background-color: #F3F0E8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
-.index_wavs canvas {
+/* 波の設定 */
+canvas {
     position: absolute;
     bottom: 0;
     left: 0;
