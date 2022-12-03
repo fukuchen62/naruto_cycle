@@ -23,7 +23,8 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 599px) {
+}
 
 /* フッター */
 /* .footer {} */
@@ -69,38 +70,70 @@
 }
 
 /* TOPに戻るボタンの設定 */
-.pagetop {
+.gotop {
 	display: none;
-	position: fixed;
-	right: 10px;
-	bottom: 10px;
-	cursor: pointer;
-	z-index: 100;
-}
-
-/* ボタンの画像はこちら */
-.pagetop img {
+	/*最初は非表示で*/
 	width: 60px;
 	height: 60px;
-	object-fit: cover;
+	box-sizing: border-box;
+	border-radius: 50%;
+	background: rgb(255, 255, 255);
+	border: 1px solid rgb(153, 153, 153);
+	padding-top: 30px;
+	text-align: center;
+	letter-spacing: -1px;
+	font-size: 100%;
+	text-decoration: none;
+	color: rgb(128, 0, 0);
+	font-size: 120%;
+	opacity: 0.5;
+	/*背景を半透明に*/
+	position: fixed;
+	/*表示場所を下記に固定*/
+	bottom: 20px;
+	right: 20px;
+	z-index: 100;
+	/*一番手前に*/
 }
 
-.pagetop:hover {
+/*三角の矢印マーク*/
+.gotop::before {
+	content: "";
+	display: block;
+	border-top: 2px solid rgb(128, 0, 0);
+	border-right: 2px solid rgb(128, 0, 0);
+	width: 25%;
+	height: 25%;
+	top: 25%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+	transform: rotate(-45deg);
+	/*角を回転させて上向きに*/
+}
+
+.gotop:hover {
 	opacity: 1;
 }
 
-@media (min-width: 600px) {
-	.pagetop {
-		bottom: 20px;
-		right: 20px;
+@media (max-width: 750px) {
+	.gotop {
+		width: 40px;
+		height: 40px;
+		text-indent: -9999px;
+		opacity: 1;
+		border: none;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 50%;
+		bottom: 10px;
+		right: 10px;
 	}
 
-	.pagetop img {
-		width: 100px;
-		height: 100px;
+	.gotop::before {
+		bottom: 0;
 	}
 }
-
 /* 以下近藤追加分 */
 .fnav_container {
 	position: relative;
@@ -112,9 +145,10 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 599px) {
 	.fnav_container {
 		width: 600px;
+		text-align: left;
 	}
 }
 
@@ -122,10 +156,11 @@
 @media screen and (min-width: 1024px) {
 	.fnav_container {
 		width: 1024px;
+		text-align: left;
 	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 599px) {
 	.fnav_w_list {
 		width: 600px;
 		text-align: left;
@@ -151,7 +186,7 @@
 	line-height: 18px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 599px) {
 	.footer_headline {
 		width: 50%;
 	}
@@ -164,6 +199,7 @@
 }
 
 .footer_list {
+	flex-direction: row;
 	margin-top: 10px;
 	margin-bottom: 16px;
 }

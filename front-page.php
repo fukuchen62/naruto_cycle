@@ -205,7 +205,7 @@
     <section class="index_spot">
 
         <!-- 波アニメーション（上）ここから -->
-        <div class="index_wave">
+        <div class="wave">
             <canvas id="waveCanvas"></canvas>
         </div>
         <!-- 波アニメーション（上）ここまで -->

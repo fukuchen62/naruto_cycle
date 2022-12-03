@@ -169,6 +169,44 @@
 	background-color: #fff;
 }
 
+/* 下部装飾画像用（自転車をこぐ女性） */
+.news_main_wrap {
+	position: relative;
+	padding-bottom: 60px;
+}
+
+.news_bottom_cycle_img {
+	display: none;
+}
+
+/* 下部アニメーション背景 */
+.news_bottom_bg_img {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.news_main_wrap {
+		padding-bottom: 180px;
+	}
+
+	.news_bottom_cycle_img {
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		right: 100px;
+		width: 20%;
+		/* height: 292px; */
+		z-index: -1;
+	}
+
+	.news_bottom_bg_img {
+		display: block;
+		position: absolute;
+		/* bottom: -200px; */
+		width: 100%;
+		z-index: -2;
+	}
+}
 
 /* -------- ニュース記事の設定 -------- */
 
@@ -330,7 +368,6 @@
 	}
 }
 
-/* ページネーションの設定 */
 .news_pagination_container {
 	margin: auto auto 60px;
 }
@@ -349,16 +386,46 @@
 	}
 }
 
-/* ニュース下部の装飾入れ物 */
+/* ニュース下部の入れ物 */
 .news_bottom_container {
 	position: relative;
 	margin-bottom: 0;
+
+}
+
+/* 下部自転車のアニメーション */
+.buruburu {
+	display: inline-block;
+	animation: hurueru .1s infinite;
+}
+
+@keyframes hurueru {
+	0% {
+		transform: translate(0px, 0px) rotateZ(0deg)
+	}
+
+	25% {
+		transform: translate(0.5px, 0.5px) rotateZ(0.5deg)
+	}
+
+	50% {
+		/* transform: translate(0px, 2px) rotateZ(0deg) */
+	}
+
+	75% {
+		transform: translate(0.5px, 0px) rotateZ(-0.5deg)
+	}
+
+	100% {
+		transform: translate(0px, 0px) rotateZ(0deg)
+	}
 }
 
 /* 下部背景のアニメーション */
 .loop_wrap {
 	display: flex;
 	width: 100vw;
+	/* height: 300px; */
 	overflow: hidden;
 }
 
@@ -393,56 +460,4 @@
 
 .loop_wrap img:last-child {
 	animation: loop2 50s linear infinite;
-}
-
-/* 下部装飾画像用（自転車をこぐ女性） */
-.news_main_wrap {
-	position: relative;
-	padding-bottom: 60px;
-}
-
-.news_bottom_cycle_img {
-	display: none;
-	display: block;
-	position: absolute;
-	bottom: 0px;
-	right: 100px;
-	width: 25%;
-	z-index: 1;
-}
-
-/* 下部アニメーション背景 */
-.news_bottom_bg_img {
-	display: none;
-}
-
-@media screen and (min-width: 599px) {
-	.news_bottom_cycle_img {
-		display: block;
-		position: absolute;
-		bottom: 0px;
-		width: 20%;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.news_main_wrap {
-		padding-bottom: 180px;
-	}
-
-	.news_bottom_cycle_img {
-		display: block;
-		position: absolute;
-		bottom: 0px;
-		right: 100px;
-		width: 15%;
-		z-index: 1;
-	}
-
-	.news_bottom_bg_img {
-		display: block;
-		position: absolute;
-		width: 100%;
-		z-index: -2;
-	}
 }

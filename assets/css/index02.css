@@ -16,14 +16,14 @@
     width: 240px;
     height: 56px;
     background: #fff;
-    box-shadow: 4px 4px #EF6000;
-    border: 3px solid #005EA7;
+    box-shadow: 4px 4px #ef6000;
+    border: 3px solid #005ea7;
     position: relative;
 }
 
 /* 検索ボタンのテキスト */
 .top_more_btn {
-    color: #FFFFFC;
+    color: #fffffc;
     font-size: 24px;
     font-weight: bold;
     margin: auto;
@@ -35,13 +35,10 @@
 
 /* moreボタンのスタイルここまで */
 
-
-
 /* ---------------section：キービジュアル---------------  */
 .key_news_wrap {
     position: relative;
 }
-
 
 /* キービジュアルの箱 */
 .index_key_visual {
@@ -58,7 +55,7 @@
     overflow: hidden;
 }
 
-.index_video_wrapper>video {
+.index_video_wrapper > video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,7 +63,6 @@
     min-width: 100%;
     min-height: 100%;
 }
-
 
 /* キービジュアル画像 */
 /* .key_img {
@@ -78,8 +74,8 @@
 
 /* キービジュ：装飾文字 */
 .key_msg {
-    font-family: 'Arvo', serif;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Arvo", serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 900;
     font-size: 80px;
     -webkit-text-stroke: 2px #fff;
@@ -141,8 +137,8 @@
     width: 100%;
     height: 140px;
     justify-content: space-between;
-    background-color: #F3F0E8;
-    color: #005EA7;
+    background-color: #f3f0e8;
+    color: #005ea7;
 }
 
 /* PC表示 */
@@ -162,8 +158,8 @@
     margin: 0;
     font-size: 24px;
     font-weight: 900;
-    -webkit-text-stroke: 1px #005EA7;
-    text-stroke: 1px #005EA7;
+    -webkit-text-stroke: 1px #005ea7;
+    text-stroke: 1px #005ea7;
     color: rgba(0, 0, 0, 0);
     text-align: left;
 }
@@ -177,12 +173,12 @@
 
 /* ニュースコンテンツ全部入り */
 .index_news_content {
-    width: calc(100%*0.83589744);
+    width: calc(100% * 0.83589744);
     margin: 10px;
     justify-content: space-between;
 }
 
-.index_news_content h2+article {
+.index_news_content h2 + article {
     margin-left: 16px;
 }
 
@@ -201,10 +197,9 @@
     margin-left: 16px;
 }
 
-.index_news_article_box article+article {
+.index_news_article_box article + article {
     margin-top: 16px;
 }
-
 
 /* カテゴリタグ＋日付ボックス */
 .index_news_meta {
@@ -227,24 +222,22 @@
     text-overflow: ellipsis;
 }
 
-
 /* 一覧へボタン */
 .index_news_btn {
-    width: calc(100%*0.16410256);
+    width: calc(100% * 0.16410256);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #005EA7;
-    color: #FFFFFC;
+    background-color: #005ea7;
+    color: #fffffc;
 }
 
 /* ---------------section：サイクリングについて---------------  */
 .index_howto {
     width: 100%;
     height: 100%;
-    margin-bottom: 160px;
     padding: 32px;
-    background-color: #005EA7;
+    background-color: #005ea7;
 }
 
 /* コンテンツボックス（見出し、概要、ボタン） */
@@ -264,9 +257,9 @@
 
 /* テキストボックス */
 .index_howto_txtbox {
-    width: calc(100%*0.82051282);
+    width: calc(100% * 0.82051282);
     margin: 0 auto;
-    color: #FFFFFC;
+    color: #fffffc;
     text-align: left;
     line-height: 1.2em;
     position: relative;
@@ -299,10 +292,8 @@
 }
 
 /* 写真ボックス */
-.index_howto_imgbox {
-    /* width: 60%; */
-    width: calc(100%*0.82051282);
-    margin: 0 auto;
+.index_howto_img {
+    width: 60%;
 }
 
 /* PC表示 */
@@ -327,7 +318,6 @@
         object-fit: cover;
     }
 }
-
 
 /* ---------------section：コースマップ---------------  */
 .index_course {
@@ -356,7 +346,7 @@
 /* コースマップの画像 */
 .index_map_img {
     width: 100%;
-    border: 10px solid #E1D6B8;
+    border: 10px solid #e1d6b8;
 }
 
 /* PC表示 */
@@ -375,7 +365,7 @@
     text-align: center;
     font-size: 24px;
     font-weight: 400;
-    border-bottom: dashed 2px #EF6000;
+    border-bottom: dashed 2px #ef6000;
 }
 
 /* ボタンボックス */
@@ -400,14 +390,13 @@
     }
 }
 
-
 /* ボタン共通スタイル */
 .index_course_selectbtn {
     width: 120px;
     height: 60px;
     border-radius: 50%;
     text-align: center;
-    color: #FFFFFC;
+    color: #fffffc;
     position: relative;
 }
 
@@ -430,28 +419,27 @@
 /* ボタン個別スタイル */
 /* 初心者コース */
 .beginner {
-    background-color: #96C85C;
+    background-color: #96c85c;
 }
 
 /* 短距離コース */
 .short {
-    background-color: #EF6000;
+    background-color: #ef6000;
 }
 
 /* 中距離コース */
 .middle {
-    background-color: #0018EF;
+    background-color: #0018ef;
 }
 
 /* 長距離コース */
 .long {
-    background-color: #F00000;
+    background-color: #f00000;
 }
-
 
 /* ---------------section：スポット---------------  */
 .index_spot {
-    background-color: #D4EBEC;
+    background-color: #d4ebec;
     position: relative;
 }
 
@@ -461,11 +449,10 @@
     position: relative;
 }
 
-
 .index_spot_deco {
     font-size: 32px;
     font-weight: 900;
-    color: #EF6000;
+    color: #ef6000;
     text-align: center;
 }
 
@@ -505,8 +492,8 @@
 .wave {
     /* display: none; */
     position: relative;
-    height: 160px;
-    background-color: #F3F0E8;
+    height: 200px;
+    background-color: #f3f0e8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
@@ -518,12 +505,11 @@ canvas {
     width: 100%;
 }
 
-
 /* ---------------SPOT下部グラデーション---------------  */
 .bg_gradient {
     width: 100%;
-    height: 160px;
-    background: linear-gradient(#D4EBEC, #F3F0E8);
+    height: 150px;
+    background: linear-gradient(#d4ebec, #f3f0e8);
 }
 
 /* ---------------section：インスタグラム---------------  */
@@ -622,7 +608,7 @@ canvas {
 
 /* 装飾文字 */
 /* デスクトップサイズの時だけ表示する背景装飾 */
-/* .circle {
+.circle {
     display: none;
 }
 
@@ -639,9 +625,7 @@ canvas {
         align-items: center;
         border-radius: 50%;
     }
-} */
-
-
+}
 
 .inner {
     width: 20px;
@@ -674,8 +658,8 @@ span {
 .index_insta_decotxt {
     font-size: 24px;
     font-weight: 900;
-    -webkit-text-stroke: 1px #EF6000;
-    text-stroke: 1px #EF6000;
+    -webkit-text-stroke: 1px #ef6000;
+    text-stroke: 1px #ef6000;
     color: rgba(0, 0, 0, 0);
 }
 
@@ -692,16 +676,13 @@ span {
 
 /* ---------------波アニメーション---------------  */
 
-.wave {
-    /* display: none; */
+.index_wave {
     position: relative;
     height: 200px;
-    background-color: #F3F0E8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
-/* 波の設定 */
-canvas {
+.index_wavs canvas {
     position: absolute;
     bottom: 0;
     left: 0;

@@ -1,30 +1,15 @@
 /* ヘッダー */
+/* コメント追加 */
+/* ヘッダーのJS用 */
+.header.change-color {
+	/* スクロールしたあとのヘッダー背景色 */
+	background-color: #005ea7;
+	/* スクロールしたあとの文字の色 */
+	color: #fff;
+	transition: 0.3s;
+}
+
 /* ヘッダーの設定 */
-
-/* スクロールでヘッダーの色を変えるここから */
-.header {
-	position: relative;
-	height: 100px;
-}
-
-.header_logo {
-	position: absolute;
-	top: 0;
-}
-
-.fix_menu {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	right: 0;
-	z-index: 999;
-	padding: 30px 0;
-	transition: background .5s;
-}
-
-.fixed_menu {
-	background: #005EA7;
-}
 
 /* ヘッダーロゴの設定 */
 /* サイズはwidthを大きくするほどサイズも大きくできる */
@@ -32,8 +17,15 @@
 	position: fixed;
 	/* 最前面に */
 	z-index: 101;
-	width: 90px;
+	width: 100px;
 	margin: 10px;
+}
+
+/* PC表示 */
+@media screen and (min-width: 1024px) {
+	.header_logo {
+		width: 160px;
+	}
 }
 
 /* ハンバーガーメニューの設定ここから */
@@ -61,11 +53,10 @@ button {
 	position: fixed;
 	right: -1000%;
 	width: 40%;
-	height: 100vh;
 	margin-left: auto;
 	font-size: 100%;
-	color: #FFFFFC;
-	background-color: #74C7F0;
+	color: rgb(0, 0, 0);
+	background-color: rgba(255, 255, 252, 0.8);
 	z-index: 9;
 	transition: 0.3s;
 	border-radius: 0 0 0 16px;
@@ -127,9 +118,12 @@ button {
 	text-align: center;
 }
 
-/* gnav文字の白ふち */
+/* gnavの文字、白枠線付けようとするとなぜかSPOTだけ効かない */
 .font_edge_white {
 	font-weight: bold;
+	/* color: #000; */
+	/* -webkit-text-stroke: 0.8px #FFF; */
+	/* text-stroke: 0.8px #FFF; */
 }
 
 .menu-list a {
@@ -137,8 +131,6 @@ button {
 	display: inline-block;
 	/* padding: 24px; */
 	height: 100%;
-	/* PC幅時gnavのheader内での位置 */
-	margin-top: 10px;
 }
 
 .menu a:hover {
@@ -151,8 +143,6 @@ button {
 	position: fixed;
 	top: 12px;
 	right: 16px;
-	/* ハンバーガーメニューのheader内での位置 */
-	margin-top: 10px;
 	/* ボタンの大きさ  */
 	width: 48px;
 	height: 48px;
@@ -170,12 +160,11 @@ button {
 .btn-line {
 	/* display: inline-block; */
 	position: absolute;
-	top: 20px;
 	/* バーガー線の位置基準として設定 */
 	width: 100%;
 	/* 線の長さと高さ */
 	height: 4px;
-	background-color: #FFFFFC;
+	background-color: rgb(255, 55, 0);
 	/* バーガー線の色 */
 	transition: 0.2s;
 	z-index: 120;
@@ -189,20 +178,18 @@ button {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #FFFFFC;
+	background-color: rgb(255, 255, 255);
 	transition: 0.5s;
 }
 
 .btn-line::before {
 	/* 上の線の位置 */
 	transform: translateY(-16px);
-	right: 0;
 }
 
 .btn-line::after {
 	/* 下の線の位置 */
 	transform: translateY(16px);
-	right: 0;
 }
 
 .menu.open {
@@ -211,7 +198,7 @@ button {
 }
 
 /* 1025px以上はハンバーガーボタン非表示、ヘッダー固定 */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
 	.btn {
 		display: none;
 	}

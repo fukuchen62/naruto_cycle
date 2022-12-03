@@ -58,6 +58,11 @@
     <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
 </footer>
 
+<!-- トップに戻るボタン -->
+<div class="pagetop">
+    <!-- 戻るボタン画像 -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_pagetop_btn_img.png" alt="トップに戻るボタン">
+</div>
 <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/index.js"></script> -->
 <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/header.js"></script> -->
