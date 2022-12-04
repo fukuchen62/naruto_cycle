@@ -1,3 +1,12 @@
+/* フッターの波 */
+.footer_wave_img img {
+	width: 100%;
+	height: 400px;
+	background-color: #f3f0e8;
+	background-repeat: repeat-x;
+	object-fit: cover;
+}
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
 	.banner_list {
