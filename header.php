@@ -17,7 +17,7 @@
     <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index.css" /> -->
 
     <!--↓今は使っていないが今後別バージョンで読み込む  -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/wave.css" />
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/wave.css" /> -->
 
     <!-- googlefont本体ここから2行 -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />

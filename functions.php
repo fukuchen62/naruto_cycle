@@ -65,6 +65,16 @@ function theme_query_vars($vars)
 add_filter('query_vars', 'theme_query_vars');
 
 
+
+// funciton.phpの動作確認(確認したい場所にコピーする)
+// function test()
+// {
+//     echo '<script>alert(\'function.phpは効いています！\')</script>';
+// }
+// add_action('wp_head', 'test');
+
+
+
 // ファイルを読み込む
 //
 //   01.リセットCSSと共通のCSS，JSを読み込む
@@ -73,6 +83,9 @@ add_filter('query_vars', 'theme_query_vars');
 add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
 function add_common_stylesheet_script()
 {
+
+
+
 
     //font-awesomeを読み込む
     wp_enqueue_style('naruto_cycle-fontawesome', '"https://use.fontawesome.com/releases/v5.6.1/css/all.css" ');
