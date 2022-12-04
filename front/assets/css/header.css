@@ -1,17 +1,36 @@
 /* ヘッダー */
 /* ヘッダーの設定 */
-
-/* スクロールでヘッダーの色を変えるここから */
 .header {
 	position: relative;
 	height: 100px;
 }
 
+
+/* ヘッダーロゴの設定 */
+/* サイズはwidthを大きくするほどサイズも大きくできる */
 .header_logo {
+	position: fixed;
 	position: absolute;
 	top: 0;
+	/* 最前面に */
+	z-index: 101;
+	width: 90px;
+	margin: 10px;
 }
 
+@media screen and (max-width: 599px) {
+	.header_logo {
+		position: fixed;
+		position: absolute;
+		top: 0;
+		/* 最前面に */
+		z-index: 101;
+		width: 80px;
+		margin: 10px;
+	}
+}
+
+/* スクロールでヘッダーの色を変える */
 .fix_menu {
 	position: fixed;
 	width: 100%;
@@ -24,16 +43,6 @@
 
 .fixed_menu {
 	background: #005EA7;
-}
-
-/* ヘッダーロゴの設定 */
-/* サイズはwidthを大きくするほどサイズも大きくできる */
-.header_logo {
-	position: fixed;
-	/* 最前面に */
-	z-index: 101;
-	width: 90px;
-	margin: 10px;
 }
 
 /* ハンバーガーメニューの設定ここから */
