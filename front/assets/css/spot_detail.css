@@ -159,6 +159,11 @@ white-space: nowrap
 	margin-left: auto;
 	margin-right: auto;
 }
+@media screen and (min-width: 599px) {
+  .info_wrap{
+    width: 500px;
+  }
+}
 @media screen and (min-width: 1024px) {
 	.info_wrap {
 		padding-top: 48px;
@@ -265,16 +270,32 @@ margin: auto -10px;
 .box_spot_info{
   /* position: relative; */
   width: 520px;
-  height: 1500px;
+  height: 1450px;
+}
+/* サムネイル画像 */
+.container_pc {
+  margin:auto;
+
 }
 /* 地図サイズ */
 iframe{
   width: 475px;
   height: 160px;
+  margin-left: -20px;
 }
+/* 詳細文 */
 .spot_date{
-  text-align: left;
+  width: 100%;
+  margin-left: 10px;
 }
+
+/* 日付 */
+.update{
+margin-left: 195px;
+}
+
+
+
 
 }
 
@@ -335,7 +356,7 @@ iframe{
 .img_pc{
   display: none;
 }
-  /* @media screen and (min-width: 1024px) { */
+
 @media screen and (min-width: 599px) {
     .img_sp{
       display: none;
@@ -346,10 +367,16 @@ iframe{
         .container_pc{
     display: block;
     text-align: left;
-    margin: 12px 28px 0px 12px;
+    /* margin: 12px 28px 0px 12px; */
+    /* margin-right: 515px; */
       max-width: 480px;
   }
+  }
 
+  @media screen and (min-width: 1024px) {
+    .container_pc{
+      margin-right: 515px;
+    }
   }
 
   /* 画像レイアウトのためのスタイル */
