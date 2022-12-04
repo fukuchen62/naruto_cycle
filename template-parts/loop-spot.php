@@ -1,15 +1,15 @@
 <div class="spot_card relative">
     <!-- お気に入りボタン -->
-    <!-- <div class="spot_like_icon">
+    <div class="spot_like_icon">
 
-                        <i class="far fa-heart LikesIcon-fa-heart"></i>
-                    </div> -->
+        <i class="far fa-heart LikesIcon-fa-heart"></i>
+    </div>
     <!-- カード１枚にかかるスポット一覧へのリンク -->
     <a href="<?php the_permalink(); ?>">
         <!-- カード全体の入れ物 -->
         <ul class="spot_list">
             <!-- カード１枚の入れ物-->
-            <li class="spot_item">
+            <li class="spot_item relative">
                 <!-- カテゴリーのラベル -->
                 <?php $pic = get_field('label');
                 $pic_url = $pic['url'];

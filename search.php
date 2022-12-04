@@ -143,7 +143,7 @@
 
         // 食べるの件数結果
         $eat_figure = $the_query->found_posts;
-        echo $eat_figure;
+        // echo $eat_figure;
 
         if ($the_query->have_posts()) :
           while ($the_query->have_posts()) :
@@ -192,7 +192,7 @@
 
         // 買うの件数結果
         $buy_figure = $the_query->found_posts;
-        echo $buy_figure;
+        // echo $buy_figure;
 
 
       ?>
@@ -243,7 +243,7 @@
 
         // 楽しむの件数結果
         $enjoy_figure = $the_query->found_posts;
-        echo $enjoy_figure;
+        // echo $enjoy_figure;
 
       ?>
 
@@ -292,7 +292,7 @@
 
         // サイクルの件数結果
         $cycle_figure = $the_query->found_posts;
-        echo $cycle_figure;
+        // echo $cycle_figure;
       ?>
 
             <?php if ($the_query->have_posts()) : ?>
