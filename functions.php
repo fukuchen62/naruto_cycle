@@ -53,7 +53,16 @@ function sortpost_rand($query)
 }
 add_action('pre_get_posts', 'sortpost_rand');
 
-
+// 検索の独自ＧＥＴパラメータ
+function theme_query_vars($vars)
+{
+    $vars[] = 'eat'; // 必要に応じて追加.
+    $vars[] = 'buy'; // 必要に応じて追加.
+    $vars[] = 'enjoy'; // 必要に応じて追加.
+    $vars[] = 'cyclespot'; // 必要に応じて追加.
+    return $vars;
+}
+add_filter('query_vars', 'theme_query_vars');
 
 
 // ファイルを読み込む
@@ -109,9 +118,11 @@ function add_common_stylesheet_script()
     // 02.『header.js』
     wp_enqueue_script('naruto_cycle-header-script', get_template_directory_uri() . '/assets/js/header.js', '', '', true);
 
-    // 03.『template-footer.js』
-    // wp_enqueue_script('naruto_cycle-footer-script', get_template_directory_uri() . '/assets/js/footer.js', '', '', true);
+    // 03.『footer.js』
+    wp_enqueue_script('naruto_cycle-footer-script', get_template_directory_uri() . '/assets/js/footer.js', '', '', true);
 
+    // 04.『3wave.js』
+    wp_enqueue_script('naruto_cycle-footer_3wave-script', get_template_directory_uri() . '/assets/js/3wave.js', '', '', true);
 }
 
 
