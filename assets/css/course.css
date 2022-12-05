@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+/* 見出しの設定（共通CSSに同じものがあるので削除予定） */
+.body {
+	font-family: "Noto Sans JP";
+	font-size: 16px;
+}
+
 /*------------------- コース選択時ボタンの設定----------- */
 .course_nav_list {
 	display: flex;
@@ -57,6 +63,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
+	pointer-events: none;
 }
 
 /*------------------- 地図のサイズの設定---- */
@@ -402,28 +409,28 @@
 
 /* 楽しむ */
 .enjoy {
-	border: solid 1px #c0db8c;
+	border: solid 1px #ffe55b;
 }
 
 .enjoy:before {
-	background: #c0db8c;
+	background: #ffe55b;
 }
 
 .enjoy:after {
-	background: #c0db8c;
+	background: #ffe55b;
 }
 
 /* 買う */
 .shopping {
-	border: solid 1px #ffe55b;
+	border: solid 1px #c0db8c;
 }
 
 .shopping:before {
-	background: #ffe55b;
+	background: #c0db8c;
 }
 
 .shopping:after {
-	background: #ffe55b;
+	background: #c0db8c;
 }
 
 /* サイクルスポット */
