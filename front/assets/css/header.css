@@ -18,7 +18,7 @@
 	margin: 10px;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 600px) {
 	.header_logo {
 		position: fixed;
 		position: absolute;
