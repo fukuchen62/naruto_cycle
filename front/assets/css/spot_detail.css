@@ -170,7 +170,7 @@ span {
   margin-right: auto;
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
   .info_wrap {
     width: 500px;
   }
@@ -283,7 +283,7 @@ span {
 }
 
 /* タブレット時サイズ変更 */
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
 
   /* 詳細箱の大きさ */
   .box_spot_info {
@@ -382,7 +382,7 @@ span {
   display: none;
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
   .img_sp {
     display: none;
   }
