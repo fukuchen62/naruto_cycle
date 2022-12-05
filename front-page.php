@@ -4,8 +4,6 @@
 <!-- トップページのみ表示するものを記入 -->
 <?php endif; ?>
 
-
-
 <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
 <main class="main">
@@ -73,22 +71,6 @@
 
                     <?php endwhile; ?>
                     <?php endif; ?>
-
-                    <!-- 記事② -->
-                    <!-- <article class="index_news_article">
-                        <div class="index_news_meta flex">
-                            <ul class="index_news_categories">
-                                <li><a href="#">お知らせ</a></li>
-                            </ul>
-                            <time class="index_news_time" datetime="2022-11-30">
-                                2022.11.30
-                            </time>
-                        </div>
-                        <h3 class="index_news_title">
-                            <a href="#">ここにタイトルが入ります</a>
-                        </h3>
-                    </article> -->
-
                 </div>
 
             </div>

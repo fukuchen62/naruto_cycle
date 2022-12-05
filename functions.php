@@ -83,10 +83,6 @@ add_filter('query_vars', 'theme_query_vars');
 add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
 function add_common_stylesheet_script()
 {
-
-
-
-
     //font-awesomeを読み込む
     wp_enqueue_style('naruto_cycle-fontawesome', '"https://use.fontawesome.com/releases/v5.6.1/css/all.css" ');
 
@@ -94,8 +90,6 @@ function add_common_stylesheet_script()
     wp_enqueue_style('naruto_cycle-googlefonts_a', "https://fonts.googleapis.com");
     wp_enqueue_style('naruto_cycle-googlefonts_b', "https://fonts.gstatic.com");
     wp_enqueue_style('naruto_cycle-googlefonts_c', "https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap");
-
-
 
     //共通のCSS（common.css）を読み込む
 
@@ -113,17 +107,20 @@ function add_common_stylesheet_script()
 
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
-    wp_enqueue_script('jquery');
+    // wp_enqueue_script('jquery');
 
     // 00.『jQuery』
-    // WordPress本体のjquery.jsを読み込まない
-    // wp_deregister_script('jquery');
 
-    //GoogleCDNから読み込む
-    // wp_enqueue_script(
-    //     'jquery-min.js',
-    //     '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
-    // );
+    if (!is_admin()) {
+        // WordPress本体のjquery.jsを読み込まない
+        wp_deregister_script('jquery');
+
+        //GoogleCDNから読み込む
+        wp_enqueue_script(
+            'jquery-min.js',
+            '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+        );
+    }
 
     // 01.『common.js』
     wp_enqueue_script('naruto_cycle-common-script', get_template_directory_uri() . '/assets/js/common.js', '', '', true);
@@ -252,11 +249,12 @@ function add_individual_stylesheet_script()
         wp_enqueue_script('naruto_cycle-howto-script', get_template_directory_uri() . '/assets/js/howto.js', '', '', true);
     }
     // 02-D:courseページ
-    else if (is_singular(array('biginner', 'short', 'midium', 'long'))) {
+    else if (is_singular('course')) {
         wp_enqueue_style('naruto_cycle-course', get_template_directory_uri() . '/assets/css/course.css', array(), false);
         // js
         wp_enqueue_script('naruto_cycle-course-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
     }
+
     // 02-E:spot検索ページ
     elseif (is_post_type_archive(array('shop', 'spot', 'cycle'))) {
         wp_enqueue_style('naruto_cycle-spot_search', get_template_directory_uri() . '/assets/css/search.css', array(), false);

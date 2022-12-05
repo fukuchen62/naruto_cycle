@@ -63,7 +63,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
-	pointer-events: none;
+	/* pointer-events: none; */
 }
 
 /*------------------- 地図のサイズの設定---- */
@@ -480,6 +480,6 @@
 	margin: 32px auto 60px;
 }
 
-section + section {
+section+section {
 	margin-top: 160px;
 }

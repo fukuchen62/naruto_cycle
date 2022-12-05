@@ -1,14 +1,15 @@
 // // headerをスクロールすると、色が変わる
 
-$(function() {
-  $(window).on('load scroll', function(){
-      if ($(window).scrollTop() > 300) {
-          $('.fix_menu').addClass('fixed_menu');
-      } else {
-          $('.fix_menu').removeClass('fixed_menu');
-      }
+jQuery(document).ready(function () {
 
-  });
+    $(window).scroll(function () {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 500) {
+            $('.header').addClass('fixed_menu');
+        } else {
+            $('.header').removeClass('fixed_menu');
+        }
+    });
 });
 
 // jQuery(function($) {
