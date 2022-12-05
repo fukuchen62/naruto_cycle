@@ -137,6 +137,17 @@
     display: relative;
 }
 
+/* 回答の詳細リンク設定 */
+.question_txt a {
+    line-height: 2em;
+    color: #005EA7;
+}
+
+.question_txt a:hover {
+    background-color: #D4EBEC;
+    color: #EF6000;
+}
+
 /* ================================================== */
 .qaa {
     margin-bottom: 60px;
