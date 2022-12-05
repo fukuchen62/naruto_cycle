@@ -272,7 +272,7 @@ function add_individual_stylesheet_script()
     }
     // spot詳細ページ
     else if (is_singular(array('shop', 'spot', 'cycle', 'course'))) {
-        wp_enqueue_style('naruto_cycle-spot_detail', get_template_directory_uri() . '/assets/css/search.css', array(), false);
+        wp_enqueue_style('naruto_cycle-spot_detail', get_template_directory_uri() . '/assets/css/spot_detail.css', array(), false);
         // js
         wp_enqueue_script('naruto_cycle-spot_spot_detail-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
         wp_enqueue_script('naruto_cycle-spot_spot_detail-script2', get_template_directory_uri() . '/assets/js/spot.js', '', '', true);
