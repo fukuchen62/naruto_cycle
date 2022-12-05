@@ -270,6 +270,14 @@ function add_individual_stylesheet_script()
         // js
         wp_enqueue_script('naruto_cycle-spot_search_result-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
     }
+    // タクソノミー（食べる、買う、楽しむ、サイクル）一覧ページページ
+    elseif (is_tax()) {
+        wp_enqueue_style('naruto_cycle-spot_search_result', get_template_directory_uri() . '/assets/css/search.css', array(), false);
+        wp_enqueue_style('naruto_cycle-spot_search_result2', get_template_directory_uri() . '/assets/css/search_result.css', array(), false);
+        // js
+        wp_enqueue_script('naruto_cycle-spot_search_result-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
+    }
+
     // spot詳細ページ
     else if (is_singular(array('shop', 'spot', 'cycle', 'course'))) {
         wp_enqueue_style('naruto_cycle-spot_detail', get_template_directory_uri() . '/assets/css/spot_detail.css', array(), false);
