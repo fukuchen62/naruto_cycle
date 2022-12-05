@@ -621,7 +621,7 @@ canvas {
 }
 
 /* TB以上で表示かつflex */
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 600px) {
     .tb_pc_flex {
         display: flex;
     }

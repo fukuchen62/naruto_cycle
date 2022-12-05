@@ -1,9 +1,13 @@
+/* 上の波の入れ物 */
 .wave {
+    /* display: none; */
     position: relative;
     height: 200px;
+    background-color: #F3F0E8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
+/* 波の設定 */
 canvas {
     position: absolute;
     bottom: 0;

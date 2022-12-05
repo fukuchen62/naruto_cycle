@@ -1,5 +1,5 @@
-/* Q&A１つ分の枠 */
-.accordion-list {
+/* Q&A１つ分の質問 */
+.accordion-title {
     position: relative;
 }
 
@@ -14,33 +14,40 @@
 
 /* 質問アイコンのPC表示 */
 @media screen and (min-width: 1024px) {
-    .accordion-list img {
+    .accordion-title img {
         display: block;
         position: absolute;
-        top: 5px;
+        top: 50%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
         left: 16px;
     }
 }
 
-/* 回答アイコンは未設定 */
+/* Q&A１つ分の回答 */
+.accordion-text {
+    position: relative;
+}
 
 /* 回答アイコンの設定 */
-/* .question_a_img {
+.question_a_img {
     display: none;
     width: 50px;
     height: 50px;
     object-fit: cover;
-} */
+}
 
 /* 回答アイコンのPC表示 */
-/* @media screen and (min-width: 1024px) {
-    .question_a_img {
+@media screen and (min-width: 1024px) {
+    .accordion-text img {
         display: block;
         position: absolute;
-        top: 30px;
+        top: 50%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
         left: 16px;
     }
-} */
+}
 
 
 /* Q＆Aの文章 */
@@ -130,6 +137,17 @@
     display: relative;
 }
 
+/* 回答の詳細リンク設定 */
+.question_txt a {
+    line-height: 2em;
+    color: #005EA7;
+}
+
+.question_txt a:hover {
+    background-color: #D4EBEC;
+    color: #EF6000;
+}
+
 /* ================================================== */
 .qaa {
     margin-bottom: 60px;
@@ -197,6 +215,7 @@
 }
 
 .accordion-text {
+    position: relative;
     border-left: 1px solid #74C7F0;
     border-right: 1px solid #74C7F0;
     border-bottom: 1px solid #74C7F0;

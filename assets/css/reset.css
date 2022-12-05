@@ -414,3 +414,16 @@ th {
 	text-align: left;
 	font-weight: bold;
 }
+
+/* 追加 */
+input {
+	/* margin: 0; */
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	/* -webkit-appearance: none; */
+	/* -moz-appearance: none; */
+	/* appearance: none; */
+}
