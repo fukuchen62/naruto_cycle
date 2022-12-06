@@ -36,7 +36,7 @@
                         現在（2022.12.12）貸出場所は７ヵ所あります。<br>
                         詳しくは、下記をご覧ください。
                         <br>
-                        <a href="http://www.bestbike.jp/?contents=shop&dir=1002">SR鳴門市レンタサイクル</a>
+                        <a href="http://www.bestbike.jp/?contents=shop&dir=1002" "target=" _blank" rel="noopener noreferrer">SR鳴門市レンタサイクル</a>
                     </p>
                 </dd>
             </dl>
@@ -53,7 +53,7 @@
                     <p class="question_txt">はい、できます。<br>
                         短距離コースの他に、約10kmの初心者コースも作成しました。<br>
                         自転車で散歩する感覚で完走できると思います。<br>
-                        <a href="#">初心者モデルコース</a>
+                        <a href="<?php echo get_permalink(142); ?>" "target=" _blank" rel="noopener noreferrer">初心者モデルコース</a>
                     </p>
                 </dd>
             </dl>
@@ -69,7 +69,7 @@
                     <img class="question_a_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/question_a_img.svg" alt="質問アイコン画像">
                     <p class="question_txt">鳴門海峡「南あわじ～鳴門」間の自転車輸送サービス『ハコバス』があります。<br>
                         詳しくは、下記をご覧ください。<br>
-                        <a href="https://asa-cycling.com/">ASAサイクリングコース</a>
+                        <a href="https://asa-cycling.com/" "target=" _blank" rel="noopener noreferrer">ASAサイクリングコース</a>
                     </p>
                 </dd>
             </dl>
@@ -156,9 +156,9 @@
                         <br>
                         現在（2022.12.12）確認出来ているところは以下の３ヶ所です。
                         <br>
-                        <a href="https://www.uchinoumipark.jp/">ウチノ海総合公園</a><br>徳島県鳴門市鳴門町高島字北679番地<br>
-                        <a href="https://www.city.naruto.tokushima.jp/kurashi/machizukuri/koen/park.html">うずしおふれあい公園</a><br>鳴門市撫養町斉田字北浜<br>
-                        <a href="https://uzupark.com/">UZUPARK</a><br>徳島県鳴門市撫養町大桑島字濘岩浜48-1
+                        <a href="https://www.uchinoumipark.jp/" "target=" _blank" rel="noopener noreferrer">ウチノ海総合公園</a><br>徳島県鳴門市鳴門町高島字北679番地<br>
+                        <a href="https://www.city.naruto.tokushima.jp/kurashi/machizukuri/koen/park.html" "target=" _blank" rel="noopener noreferrer">うずしおふれあい公園</a><br>鳴門市撫養町斉田字北浜<br>
+                        <a href="https://uzupark.com/" "target=" _blank" rel="noopener noreferrer">UZUPARK</a><br>徳島県鳴門市撫養町大桑島字濘岩浜48-1
                         <br>
                     </p>
                 </dd>
@@ -196,7 +196,7 @@
                         鳴門市は漁業が盛んなので魚介類が豊富です。カフェ・レストランやサイクリング中にテイクアウト出来る軽食などもあるので、是非スポット検索してみてください。<br>
                         他にも、ASAサイクリングのおもてなしスポットもあります。<br>
                         詳しくは、下記をご覧ください。<br>
-                        <a href="https://asa-cycling.com/course/naruto/">鳴門市のおもてなしスポット</a>
+                        <a href="https://asa-cycling.com/course/naruto/" "target=" _blank" rel="noopener noreferrer">鳴門市のおもてなしスポット</a>
                     </p>
                 </dd>
             </dl>
@@ -215,7 +215,7 @@
                         鳴門市は海に多く面しているので、サイクリング中も絶景スポットがたくさんあります。<br>
                         サイトでも「ビュースポット」として紹介しているので、是非検索してみてください。<br>
                         詳しくは、下記をご覧ください。<br>
-                        <a href="#">ビュースポット</a>
+                        <a href="#" "target=" _blank" rel="noopener noreferrer">ビュースポット</a>
                     </p>
                 </dd>
             </dl>
@@ -234,7 +234,7 @@
                         【バス】徳島駅から鳴門駅前まで約45分。<br>
                         【車】徳島駅から鳴門駅まで約40分。<br>
                         詳しくは、下記をご覧ください。<br>
-                        <a href="https://www.awanavi.jp/site/access/">阿波ナビ</a>
+                        <a href="https://www.awanavi.jp/site/access/" "target=" _blank" rel="noopener noreferrer">阿波ナビ</a>
                     </p>
                 </dd>
             </dl>
