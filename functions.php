@@ -244,10 +244,22 @@ function add_individual_stylesheet_script()
     }
     // 02-C:howtoページ
     else if (is_page('cycle')) {
+        //slickCSSを読み込む
+        wp_enqueue_style('slick', get_template_directory_uri() . '/assets/slick/slick.css', false);
+
+        //slick-themeCSSを読み込む
+        wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css', false);
+
+        //固有CSS
         wp_enqueue_style('naruto_cycle-howto', get_template_directory_uri() . '/assets/css/howto.css', array(), false);
+
+        //slickのJSを読み込み
+        wp_enqueue_script('slick-min', get_template_directory_uri() . '/assets/slick/slick.min.js', '', '', true);
+
         // js
         wp_enqueue_script('naruto_cycle-howto-script', get_template_directory_uri() . '/assets/js/howto.js', '', '', true);
     }
+
     // 02-D:courseページ
     else if (is_singular('course')) {
         wp_enqueue_style('naruto_cycle-course', get_template_directory_uri() . '/assets/css/course.css', array(), false);
