@@ -32,7 +32,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="iframe_wrapper beginner">
+            <div class="iframe_wrapper <?php the_field('class'); ?>">
                 <?php the_field('map'); ?>
 
                 <!-- <iframe class="course_iframe" src="</iframe> -->
