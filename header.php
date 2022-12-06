@@ -19,7 +19,7 @@
             <div class="header_logo">
                 <h1>
                     <a href="<?php echo home_url(); ?>">
-                        <img class="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/header_logo_img.png" alt="なるとサイくるっと！のロゴ" />
+                        <img class="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/header_log_svg.svg" alt="なるとサイくるっと！のロゴ" />
                     </a>
                 </h1>
             </div>
