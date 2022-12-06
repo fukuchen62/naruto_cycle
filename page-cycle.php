@@ -96,22 +96,28 @@
             <h3 class="howto_list_headline">もっと鳴門について知るには</h3>
             <ul class="more_naruto_card_list slider">
                 <li class="more_naruto_card_item">
-                    <a>
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
+                    <a href="<?php the_permalink(156); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+
+                            <?php the_post_thumbnail('thumbnail'); ?>
+
+                        <?php else : ?>
+                            <img src="<?php echo $pic_url; ?>" alt="ニュース写真" class="news_card_item_img">
+                        <?php endif; ?>
                         <p class="more_naruto_num">01</p>
                         <div class="more_naruto_caption">
                             <h3 class="more_naruto_title">01|インタビュー</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            <?php the_excerpt(156); ?>
                         </div>
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a>
+                    <a href="<?php the_permalink(149); ?>">
                         <img class="" src="https://placehold.jp/500x480.png" alt="">
                         <p class="more_naruto_num">02</p>
                         <div class="more_naruto_caption">
                             <h3 class="more_naruto_title">02|ポタリングコラム</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            <?php the_excerpt(149); ?>
                         </div>
                     </a>
                 </li>
