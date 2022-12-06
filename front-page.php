@@ -147,7 +147,7 @@
                         <a href="<?php echo get_permalink(142); ?>">
                             <div class="index_course_btntxt">
                                 <p>初心者コース</p>
-                                <p>00km</p>
+                                <p>約10km</p>
                             </div>
                         </a>
                     </div>
@@ -157,7 +157,7 @@
                         <a href="<?php echo get_permalink(183); ?>">
                             <div class="index_course_btntxt">
                                 <p>短距離コース</p>
-                                <p>00km</p>
+                                <p>約28km</p>
                             </div>
                         </a>
                     </div>
@@ -167,7 +167,7 @@
                         <a href="<?php echo get_permalink(184); ?>">
                             <div class="index_course_btntxt">
                                 <p>中距離コース</p>
-                                <p>00km</p>
+                                <p>約43km</p>
                             </div>
                         </a>
                     </div>
@@ -177,7 +177,7 @@
                         <a href="<?php echo get_permalink(185); ?>">
                             <div class="index_course_btntxt">
                                 <p>長距離コース</p>
-                                <p>00km</p>
+                                <p>約69km</p>
                             </div>
                         </a>
                     </div>
