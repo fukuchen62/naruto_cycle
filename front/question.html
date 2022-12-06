@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="鳴門を自転車でぐるっと巡るサイクリングコースを紹介。定番の観光地から穴場スポットまで網羅したおススメコースをマップで確認！知っておきたい注意点や駐輪場の事まで詳しく掲載。鳴門の自転車旅には欠かせないサイクリング情報サイトです。" />
@@ -14,9 +13,9 @@
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/cycle_move.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/question.css">
-    <link rel="stylesheet" href="./assets/css/3wave.css">
+    <link rel="stylesheet" href="./assets/css/cycle_move.css">
 
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,11 +30,46 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- ファビコン↓() -->
 </head>
-
 <body>
     <div class="wrap">
 
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <header class="header fix_menu flex">
+            <!-- サイトロゴ -->
+            <h1 class="header_logo">
+                    <a href="#">
+                        <img class="img" src="./assets/image/header_log_svg.svg" alt="なるとサイくるっと！のロゴ">
+                    </a>
+                </h1>
+            <!-- グローバルナビ -->
+            <nav>
+                <ul class="menu">
+                    <li class="menu-list font_edge_white">
+                        <a href="news.html"><ruby>NEWS<rt>新着情報</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="howto.html"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="course.html"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="search.html"><ruby>SPOT<rt>スポット検索</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="mypage.html"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
+                    </li>
+                </ul>
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+            </nav>
+        </header>
+
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
         <header class="header fix_menu flex">
             <!-- サイトロゴ -->
             <h1 class="header_logo">
@@ -330,15 +364,12 @@
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
         <footer class="footer bg_blue white txt_c">
-            <!-- フッター用の波 -->
-            <!-- <div class="wave">
-                <canvas id="waveCanvas"></canvas>
-            </div> -->
+            <!-- バナーの入れ物 -->
             <ul class="banner_list gap32_16 m_bottom40">
                 <!-- asaなどのバナーがliで入ります -->
-                <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-                <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-                <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+                <li class="banner_item"><a href=""><img src="./assets/image/footer_banner_asa.png" alt="○○のバナー"></a></li>
+                <li class="banner_item"><a href=""><img src="./assets/image/footer_banner_tokushimacycle.png" alt="○○のバナー"></a></li>
+                <li class="banner_item"><a href=""><img src="./assets/image/footer_banner_narutocity.png" alt="○○のバナー"></a></li>
             </ul>
 
             <nav class="fnav_container bg_blue">
@@ -383,9 +414,11 @@
 
             <div class="sns_container flex gap32_16">
                 <!-- twitter -->
-                <a href=""><img class="sns_icon" src="./assets/image/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
+                <a href="//twitter.com/intent/tweet?url= なるとサイくるっと！のURL &text=" target="_blank" rel="nofollow noopener noreferrer"><img class="sns_icon" src="./assets/image/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン">
+                </a>
                 <!-- facebook -->
-                <a href=""><img class="sns_icon" src="./assets/image/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
+                <a href="//www.facebook.com/sharer/sharer.php?u= なるとサイくるっと！のURL &t=" target="_blank" rel="nofollow noopener noreferrer"><img class="sns_icon" src="./assets/image/index_footer_sharefb.png" alt="Facebookへのシェアボタン">
+                </a>
             </div>
             <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
         </footer>
@@ -396,15 +429,13 @@
             <img src="./assets/image/index_pagetop_btn_img.png" alt="トップに戻るボタン">
         </div>
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-        <script src="./assets/js/question.js"></script>
+        <script src="./assets/js/index.js"></script>
         <script src="./assets/js/header.js"></script>
         <script src="./assets/js/footer.js"></script>
         <script src="./assets/js/common.js"></script>
-        <script src="./assets/js/bluewave.js"></script>
-
-
+        <script src="./assets/js/3wave.js"></script>
     </div>
 </body>
 
 </html>
-<!--------- フッター切り取りここまで --------->
+<!-- フッター切り取りここまで -->
