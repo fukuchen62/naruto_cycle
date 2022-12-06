@@ -100,15 +100,18 @@ height: 500px;
 
 }
 
-.about_thanks_table td{
+.about_table td{
     text-align: start;
     padding: 10px;
     display: block;
 }
 
 @media screen and (min-width: 1024px){
-.about_thanks_table td {
-    width: 50%;
-    display:inline-block;
+.about_table td {
+    white-space: nowrap;
+    text-align: start;
+    margin: auto;
+    display: inline-block;
 }
+
 }
