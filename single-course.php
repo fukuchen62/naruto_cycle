@@ -137,7 +137,7 @@
                 <span class="annotation">(※消費カロリーは距離からの概算です。)</span>
             </div>
             <div class="info_content">
-                <span class="info_item">コメント</span><br>
+                <span class="info_item">概要</span><br>
                 <p class="comment_text"><?php the_field('comment'); ?></p>
             </div>
 
