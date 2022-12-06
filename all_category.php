@@ -14,7 +14,7 @@ Template Name: 全記事一覧テスト
     <div class="news_main_wrap">
         <!-- キービジュアル -->
         <div class="key_bg_under">
-            <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_blue.png" alt="マイページキービジュアル" class="key_bg_under_img">
         </div>
 
         <!-- パンくずリスト -->

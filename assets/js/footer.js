@@ -1,24 +1,25 @@
 // <!-- TOPに戻るボタン用 -->
+jQuery(document).ready(function () {
 
-$(function(){
-  var topBtn=$('.pagetop');
+  var topBtn = $('.pagetop');
   topBtn.hide();
 
   //ボタンの表示設定
-  $(window).scroll(function(){
-    if($(this).scrollTop()>200){
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
       //---- 画面を200pxスクロールしたら、ボタンを表示する
       topBtn.fadeIn();
-    }else{
+    } else {
       //---- 画面が200pxより上なら、ボタンを表示しない
       topBtn.fadeOut();
     }
   });
 
   //ボタンをクリックしたら、スクロールして上に戻る
-  topBtn.click(function(){
+  topBtn.click(function () {
     $('body,html').animate({
-    scrollTop: 0},200);
+      scrollTop: 0
+    }, 200);
     return false;
   });
 });

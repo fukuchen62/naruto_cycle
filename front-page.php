@@ -4,8 +4,6 @@
 <!-- トップページのみ表示するものを記入 -->
 <?php endif; ?>
 
-
-
 <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
 <main class="main">
@@ -17,19 +15,19 @@
 
         <section class="index_key_visual">
 
-            <div class="key_img_box">
-                <!-- キービジュアル画像 -->
-                <!-- <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像" class="key_img"> -->
+            <!-- <div class="key_img_box"> -->
+            <!-- キービジュアル画像 -->
+            <!-- <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像" class="key_img"> -->
 
-                <!-- 動画 -->
-                <div class="index_video_wrapper">
-                    <video autoplay muted playsinline loop>
-                        <source src="<?php echo get_template_directory_uri(); ?>/assets/img/index_keymovie.mp4" type="video/mp4">
-                        <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像">
-                    </video>
-                </div>
-
+            <!-- 動画 -->
+            <div class="index_video_wrapper">
+                <video autoplay muted playsinline loop>
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/index_key_movie.mp4" type="video/mp4">
+                    <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像">
+                </video>
             </div>
+
+            <!-- </div> -->
 
             <!-- 装飾＞文字 -->
             <h2 class="key_msg">
@@ -73,22 +71,6 @@
 
                     <?php endwhile; ?>
                     <?php endif; ?>
-
-                    <!-- 記事② -->
-                    <!-- <article class="index_news_article">
-                        <div class="index_news_meta flex">
-                            <ul class="index_news_categories">
-                                <li><a href="#">お知らせ</a></li>
-                            </ul>
-                            <time class="index_news_time" datetime="2022-11-30">
-                                2022.11.30
-                            </time>
-                        </div>
-                        <h3 class="index_news_title">
-                            <a href="#">ここにタイトルが入ります</a>
-                        </h3>
-                    </article> -->
-
                 </div>
 
             </div>
@@ -118,8 +100,8 @@
                 </h2>
 
                 <!-- キャプション -->
-                <p class="index_howto_txt ">徳島県鳴門市は四国の東端に位置し、鳴門海峡を隔てて淡路島と向かい合う四国の玄関口です。
-                    鳴門市の気候は温暖な瀬戸内気候で年間を通して降雨量は少なく、平均気温は16度前後と過ごしやすいのが特徴です。</p>
+                <p class="index_howto_txt ">鳴門市では大鳴門橋への自転車道設置の実現に向けて、観光地や県民のおもてなし等を堪能いただけるサイクリング環境の整備に取り組んでいます。「なるとサイくるっと！」では国内外のサイクリストを魅了する短距離・中距離・長距離のサイクリングコースを紹介する他、初心者の方でも楽しめるように無料の渡し船を利用して対岸のウチノ海総合公園に行く約10kmのポタリングコースも設置しました。<br>
+                    &emsp;コース周辺の飲食店や観光・写真スポットを中心にたくさん紹介しているので、鳴門の景色を楽しんだり、寄り道をいっぱいしたり、おいしいものを食べたり、スポーツとして技術や能力を向上させたり、サイクリングを通じて鳴門の魅力を思う存分楽しんでみてください。</p>
 
                 <!-- もっと読むボタン -->
                 <div class="common_btn index_howto_btn">
@@ -165,33 +147,39 @@
                         <a href="<?php echo get_permalink(142); ?>">
                             <div class="index_course_btntxt">
                                 <p>初心者コース</p>
-                                <p>00km</p>
+                                <p>約10km</p>
                             </div>
                         </a>
                     </div>
 
                     <!-- 短距離コース -->
                     <div class="index_course_selectbtn short">
-                        <div class="index_course_btntxt">
-                            <p>短距離コース</p>
-                            <p>00km</p>
-                        </div>
+                        <a href="<?php echo get_permalink(183); ?>">
+                            <div class="index_course_btntxt">
+                                <p>短距離コース</p>
+                                <p>約28km</p>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- 中距離コース -->
                     <div class="index_course_selectbtn middle">
-                        <div class="index_course_btntxt">
-                            <p>中距離コース</p>
-                            <p>00km</p>
-                        </div>
+                        <a href="<?php echo get_permalink(184); ?>">
+                            <div class="index_course_btntxt">
+                                <p>中距離コース</p>
+                                <p>約43km</p>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- 長距離コース -->
                     <div class="index_course_selectbtn long">
-                        <div class="index_course_btntxt">
-                            <p>長距離コース</p>
-                            <p>00km</p>
-                        </div>
+                        <a href="<?php echo get_permalink(185); ?>">
+                            <div class="index_course_btntxt">
+                                <p>長距離コース</p>
+                                <p>約69km</p>
+                            </div>
+                        </a>
                     </div>
 
                 </div>
@@ -303,9 +291,6 @@
         </div>
     </section>
 
-    <!-- グラデーションの箱 -->
-    <div class="bg_gradient"></div>
-
 
     <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ section：インスタ ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
@@ -334,9 +319,8 @@
             <div class="index_insta_decobox">
 
                 <!-- 回転アニメーション -->
-                <div class="circle">
-                    <div class="inner">
-                        <!-- 文字配置の基準となる親要素 -->
+                <div class="index_circle">
+                    <div class="index_inner">
                         <p class="text index_insta_decotxt">HAVE A NICE BIKE TRIP! </p>
                     </div>
                 </div>

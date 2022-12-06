@@ -4,7 +4,7 @@
     <div class="news_detail_wrap">
         <!-- キービジュアル -->
         <div class="key_bg_under">
-            <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_orange.png" alt="マイページキービジュアル" class="key_bg_under_img">
         </div>
 
         <!-- パンくずリスト -->
@@ -47,7 +47,7 @@
                 <aside class="news_detail_archive_wrap">
                     <div>
                         <?php get_sidebar('categories'); ?>
-                        <?php get_sidebar('archives'); ?>
+
 
                     </div>
                 </aside>

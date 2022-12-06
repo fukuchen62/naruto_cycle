@@ -63,7 +63,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
-	pointer-events: none;
+	/* pointer-events: none; */
 }
 
 /*------------------- 地図のサイズの設定---- */
@@ -89,6 +89,7 @@
 .icon_list_wrap {
 	background-color: #d4ebec;
 	border: solid 4px #74c7f0;
+	border-radius: 8px;
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 1024px;
@@ -171,6 +172,7 @@
 	height: 560px;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 3px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -264,9 +266,31 @@
 	display: none;
 }
 
+@media screen and (min-width: 600px) {
+	.course_info_pic_woman {
+		display: inline-block;
+		width: 120px;
+		object-fit: contain;
+		position: absolute;
+		right: -140px;
+		top: -20px;
+	}
+
+	.course_info_pic_man {
+		display: inline-block;
+		width: 100px;
+		object-fit: contain;
+		position: absolute;
+		bottom: 0;
+		left: -120px;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	.course_info_pic_woman {
 		display: inline-block;
+		width: 180px;
+		object-fit: contain;
 		position: absolute;
 		right: 0;
 		top: -20px;
@@ -274,9 +298,11 @@
 
 	.course_info_pic_man {
 		display: inline-block;
+		width: 160px;
+		object-fit: contain;
 		position: absolute;
 		bottom: 0;
-		left: -30px;
+		left: 40px;
 	}
 }
 
@@ -290,7 +316,7 @@
 
 /* テキストが入る部分の設定 */
 .info_content {
-	width: 250px;
+	width: 280px;
 	line-height: 2rem;
 }
 
@@ -329,10 +355,20 @@
 
 /* 右下の注釈部分の設定 */
 .annotation {
+	display: inline-block;
 	position: absolute;
 	right: 8px;
 	bottom: 8px;
 	font-size: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+	.annotation {
+		position: absolute;
+		left: 200px;
+		bottom: 8px;
+		font-size: 12px;
+	}
 }
 
 /* 周辺スポットのCSS----------------------------------------- */
@@ -372,6 +408,7 @@
 	line-height: 48px;
 	left: 50%;
 	transform: translate(-50%);
+	border-radius: 5px;
 }
 
 /* 装飾の設定 */
@@ -382,6 +419,7 @@
 	height: 48px;
 	position: absolute;
 	left: 0;
+	border-radius: 5px 0 5px 0;
 }
 
 .course_spot_cate_headline:after {
@@ -391,6 +429,7 @@
 	height: 48px;
 	position: absolute;
 	right: -1px;
+	border-radius: 0 5px 5px 0;
 }
 
 /* 小見出し(h3)の固有の装飾 */
@@ -480,6 +519,6 @@
 	margin: 32px auto 60px;
 }
 
-section + section {
+section+section {
 	margin-top: 160px;
 }

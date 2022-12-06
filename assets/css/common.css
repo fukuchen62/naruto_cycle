@@ -200,6 +200,8 @@ ruby rt {
 
 .key_bg_under {
 	margin-bottom: 32px;
+	position: relative;
+	top: -100px;
 }
 
 /* スクリーンサイズが600px以上の場合(デスクトップ)に適用*/

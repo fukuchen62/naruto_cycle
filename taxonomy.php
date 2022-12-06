@@ -1,102 +1,71 @@
 <?php get_header(); ?>
 
-<!-- パンくず -->
-<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
+<!-- ヘッダー切り取りここまで -->
+<main>
+    <!-- キービジュアル -->
+    <div class="key_bg_under">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_orange.png" alt="マイページキービジュアル" class="key_bg_under_img">
+    </div>
 
-<!-- 検索フォーム -->
-<h2>スポット検索
-</h2>
+    <!-- パンくずリスト -->
+    <div class="bradcrumbs">
+        <!-- パンくず -->
+        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
+    </div>
+    <div class="wrap">
 
-<?php get_search_form(); ?>
+        <!-- ページタイトル -->
+        <h2 class="search_title_jp">スポットを探す</h2>
+        <h2 class="search_title">SEARCH</h2>
+        <div class="wrap_search_container">
 
-<!-- 記事一覧 -->
-<?php
-$args = array(
-    'post_type' => 'cycle', //カスタム投稿タイプを指定
-    // 'taxonomy' => 'restaurant', //カスタムタクソノミーを指定
-    'orderby' => 'rand', // ランダムで表示
-    'posts_per_page' => -1, //表示する記事数
-    // 'post__not_in' => array($post->ID) // 現在表示している記事を除外
-);
-
-// カテゴリーで絞る場合
-// $taxquerysp = array('relation' => 'AND');
-// $taxquerysp[] = array(
-//     'taxonomy' => 'shop_type',
-//     'terms' => array('cafe', 'restaurant', 'ramen', 'dining', 'cycle', 'cyclepit', 'rental'),
-//     'field' => 'slug',
-// );
-// $args['tax_query'] = $taxquerysp;
+            <?php get_search_form(); ?>
 
 
-
-$spot_query = new WP_Query($args); //サブループを変数に格納
-if ($spot_query->have_posts()) :
-    while ($spot_query->have_posts()) :
-        $spot_query->the_post();
-?>
-
-<!-- ここにhtml -->
-<div class="col-md-3">
-    <?php get_template_part('template-parts/loop', 'spot') ?>
-</div>
-
-<?php endwhile;
-endif;
-wp_reset_postdata(); //サブループを抜ける
-?>
-
-
-
-<?php get_footer(); ?>
-
-<?php get_header(); ?>
-
-<!-- パンくず -->
-<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
-
-
-<main class="main">
-    <?php
-    //開いているページの情報を取得
-    $kind_slug = get_query_var('kind');
-    //タクソノミの値にてそのタクソノミをしゅとくする
-    $kind = get_term_by('slug', $kind_slug, 'kind');
-    ?>
-    <section class="sec">
-        <div class="container">
-            <div class="sec_header">
-                <h2 class="title title-jp"><?php echo $kind->name; ?></h2>
-                <span class="title title-en"><?php echo strtoupper($kind->slug); ?></span>
-            </div>
-
-            <div class="row justify-content-center">
-                <!-- ループの開始 -->
-                <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : ?>
-                <!-- 記事を取得して$POSTに代入 -->
-                <?php the_post(); ?>
-
-                <div class="col-md-3">
-                    <?php get_template_part('template-parts/loop', 'menu') ?>
-                </div>
-
-
-                <?php endwhile; ?>
-                <!-- ループの終了 -->
-                <?php endif; ?>
-
-            </div>
         </div>
-    </section>
+
+
+
+        <!-- PC表示の人のあしらい１ -->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/search_form_img1.png" alt="装飾" class="search_img1_pc img_pc_only">
+        <!-- PC表示の人のあしらい２ -->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/search_form_img2.png" alt="装飾" class="search_img2_pc img_pc_only">
+    </div>
+
+    <!-- スマホ表示の人のあしらい -->
+    <img src="assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp">
+
+    <div class="reccomend_wrap">
+
+        <!-- <div class="pickup">＼ PICK UP! ／ </div> -->
+        <!-- ピックアップタイトル -->
+
+        <h2 class="reccomend_title_jp"><?php single_term_title(''); ?></h2>
+        <h2 class="reccomend_title"><?php echo strtoupper($term); ?></h2>
+    </div>
+    <!-- 記事一覧 -->
+    <div class="spot_list_wrap">
+        <!-- カード全体の入れ物 -->
+        <ul class="spot_list">
+
+
+            <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+
+            <li class="card_container">
+                <!-- カード -->
+                <?php get_template_part('template-parts/loop', 'spot') ?>
+            </li>
+
+
+            <?php endwhile;
+            endif;
+
+            ?>
+
+        </ul>
+    </div>
 </main>
-<h2>spot一覧表示</h2>
 
-
-<p>食べる</p>
-<p>見る</p>
-<p>買う</p>
-<p>楽しむ</p>
-<p>サイクルスポット</p>
 
 <?php get_footer(); ?>

@@ -4,12 +4,12 @@
 <main>
     <!-- キービジュアル -->
     <div class="key_bg_under">
-        <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_orange.png" alt="マイページキービジュアル" class="key_bg_under_img">
     </div>
 
     <!-- パンくずリスト -->
     <div class="bradcrumbs">
-        ここに＞パンくずリストが＞入ります
+        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
     </div>
     <div class="wrap">
 

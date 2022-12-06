@@ -6,6 +6,10 @@
     overflow: hidden;
 }
 
+section+section {
+    margin-top: 160px;
+}
+
 /* moreボタンのスタイルここから */
 .more_btn {
     margin: 48px auto auto auto;
@@ -53,7 +57,8 @@
 /* 動画 */
 .index_video_wrapper {
     position: relative;
-    width: 100vw;
+    top: -100px;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
@@ -81,56 +86,56 @@
     font-family: 'Arvo', serif;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 900;
-    font-size: 80px;
+    font-size: calc(100vw / 10);
     -webkit-text-stroke: 2px #fff;
     text-stroke: 1px #fff;
     color: rgba(0, 0, 0, 0);
     opacity: 0.5;
     position: absolute;
-    top: 300px;
-    left: 10px;
+    top: 50px;
+    left: 10%;
 }
 
 /* TB表示 */
 @media screen and (min-width: 600px) {
     .key_msg {
-        font-size: 120px;
-        top: 240px;
-        left: 32px;
+        font-size: calc(100vw / 12);
+        top: 20px;
+        left: 10%;
     }
 }
 
 /* PC表示 */
 @media screen and (min-width: 1024px) {
     .key_msg {
-        font-size: 144px;
-        top: 200px;
-        left: 32px;
+        font-size: calc(100vw / 14);
+        top: 0px;
+        left: 10%;
     }
 }
 
 /* キービジュ：装飾画像 */
 .key_man {
-    width: 120px;
+    width: 30%;
     font-weight: 900;
     position: absolute;
-    bottom: 0;
-    left: 20px;
+    bottom: 100px;
+    left: 10%;
 }
 
 /* TB表示 */
 @media screen and (min-width: 600px) {
     .key_man {
-        width: 190px;
-        left: 80px;
+        width: 22%;
+        left: 5%;
     }
 }
 
 /* PC表示 */
 @media screen and (min-width: 1024px) {
     .key_man {
-        width: 265px;
-        left: 100px;
+        width: 20%;
+        left: 10%;
     }
 }
 
@@ -140,19 +145,24 @@
 .index_news {
     width: 100%;
     height: 140px;
+    margin-top: 0;
+    /* display: flex; */
     justify-content: space-between;
+    /* align-items: center; */
     background-color: #F3F0E8;
     color: #005EA7;
+    border: 1px #005EA7 solid;
 }
 
 /* PC表示 */
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 940px) {
     .index_news {
         width: 650px;
         height: 160px;
         position: absolute;
-        bottom: 0;
+        bottom: 100px;
         right: 0;
+        opacity: 0.7;
     }
 }
 
@@ -198,7 +208,8 @@
 /* ニュース記事単体 */
 .index_news_article_box {
     width: 70%;
-    margin-left: 16px;
+    /* margin-left: 16px; */
+    padding-top: 10px;
 }
 
 .index_news_article_box article+article {
@@ -242,7 +253,6 @@
 .index_howto {
     width: 100%;
     height: 100%;
-    margin-bottom: 160px;
     padding: 32px;
     background-color: #005EA7;
 }
@@ -288,8 +298,10 @@
 
 /* キャプション */
 .index_howto_txt {
-    margin: 32px;
+    margin: 30px;
+    margin-right: 30px;
     text-align: left;
+    line-height: 1.5;
 }
 
 /* ボタン */
@@ -331,7 +343,7 @@
 
 /* ---------------section：コースマップ---------------  */
 .index_course {
-    margin: 0 auto;
+    margin: 160px auto;
 }
 
 /* PC表示 */
@@ -377,12 +389,14 @@
 
 /* コースを選ぶ見出し */
 .index_couse_selecttop {
-    width: 200px;
+    width: 160px;
     margin: 24px auto 0;
+    padding: 8px;
     text-align: center;
+    line-height: 1.2em;
     font-size: 24px;
     font-weight: 400;
-    border-bottom: dashed 2px #EF6000;
+    border-bottom: dashed 5px #EF6000;
 }
 
 /* ボタンボックス */
@@ -410,12 +424,14 @@
 
 /* ボタン共通スタイル */
 .index_course_selectbtn {
+    display: inline-block;
     width: 120px;
     height: 60px;
     border-radius: 50%;
     text-align: center;
     color: #FFFFFC;
     position: relative;
+    transition: 0.3s;
 }
 
 .index_course_btntxt {
@@ -440,9 +456,18 @@
     background-color: #96C85C;
 }
 
+.beginner:hover {
+    transform: scale(1.1);
+}
+
+
 /* 短距離コース */
 .short {
     background-color: #EF6000;
+}
+
+.short:hover {
+    transform: scale(1.1);
 }
 
 /* 中距離コース */
@@ -450,16 +475,26 @@
     background-color: #0018EF;
 }
 
+.middle:hover {
+    transform: scale(1.1);
+}
+
 /* 長距離コース */
 .long {
     background-color: #F00000;
 }
 
+.long:hover {
+    transform: scale(1.1);
+}
 
 /* ---------------section：スポット---------------  */
 .index_spot {
     background-color: #D4EBEC;
     position: relative;
+    background: -moz-linear-gradient(top, #D4EBEC 90%, #F3F0E8);
+    background: -webkit-linear-gradient(top, #D4EBEC 90%, #F3F0E8);
+    background: linear-gradient(to bottom, #D4EBEC 90%, #F3F0E8);
 }
 
 .index_spot_headlinebox {
@@ -469,11 +504,22 @@
 }
 
 
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .index_spot_deco {
     font-size: 32px;
     font-weight: 900;
     color: #EF6000;
     text-align: center;
+    animation: blink 0.5s ease-in-out infinite alternate;
 }
 
 /* TB表示 */
@@ -523,14 +569,6 @@ canvas {
     bottom: 0;
     left: 0;
     width: 100%;
-}
-
-
-/* ---------------SPOT下部グラデーション---------------  */
-.bg_gradient {
-    width: 100%;
-    height: 160px;
-    background: linear-gradient(#D4EBEC, #F3F0E8);
 }
 
 /* ---------------section：インスタグラム---------------  */
@@ -608,8 +646,8 @@ canvas {
 @media screen and (min-width: 1024px) {
     .index_insta_img {
         display: block;
-        width: 440px;
-        height: 263px;
+        width: 320px;
+        height: 200px;
         transform: scale(-1, 1);
         object-fit: cover;
     }
@@ -629,12 +667,12 @@ canvas {
 
 /* 装飾文字 */
 /* デスクトップサイズの時だけ表示する背景装飾 */
-/* .circle {
+.index_circle {
     display: none;
 }
 
 @media screen and (min-width: 1024px) {
-    .circle {
+    .index_circle {
         position: absolute;
         top: -75px;
         right: 55px;
@@ -646,11 +684,11 @@ canvas {
         align-items: center;
         border-radius: 50%;
     }
-} */
+}
 
 
 
-.inner {
+.index_inner {
     width: 20px;
     height: 20px;
     border-radius: 50%;

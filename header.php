@@ -8,41 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
-    <!-- <title>なるとサイくるっと！</title> -->
-    <!-- 外部css -->
-    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" />
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" />
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header.css" /> -->
-    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/footer.css" /> -->
-    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index.css" /> -->
-
-    <!--↓今は使っていないが今後別バージョンで読み込む  -->
-    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/wave.css" /> -->
-
-    <!-- googlefont本体ここから2行 -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-    <!-- 全体用font↓ -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet" /> -->
-    <!-- h1のfont↓ -->
-
-    <!-- FontAwesome↓ -->
-    <!-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet" /> -->
-    <!-- jQuery本体↓ -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
-    <!-- ファビコン↓() -->
 
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
     <div class="wrap">
-        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <!-- headerここから -->
         <header class="header flex">
             <div class="header_logo">
                 <h1>
                     <a href="<?php echo home_url(); ?>">
-                        <img class="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/header_logo_img.png" alt="なるとサイくるっと！のロゴ" />
+                        <img class="img" src="<?php echo get_template_directory_uri(); ?>/assets/img/header_log_svg.svg" alt="なるとサイくるっと！のロゴ" />
                     </a>
                 </h1>
             </div>
@@ -52,7 +29,7 @@
                         <a href="<?php echo home_url('/news/'); ?>"><ruby>NEWS<rt>新着情報</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo get_permalink(2); ?>"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
+                        <a href="<?php echo home_url('/cycle/'); ?>"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
                         <a href="<?php echo get_permalink(183); ?>"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
@@ -72,4 +49,4 @@
                 </button>
             </nav>
         </header>
-        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <!-- headerここまで -->

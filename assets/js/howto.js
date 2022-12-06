@@ -8,7 +8,7 @@ $(function () {
 
 		// ウィンドウ幅が1024px未満の場合（pc以外の場合）
 		if (width < 1024) {
-			$(document).ready(function () {
+			$(document).on("load", function () {
 				$(".more_naruto_card_list").slick({
 					// slidesToShow: 3,  //一度に表示する画像の数
 					slidesToScroll: 1, //一度のスクロールで動く数
@@ -25,7 +25,7 @@ $(function () {
 			});
 		} else {
 			// pc以外の場合
-			$(document).ready(function () {
+			$(document).on("load", function () {
 				$(".more_naruto_card_list").slick({
 					// slidesToShow: 3,  //一度に表示する画像の数
 					slidesToScroll: 1, //一度のスクロールで動く数
