@@ -9,7 +9,7 @@
 
     <!-- パンくずリスト -->
     <div class="bradcrumbs">
-        ここに＞パンくずリストが＞入ります
+        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
     </div>
     <div class="wrap">
 
