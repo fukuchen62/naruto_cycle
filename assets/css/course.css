@@ -448,28 +448,28 @@
 
 /* 楽しむ */
 .enjoy {
-	border: solid 1px #ffe55b;
+	border: solid 1px #c0db8c;
 }
 
 .enjoy:before {
-	background: #ffe55b;
+	background: #c0db8c;
 }
 
 .enjoy:after {
-	background: #ffe55b;
+	background: #c0db8c;
 }
 
 /* 買う */
 .shopping {
-	border: solid 1px #c0db8c;
+	border: solid 1px #ffe55b;
 }
 
 .shopping:before {
-	background: #c0db8c;
+	background: #ffe55b;
 }
 
 .shopping:after {
-	background: #c0db8c;
+	background: #ffe55b;
 }
 
 /* サイクルスポット */
@@ -519,6 +519,6 @@
 	margin: 32px auto 60px;
 }
 
-section+section {
+section + section {
 	margin-top: 160px;
 }
