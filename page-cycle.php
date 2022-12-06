@@ -3,7 +3,7 @@
 <main>
     <!-- キービジュアル -->
     <div class="key_bg_under">
-        <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_lightblue.png" alt="マイページキービジュアル" class="key_bg_under_img">
     </div>
 
     <!-- パンくずリスト -->
@@ -96,28 +96,27 @@
             <h3 class="howto_list_headline">もっと鳴門について知るには</h3>
             <ul class="more_naruto_card_list slider">
                 <li class="more_naruto_card_item">
+                    <!-- 番号は仮。コラムができ次第番号差し替え -->
                     <a href="<?php the_permalink(156); ?>">
-                        <?php if (has_post_thumbnail()) : ?>
 
-                            <?php the_post_thumbnail('thumbnail'); ?>
+                        <?php echo get_the_post_thumbnail(156, 'thumbnail'); ?>
 
-                        <?php else : ?>
-                            <img src="<?php echo $pic_url; ?>" alt="ニュース写真" class="news_card_item_img">
-                        <?php endif; ?>
                         <p class="more_naruto_num">01</p>
                         <div class="more_naruto_caption">
                             <h3 class="more_naruto_title">01|インタビュー</h3>
-                            <?php the_excerpt(156); ?>
+                            <?php echo get_the_excerpt(156); ?>
                         </div>
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
                     <a href="<?php the_permalink(149); ?>">
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
+
+                        <?php echo get_the_post_thumbnail(149, 'thumbnail'); ?>
+
                         <p class="more_naruto_num">02</p>
                         <div class="more_naruto_caption">
                             <h3 class="more_naruto_title">02|ポタリングコラム</h3>
-                            <?php the_excerpt(149); ?>
+                            <?php echo get_the_excerpt(149); ?>
                         </div>
                     </a>
                 </li>
