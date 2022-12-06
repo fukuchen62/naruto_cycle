@@ -154,26 +154,32 @@
 
                     <!-- 短距離コース -->
                     <div class="index_course_selectbtn short">
-                        <div class="index_course_btntxt">
-                            <p>短距離コース</p>
-                            <p>00km</p>
-                        </div>
+                        <a href="<?php echo get_permalink(183); ?>">
+                            <div class="index_course_btntxt">
+                                <p>短距離コース</p>
+                                <p>00km</p>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- 中距離コース -->
                     <div class="index_course_selectbtn middle">
-                        <div class="index_course_btntxt">
-                            <p>中距離コース</p>
-                            <p>00km</p>
-                        </div>
+                        <a href="<?php echo get_permalink(184); ?>">
+                            <div class="index_course_btntxt">
+                                <p>中距離コース</p>
+                                <p>00km</p>
+                            </div>
+                        </a>
                     </div>
 
                     <!-- 長距離コース -->
                     <div class="index_course_selectbtn long">
-                        <div class="index_course_btntxt">
-                            <p>長距離コース</p>
-                            <p>00km</p>
-                        </div>
+                        <a href="<?php echo get_permalink(185); ?>">
+                            <div class="index_course_btntxt">
+                                <p>長距離コース</p>
+                                <p>00km</p>
+                            </div>
+                        </a>
                     </div>
 
                 </div>
