@@ -87,10 +87,60 @@ $(".spot_more_btn").click(function () {
 	$(this).css({ display: "none" });
 });
 
-// $(".spot_more_btn").on("load", function () {
+// $(document).ready(function () {
 // 	// ボタンから見て親に当たる要素(今回はul)の子(今回はli)の数をカウント
-// 	var list = $(this).prev().children().length;
+// 	var list = $(".eat_btn").prev().children().length;
 // 	console.log(list);
-// 	// 3以下ならボタン非表示。
-// 	if (list < 3) $(this).css({ display: "none" });
+// 	if (list < 4) $(".eat_btn").css({ display: "none" });
+
+// 	if (width < 600) {
+// 		// spの場合
+// 		// 4件未満ならボタン非表示。
+// 	} else if (width < 1024) {
+// 		// tbの場合
+// 		// 5件未満ならボタン非表示。
+// 		if (list < 5) $(".shopping_btn").css({ display: "none" });
+// 	} else {
+// 		// pcの場合
+// 		// 7件未満ならボタン非表示
+// 		if (list < 7) $(".cycle_btn").css({ display: "none" });
+// 	}
 // });
+
+$(window).on("load", function () {
+	// ボタンから見て親に当たる要素(今回はul)の子(今回はli)の数をカウント
+	var eatList = $(".eat_btn").prev().children().length;
+	var enjoyList = $(".enjoy_btn").prev().children().length;
+	var shoppingList = $(".shopping_btn").prev().children().length;
+	var cycleList = $(".cycle_btn").prev().children().length;
+	console.log(eatList);
+
+	var windowWidth = $(window).width();
+	var windowSm = 599;
+	var windowPc = 1023;
+	if (windowWidth <= windowSm) {
+		//横幅599px以下（スマホ）に適用させるJavaScript
+		// spの場合
+		// 4件未満ならボタン非表示。
+		if (eatList < 4) $(".eat_btn").css({ display: "none" });
+		if (enjoyList < 4) $(".enjoy_btn").css({ display: "none" });
+		if (shoppingList < 4) $(".shopping_btn").css({ display: "none" });
+		if (cycleList < 4) $(".cycle_btn").css({ display: "none" });
+	} else if (windowWidth <= windowPc) {
+		//横幅1023px以下（タブレット）に適用させるJavaScript
+		// tbの場合
+		// 5件未満ならボタン非表示。
+		if (eatList < 5) $(".eat_btn").css({ display: "none" });
+		if (enjoyList < 5) $(".enjoy_btn").css({ display: "none" });
+		if (shoppingList < 5) $(".shopping_btn").css({ display: "none" });
+		if (cycleList < 5) $(".cycle_btn").css({ display: "none" });
+	} else {
+		//それ以外（PC）に適用させるJavaScript
+		// pcの場合
+		// 7件未満ならボタン非表示
+		if (eatList < 7) $(".eat_btn").css({ display: "none" });
+		if (enjoyList < 7) $(".enjoy_btn").css({ display: "none" });
+		if (shoppingList < 7) $(".shopping_btn").css({ display: "none" });
+		if (cycleList < 7) $(".cycle_btn").css({ display: "none" });
+	}
+});
