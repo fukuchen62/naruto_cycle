@@ -111,16 +111,16 @@ function add_common_stylesheet_script()
 
     // 00.『jQuery』
 
-    if (!is_admin()) {
-        // WordPress本体のjquery.jsを読み込まない
-        wp_deregister_script('jquery');
+    // if (!is_admin()) {
+    // WordPress本体のjquery.jsを読み込まない
+    // wp_deregister_script('jquery');
 
-        //GoogleCDNから読み込む
-        wp_enqueue_script(
-            'jquery-min.js',
-            '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
-        );
-    }
+    //GoogleCDNから読み込む
+    wp_enqueue_script(
+        'jquery-min.js',
+        '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+    );
+    // }
 
     // 01.『common.js』
     wp_enqueue_script('naruto_cycle-common-script', get_template_directory_uri() . '/assets/js/common.js', '', '', true);
