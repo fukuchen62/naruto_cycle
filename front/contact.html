@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/question.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
 
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,6 +64,67 @@
         </header>
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
         <main>
+            <!-- キービジュアル -->
+            <div class="key_bg_under">
+                <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+            </div>
+
+            <!-- パンくずリスト -->
+            <div class="bradcrumbs">
+                ここに＞パンくずリストが＞入ります
+            </div>
+
+            <!-- ページ見出し -->
+            <section class="mypage">
+                <h2 class="course_top headline"><ruby>CONTACT<rt>お問い合わせ</rt></ruby></h2>
+            </section>
+
+            <!-- 問い合わせフォーム -->
+            <div class="contact_wrap">
+                <form action="confirm.php" method="post" name="form" onsubmit="return validate()">
+                    <p class="contact_text_top">お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
+                    <div class="contact_form">
+                        <div class="form_item">
+                            <label><span class="item_req">必須</span>件名</label>
+                            <select name="item">
+                                <option value="">お問い合わせ項目を選択してください</option>
+                                <option value="コースについて">コースについて</option>
+                                <option value="掲載について">掲載について</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+                        <div class="form_item">
+                            <label><span class="item_req">必須</span>お名前</label>
+                            <input type="text" name="name" placeholder="例）山田太郎" value="" class="item">
+                        </div>
+                        <div class="form_item">
+                            <label><span class="item_req">必須</span>メールアドレス</label>
+                            <input type="text" name="email" placeholder="例）guest@example.com" value="" class="item">
+                        </div>
+                        <div class="form_item">
+                            <label><span class="item_req">必須</span>メールアドレス(確認)</label>
+                            <input type="text" name="email" placeholder="例）guest@example.com" value="" class="item">
+                        </div>
+                        <div class="form_item">
+                            <label><span class="item_req">任意</span>電話番号</label>
+                            <input type="text" name="tel" placeholder="例）0000000000" value="" class="item">
+                        </div>
+                        <div class="form_item">
+                            <label><span class="item_req">必須</span>お問合せ内容</label>
+                            <textarea name="content" rows="5" placeholder="お問合せ内容を入力" class="item"></textarea>
+                        </div>
+                    </div>
+
+                    <p class="contact_text_bottom">個人情報の取り扱いに関しては、プライバシーポリシーをお読みいただき、ご同意の上お問い合わせください。</p>
+
+                    <div class="consent_text">
+                        <input type="checkbox" id="consent" name="consent">
+                        <label for="consent"><span class="contact_text_consent"></span><a href="pravacy.html">
+                                プライバシーポリシー・免責事項</a>に同意する。</span></label>
+                    </div>
+                    <button type="submit" class="common_btn contact_submit_btn">確認画面へ</button>
+                </form>
+            </div>
 
         </main>
         <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->

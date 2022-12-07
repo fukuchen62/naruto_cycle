@@ -1,0 +1,122 @@
+body {
+  box-sizing: border-box;
+}
+
+section+section {
+  margin-top: 160px;
+}
+
+/* スポット情報ボックスの設定 */
+.spot_detail_box {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 8px solid #96C85C;
+  background-color: #fffffc;
+
+}
+
+/* 写真のスライド */
+.slider6-wrap {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-6 .slick-slide {
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider-6 .slick-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbs_dots {
+  margin: 10px 0 0;
+}
+
+.thumbs_list li {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.thumbs_list li.slick-active {
+  opacity: 1;
+}
+
+/* メイン情報の設定 */
+/* .spot_nameはcommon cssで設定（カードと共通） */
+
+.spot_text {
+  margin-bottom: 8px;
+}
+
+/* 情報リストの設定 */
+.spot_main_info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+
+.spot_main_info dt {
+  width: 35%;
+  font-weight: normal;
+}
+
+.spot_main_info dd {
+  width: 65%;
+  line-height: 1.5em;
+}
+
+/* マップ設定 */
+.spot_map_box {
+  width: 100%;
+  margin: 16px auto;
+}
+
+/* サービスアイコンの設定 */
+.spot_icon_box {
+  width: 100%;
+}
+
+.spot_date_icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.spot_service_icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+/* スポット通過コースのボタン */
+.spot_choice_course_box {
+  margin-top: 32px;
+}
+
+.spot_choice_text {
+  text-align: center;
+}
+
+.index_course_btnbox {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* 最終更新日 */
+.last_update {
+  text-align: right;
+}
