@@ -318,7 +318,7 @@
 /* 跳ねる動き */
 .move_jump {
 	animation-name: jump;
-	animation-duration: .4s;
+	animation-duration: .5s;
 }
 
 @keyframes jump {

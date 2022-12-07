@@ -403,3 +403,11 @@ ruby rt {
 }
 
 /* コースを選ぶボタンリストここまで */
+
+/* 12/7髙瀬追加・男女イラストアニメーション基本設定 */
+.animation {
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1.5s;
+}

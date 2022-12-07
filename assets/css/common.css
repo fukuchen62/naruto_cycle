@@ -226,12 +226,10 @@ ruby rt {
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {
-}
+@media screen and (min-width: 600px) {}
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
 
 /* moreボタン設定 */
 .common_btn {
@@ -406,3 +404,11 @@ ruby rt {
 }
 
 /* コースを選ぶボタンリストここまで */
+
+/* 12/7髙瀬追加・男女イラストアニメーション基本設定 */
+.animation {
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1.5s;
+}
