@@ -82,7 +82,7 @@
                 <table class="info_item">
                     <tbody>
                         <tr>
-                            <th>営業時間</th>
+                            <th>営業時間　　</th>
                             <td><?php the_field('open_time'); ?></td>
 
                         </tr>
@@ -116,7 +116,9 @@
                     <tbody>
                         <tr>
                             <th>webサイト　</th>
-                            <td><?php the_field('home_url'); ?>
+                            <td>
+
+                                <a href="<?php the_field('home_url'); ?>"><?php the_field('home_url'); ?></a>
 
                             </td>
                         </tr>
@@ -124,13 +126,43 @@
                 </table>
 
                 <!-- SNSアイコン -->
+
+                <?php
+                $sns_address_array = get_field('sns');
+                $sns_address = explode(",", $sns_address_array);
+
+
+                ?>
+
                 <ul class="spot_icon">
+
+                    <?php foreach ($sns_address as $sns) : ?>
+
+
+                    <?php
+                        if (strpos($sns, 'twitter') !== false) : ?>
+                    <!-- 'twitter'が含まれている場合 -->
                     <li>
-                        <img src="https://placehold.jp/50x50.png" alt="SNS">
+                        <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
                     </li>
+
+                    <!-- facebook -->
+
+                    <?php elseif (strpos($sns, 'facebook') !== false) : ?>
                     <li>
-                        <img src="https://placehold.jp/50x50.png" alt="SNS">
+                        <a href="<?php echo $sns; ?>"><img class=" sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
                     </li>
+
+                    <!-- insta -->
+
+                    <?php elseif (strpos($sns, 'instagram') !== false) : ?>
+                    <li>
+                        <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン">
+                    </li>
+
+                    <!-- <img src="https://placehold.jp/50x50.png" alt="SNS"> -->
+                    <?php endif; ?>
+                    <?php endforeach; ?>
                 </ul>
 
                 <!-- 備考欄 -->
@@ -148,7 +180,7 @@
                     <?php $icons = get_field('icon'); ?>
                     <?php
                     foreach ($icons as $icon) : ?>
-                    <li class="spot_service_icon"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン"></a></li>
+                    <li class="spot_service_icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン"></li>
                     <?php endforeach; ?>
 
                 </ul>
@@ -198,31 +230,18 @@
                 <ul class="course_top_choice_list flex just_center f_wrap white">
 
                     <?php
-                    foreach ($cid as $id) {
-                        echo '<li><a href="" class="course_top_choice_btn bg_lightgreen">
-                            <p class="course_top_choice_cate">';
-                        echo get_the_title($id);
-                        echo '</p>
+                    foreach ($cid as $id) : ?>
+                    <li><a href="" class="course_top_choice_btn  bg_<?php echo $id; ?>">
+                            <p class="course_top_choice_cate">
+                                    <?php echo get_the_title($id);
+                                    echo '</p>'; ?>
                             <!-- 距離のクラス名要再考 -->
                             <p class="course_top_choice_km">〇〇㎞</p>
                         </a>
                     </li>';
-                    }
+                    <?php endforeach;
                     ?>
-                    <li>
-                        <a href="" class="course_top_choice_btn bg_lightgreen">
-                            <p class="course_top_choice_cate">初心者コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="course_top_choice_btn bg_orange">
-                            <p class="course_top_choice_cate">短距離コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -267,8 +286,9 @@
 
             <?php
             $args = array(
-                'post_type' => 'spot', //カスタム投稿タイプを指定
-                'posts_per_page' => -1, //表示する記事数
+                'post_type' => array('spot', 'shop', 'cycle'), //カスタム投稿タイプを指定
+                'orderby' => 'rand', // ランダムで表示
+                'posts_per_page' => 6, //表示する記事数
             );
             $taxquerysp = array('relation' => 'AND ');
             $metaquerysp = array('relation' => 'AND ');

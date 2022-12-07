@@ -10,7 +10,6 @@ body {
 	background-color: #f3f0e8;
 
 	/* フォント設定 */
-	font-family: 'Arvo', serif;
 	font-family: 'Noto Sans JP', sans-serif;
 	font-weight: 400;
 }
@@ -277,13 +276,20 @@ ruby rt {
 	padding: 20px;
 	margin: 0 auto;
 	border: dashed 2px #EF6000;
+	border-radius: 5px;
 	background-color: #FFFFFC;
+	transition: all 0.5s ease-in-out;
+}
+
+.spot_item:hover {
+	transform: scale(1.05);
 }
 
 /* カテゴリラベル */
 .spot_item_cate {
 	width: 48px;
 	height: 64px;
+	border-radius: 5px 0 0 0;
 	position: absolute;
 	left: 0;
 	top: 0;

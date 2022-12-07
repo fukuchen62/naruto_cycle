@@ -1,3 +1,5 @@
+/* フッターの設定 */
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
 	.banner_list {
@@ -170,7 +172,8 @@
 
 .footer_nav_item {
 	font-weight: lighter;
-	font-size: 12px;
+	font-size: 16px;
+	line-height: 3em;
 	color: rgba(255, 255, 255, 0.9);
 }
 

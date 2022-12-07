@@ -9,7 +9,9 @@
     <!-- パンくずリスト -->
     <div class="bradcrumbs">
         <!-- ここに＞パンくずリストが＞入ります -->
-        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
+
+
+
     </div>
 
     <section class="course">
@@ -84,8 +86,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="common_btn dl-btn">地図をダウンロード</div>
-        </div>
+            <!-- <div class="common_btn dl-btn">地図をダウンロード</div>
+        </div> -->
     </section>
 
     <section class="info">
@@ -188,48 +190,49 @@
                             $spot_query->the_post();
                     ?>
 
-                            <li class="card_container">
-                                <div class="spot_card relative">
-                                    <!-- お気に入りボタン -->
-                                    <div class="spot_like_icon">
-                                        <i class="far fa-heart LikesIcon-fa-heart"></i>
-                                    </div>
-                                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                                    <a href="<?php the_permalink(); ?>">
-                                        <!-- カード全体の入れ物 -->
-                                        <ul class="spot_list">
-                                            <!-- カード１枚の入れ物-->
-                                            <li class="spot_item relative">
-                                                <!-- カテゴリーのラベル -->
-                                                <?php $pic = get_field('label');
+                    <li class="card_container">
+                        <div class="spot_card relative">
+                            <!-- お気に入りボタン -->
+                            <div class="spot_like_icon">
+                                <?php echo get_favorites_button(get_the_ID()); ?>
+                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                            </div>
+                            <!-- カード１枚にかかるスポット一覧へのリンク -->
+                            <a href="<?php the_permalink(); ?>">
+                                <!-- カード全体の入れ物 -->
+                                <ul class="spot_list">
+                                    <!-- カード１枚の入れ物-->
+                                    <li class="spot_item relative">
+                                        <!-- カテゴリーのラベル -->
+                                        <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
                                                 ?>
-                                                <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
-                                                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
+                                        <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
+                                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
 
-                                                <!-- スポット写真 -->
-                                                <?php
+                                        <!-- スポット写真 -->
+                                        <?php
                                                 $pic = get_field('eyecatch');
                                                 //  サムネイルサイズ画像のURL
                                                 $pic_url = $pic['sizes']['thumbnail'];
                                                 ?>
-                                                <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
-                                                <!-- スポット名 -->
-                                                <h3 class="spot_item_name"><?php the_title(); ?></h3>
-                                                <!-- スポット情報の表 -->
-                                                <dl class="spot_item_info flex">
-                                                    <dt>営業時間</dt>
-                                                    <dd><?php the_field('open_time'); ?></dd>
-                                                    <dt>住所</dt>
-                                                    <dd><?php the_field('address'); ?></dd>
-                                                    <dt>電話番号</dt>
-                                                    <dd><?php the_field('telephone'); ?></dd>
-                                                </dl>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </div>
-                            </li>
+                                        <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
+                                        <!-- スポット名 -->
+                                        <h3 class="spot_item_name"><?php the_title(); ?></h3>
+                                        <!-- スポット情報の表 -->
+                                        <dl class="spot_item_info flex">
+                                            <dt>営業時間</dt>
+                                            <dd><?php the_field('open_time'); ?></dd>
+                                            <dt>住所</dt>
+                                            <dd><?php the_field('address'); ?></dd>
+                                            <dt>電話番号</dt>
+                                            <dd><?php the_field('telephone'); ?></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                    </li>
                     <?php endwhile;
                     endif;
                     // wp_reset_postdata(); //サブループを抜ける
@@ -274,49 +277,50 @@
                             $spot_query->the_post();
                     ?>
 
-                            <li class="card_container">
-                                <div class="spot_card relative">
-                                    <!-- お気に入りボタン -->
-                                    <div class="spot_like_icon">
-                                        <i class="far fa-heart LikesIcon-fa-heart"></i>
-                                    </div>
-                                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                                    <a href="<?php the_permalink(); ?>">
-                                        <!-- カード全体の入れ物 -->
-                                        <ul class="spot_list">
-                                            <!-- カード１枚の入れ物-->
-                                            <li class="spot_item relative">
-                                                <!-- カテゴリーのラベル -->
-                                                <?php $pic = get_field('label');
+                    <li class="card_container">
+                        <div class="spot_card relative">
+                            <!-- お気に入りボタン -->
+                            <div class="spot_like_icon">
+                                <?php echo get_favorites_button(get_the_ID()); ?>
+                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                            </div>
+                            <!-- カード１枚にかかるスポット一覧へのリンク -->
+                            <a href="<?php the_permalink(); ?>">
+                                <!-- カード全体の入れ物 -->
+                                <ul class="spot_list">
+                                    <!-- カード１枚の入れ物-->
+                                    <li class="spot_item relative">
+                                        <!-- カテゴリーのラベル -->
+                                        <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
                                                 ?>
-                                                <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
-                                                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
-                                                <!-- スポット写真 -->
-                                                <?php
+                                        <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
+                                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
+                                        <!-- スポット写真 -->
+                                        <?php
                                                 $pic = get_field('eyecatch');
                                                 //  サムネイルサイズ画像のURL
                                                 $pic_url = $pic['sizes']['thumbnail'];
                                                 ?>
-                                                <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
+                                        <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
 
-                                                <!-- スポット名 -->
-                                                <h3 class="spot_item_name"><?php the_title(); ?></h3>
-                                                <!-- スポット情報の表 -->
+                                        <!-- スポット名 -->
+                                        <h3 class="spot_item_name"><?php the_title(); ?></h3>
+                                        <!-- スポット情報の表 -->
 
-                                                <dl class="spot_item_info flex">
-                                                    <dt>営業時間</dt>
-                                                    <dd><?php the_field('open_time'); ?></dd>
-                                                    <dt>住所</dt>
-                                                    <dd><?php the_field('address'); ?></dd>
-                                                    <dt>電話番号</dt>
-                                                    <dd><?php the_field('telephone'); ?></dd>
-                                                </dl>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </div>
-                            </li>
+                                        <dl class="spot_item_info flex">
+                                            <dt>営業時間</dt>
+                                            <dd><?php the_field('open_time'); ?></dd>
+                                            <dt>住所</dt>
+                                            <dd><?php the_field('address'); ?></dd>
+                                            <dt>電話番号</dt>
+                                            <dd><?php the_field('telephone'); ?></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                    </li>
                     <?php endwhile;
                     endif;
                     wp_reset_postdata(); //サブループを抜ける
@@ -362,50 +366,51 @@
                             $spot_query->the_post();
                     ?>
 
-                            <li class="card_container">
-                                <div class="spot_card relative">
-                                    <!-- お気に入りボタン -->
-                                    <div class="spot_like_icon">
-                                        <i class="far fa-heart LikesIcon-fa-heart"></i>
-                                    </div>
-                                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                                    <a href="<?php the_permalink(); ?>">
-                                        <!-- カード全体の入れ物 -->
-                                        <ul class="spot_list">
-                                            <!-- カード１枚の入れ物-->
-                                            <li class="spot_item relative">
-                                                <!-- カテゴリーのラベル -->
-                                                <?php $pic = get_field('label');
+                    <li class="card_container">
+                        <div class="spot_card relative">
+                            <!-- お気に入りボタン -->
+                            <div class="spot_like_icon">
+                                <?php echo get_favorites_button(get_the_ID()); ?>
+                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                            </div>
+                            <!-- カード１枚にかかるスポット一覧へのリンク -->
+                            <a href="<?php the_permalink(); ?>">
+                                <!-- カード全体の入れ物 -->
+                                <ul class="spot_list">
+                                    <!-- カード１枚の入れ物-->
+                                    <li class="spot_item relative">
+                                        <!-- カテゴリーのラベル -->
+                                        <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
                                                 ?>
-                                                <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
-                                                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
+                                        <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
+                                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
 
-                                                <!-- スポット写真 -->
-                                                <?php
+                                        <!-- スポット写真 -->
+                                        <?php
                                                 $pic = get_field('eyecatch');
                                                 //  サムネイルサイズ画像のURL
                                                 $pic_url = $pic['sizes']['thumbnail'];
                                                 ?>
-                                                <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
+                                        <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
 
-                                                <!-- スポット名 -->
-                                                <h3 class="spot_item_name"><?php the_title(); ?></h3>
-                                                <!-- スポット情報の表 -->
+                                        <!-- スポット名 -->
+                                        <h3 class="spot_item_name"><?php the_title(); ?></h3>
+                                        <!-- スポット情報の表 -->
 
-                                                <dl class="spot_item_info flex">
-                                                    <dt>営業時間</dt>
-                                                    <dd><?php the_field('open_time'); ?></dd>
-                                                    <dt>住所</dt>
-                                                    <dd><?php the_field('address'); ?></dd>
-                                                    <dt>電話番号</dt>
-                                                    <dd><?php the_field('telephone'); ?></dd>
-                                                </dl>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </div>
-                            </li>
+                                        <dl class="spot_item_info flex">
+                                            <dt>営業時間</dt>
+                                            <dd><?php the_field('open_time'); ?></dd>
+                                            <dt>住所</dt>
+                                            <dd><?php the_field('address'); ?></dd>
+                                            <dt>電話番号</dt>
+                                            <dd><?php the_field('telephone'); ?></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                    </li>
                     <?php endwhile;
                     endif;
                     wp_reset_postdata(); //サブループを抜ける
@@ -452,51 +457,52 @@
                     ?>
 
 
-                            <li class="card_container">
-                                <div class="spot_card relative">
-                                    <!-- お気に入りボタン -->
-                                    <div class="spot_like_icon">
-                                        <i class="far fa-heart LikesIcon-fa-heart"></i>
-                                    </div>
-                                    <!-- カード１枚にかかるスポット一覧へのリンク -->
-                                    <a href="<?php the_permalink(); ?>">
-                                        <!-- カード全体の入れ物 -->
-                                        <ul class="spot_list">
-                                            <!-- カード１枚の入れ物-->
-                                            <li class="spot_item relative">
-                                                <!-- カテゴリーのラベル -->
-                                                <?php $pic = get_field('label');
+                    <li class="card_container">
+                        <div class="spot_card relative">
+                            <!-- お気に入りボタン -->
+                            <div class="spot_like_icon">
+                                <?php echo get_favorites_button(get_the_ID()); ?>
+                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                            </div>
+                            <!-- カード１枚にかかるスポット一覧へのリンク -->
+                            <a href="<?php the_permalink(); ?>">
+                                <!-- カード全体の入れ物 -->
+                                <ul class="spot_list">
+                                    <!-- カード１枚の入れ物-->
+                                    <li class="spot_item relative">
+                                        <!-- カテゴリーのラベル -->
+                                        <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
                                                 ?>
-                                                <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
-                                                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
+                                        <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
+                                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate"> -->
 
-                                                <!-- スポット写真 -->
+                                        <!-- スポット写真 -->
 
-                                                <?php
+                                        <?php
                                                 $pic = get_field('eyecatch');
                                                 //  サムネイルサイズ画像のURL
                                                 $pic_url = $pic['sizes']['thumbnail'];
                                                 ?>
-                                                <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
+                                        <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
 
-                                                <!-- スポット名 -->
-                                                <h3 class="spot_item_name"><?php the_title(); ?></h3>
-                                                <!-- スポット情報の表 -->
+                                        <!-- スポット名 -->
+                                        <h3 class="spot_item_name"><?php the_title(); ?></h3>
+                                        <!-- スポット情報の表 -->
 
-                                                <dl class="spot_item_info flex">
-                                                    <dt>営業時間</dt>
-                                                    <dd><?php the_field('open_time'); ?></dd>
-                                                    <dt>住所</dt>
-                                                    <dd><?php the_field('address'); ?></dd>
-                                                    <dt>電話番号</dt>
-                                                    <dd><?php the_field('telephone'); ?></dd>
-                                                </dl>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </div>
-                            </li>
+                                        <dl class="spot_item_info flex">
+                                            <dt>営業時間</dt>
+                                            <dd><?php the_field('open_time'); ?></dd>
+                                            <dt>住所</dt>
+                                            <dd><?php the_field('address'); ?></dd>
+                                            <dt>電話番号</dt>
+                                            <dd><?php the_field('telephone'); ?></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                    </li>
 
                     <?php endwhile;
                     endif;
