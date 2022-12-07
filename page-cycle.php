@@ -151,7 +151,7 @@
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a href="<?php echo get_term_link('cycle', 'shop_type'); ?>">
+                    <a href="<?php echo get_term_link('cycle-spot', 'shop_type'); ?>">
                         <img class="" src="https://placehold.jp/500x480.png" alt="">
                         <p class="more_naruto_num">06</p>
                         <div class="more_naruto_caption">
