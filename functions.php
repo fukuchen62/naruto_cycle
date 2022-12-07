@@ -111,16 +111,16 @@ function add_common_stylesheet_script()
 
     // 00.『jQuery』
 
-    if (!is_admin()) {
-        // WordPress本体のjquery.jsを読み込まない
-        wp_deregister_script('jquery');
+    // if (!is_admin()) {
+    // WordPress本体のjquery.jsを読み込まない
+    // wp_deregister_script('jquery');
 
-        //GoogleCDNから読み込む
-        wp_enqueue_script(
-            'jquery-min.js',
-            '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
-        );
-    }
+    //GoogleCDNから読み込む
+    wp_enqueue_script(
+        'jquery-min.js',
+        '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+    );
+    // }
 
     // 01.『common.js』
     wp_enqueue_script('naruto_cycle-common-script', get_template_directory_uri() . '/assets/js/common.js', '', '', true);
@@ -278,7 +278,7 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('naruto_cycle-spot_search_result', get_template_directory_uri() . '/assets/css/search.css', array(), false);
         wp_enqueue_style('naruto_cycle-spot_search_result2', get_template_directory_uri() . '/assets/css/search_result.css', array(), false);
         // js
-        wp_enqueue_script('naruto_cycle-spot_search_result-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
+        wp_enqueue_script('naruto_cycle-spot_search_result-script', get_template_directory_uri() . '/assets/js/mypage.js', '', '', true);
     }
     // タクソノミー（食べる、買う、楽しむ、サイクル）一覧ページページ
     elseif (is_tax()) {

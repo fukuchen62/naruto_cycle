@@ -1,3 +1,5 @@
+/* フッターの設定 */
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
 	.banner_list {
@@ -5,6 +7,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		gap: 32px 32px;
 	}
 
 	.fnav_list {
@@ -25,11 +28,6 @@
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
 @media screen and (min-width: 600px) {}
 
-/* フッター */
-/* .footer {} */
-
-/* ulバナーリスト */
-/* .banner_list {} */
 
 /* liバナー */
 .banner_item {
@@ -48,19 +46,6 @@
 	height: 32px;
 	flex-basis: 100%;
 }
-
-/* .image-wrap {
-    margin: 10px 5px;
-}
-
-.image-wrap img {
-    width: 100%;
-    height: 300px;
-}
-
-.flex-item {
-    flex-basis: 100%;
-} */
 
 /* 著作権表示 */
 .copyright {
@@ -163,22 +148,27 @@
 	}
 }
 
-.footer_list {
+/* .footer_list {
 	margin-top: 10px;
 	margin-bottom: 16px;
-}
+} */
 
 .footer_nav_item {
 	font-weight: lighter;
-	font-size: 12px;
+	font-size: 16px;
+	line-height: 3em;
 	color: rgba(255, 255, 255, 0.9);
 }
 
-.bold {
-	font-weight: bold;
-	font-size: 16px;
-	color: rgb(255, 255, 255);
-	margin-bottom: 10px;
+.footer_nav_item a:hover {
+	color: #EF6000;
 }
 
 /* 近藤追加分ここまで */
+
+/* PCサイズフッターナビの文字設定（髙瀬追加） */
+@media screen and (min-width: 1024px) {
+	.footer_nav_item {
+		line-height: 2em;
+	}
+}

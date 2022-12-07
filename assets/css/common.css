@@ -10,7 +10,7 @@ body {
 	background-color: #f3f0e8;
 
 	/* フォント設定 */
-	font-family: 'Noto Sans JP', sans-serif;
+	font-family: "Noto Sans JP", sans-serif;
 	font-weight: 400;
 }
 
@@ -103,7 +103,6 @@ ruby rt {
 	margin: auto;
 }
 
-
 /* 親要素にflex */
 .flex {
 	display: flex;
@@ -179,12 +178,10 @@ ruby rt {
 	height: 267px;
 }
 
-
-
 /* ----------下層ページキービジュアル設定---------- */
 .key_bg_under_img {
 	width: 100%;
-	height: 80px;
+	height: 120px;
 	object-fit: cover;
 }
 
@@ -226,14 +223,15 @@ ruby rt {
 	}
 }
 
-
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 600px) {
+}
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
 /* moreボタン設定 */
 .common_btn {
@@ -275,9 +273,9 @@ ruby rt {
 	height: 440px;
 	padding: 20px;
 	margin: 0 auto;
-	border: dashed 2px #EF6000;
+	border: dashed 2px #ef6000;
 	border-radius: 5px;
-	background-color: #FFFFFC;
+	background-color: #fffffc;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -331,7 +329,6 @@ ruby rt {
 	gap: 32px;
 }
 
-
 /* --- お気に入りボタン --- */
 /* ハートアニメーション */
 @keyframes heartAnimation {
@@ -358,7 +355,7 @@ ruby rt {
 
 	100% {
 		/* もとのサイズに戻す */
-		transform: scale(1.0);
+		transform: scale(1);
 	}
 }
 
@@ -376,14 +373,12 @@ ruby rt {
 /* クリックでお気に入りする時のCSS */
 .LikesIcon-fa-heart.heart {
 	/* heartAnimationアニメーションを200ミリ秒かけて実行する */
-	animation: heartAnimation .2s;
+	animation: heartAnimation 0.2s;
 	/* アイコン色を黒から赤へ変更する */
 	color: #e2264d;
 }
 
-
 /* --------------------------- */
-
 
 /* コースを選ぶボタンリストここから */
 .course_top_choice_list li {
