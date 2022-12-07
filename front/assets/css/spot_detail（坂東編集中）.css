@@ -8,23 +8,36 @@ section+section {
 
 /* スポット情報ボックスの設定 */
 .spot_detail_box {
-  width: 320px;
+  width: calc(100%*0.82051282);
+  max-width: 1024px;
   margin: 0 auto;
   padding: 20px;
   border: 8px solid #96C85C;
   background-color: #fffffc;
+}
 
+.spot_date_img_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 /* 写真のスライド */
+.spot_img_box {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
 .slider6-wrap {
-  width: 600px;
+  width: 100%;
+  max-width: 480px;
   margin: 0 auto;
   position: relative;
 }
 
 .slider-6 .slick-slide {
-  height: 400px;
+  height: 265px;
+  object-fit: cover;
   overflow: hidden;
 }
 
@@ -52,7 +65,14 @@ section+section {
   opacity: 1;
 }
 
+
 /* メイン情報の設定 */
+.spot_maindate_box {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+
 /* .spot_nameはcommon cssで設定（カードと共通） */
 
 .spot_text {
@@ -90,9 +110,10 @@ section+section {
 }
 
 .spot_date_icon {
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 20px;
 }
 
 .spot_service_icon {
@@ -114,6 +135,17 @@ section+section {
 .index_course_btnbox {
   width: 100%;
   flex-wrap: wrap;
+}
+
+/* スポットタグ */
+.spot_tag_box {
+  width: 100%;
+  height: 24px;
+}
+
+.spot_tag {
+  display: inline-block;
+
 }
 
 /* 最終更新日 */
