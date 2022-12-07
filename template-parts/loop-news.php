@@ -30,7 +30,7 @@
             <!-- 記事見出しの入れ物 -->
             <div class="news_card_txt_container">
                 <div class="news_card_txt">
-                    <p><?php the_excerpt(); ?></p>
+                    <?php the_excerpt(); ?>
 
                 </div>
             </div>

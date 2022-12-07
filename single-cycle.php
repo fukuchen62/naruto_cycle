@@ -140,12 +140,14 @@
                                 <?php
                                 foreach ($cid as $id) : ?>
 
-                                <div class="index_course_selectbtn  <?php the_field('class', $id); ?>">
-                                    <div class="index_course_btntxt">
-                                        <p><?php echo get_the_title($id); ?></p>
-                                        <p>約<?php the_field('distance', $id); ?>km</p>
+                                <a href="<?php echo get_permalink($id); ?>">
+                                    <div class="index_course_selectbtn  <?php the_field('class', $id); ?>">
+                                        <div class="index_course_btntxt">
+                                            <p><?php echo get_the_title($id); ?></p>
+                                            <p>約<?php the_field('distance', $id); ?>km</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                                 <?php endforeach;
                                 ?>
 
