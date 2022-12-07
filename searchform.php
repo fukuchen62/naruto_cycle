@@ -15,7 +15,7 @@
 
     <!-- 「食べるタイプ」のチェックを保持 -->
     <?php $select_eat = filter_input(INPUT_GET, "eat", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-    $checked["eat"] = ["cafe-restaurante" => "", "seafood" => "", "noodle" => "", "takeout" => ""];
+    $checked["eat"] = ["cafe-restaurant" => "", "seafood" => "", "noodle" => "", "takeout" => ""];
     foreach ($select_eat as $val) {
         $checked["eat"][$val] = " checked";
     }
@@ -100,7 +100,7 @@
                         <ul class="item_box">
                             <li class="choice_item">
 
-                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="eat[]" value="cafe-restaurante" <?= $checked["eat"]["cafe-restaurante"] ?>>カフェ・レストラン</label>
+                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="eat[]" value="cafe-restaurante" <?= $checked["eat"]["cafe-restaurant"] ?>>カフェ・レストラン</label>
                             </li>
                         </ul>
                     </li>

@@ -1,313 +1,282 @@
 <?php get_header(); ?>
-
-<!-- ヘッダー切り取りここまで -->
+<!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 <main>
     <!-- キービジュアル -->
     <div class="key_bg_under">
-        <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_green.png" alt="マイページキービジュアル" class="key_bg_under_img">
     </div>
 
-    <!-- パンくずリスト -->
-    <div class="bradcrumbs">
-        <!-- パンくず -->
-        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
-    </div>
-    <!-- <section class="search"> -->
-    <!-- 検索ボックス -->
-    <div class="wrap_search_container">
-        <!-- ページタイトル -->
+    <section class="search">
+        <!-- 検索ボックス -->
+        <div class="wrap_search_container">
+            <!-- ページタイトル -->
+            <h2 class="course_headline headline"><ruby>SPOT<rt>周辺スポット</rt></ruby></h2>
 
-        <h2 class="search_title_jp">周辺スポット</h2>
-        <div class="search_title">SPOT</div>
-        <!-- 詳細の囲い -->
-        <div class="box_spot_info">
+            <!-- 詳細ボックス -->
+            <div class="spot_detail_box">
+
+                <!-- 写真とメインデータのボックス -->
+                <div class="spot_date_img_box">
+
+                    <!-- 画像ボックス -->
+                    <div class="spot_img_box">
+
+                        <div class="slider-container">
+                            <div id="slider" class="slider_img_box">
+                                <?php
+                                $pic = get_field('eyecatch');
+                                $pic_url = $pic['sizes']['medium'];
+                                ?>
+                                <!-- <?php print_r($pic); ?> -->
+                                <div><img src="<?php echo $pic_url; ?>" alt="アイキャッチ画像" class="slider_img"></div>
+
+                                <?php
+                                $pic1 = get_field('pic1');
+                                $pic1_url = $pic1['url'];
+                                ?>
+                                <div><img src="<?php echo $pic1_url; ?>" alt="アイキャッチ画像" class="slider_img"></div>
+
+                                <?php
+                                $pic2 = get_field('pic2');
+                                $pic2_url = $pic2['url'];
+                                ?>
+                                <div><img src="<?php echo $pic2_url; ?>" alt="アイキャッチ画像" class="slider_img"></div>
+
+                                <div><img src="<?php echo $pic_url; ?>" alt="アイキャッチ画像" class="slider_img"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- スポットメインデータボックス -->
+                    <div class="spot_maindate_box">
+                        <!-- スポット名 -->
+                        <h2 class="spot_item_name"><?php the_field('shop_name'); ?></h2>
+                        <!-- スポット紹介文 -->
+                        <p class="spot_text">
+                            <?php the_field('catchphrase'); ?></p>
 
 
-            <div class="container">
-                <!-- メイン画像 -->
-                <div class="main-img js-main-img img_sp">
-                    <?php
-                    $pic = get_field('eyecatch');
-                    $pic_url = $pic['sizes']['medium'];
-                    ?>
-                    <?php print_r($pic); ?>
-                    <img src="<?php echo $pic_url; ?>" alt="サムネイル画像" />
+                        <table class="spot_main_item">
+                            <tbody>
+                                <tr>
+                                    <th>営業時間</th>
+                                    <td><?php the_field('open_time'); ?></td>
+                                </tr>
+                                <tr>
+                                    <th>定休日</th>
+                                    <td><?php the_field('closed'); ?></td>
+                                </tr>
+                                <tr>
+                                    <th>駐車場</th>
+                                    <td><?php the_field('parking'); ?></td>
+                                </tr>
+                                <tr>
+                                    <th>電話</th>
+                                    <td><?php the_field('telephone'); ?></td>
+                                </tr>
+                                <tr>
+                                    <th>所在地</th>
+                                    <td><?php the_field('address'); ?></td>
+                                </tr>
+                                <tr>
+                                    <th>webサイト</th>
+                                    <td><a href="<?php the_field('home_url'); ?>"><?php the_field('home_url'); ?></a></td>
+                                </tr>
+
+                                <tr>
+                                    <th>備考</th>
+                                    <td><?php the_field('memo'); ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <!-- サムネイル画像 -->
-                <ul class="sub-img js-sub-img img_sp">
-                    <!-- 選択されている画像の枠線を変更 -->
-                    <li class="current img_sp">
-                        <img src="<?php echo $pic_url; ?>" alt="サムネイル画像" />
-                    </li>
-                    <li class="img_sp">
-                        <?php
-                        $pic1 = get_field('pic1');
-                        $pic1_url = $pic1['url'];
-                        ?>
-                        <img src="<?php echo $pic1_url; ?>" alt="サムネイル画像" />
-                    </li>
-                    <li class="img_sp">
-                        <?php
-                        $pic2 = get_field('pic2');
-                        $pic2_url = $pic2['url'];
-                        ?>
-                        <img src="<?php echo $pic2_url; ?>" alt="サムネイル画像" />
-                    </li>
-                </ul>
-            </div>
-            <div class="container_pc">
-                <!-- メイン画像 -->
-                <div class="main-img js-main-img img_pc">
-                    <img src="<?php echo $pic_url; ?>" alt="サムネイル画像" />
-                </div>
-                <!-- サムネイル画像 -->
-                <ul class="sub-img js-sub-img img_pc">
-                    <!-- 選択されている画像の枠線を変更 -->
-                    <li class="current img_pc">
-                        <img src="<?php echo $pic_url; ?>" alt="サムネイル画像" />
-                    </li>
-                    <li class="img_pc">
-                        <img src="<?php echo $pic1_url; ?>" alt="サムネイル画像" />
-                    </li>
-                    <li class="img_pc">
-                        <img src="<?php echo $pic2_url; ?>" alt="サムネイル画像" />
-                    </li>
-                </ul>
-            </div>
-            <div class="spot_date">
-                <!-- スポット名 -->
-                <h2 class="spot_name"><?php the_field('shop_name'); ?></h2>
-                <!-- スポット紹介文 -->
-                <p class="spot_text"><?php the_field('catchphrase'); ?></p>
-                <table class="info_item">
-                    <tbody>
-                        <tr>
-                            <th>営業時間　　</th>
-                            <td><?php the_field('open_time'); ?></td>
 
-                        </tr>
-                        <tr>
-                            <th>定休日</th>
-                            <td><?php the_field('closed'); ?></td>
 
-                        </tr>
-                        <tr>
-                            <th>駐車場</th>
-                            <td><?php the_field('parking'); ?></td>
 
-                        </tr>
-                        <tr>
-                            <th>電話</th>
-                            <td><?php the_field('telephone'); ?></td>
+                <div class="spot_subdate_box">
+                    <!-- マップのボックス -->
+                    <div class="spot_map_box">
+                        <p class="box_heading">マップ</p>
+                        <!-- グーグルマップ埋め込み -->
+                        <?php the_field('acsess'); ?>
 
-                        </tr>
-                        <tr>
-                            <th>所在地</th>
-                            <td><?php the_field('address'); ?></td>
+                        <!-- サービスアイコンボックス -->
+                        <div class="spot_icon_box">
+                            <p class="box_heading">設備</p>
+                            <ul class="spot_date_icon">
 
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- グーグルマップ埋め込み -->
-                <?php the_field('acsess'); ?>
+                                <?php $icons = get_field('icon'); ?>
+                                <?php
+                                foreach ($icons as $icon) : ?>
+                                <li class="spot_service_icon">
 
-                <!-- WEBサイトのURL -->
-                <table class="info_item">
-                    <tbody>
-                        <tr>
-                            <th>webサイト　</th>
-                            <td><?php the_field('home_url'); ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン">
+                                    <?php endforeach; ?>
+                                </li>
 
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
 
-                <!-- SNSアイコン -->
-                <ul class="spot_icon">
-                    <li>
-                        <img src="https://placehold.jp/50x50.png" alt="SNS">
-                    </li>
-                    <li>
-                        <img src="https://placehold.jp/50x50.png" alt="SNS">
-                    </li>
-                </ul>
+                            </ul>
+                        </div>
 
-                <!-- 備考欄 -->
-                <ul class="info_item">
-                    <li class="info_remark">備考
-                        <?php the_field('memo'); ?>
-                        <p>・駐車場は有料ですなどなど・・・</p>
-                        <p>・</p>
-                        <p>・</p>
-                    </li>
-                </ul>
-                <!-- サービスアイコン -->
-                <ul class="spot_date_icon">
+                        <!-- このスポット用コース選択見出し -->
+                        <div class="spot_choice_course_box">
+                            <p class="spot_choice_text">ここに行くならこのコース！</p>
 
-                    <?php $icons = get_field('icon'); ?>
-                    <?php
-                    foreach ($icons as $icon) : ?>
-                    <li class="spot_service_icon"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン"></a></li>
-                    <?php endforeach; ?>
+                            <!-- コース選択ボタンボックス -->
+                            <div class="spot_course_btnbox flex">
 
-                </ul>
-                <!-- タグ -->
-                <?php $page_id = get_the_id();
-                ?>
-                <?php $terms = get_the_terms($post->ID, 'shop_type');
-                // print_r($terms);
+                                <!-- コースidを取得して配列にする -->
+                                <?php
+                                $course_id = get_field('course_id');
+                                $cid = explode(",", $course_id);
+                                // print_r($cid);
 
-                ?>
-                <ul class="spot_typetag_wrap">
-                    <?php echo get_the_term_list($post->ID, 'shop_type', '<li class="spot_typetag"><span>#', '</span></li>
-                    <li class="spot_typetag"><span>#', '</span></li>') ?>
+                                ?>
 
-                </ul>
+                                <!-- コースボタン表示 -->
 
-            </div>
-            <!-- コース案内 -->
-            <div class="this_course">
-                <p class="spot_apply">
-                    ここに行くならこのコース！</p>
+                                <?php
+                                foreach ($cid as $id) : ?>
 
-                <!-- <ul class="course_top_choice_list flex just_center f_wrap white">
-                        <a href="">
-                            <li class="course_top_choice_btn bg_lightgreen">
-                                <p class="course_top_choice_cate">初心者コース</p>
+                                <div class="index_course_selectbtn  <?php the_field('class', $id); ?>">
+                                    <div class="index_course_btntxt">
+                                        <p><?php echo get_the_title($id); ?></p>
+                                        <p>約<?php the_field('distance', $id); ?>km</p>
+                                    </div>
+                                </div>
+                                <?php endforeach;
+                                ?>
 
-                                <p class="course_top_choice_km">〇〇㎞</p>
-                            </li>
-                        </a>
-                        <a href="">
-                            <li class="course_top_choice_btn bg_orange">
-                                <p class="course_top_choice_cate">短距離コース</p>
+                            </div>
+                        </div>
+                    </div>
 
-                                <p class="course_top_choice_km">〇〇㎞</p>
-                            </li>
-                        </a>
-                    </ul> -->
-                <!-- コースidを取得して配列にする -->
-                <?php
-                $course_id = get_field('course_id');
-                $cid = explode(",", $course_id);
-                print_r($cid);
-
-                ?>
-
-                <ul class="course_top_choice_list flex just_center f_wrap white">
-
-                    <?php
-                    foreach ($cid as $id) {
-                        echo '<li><a href="" class="course_top_choice_btn bg_lightgreen">
-                            <p class="course_top_choice_cate">';
-                        echo get_the_title($id);
-                        echo '</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </a>
-                    </li>';
-                    }
+                    <!-- タグ -->
+                    <?php $page_id = get_the_id();
                     ?>
-                    <li>
-                        <a href="" class="course_top_choice_btn bg_lightgreen">
-                            <p class="course_top_choice_cate">初心者コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
+                    <?php $terms = get_the_terms($post->ID, 'shop_type');
+                    // print_r($terms);
+                    ?>
+
+                    <div class="spot_tag_box">
+                        <?php echo get_the_term_list($post->ID, 'shop_type', '<div class="spot_tag">#', '</div>
+
+
+                            <div class="spot_tag">#', '</div>') ?>
+
+
+
+                        <!-- <div class="spot_tag">#グルメ</div>
+
+
+                            <div class="spot_tag">#海鮮</div>
                         </a>
+                        <a href="#">
+                            <div class="spot_tag">#グルメ</div>
+                        </a> -->
+                    </div>
+
+                </div>
+                <!-- 更新日 -->
+                <p class="last_update">最終更新日：<?php the_field('update'); ?></p>
+
+                <!-- お気に入りボタン -->
+                <div class=" ">
+                    <?php echo get_favorites_button(get_the_ID()); ?>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!-- 装飾 -->
+        <div class="info_wrap info_main">
+            <img src="https://placehold.jp/22x60.png" alt="クリップ" class="course_info_pic_clip" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spotdetail_message_img.png" alt="装飾" class="course_info_pic_boy">
+
+            <!-- メモ欄 -->
+            <div class="info_content">
+                <ul class="info_list">
+                    <li class="info_item font_bold">
+                        おすすめアイテム
                     </li>
                     <li>
-                        <a href="" class="course_top_choice_btn bg_orange">
-                            <p class="course_top_choice_cate">短距離コース</p>
-                            <!-- 距離のクラス名要再考 -->
-                            <p class="course_top_choice_km">〇〇㎞</p>
-                        </a>
+                        <?php the_field('recommend_menu'); ?><br>
                     </li>
+                    <li class="info_item font_bold">
+                        お店から一言
+                    </li>
+                    <li>
+                        <?php the_field('recommend_point'); ?>
+                    </li>
+
                 </ul>
             </div>
         </div>
-        <!-- 更新日 -->
-        <p class="update">最終更新日：<?php the_field('update'); ?></p>
-    </div>
-    <!-- </section> -->
 
-    <!-- <section class="memo"> -->
-    <!-- 装飾 -->
-    <div class="info_wrap info_bg_deco"></div>
-    <div class="info_wrap info_main">
-        <img src="https://placehold.jp/22x60.png" alt="クリップ" class="course_info_pic_clip" />
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spotdetail_message_img.png" alt="装飾" class="course_info_pic_boy">
-        <!-- メモ欄 -->
-        <div class="info_content">
-            <ul class="info_list">
-                <li class="info_item font_bold">
-                    おすすめメニュー
+    </section>
+    <!-- おすすめスポット -->
+    <section>
+        <h2 class="info_headline headline"><ruby>RECCOMEND<rt>こちらもいかがですか？</rt></ruby></h2>
+
+        <!-- 全てのカード入りの箱 -->
+        <div class="spot_card_box">
+            <!-- カード一覧 -->
+            <ul class="spot_list flex">
+
+                <!-- カード -->
+                <?php
+                $args = array(
+                    'post_type' => array('spot', 'shop', 'cycle'), //カスタム投稿タイプを指定
+                    'orderby' => 'rand', // ランダムで表示
+                    'posts_per_page' => 6, //表示する記事数
+                );
+                $taxquerysp = array('relation' => 'AND ');
+                $metaquerysp = array('relation' => 'AND ');
+                $metaquerysp[] = array(
+                    'key' => 'course_id',
+                    'value' => $cid[array_rand($cid, 1)],
+                    'compare' => 'LIKE',
+                );
+                $args['tax_query'] = $taxquerysp;
+                $args['meta_query'] = $metaquerysp;
+                // print_r($metaquerysp);
+                $spot_query = new WP_Query($args); //サブループを変数に格納
+                ?>
+                <?php
+                if ($spot_query->have_posts()) :
+                    while ($spot_query->have_posts()) :
+                        $spot_query->the_post();
+                ?>
+
+
+                <li class="card_container">
+                    <?php get_template_part('template-parts/loop', 'spot'); ?>
                 </li>
-                <li>
-                    <?php the_field('recommend_menu'); ?><br>
-                </li>
-                <li class="info_item font_bold">
-                    お店から一言
-                </li>
-                <li>
-                    <?php the_field('recommend_point'); ?>
-                </li>
+
+                <?php endwhile;
+                endif;
+                wp_reset_postdata(); //サブループを抜ける
+                ?>
+
+
+
+
 
             </ul>
         </div>
-    </div>
 
 
-    <!-- </section> -->
-    <!-- <section class="info"> -->
-    <h2 class="info_headline headline"><ruby>RECCOMEND<rt>こちらもいかがですか？</rt></ruby></h2>
-    <div class="course_spot_cate_list">
-        <ul class="spot_list">
+        <a href="<?php echo home_url('/spot/'); ?>">
+            <div class="common_btn">スポットを探す
+            </div>
+        </a>
+    </section>
 
-
-            <?php
-            $args = array(
-                'post_type' => 'spot', //カスタム投稿タイプを指定
-                'posts_per_page' => -1, //表示する記事数
-            );
-            $taxquerysp = array('relation' => 'AND ');
-            $metaquerysp = array('relation' => 'AND ');
-            $metaquerysp[] = array(
-                'key' => 'course_id',
-                'value' => $cid[array_rand($cid, 1)],
-                'compare' => 'LIKE',
-            );
-            $args['tax_query'] = $taxquerysp;
-            $args['meta_query'] = $metaquerysp;
-            // print_r($metaquerysp);
-            $spot_query = new WP_Query($args); //サブループを変数に格納
-            ?>
-
-            <?php
-            if ($spot_query->have_posts()) :
-                while ($spot_query->have_posts()) :
-                    $spot_query->the_post();
-            ?>
-
-
-            <li class="card_container">
-                <!-- カード -->
-                <?php get_template_part('template-parts/loop', 'spot'); ?>
-
-
-            </li>
-
-            <?php endwhile;
-            endif;
-            wp_reset_postdata(); //サブループを抜ける
-            ?>
-
-        </ul>
-    </div>
-    <!-- </ul> -->
-    <div class="common_btn">スポット一覧</div>
-    <!-- </section> -->
 </main>
-<!-- <script src="js/spot.js"></script> -->
-<!-- フッター切り取りここから -->
+<!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 <?php get_footer(); ?>

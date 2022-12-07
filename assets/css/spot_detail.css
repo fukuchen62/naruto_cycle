@@ -1,166 +1,220 @@
-@charset "utf-8";
-
-.search_title_jp {
-  font-size: 16px;
-  margin: 12px auto auto auto;
-}
-
-/* ページタイトル */
-.search_title {
-  font-family: 'Noto Sans JP';
-  font-weight: bold;
-  font-size: 48px;
-  margin: auto auto 20px auto;
-}
-
-/* 真ん中にする */
-.wrap_search_container {
-  text-align: center;
-  margin: auto;
-}
-
-/* 詳細ボックス */
-.box_spot_info {
+body {
   box-sizing: border-box;
-  background: #FFFFFC;
-  /* アクセント4 */
+}
+
+section+section {
+  margin-top: 160px;
+}
+
+/* ----------------------スポット情報ボックスの設定---------------------- */
+.spot_detail_box {
+  width: calc(100%*0.82051282);
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
   border: 8px solid #96C85C;
-  width: 320px;
-  height: 1220px;
-  margin: auto;
+  background-color: #fffffc;
 }
 
-/* 詳細 */
-.spot_date {
-  align-items: left;
-  margin: 16px auto;
-  width: 281px;
+@media screen and (min-width: 1024px) {
+  .spot_detail_box {
+    width: 1024px;
+  }
 }
 
-/* 施設名 */
-.spot_name {
-  font-size: 32px;
-  text-align: left;
-  font-weight: bold;
+.spot_date_img_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-/* 施設説明 */
+/* ----------------------写真のスライド---------------------- */
+.spot_img_box {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .spot_img_box {
+    max-width: 476px;
+  }
+}
+
+.slider-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slick-prev, .slick-next {
+  z-index: 2;
+}
+
+.slick-prev {
+  left: 0 !important;
+}
+
+.slick-next {
+  right: 0 !important;
+}
+
+/* メインスライド画像 */
+.slider_img_box {
+  overflow: hidden;
+}
+
+.slider_img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* ----------------------メイン情報の設定---------------------- */
+.spot_maindate_box {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .spot_maindate_box {
+    max-width: 476px;
+  }
+}
+
+
+/* .spot_nameはcommon cssで設定（カードと共通） */
+
 .spot_text {
-  text-align: left;
-  margin: 8px auto 20px auto;
+  margin-bottom: 8px;
 }
 
+/* ----------------------情報リストの設定---------------------- */
 /* テーブル */
-.info_item {
+table, th, td {
+  border: solid 1px #000;
+  border-radius: 5px;
+}
+
+.spot_main_item {
+  width: 100%;
+  margin-top: 16px;
   border-spacing: 8px;
-  margin: auto -6px;
   text-align: left;
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 8px;
 }
 
 /* フォント変更 */
 th {
+  padding: 8px;
   font-weight: normal;
 }
 
 td {
-  white-space: nowrap;
+  padding: 8px;
+  /* white-space: nowrap; */
+  word-wrap: break-word;
 }
 
-/* SNS */
-.spot_icon {
-  display: flex;
-  gap: 8px 20px;
-  /* 余白 */
+
+
+/* ----------------------マップ設定---------------------- */
+.box_heading {
+  text-align: left;
+  margin: 32px auto 16px;
 }
 
-.info_remark {
-  margin: 8px;
+@media screen and (min-width: 600px) {
+  .box_heading {
+    text-align: center;
+  }
 }
 
-/* 施設サービスアイコン */
+.spot_map_box {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .spot_map_box {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.spot_map_box iframe {
+  width: 100%;
+  height: 240px;
+}
+
+/* ----------------------サービスアイコンの設定---------------------- */
+.spot_icon_box {
+  width: 100%;
+}
+
 .spot_date_icon {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  /* 余白 */
-  margin: auto auto 32px auto;
 }
 
-/* タグ */
-.spot_typetag_wrap {
-  display: flex;
+.spot_service_icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
-.spot_typetag {
-  white-space: nowrap;
-  margin: auto 28px 0px 0px;
-  font-weight: bold;
+
+/* ----------------------スポット通過コースのボタン---------------------- */
+.spot_choice_course_box {
+  margin: 0 auto;
 }
 
-span {
-  width: 75px;
-  height: 28px;
-  border-radius: 4px;
-  background-color: #D4EBEC;
+.spot_choice_text {
+  text-align: center;
+  margin: 32px auto 16px;
 }
 
-/* コースの案内 */
-.spot_apply {
-  font-weight: bold;
-  margin: 32px auto 22px auto;
-  /* text-align: center; */
-  border-bottom: 5px dashed #74C7F0;
-  width: 200px;
-  white-space: nowrap
-}
-
-/* コース案内位置 */
-.f_wrap {
-  flex-wrap: nowrap;
-  margin: -10px;
-}
-
-.course_top_choice_list a {
-  padding: 2px;
-}
-
-.course_top_choice_list li {
-  margin: 0px auto 20px auto;
-}
-
-/* コースの位置 */
-.course_top_choice_list a {
-  /* border: 1px solid #000; */
-  display: inline-block;
-  display: flex;
-  flex-direction: column;
+.spot_course_btnbox {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 60px;
-  /* margin: 8px; */
-  border-radius: 50%;
 }
 
-/* .flex {
-    display: flex;
-    gap:4px
-} */
-.course_top_choice_list li {
-  margin: 0px 2px;
+/* ----------------------スポットタグ---------------------- */
+
+.spot_tag_box {
+  margin: 32px auto 16px;
+  text-align: center;
 }
 
-/* 更新日 */
-.update {
-  margin: 0px -150px 32px auto;
+.spot_tag_box a+a {
+  margin-left: 16px;
 }
+
+.spot_tag {
+  display: inline-block;
+  text-align: center;
+  padding: 8px;
+  background-color: #D4EBEC;
+  border-radius: 5px;
+
+}
+
+/* ----------------------最終更新日---------------------- */
+.last_update {
+  text-align: right;
+}
+
+
 
 /*--------- メモ欄 -------------------------------------*/
 
 /* コース情報を囲う色付きの部分の設定 */
 .info_wrap {
+  margin-top: 80px;
   padding-top: 80px;
   width: 320px;
   height: 400px;
@@ -192,6 +246,7 @@ span {
   transform: rotateZ(3deg);
 }
 
+
 /* 前の白い部分 */
 .info_main {
   background-color: #fff;
@@ -201,6 +256,7 @@ span {
   column-gap: 64px;
   justify-content: center;
 }
+
 
 /* 装飾 */
 .course_info_pic_clip {
@@ -229,7 +285,8 @@ span {
 
 /* テキストが入る部分の設定 */
 .info_content {
-  width: 250px;
+  width: 100%;
+  padding: 20px;
   line-height: 2rem;
 }
 
@@ -242,7 +299,7 @@ span {
   margin: auto -10px;
 }
 
-/* RECOMMENDの見出し */
+/* RECCOMENDの見出し */
 .info_headline {
   margin: 160px auto 32px auto;
 }
@@ -263,190 +320,4 @@ span {
 
 .spot_item_name {
   text-align: left;
-}
-
-/* スポットのもっと見るボタンの設定 */
-.common_btn {
-  margin: -32px auto 60px auto;
-}
-
-/* コース上スポット全体の表示設定 */
-.course_spot_cate_list {
-  margin-left: auto;
-  margin-right: auto;
-  width: 320px;
-}
-
-/* タブレット時サイズ変更 */
-@media screen and (min-width: 600px) {
-
-  /* 詳細箱の大きさ */
-  .box_spot_info {
-    /* position: relative; */
-    width: 520px;
-    height: 1450px;
-  }
-
-  /* タブレット以上でのサムネイル画像 */
-  /* .container_pc {
-    margin: auto;
-  } */
-
-  /* 地図サイズ */
-  iframe {
-    width: 475px;
-    height: 160px;
-    margin-left: -20px;
-  }
-
-  /* 詳細文 */
-  .spot_date {
-    width: 100%;
-    margin-left: 10px;
-  }
-
-  /* 日付 */
-  .update {
-    margin-left: 195px;
-  }
-}
-
-/* タブレット時2カラムにする場合 */
-@media screen and (min-width: 671px) {
-  .course_spot_cate_list {
-    width: 672px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .course_spot_cate_list {
-    width: 1024px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-
-  /* 詳細箱の大きさ */
-  .box_spot_info {
-    position: relative;
-    width: 1024px;
-    height: 785px;
-  }
-
-  /* 詳細 */
-  .spot_date {
-    align-items: center;
-    margin: -530px 518px;
-    width: 476px;
-  }
-
-  /* コースの詳細 */
-  .this_course {
-    /* margin-top:400px ;
-  margin-right: 500px; */
-    position: absolute;
-    top: 570px;
-    right: 650px;
-  }
-
-  /* データ更新日 */
-  .update {
-    /* margin-top: 570px; */
-    margin-left: 698px;
-  }
-
-  .info_content {
-    width: 300px;
-    word-wrap: break-word;
-    text-align: left;
-    margin-right: 250px;
-  }
-}
-
-/* モバイル時にPC版画像非表示 */
-.img_pc {
-  display: none;
-}
-
-@media screen and (min-width: 600px) {
-  .img_sp {
-    display: none;
-  }
-
-  .img_pc {
-    display: block;
-  }
-
-  .container_pc {
-    display: block;
-    /* 上にあったmarginをここに統合 */
-    margin: auto;
-    text-align: left;
-    /* margin: 12px 28px 0px 12px; */
-    /* margin-right: 515px; */
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .container_pc {
-    margin-right: 515px;
-  }
-}
-
-/* サムネイルレイアウトのためのスタイル */
-.container {
-  margin: 0px auto 0;
-  /* max-width: 100%; */
-}
-
-/* メイン画像 */
-/* .main-img {
-  margin: 12px auto 5px auto;
-} */
-
-/* メインサムネイル */
-.main-img {
-  margin: 12px auto 5px auto;
-  height: 200px;
-  max-width: 100%;
-}
-
-.main-img {
-  /* height: auto;
-  width: 100%; */
-}
-
-
-/* アクティブな画像の枠線を変更 */
-.sub-img li.current img {
-  border: 2px solid rgb(0, 0, 0);
-  transition: border .5s;
-}
-
-/* サブサムネイル位置調整 */
-.sub-img {
-  display: flex;
-  /* margin-top: 10px; */
-}
-
-.sub-img li {
-  margin-right: 2%;
-  width: calc(96% / 3);
-}
-
-.sub-img li:nth-child(3n) {
-  margin-right: 0;
-}
-
-/* 切り替わり */
-.sub-img li img {
-  border: 2px solid transparent;
-  transition: border .5s;
-}
-
-/* サブサムネイル設定 */
-.sub-img img {
-  cursor: pointer;
-  width: 100%;
 }

@@ -291,9 +291,33 @@ function add_individual_stylesheet_script()
     // spot詳細ページ
     else if (is_singular(array('shop', 'spot', 'cycle', 'course'))) {
         wp_enqueue_style('naruto_cycle-spot_detail', get_template_directory_uri() . '/assets/css/spot_detail.css', array(), false);
+        wp_enqueue_style(
+            'naruto_cycle-top',
+            get_template_directory_uri() . '/assets/css/index.css',
+            array(),
+            false
+        );
+
+        //slickCSSを読み込む
+        wp_enqueue_style('naruto_cycle-slick', '"https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" ');
+
+        wp_enqueue_style('slick', get_template_directory_uri() . '/assets/slick/slick.css', false);
+
+        //slick-themeCSSを読み込む
+        wp_enqueue_style('naruto_cycle-slick_theme', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css ');
+
+        wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css', false);
+
+
+
         // js
         wp_enqueue_script('naruto_cycle-spot_spot_detail-script', get_template_directory_uri() . '/assets/js/course.js', '', '', true);
         wp_enqueue_script('naruto_cycle-spot_spot_detail-script2', get_template_directory_uri() . '/assets/js/spot.js', '', '', true);
+        // wp_enqueue_script('slick-min', get_template_directory_uri() . '/assets/slick/slick.min.js', '', '', true);
+        wp_enqueue_script(
+            'naruto_cycle_slick',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
+        );
     }
     //mypage
     else if (is_page('mypage')) {
