@@ -175,6 +175,13 @@
 	color: rgba(255, 255, 255, 0.9);
 }
 
+.footer_nav_item a:hover {
+	color: #EF6000;
+	background-color: #D4EBEC;
+	padding: 2px;
+	border-radius: 2px;
+}
+
 .bold {
 	font-weight: bold;
 	font-size: 16px;
@@ -183,3 +190,11 @@
 }
 
 /* 近藤追加分ここまで */
+
+/* PCサイズフッターナビの文字設定（髙瀬追加） */
+@media screen and (min-width: 1024px) {
+	.footer_nav_item {
+		font-size: 14px;
+		line-height: 2em;
+	}
+}
