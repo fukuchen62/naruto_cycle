@@ -34,7 +34,7 @@
                     <li class="footer_nav_item"><a href=" <?php echo get_term_link('eat', 'shop_type'); ?>">食べる</a></li>
                     <li class="footer_nav_item"><a href="<?php echo get_term_link('buy', 'shop_type'); ?>">買う</a></li>
                     <li class="footer_nav_item"><a href="<?php echo get_term_link('enjoy', 'spot_type'); ?>">楽しむ</a></li>
-                    <li class="footer_nav_item"><a href="<?php echo get_term_link('cycle', 'shop_type'); ?>">サイクルスポット</a></li>
+                    <li class="footer_nav_item"><a href="<?php echo get_term_link('cycle-spot', 'shop_type'); ?>">サイクルスポット</a></li>
                 </ul>
             </li>
             <li class="footer_headline">Q＆A・その他
