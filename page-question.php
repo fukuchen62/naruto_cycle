@@ -7,10 +7,10 @@
     </div>
 
     <!-- パンくずリスト -->
-    <div class="bradcrumbs">
-        <!-- パンくず -->
-        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
-    </div>
+    <!-- <div class="bradcrumbs"> -->
+    <!-- パンくず -->
+    <?php /**echo do_shortcode('[flexy_breadcrumb]');*/ ?>
+    <!-- </div> -->
 
     <!-- Q&A -->
     <section class="qaa">

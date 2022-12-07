@@ -12,10 +12,10 @@
         </div>
 
         <!-- パンくずリスト -->
-        <div class="bradcrumbs">
-            <!-- パンくず -->
-            <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
-        </div>
+        <!-- <div class="bradcrumbs"> -->
+        <!-- パンくず -->
+        <?php /**echo do_shortcode('[flexy_breadcrumb]'); */ ?>
+        <!-- </div> -->
         <!-- ページ見出し -->
         <section class="news">
             <h2 class="course_top headline"><ruby>NEWS<rt>ニュース</rt></ruby></h2>

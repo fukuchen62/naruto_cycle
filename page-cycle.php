@@ -7,10 +7,10 @@
     </div>
 
     <!-- パンくずリスト -->
-    <div class="bradcrumbs">
-        <!-- パンくず -->
-        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
-    </div>
+    <!-- <div class="bradcrumbs"> -->
+    <!-- パンくず -->
+    <?php /**echo do_shortcode('[flexy_breadcrumb]'); */ ?>
+    <!-- </div> -->
     <div class="howto">
         <h2 class="huwto_headline headline"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></h2>
         <div class="howto_container">

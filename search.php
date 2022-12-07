@@ -8,10 +8,10 @@
     </div>
 
     <!-- パンくずリスト -->
-    <div class="bradcrumbs">
-        <!-- パンくず -->
-        <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
-    </div>
+    <!-- <div class="bradcrumbs"> -->
+    <!-- パンくず -->
+    <!-- <?php /**echo do_shortcode('[flexy_breadcrumb]'); */ ?> -->
+    <!-- </div> -->
     <div class="wrap">
 
         <!-- ページタイトル -->

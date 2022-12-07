@@ -8,10 +8,10 @@
         </div>
 
         <!-- パンくずリスト -->
-        <div class="bradcrumbs">
-            <!-- ここに＞パンくずリストが＞入ります -->
-            <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
-        </div>
+        <!-- <div class="bradcrumbs"> -->
+        <!-- ここに＞パンくずリストが＞入ります -->
+        <?php /**echo do_shortcode('[flexy_breadcrumb]');*/ ?>
+        <!-- </div> -->
         <div class="news_detail">
             <div class="news_detail_container flex">
                 <article class="news_detail_article">
