@@ -109,7 +109,13 @@ button {
 	}
 }
 
-.menu li:last-child {
+/* 下線アニメーション時バグが出るため */
+/* last-childからli全体に変更 */
+/* .menu li:last-child {
+	margin-bottom: 24px;
+} */
+
+.menu li {
 	margin-bottom: 24px;
 }
 
@@ -142,6 +148,7 @@ button {
 }
 
 .menu-list a {
+	position: relative;
 	justify-items: center;
 	display: inline-block;
 	/* padding: 24px; */
@@ -150,11 +157,35 @@ button {
 	margin-top: 10px;
 }
 
-.menu a:hover {
+.menu-list a:hover {
 	/* background: rgb(162, 148, 255); */
 	color: #EF6000;
 }
 
+/* g-nav下線アニメーションの設定 */
+.menu-list a::after {
+	position: absolute;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #EF6000;
+	bottom: -4px;
+	transform: scale(0, 1);
+	transform-origin: right top;
+	/*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+	transition: transform 0.3s;
+	/*変形の時間*/
+}
+
+.menu-list a:hover::after {
+	transform: scale(1, 1);
+	/*ホバー後、x軸方向に1（相対値）伸長*/
+	transform-origin: left top;
+	/*左から右に向かう*/
+}
+
+/* ハンバーガーメニューの設定 */
 .btn {
 	/* ボタンの配置位置  */
 	position: fixed;
