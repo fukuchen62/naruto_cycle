@@ -98,6 +98,15 @@ $(window).on("load", function () {
 	var windowWidth = $(window).width();
 	var windowSm = 671;
 	var windowPc = 1023;
+
+	if (eatList == 1) $(".eat_btn").prev().css({ "justify-content": "center" });
+	if (enjoyList == 1)
+		$(".enjoy_btn").prev().css({ "justify-content": "center" });
+	if (shoppingList == 1)
+		$(".shopping_btn").prev().css({ "justify-content": "center" });
+	if (cycleList == 1)
+		$(".cycle_btn").prev().css({ "justify-content": "center" });
+
 	if (windowWidth <= windowSm) {
 		//横幅671px以下（1カラム）に適用させるJavaScript
 		// spの場合
