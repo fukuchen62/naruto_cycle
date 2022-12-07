@@ -51,9 +51,11 @@
 
     <div class="sns_container flex gap32_16">
         <!-- twitter -->
-        <a href=""><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
+        <a href="//twitter.com/intent/tweet?url=http://www.naruto-cycle.com/&text=" target="_blank" rel="nofollow noopener noreferrer"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン">
+        </a>
         <!-- facebook -->
-        <a href=""><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http://www.naruto-cycle.com/&t=" target="_blank" rel="nofollow noopener noreferrer"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン">
+        </a>
     </div>
     <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
 </footer>
