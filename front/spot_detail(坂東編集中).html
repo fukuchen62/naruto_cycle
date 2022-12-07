@@ -84,10 +84,6 @@
                 <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
             </div>
 
-            <!-- パンくずリスト -->
-            <div class="bradcrumbs">
-                ここに＞パンくずリストが＞入ります
-            </div>
             <section class="search">
                 <!-- 検索ボックス -->
                 <div class="wrap_search_container">
@@ -101,14 +97,19 @@
                         <div class="spot_date_img_box">
 
                             <!-- 画像ボックス -->
-                            <div class="slider6-wrap spot_img_box">
-                                <ul class="slider-6" id="js-slider-6">
-                                    <li><img src="./assets/uploads/IMG_8143.JPG" alt="サムネイル画像"></li>
-                                    <li><img src="https://placehold.jp/480x400.png" alt="サムネイル画像"></li>
-                                    <li><img src="https://placehold.jp/480x400.png" alt="サムネイル画像"></li>
-                                </ul>
-                                <div class="thumbs_dots"></div>
+                            <div class="spot_img_box">
+
+                                <div class="slider-container">
+                                    <div id="slider" class="slider_img_box">
+                                        <div><img src="./assets/uploads/IMG_8143.JPG" alt="アイキャッチ画像" class="slider_img"></div>
+                                        <div><img src="https://placehold.jp/480x400.png" alt="アイキャッチ画像" class="slider_img"></div>
+                                        <div><img src="./assets/uploads/IMG_8143.JPG" alt="アイキャッチ画像" class="slider_img"></div>
+                                        <div><img src="https://placehold.jp/480x400.png" alt="アイキャッチ画像" class="slider_img"></div>
+                                    </div>
+                                </div>
+
                             </div>
+
                             <!-- スポットメインデータボックス -->
                             <div class="spot_maindate_box">
                                 <!-- スポット名 -->
@@ -265,7 +266,6 @@
                 </div>
 
                 <!-- 装飾 -->
-                <div class="info_wrap info_bg_deco"></div>
                 <div class="info_wrap info_main">
                     <img src="https://placehold.jp/22x60.png" alt="クリップ" class="course_info_pic_clip" />
                     <img src="assets/image/spotdetail_message_img.png" alt="装飾" class="course_info_pic_boy">
