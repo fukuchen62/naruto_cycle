@@ -517,6 +517,7 @@
 /* スポットのもっと見るボタンの設定----------- */
 .spot_more_btn {
 	margin: 32px auto 60px;
+	display: none;
 }
 
 section + section {

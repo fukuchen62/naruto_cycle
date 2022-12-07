@@ -1,6 +1,6 @@
 "use strict";
 
-// // コースがクリックされた場合の挙動（データベースで画面遷移する場合は不要かも）
+//// // コースがクリックされた場合の挙動（データベースで画面遷移する場合は不要かも）
 // $(".course_nav.beginner").click(function () {
 // 	$(".iframe_wrapper")
 // 		.removeClass("short")
@@ -46,7 +46,7 @@
 // 	);
 // });
 
-// コース情報の後ろで回転する装飾のアニメーション
+// コース情報の後ろで回転する装飾のアニメーション;
 const before = $(".text");
 const text = before.text(); // spanタグで囲む前のテキストを取得
 const textArray = text.split(""); // 取得したテキストを1文字ずつに分割し配列に
@@ -96,31 +96,31 @@ $(window).on("load", function () {
 	console.log(eatList);
 
 	var windowWidth = $(window).width();
-	var windowSm = 599;
+	var windowSm = 671;
 	var windowPc = 1023;
 	if (windowWidth <= windowSm) {
-		//横幅599px以下（スマホ）に適用させるJavaScript
+		//横幅671px以下（1カラム）に適用させるJavaScript
 		// spの場合
-		// 4件未満ならボタン非表示。
-		if (eatList < 4) $(".eat_btn").css({ display: "none" });
-		if (enjoyList < 4) $(".enjoy_btn").css({ display: "none" });
-		if (shoppingList < 4) $(".shopping_btn").css({ display: "none" });
-		if (cycleList < 4) $(".cycle_btn").css({ display: "none" });
+		// 4件以上ならボタン非表示。
+		if (eatList > 3) $(".eat_btn").css({ display: "block" });
+		if (enjoyList > 3) $(".enjoy_btn").css({ display: "block" });
+		if (shoppingList > 3) $(".shopping_btn").css({ display: "block" });
+		if (cycleList > 3) $(".cycle_btn").css({ display: "block" });
 	} else if (windowWidth <= windowPc) {
-		//横幅1023px以下（タブレット）に適用させるJavaScript
+		//横幅1023px以下（2カラム）に適用させるJavaScript
 		// tbの場合
-		// 5件未満ならボタン非表示。
-		if (eatList < 5) $(".eat_btn").css({ display: "none" });
-		if (enjoyList < 5) $(".enjoy_btn").css({ display: "none" });
-		if (shoppingList < 5) $(".shopping_btn").css({ display: "none" });
-		if (cycleList < 5) $(".cycle_btn").css({ display: "none" });
+		// 5件以上ならボタン非表示。
+		if (eatList > 4) $(".eat_btn").css({ display: "block" });
+		if (enjoyList > 4) $(".enjoy_btn").css({ display: "block" });
+		if (shoppingList > 4) $(".shopping_btn").css({ display: "block" });
+		if (cycleList > 4) $(".cycle_btn").css({ display: "block" });
 	} else {
 		//それ以外（PC）に適用させるJavaScript
 		// pcの場合
-		// 7件未満ならボタン非表示
-		if (eatList < 7) $(".eat_btn").css({ display: "none" });
-		if (enjoyList < 7) $(".enjoy_btn").css({ display: "none" });
-		if (shoppingList < 7) $(".shopping_btn").css({ display: "none" });
-		if (cycleList < 7) $(".cycle_btn").css({ display: "none" });
+		// 6件以上ならボタン非表示
+		if (eatList > 6) $(".eat_btn").css({ display: "block" });
+		if (enjoyList > 6) $(".enjoy_btn").css({ display: "block" });
+		if (shoppingList > 6) $(".shopping_btn").css({ display: "block" });
+		if (cycleList > 6) $(".cycle_btn").css({ display: "block" });
 	}
 });
