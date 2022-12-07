@@ -105,8 +105,15 @@ table, th, td {
   border-spacing: 8px;
 }
 
+.spot_mainInfo_sns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 /* フォント変更 */
 th {
+  width: 100px;
   padding: 8px;
   font-weight: normal;
 }
