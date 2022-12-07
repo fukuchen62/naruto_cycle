@@ -11,6 +11,8 @@ $(window).on("load", function () {
 	var windowSm = 671;
 	var windowPc = 1023;
 
+	if (list == 1) $(".spot_list").css({ "justify-content": "center" });
+
 	if (windowWidth <= windowSm) {
 		//横幅671px以下（1カラム）に適用
 		// spの場合

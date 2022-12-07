@@ -523,3 +523,7 @@
 section + section {
 	margin-top: 160px;
 }
+
+main {
+	padding-bottom: 60px;
+}
