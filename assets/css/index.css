@@ -123,6 +123,29 @@ section+section {
     left: 10%;
 }
 
+/* 髙瀬追加・サイクリングマン左右の動き */
+.animation {
+    animation-timing-function: cubic-bezier(0.59, 0.35, 0.24, 1.2);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+}
+
+.move_slide {
+    animation-name: anim_h;
+}
+
+@keyframes anim_h {
+    0% {
+        transform: translate(0px, 0);
+    }
+
+    100% {
+        transform: translate(500px, 0);
+    }
+}
+
+
 /* TB表示 */
 @media screen and (min-width: 600px) {
     .key_man {
