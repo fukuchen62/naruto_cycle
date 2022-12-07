@@ -4,7 +4,7 @@
         <!-- お気に入りボタン -->
         <div class="spot_like_icon">
             <?php echo get_favorites_button(get_the_ID()); ?>
-            <i class="far fa-heart LikesIcon-fa-heart"><?php get_favorites_button(get_the_ID()) ?></i>
+            <!-- <i class="far fa-heart LikesIcon-fa-heart"><?php get_favorites_button(get_the_ID()) ?></i> -->
         </div>
         <!-- カード１枚にかかるスポット一覧へのリンク -->
         <a href="<?php the_permalink(); ?>">
