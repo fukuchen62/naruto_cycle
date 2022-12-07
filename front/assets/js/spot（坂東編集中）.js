@@ -34,7 +34,7 @@ $(function () {
       return '';
     },
     fade: true, // スライド切り替えをフェード
-    autoplay: true, //自動再生させない
+    autoplay: true, //自動再生させる
     slidesToShow: 1, // 表示させるスライド数
   });
 

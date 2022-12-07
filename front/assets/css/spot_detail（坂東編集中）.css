@@ -6,7 +6,7 @@ section+section {
   margin-top: 160px;
 }
 
-/* スポット情報ボックスの設定 */
+/* ----------------------スポット情報ボックスの設定---------------------- */
 .spot_detail_box {
   width: calc(100%*0.82051282);
   max-width: 1024px;
@@ -16,27 +16,43 @@ section+section {
   background-color: #fffffc;
 }
 
+@media screen and (min-width: 1024px) {
+  .spot_detail_box {
+    width: 1024px;
+  }
+}
+
 .spot_date_img_box {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
 }
 
-/* 写真のスライド */
+/* ----------------------写真のスライド---------------------- */
 .spot_img_box {
-  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .spot_img_box {
+    max-width: 476px;
+  }
 }
 
 .slider6-wrap {
   width: 100%;
-  max-width: 480px;
   margin: 0 auto;
   position: relative;
 }
 
+@media screen and (min-width: 1024px) {
+  .slider6-wrap {
+    max-width: 476px;
+  }
+}
+
 .slider-6 .slick-slide {
-  height: 265px;
   object-fit: cover;
   overflow: hidden;
 }
@@ -45,7 +61,8 @@ section+section {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  overflow: hidden;
 }
 
 .thumbs_dots {
@@ -54,8 +71,8 @@ section+section {
 
 .thumbs_list li {
   display: inline-block;
-  width: 150px;
-  height: 80px;
+  width: calc(100%/3);
+  height: 100px;
   opacity: 0.4;
   cursor: pointer;
   transition: opacity 0.3s;
@@ -66,10 +83,16 @@ section+section {
 }
 
 
-/* メイン情報の設定 */
+/* ----------------------メイン情報の設定---------------------- */
 .spot_maindate_box {
-  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .spot_maindate_box {
+    max-width: 476px;
+  }
 }
 
 
@@ -79,38 +102,65 @@ section+section {
   margin-bottom: 8px;
 }
 
-/* 情報リストの設定 */
-.spot_main_info {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  line-height: 20px;
+/* ----------------------情報リストの設定---------------------- */
+/* テーブル */
+table, th, td {
+  border: solid 1px #000;
+  border-radius: 5px;
 }
 
-.spot_main_info dt {
-  width: 35%;
+.spot_main_item {
+  width: 100%;
+  margin-top: 16px;
+  border-spacing: 8px;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 8px;
+}
+
+/* フォント変更 */
+th {
+  padding: 8px;
   font-weight: normal;
 }
 
-.spot_main_info dd {
-  width: 65%;
-  line-height: 1.5em;
+td {
+  padding: 8px;
+  white-space: nowrap;
 }
 
-/* マップ設定 */
+
+
+/* ----------------------マップ設定---------------------- */
+.box_heading {
+  text-align: left;
+  margin: 32px auto 16px;
+}
+
+@media screen and (min-width: 600px) {
+  .box_heading {
+    text-align: center;
+  }
+}
+
 .spot_map_box {
   width: 100%;
-  margin: 16px auto;
+  margin: 0 auto;
 }
 
-/* サービスアイコンの設定 */
+@media screen and (min-width: 600px) {
+  .spot_map_box {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ----------------------サービスアイコンの設定---------------------- */
 .spot_icon_box {
   width: 100%;
 }
 
 .spot_date_icon {
-  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -123,32 +173,44 @@ section+section {
 }
 
 
-/* スポット通過コースのボタン */
+/* ----------------------スポット通過コースのボタン---------------------- */
 .spot_choice_course_box {
-  margin-top: 32px;
+  margin: 0 auto;
 }
 
 .spot_choice_text {
   text-align: center;
+  margin: 32px auto 16px;
 }
 
-.index_course_btnbox {
+.spot_course_btnbox {
   width: 100%;
   flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
-/* スポットタグ */
+/* ----------------------スポットタグ---------------------- */
+
 .spot_tag_box {
-  width: 100%;
-  height: 24px;
+  margin: 32px auto 16px;
+  text-align: center;
+}
+
+.spot_tag_box a+a {
+  margin-left: 16px;
 }
 
 .spot_tag {
   display: inline-block;
+  text-align: center;
+  padding: 8px;
+  background-color: #D4EBEC;
+  border-radius: 5px;
 
 }
 
-/* 最終更新日 */
+/* ----------------------最終更新日---------------------- */
 .last_update {
   text-align: right;
 }

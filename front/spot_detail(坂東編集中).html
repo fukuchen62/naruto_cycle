@@ -103,10 +103,9 @@
                             <!-- 画像ボックス -->
                             <div class="slider6-wrap spot_img_box">
                                 <ul class="slider-6" id="js-slider-6">
-                                    <li><img src="./assets/uploads/IMG_8143.JPG" alt=""></li>
-                                    <li><img src="https://placehold.jp/480x400.png" alt=""></li>
-                                    <li><img src="https://placehold.jp/480x400.png" alt=""></li>
-                                    <li><img src="https://placehold.jp/480x400.png" alt=""></li>
+                                    <li><img src="./assets/uploads/IMG_8143.JPG" alt="サムネイル画像"></li>
+                                    <li><img src="https://placehold.jp/480x400.png" alt="サムネイル画像"></li>
+                                    <li><img src="https://placehold.jp/480x400.png" alt="サムネイル画像"></li>
                                 </ul>
                                 <div class="thumbs_dots"></div>
                             </div>
@@ -118,22 +117,40 @@
                                 <p class="spot_text">
                                                         魚が食べたいならここ！いつもにぎわう鳴門の名店。</p>
 
-                                <dl class="spot_main_info flex">
-                                    <dt>営業時間</dt>
-                                    <dd>11:00～21:00</dd>
-                                    <dt>定休日</dt>
-                                    <dd>火曜日</dd>
-                                    <dt>駐車場</dt>
-                                    <dd>８台</dd>
-                                    <dt>電話番号</dt>
-                                    <dd>088-686-0005</dd>
-                                    <dt>所在地</dt>
-                                    <dd>徳島県鳴門市撫養町大桑島字北ノ浜51-1</dd>
-                                    <dt>webサイト</dt>
-                                    <dd><a href="http://www.arashi-naruto.co.jp/" target=" _blank" rel="noopener noreferrer">http://www.arashi-naruto.co.jp/</a></dd>
-                                    <dt>備考</dt>
-                                    <dd>駐車場は席数より少ないです。<br>メニューはその日の仕入れにより変わります。<br>土日は混雑する為、予約推奨。</dd>
-                                </dl>
+
+                                <table class="spot_main_item">
+                                    <tbody>
+                                        <tr>
+                                            <th>営業時間</th>
+                                            <td>11:00～21:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>定休日</th>
+                                            <td>火曜日</td>
+                                        </tr>
+                                        <tr>
+                                            <th>駐車場</th>
+                                            <td>８台</td>
+                                        </tr>
+                                        <tr>
+                                            <th>電話</th>
+                                            <td>088-123-4567</td>
+                                        </tr>
+                                        <tr>
+                                            <th>所在地</th>
+                                            <td>徳島県鳴門市撫養町大桑島字北ノ浜51-1</td>
+                                        </tr>
+                                        <tr>
+                                            <th>webサイト</th>
+                                            <td><a href="http://www.arashi-naruto.co.jp/">http://www.arashi-naruto.co.jp/</a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>備考</th>
+                                            <td>駐車場は席数より少ないです。<br>メニューはその日の仕入れにより変わります。<br>土日は混雑する為、予約推奨。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
@@ -142,11 +159,13 @@
                         <div class="spot_subdate_box">
                             <!-- マップのボックス -->
                             <div class="spot_map_box">
+                                <p class="box_heading">マップ</p>
                                 <!-- グーグルマップ埋め込み -->
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.3277188231764!2d134.6014123152186!3d34.18910218056893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536595bcb61b15%3A0x25636e350943bc9e!2z5ZGz5YemIOOBguOCieOBlw!5e0!3m2!1sja!2sjp!4v1669605025472!5m2!1sja!2sjp" title="google_map" width="280" height="200" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.3277188231764!2d134.6014123152186!3d34.18910218056893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35536595bcb61b15%3A0x25636e350943bc9e!2z5ZGz5YemIOOBguOCieOBlw!5e0!3m2!1sja!2sjp!4v1669605025472!5m2!1sja!2sjp" title="google_map" width="100%" height="240" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                                 <!-- サービスアイコンボックス -->
                                 <div class="spot_icon_box">
+                                    <p class="box_heading">設備</p>
                                     <ul class="spot_date_icon">
                                         <li class="spot_service_icon">
                                             <a href="">
@@ -203,7 +222,7 @@
                                     <p class="spot_choice_text">ここに行くならこのコース！</p>
 
                                     <!-- コース選択ボタンボックス -->
-                                    <div class="index_course_btnbox flex">
+                                    <div class="spot_course_btnbox flex">
 
                                         <!-- 初心者コース -->
                                         <div class="index_course_selectbtn beginner">
@@ -225,17 +244,18 @@
                             </div>
 
                             <!-- タグ -->
-                            <!-- <div class="spot_tag_box">
+                            <div class="spot_tag_box">
                                 <a href="#">
-                                    <span class="spot_tag">＃グルメ</span>
+                                    <div class="spot_tag">#グルメ</div>
                                 </a>
                                 <a href="#">
-                                    <span class="spot_tag">＃グルメ</span>
+                                    <div class="spot_tag">#海鮮</div>
                                 </a>
                                 <a href="#">
-                                    <span class="spot_tag">＃グルメ</span>
+                                    <div class="spot_tag">#グルメ</div>
                                 </a>
-                            </div> -->
+                            </div>
+
                         </div>
                         <!-- 更新日 -->
                         <p class="last_update">最終更新日：2022.12.14</p>
@@ -244,6 +264,31 @@
 
                 </div>
 
+                <!-- 装飾 -->
+                <div class="info_wrap info_bg_deco"></div>
+                <div class="info_wrap info_main">
+                    <img src="https://placehold.jp/22x60.png" alt="クリップ" class="course_info_pic_clip" />
+                    <img src="assets/image/spotdetail_message_img.png" alt="装飾" class="course_info_pic_boy">
+
+                    <!-- メモ欄 -->
+                    <div class="info_content">
+                        <ul class="info_list">
+                            <li class="info_item font_bold">
+                                おすすめメニュー
+                            </li>
+                            <li>
+                                <p>いちごのショートケーキがおすすめです！</p><br>
+                            </li>
+                            <li class="info_item font_bold">
+                                お店から一言
+                            </li>
+                            <li>
+                                <p>いちごのショートケーキがおすすめです！</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
 
             </section>
             <!-- おすすめスポット -->
@@ -361,8 +406,6 @@
                         </li>
                     </ul>
                 </div>
-
-
                 <div class="common_btn">スポット一覧</div>
             </section>
 
