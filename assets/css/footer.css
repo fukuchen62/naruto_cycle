@@ -170,7 +170,8 @@
 
 .footer_nav_item {
 	font-weight: lighter;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 2.5em;
 	color: rgba(255, 255, 255, 0.9);
 }
 
