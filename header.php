@@ -10,6 +10,7 @@
     <meta name="format-detection" content="telephone=no" />
 
     <?php wp_head(); ?>
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/head_favicon.ico">
 </head>
 
 <body <?php body_class(); ?>>
