@@ -40,48 +40,35 @@ section+section {
   }
 }
 
-.slider6-wrap {
+.slider-container {
   width: 100%;
+  height: auto;
   margin: 0 auto;
-  position: relative;
 }
 
-@media screen and (min-width: 1024px) {
-  .slider6-wrap {
-    max-width: 476px;
-  }
+.slick-prev, .slick-next {
+  z-index: 2;
 }
 
-.slider-6 .slick-slide {
-  object-fit: cover;
+.slick-prev {
+  left: 0 !important;
+}
+
+.slick-next {
+  right: 0 !important;
+}
+
+/* メインスライド画像 */
+.slider_img_box {
   overflow: hidden;
 }
 
-.slider-6 .slick-slide img {
-  display: block;
+.slider_img {
   width: 100%;
   height: 360px;
   object-fit: cover;
   overflow: hidden;
 }
-
-.thumbs_dots {
-  margin: 10px 0 0;
-}
-
-.thumbs_list li {
-  display: inline-block;
-  width: calc(100%/3);
-  height: 100px;
-  opacity: 0.4;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.thumbs_list li.slick-active {
-  opacity: 1;
-}
-
 
 /* ----------------------メイン情報の設定---------------------- */
 .spot_maindate_box {
@@ -126,7 +113,8 @@ th {
 
 td {
   padding: 8px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  word-wrap: break-word;
 }
 
 
@@ -258,6 +246,7 @@ td {
   transform: rotateZ(3deg);
 }
 
+
 /* 前の白い部分 */
 .info_main {
   background-color: #fff;
@@ -296,7 +285,8 @@ td {
 
 /* テキストが入る部分の設定 */
 .info_content {
-  width: 250px;
+  width: 100%;
+  padding: 20px;
   line-height: 2rem;
 }
 
