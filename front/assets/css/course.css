@@ -36,6 +36,15 @@
 	cursor: pointer;
 }
 
+/* 髙瀬追加・コース選択ホバー時の設定 */
+.course_nav_list li:hover {
+	font-size: 35px;
+	color: rgb(255, 222, 132);
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+}
+
+
 /* コースのボタンごとに異なる設定 */
 .beginner {
 	background-color: #96c85c;
@@ -256,6 +265,7 @@
 	}
 }
 
+/* 男女自転車のあしらい */
 .course_info_pic_woman {
 	display: none;
 }
@@ -279,6 +289,64 @@
 		left: -30px;
 	}
 }
+
+/* 髙瀬追加・男女イラストアニメーション基本設定 */
+.animation {
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1.5s;
+}
+
+/* 半円の動き */
+.move_rolling {
+	animation-name: anim_s;
+	transform: rotate(5deg);
+	animation-duration: 2s;
+}
+
+@keyframes anim_s {
+	50% {
+		transform: rotate(-5deg);
+	}
+
+	100% {
+		transform: rotate(5deg);
+	}
+}
+
+/* 跳ねる動き */
+.move_jump {
+	animation-name: jump;
+	animation-duration: .4s;
+}
+
+@keyframes jump {
+	0% {
+		transform: translate(0%, 15px) rotateX(10deg);
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
+/* 左右の動き */
+/* .move_slide {
+	animation-name: anim_h;
+}
+
+@keyframes anim_h {
+	0% {
+		transform: translate(0px, 0);
+	}
+
+	100% {
+		transform: translate(30px, 0);
+	}
+} */
+
+
 
 /* 常に表示する装飾 */
 .course_info_pic_clip {
@@ -481,6 +549,6 @@
 	margin: 32px auto 60px;
 }
 
-section + section {
+section+section {
 	margin-top: 160px;
 }
