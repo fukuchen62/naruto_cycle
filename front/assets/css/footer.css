@@ -148,10 +148,10 @@
 	}
 }
 
-.footer_list {
+/* .footer_list {
 	margin-top: 10px;
 	margin-bottom: 16px;
-}
+} */
 
 .footer_nav_item {
 	font-weight: lighter;
@@ -169,7 +169,6 @@
 /* PCサイズフッターナビの文字設定（髙瀬追加） */
 @media screen and (min-width: 1024px) {
 	.footer_nav_item {
-		font-size: 14px;
 		line-height: 2em;
 	}
 }
