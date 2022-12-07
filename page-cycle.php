@@ -94,7 +94,7 @@
         </div>
         <div class="more_naruto list_container">
             <h3 class="howto_list_headline">もっと鳴門について知るには</h3>
-            <ul class="more_naruto_card_list slider">
+            <ul class="more_naruto_card_list">
                 <li class="more_naruto_card_item">
                     <!-- 番号は仮。コラムができ次第番号差し替え -->
                     <a href="<?php the_permalink(156); ?>">
