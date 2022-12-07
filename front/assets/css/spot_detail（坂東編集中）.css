@@ -60,8 +60,8 @@ section+section {
 .slider-6 .slick-slide img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 360px;
+  object-fit: cover;
   overflow: hidden;
 }
 
@@ -155,6 +155,11 @@ td {
   }
 }
 
+.spot_map_box iframe {
+  width: 100%;
+  height: 240px;
+}
+
 /* ----------------------サービスアイコンの設定---------------------- */
 .spot_icon_box {
   width: 100%;
@@ -213,4 +218,116 @@ td {
 /* ----------------------最終更新日---------------------- */
 .last_update {
   text-align: right;
+}
+
+
+
+/*--------- メモ欄 -------------------------------------*/
+
+/* コース情報を囲う色付きの部分の設定 */
+.info_wrap {
+  margin-top: 80px;
+  padding-top: 80px;
+  width: 320px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .info_wrap {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .info_wrap {
+    padding-top: 48px;
+    height: 320px;
+    width: 640px;
+  }
+}
+
+/* メモ */
+/* 後ろの茶色の装飾 */
+.info_bg_deco {
+  background-color: #e1d6b8;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: rotateZ(3deg);
+}
+
+/* 前の白い部分 */
+.info_main {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 64px;
+  justify-content: center;
+}
+
+
+/* 装飾 */
+.course_info_pic_clip {
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  transform: rotateZ(-15deg);
+}
+
+.course_info_pic_boy {
+  position: absolute;
+  width: 91px;
+  height: 210px;
+  top: 275px;
+  right: 0px;
+}
+
+@media screen and (min-width: 1024px) {
+  .course_info_pic_boy {
+    width: 127px;
+    height: 293px;
+    top: 50px;
+    right: 30px;
+  }
+}
+
+/* テキストが入る部分の設定 */
+.info_content {
+  width: 250px;
+  line-height: 2rem;
+}
+
+.font_bold {
+  font-weight: bold;
+}
+
+.info_list li {
+  text-align: left;
+  margin: auto -10px;
+}
+
+/* RECCOMENDの見出し */
+.info_headline {
+  margin: 160px auto 32px auto;
+}
+
+/* カード横並び */
+.spot_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: auto auto 64px auto;
+}
+
+/* カード内文字左寄せ */
+.spot_item_info {
+  text-align: left;
+}
+
+.spot_item_name {
+  text-align: left;
 }
