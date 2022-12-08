@@ -215,7 +215,7 @@
                         鳴門市は海に多く面しているので、サイクリング中も絶景スポットがたくさんあります。<br>
                         サイトでも「ビュースポット」として紹介しているので、是非検索してみてください。<br>
                         詳しくは、下記をご覧ください。<br>
-                        <a href="#" target=" _blank" rel="noopener noreferrer">ビュースポット</a>
+                        <a href="<?php echo get_term_link('viewspot', 'spot_type'); ?>" target=" _blank" rel="noopener noreferrer">ビュースポット</a>
                     </p>
                 </dd>
             </dl>
