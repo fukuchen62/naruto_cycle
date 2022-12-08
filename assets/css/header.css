@@ -10,6 +10,7 @@
 	z-index: 2;
 	align-items: center;
 	background-color: inherit;
+	transition: 0.5s;
 }
 
 
