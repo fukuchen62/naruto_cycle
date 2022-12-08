@@ -1,0 +1,50 @@
+.contact_wrap {
+    width: calc(100%*0.71794872);
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.contact_text_top {
+    margin-bottom: 16px;
+}
+
+.contact_text_bottom {
+    margin: 32px 0 32px;
+}
+
+.consent_text {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.contact_form {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #D4EBEC;
+}
+
+.form_item {
+    padding: 20px;
+    border: 2px solid #74C7F0
+}
+
+.item_req {
+    margin: 0 auto;
+    background-color: #EF6000;
+    color: #fffffc;
+}
+
+.item {
+    width: 100%;
+    margin: 16px auto 0;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: #fffffc;
+}
+
+.contact_submit_btn {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}

@@ -339,7 +339,7 @@ function add_individual_stylesheet_script()
     }
     // お問い合わせ
     else if (is_page('contact')) {
-        wp_enqueue_style('naruto_cycle-contact', get_template_directory_uri() . '/assets/css/question.css', array(), false);
+        wp_enqueue_style('naruto_cycle-contact', get_template_directory_uri() . '/assets/css/contact.css', array(), false);
         // js
         wp_enqueue_script('naruto_cycle-contact-script', get_template_directory_uri() . '/assets/js/question.js', '', '', true);
     }
