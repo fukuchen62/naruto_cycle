@@ -42,7 +42,7 @@
                         <a href="<?php echo home_url('/mypage/'); ?>"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
                     </li>
                     <li class="menu-list font_edge_white">
-                        <a href="<?php echo home_url('/question/'); ?>"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
+                        <a href="<?php echo home_url('/question/'); ?>"><ruby>Q＆A<rt>よくある質問</rt></ruby></a>
                     </li>
                 </ul>
                 <button type="button" class="btn js-btn">
