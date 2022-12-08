@@ -261,12 +261,14 @@
                                     <h3 class="spot_item_name"><?php the_field('shop_name'); ?></h3>
                                     <!-- スポット情報の表 -->
                                     <dl class="spot_item_info flex">
-                                        <dt>営業時間</dt>
-                                        <dd><?php the_field('open_time'); ?></dd>
-                                        <dt>住所</dt>
-                                        <dd><?php the_field('address'); ?></dd>
-                                        <dt>電話番号</dt>
-                                        <dd><?php the_field('telephone'); ?></dd>
+                                        <?php $page_id = get_the_id();
+                                                ?>
+                                        <?php $terms = get_the_terms($post->ID, 'spot_type');
+                                                // print_r($terms);
+                                                ?>
+                                        <dt></dt>
+                                        <dd><?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                                        </dd>
                                     </dl>
                                 </li>
                             </ul>
