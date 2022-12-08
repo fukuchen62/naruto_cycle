@@ -31,7 +31,7 @@
                 ?>
                 <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
                 <!-- スポット名 -->
-                <h3 class="spot_item_name"><?php the_field('shop_name'); ?><?php the_field('spot_name'); ?></h3>
+                <h3 class="spot_item_name"><?php the_title(); ?></h3>
                 <!-- スポット情報の表 -->
                 <dl class="spot_item_info flex">
                     <?php $page_id = get_the_id();

@@ -30,15 +30,21 @@
                     ?>
                     <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
                     <!-- スポット名 -->
-                    <h3 class="spot_item_name"><?php the_field('shop_name'); ?></h3>
+                    <h3 class="spot_item_name"><?php the_title(); ?></h3>
                     <!-- スポット情報の表 -->
                     <dl class="spot_item_info flex">
-                        <dt>営業時間</dt>
-                        <dd><?php the_field('open_time'); ?></dd>
-                        <dt>住所</dt>
-                        <dd><?php the_field('address'); ?></dd>
-                        <dt>電話番号</dt>
-                        <dd><?php the_field('telephone'); ?></dd>
+                        <?php $page_id = get_the_id();
+                        ?>
+
+
+
+                        <dt></dt>
+                        <dd>
+                            <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
+                            <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
+                            <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
+                            <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                        </dd>
                     </dl>
                 </li>
             </ul>

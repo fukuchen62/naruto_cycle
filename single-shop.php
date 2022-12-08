@@ -236,13 +236,13 @@
             <div class="info_content">
                 <ul class="info_list">
                     <li class="info_item font_bold">
-                        おすすめメニュー
+                        お店のオススメ
                     </li>
                     <li>
                         <?php the_field('recommended_menu'); ?><br>
                     </li>
                     <li class="info_item font_bold">
-                        お店から一言
+                        お店のこだわり
                     </li>
                     <li>
                         <?php the_field('recommended_point'); ?>
