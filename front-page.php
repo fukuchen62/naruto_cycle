@@ -236,7 +236,7 @@
                     <div class="spot_card relative">
                         <!-- お気に入りボタン -->
                         <div class="spot_like_icon">
-                            <i class="far fa-heart LikesIcon-fa-heart"></i>
+                            <?php echo get_favorites_button(get_the_ID()); ?>
                         </div>
                         <!-- カード１枚にかかるスポット一覧へのリンク -->
                         <a href="<?php the_permalink(); ?>">
@@ -319,11 +319,11 @@
             <div class="index_insta_decobox">
 
                 <!-- 回転アニメーション -->
-                <div class="index_circle">
+                <!-- <div class="index_circle">
                     <div class="index_inner">
                         <p class="text index_insta_decotxt">HAVE A NICE BIKE TRIP! </p>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- 自転車のあしらい -->
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
