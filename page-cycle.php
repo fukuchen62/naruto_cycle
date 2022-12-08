@@ -92,96 +92,77 @@
 
             </div>
         </div>
+        <!-- スイラドショーここから -->
         <div class="more_naruto list_container">
             <h3 class="howto_list_headline">もっと鳴門について知るには</h3>
-            <ul class="more_naruto_card_list">
+            <ul class="more_naruto_card_list slider">
                 <li class="more_naruto_card_item">
-                    <!-- 番号は仮。コラムができ次第番号差し替え -->
-                    <a href="<?php the_permalink(156); ?>">
-
-                        <?php echo get_the_post_thumbnail(156, 'thumbnail'); ?>
-
+                    <a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img01.png" alt="">
                         <p class="more_naruto_num">01</p>
                         <div class="more_naruto_caption">
                             <h3 class="more_naruto_title">01|インタビュー</h3>
-                            <?php echo get_the_excerpt(156); ?>
+                            日々鳴門サイクリング活性化に尽力している方々へ直にインタビュー。<br>
+                            鳴門サイクリングへの熱い想いを綴っています。読めばサイクリングが好きになる事間違いなし！
                         </div>
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a href="<?php the_permalink(149); ?>">
-
-                        <?php echo get_the_post_thumbnail(149, 'thumbnail'); ?>
-
+                    <a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img02.png" alt="">
                         <p class="more_naruto_num">02</p>
                         <div class="more_naruto_caption">
-                            <h3 class="more_naruto_title">02|ポタリングコラム</h3>
-                            <?php echo get_the_excerpt(149); ?>
+                            <h3 class="more_naruto_title">02|食べる</h3>
+                            渦潮で知られる豊かな海が育んだ海産物をはじめ、鳴門が誇る食の特産品をふんだんに使用した絶品グルメの数々でおもてなしいたします。<br>
+                            地元で愛される名店揃い、ぜひご賞味ください！
                         </div>
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a href=" <?php echo get_term_link('eat', 'shop_type'); ?>">
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
+                    <a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img03.png" alt="">
                         <p class="more_naruto_num">03</p>
                         <div class="more_naruto_caption">
-                            <h3 class="more_naruto_title">03|食べる</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            <h3 class="more_naruto_title">03|買う</h3>
+                            なると金時、わかめ、れんこんなど、鳴門ならではの特産品を使用した商品や、国の伝統工芸品に認定されている大谷焼など、銘品・逸品が目白押し。<br>
+                            旅の思い出に、贈答品に、鳴門ショッピングをお楽しみください！
                         </div>
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a href="<?php echo get_term_link('buy', 'shop_type'); ?>">
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
+                    <a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img04.png" alt="">
                         <p class="more_naruto_num">04</p>
                         <div class="more_naruto_caption">
-                            <h3 class="more_naruto_title">04|買う</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            <h3 class="more_naruto_title">04|楽しむ</h3>
+                            鳴門の渦潮、大塚国際美術館など世界的に有名な観光地から、隠れた穴場、ローカルビュースポットなど、自転車で巡るあなただけの感動体験を鳴門サイクリングで見つけてください！
                         </div>
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a href="<?php echo get_term_link('enjoy', 'spot_type'); ?>">
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
+                    <a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img05.png" alt="">
                         <p class="more_naruto_num">05</p>
                         <div class="more_naruto_caption">
-                            <h3 class="more_naruto_title">05|楽しむ</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            <h3 class="more_naruto_title">05|サイクルスポット</h3>
+                            鳴門サイクルツーリズムの拠点となる「UZU PARK（ウズパーク）」や、自転車について気軽に相談できるサイクルショップなど、サイクリングに欠かせない情報はこちら！
                         </div>
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a href="<?php echo get_term_link('cycle-spot', 'shop_type'); ?>">
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
+                    <a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img06.png" alt="">
                         <p class="more_naruto_num">06</p>
                         <div class="more_naruto_caption">
-                            <h3 class="more_naruto_title">06|サイクルスポット</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </div>
-                    </a>
-                </li>
-                <li class="more_naruto_card_item">
-                    <a href="<?php echo home_url('/question/'); ?>">
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
-                        <p class="more_naruto_num">07</p>
-                        <div class="more_naruto_caption">
-                            <h3 class="more_naruto_title">07|よくある質問</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </div>
-                    </a>
-                </li>
-                <li class="more_naruto_card_item">
-                    <a href="<?php echo home_url('/aboutsite/'); ?>">
-                        <img class="" src="https://placehold.jp/500x480.png" alt="">
-                        <p class="more_naruto_num">08</p>
-                        <div class="more_naruto_caption">
-                            <h3 class="more_naruto_title">08|サイト制作にあたって</h3>
-                            カードの説明が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            <h3 class="more_naruto_title">06|Q&A</h3>
+                            初めて鳴門を訪れるサイクリストや、初心者の方でも安心して自転車旅行をしていただけるよう、よくある質問やサイクリング情報をまとめました。<br>
+                            みんなでレッツ鳴門サイクリング！
                         </div>
                     </a>
                 </li>
             </ul>
         </div>
+        <!-- スイラドショーここまで -->
     </div>
 </main>
 

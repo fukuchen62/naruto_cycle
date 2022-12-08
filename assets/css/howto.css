@@ -158,6 +158,7 @@
 
 /* 走行の注意については左寄せ */
 .attention_text {
+	margin-top: 16px;
 	text-align: left;
 	line-height: 1.5em;
 }
