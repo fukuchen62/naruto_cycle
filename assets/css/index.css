@@ -104,13 +104,13 @@ video {
     font-family: 'Arvo', serif;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 900;
-    font-size: calc(100vw / 5);
+    font-size: calc(100vw / 9);
     -webkit-text-stroke: 2px #fff;
     text-stroke: 1px #fff;
     color: rgba(0, 0, 0, 0);
     opacity: 0.5;
     position: absolute;
-    top: 240px;
+    top: 200px;
     left: 10%;
 }
 
@@ -118,7 +118,7 @@ video {
 @media screen and (min-width: 600px) {
     .key_msg {
         font-size: calc(100vw / 8);
-        top: 240px;
+        top: 200px;
         left: 10%;
     }
 }
@@ -127,7 +127,7 @@ video {
 @media screen and (min-width: 1024px) {
     .key_msg {
         font-size: calc(100vw /8);
-        top: 240px;
+        top: 200px;
         left: 10%;
     }
 }
