@@ -83,7 +83,7 @@
                                     <th>webサイト</th>
 
                                     <td>
-                                        <?php if (get_field('home_url')) : ?><a href="<?php the_field('home_url'); ?>"><?php the_field('spot_name'); ?></a>
+                                        <?php if (get_field('home_url')) : ?><a href="<?php the_field('home_url'); ?>" target="_blank" rel="noopener noreferrer"><?php the_field('spot_name'); ?></a>
                                         <?php endif; ?>
                                     </td>
 
@@ -104,15 +104,15 @@
                                             <!-- 'twitter'が含まれている場合 -->
                                             <?php
                                                 if (strpos($sns, 'twitter') !== false) : ?>
-                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン" target="_blank" rel="noopener noreferrer"></a>
 
                                             <!-- facebook -->
                                             <?php elseif (strpos($sns, 'facebook') !== false) : ?>
-                                            <a href="<?php echo $sns; ?>"><img class="sns_icon " src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon " src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン" target="_blank" rel="noopener noreferrer"></a>
 
                                             <!-- insta -->
                                             <?php elseif (strpos($sns, 'instagram') !== false) : ?>
-                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン">
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン" target="_blank" rel="noopener noreferrer">
 
                                                 <?php endif; ?>
                                                 <?php endforeach; ?>
