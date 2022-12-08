@@ -24,7 +24,8 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 600px) {
+}
 
 /* liバナー */
 .banner_item {
@@ -131,7 +132,7 @@
 .footer_headline {
 	font-weight: bold;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 3.5rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -154,15 +155,15 @@
 .footer_nav_item {
 	font-weight: lighter;
 	font-size: 16px;
-	line-height: 3em;
+	line-height: 3rem;
 	color: rgba(255, 255, 255, 0.9);
 }
 
 .footer_nav_item a:hover {
-	color: #EF6000;
-	background-color: #D4EBEC;
+	color: #ef6000;
+	/* background-color: #D4EBEC;
 	padding: 2px;
-	border-radius: 2px;
+	border-radius: 2px; */
 }
 
 .bold {
@@ -177,6 +178,6 @@
 /* PCサイズフッターナビの文字設定（髙瀬追加） */
 @media screen and (min-width: 1024px) {
 	.footer_nav_item {
-		line-height: 2em;
+		line-height: 2rem;
 	}
 }

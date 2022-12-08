@@ -272,7 +272,7 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('naruto_cycle-spot_search', get_template_directory_uri() . '/assets/css/search.css', array(), false);
         // js
         wp_enqueue_script('naruto_cycle-spot_search-script', get_template_directory_uri() . '/assets/js/mypage.js', '', '', true);
-        wp_enqueue_script('naruto_cycle-spot_search-script', get_template_directory_uri() . '/assets/js/search.js', '', '', true);
+        wp_enqueue_script('naruto_cycle-spot_search-script2', get_template_directory_uri() . '/assets/js/search.js', '', '', true);
     }
     // 検索結果ページ
     elseif (is_search()) {
@@ -280,7 +280,7 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('naruto_cycle-spot_search_result2', get_template_directory_uri() . '/assets/css/search_result.css', array(), false);
         // js
         wp_enqueue_script('naruto_cycle-spot_search_result-script', get_template_directory_uri() . '/assets/js/mypage.js', '', '', true);
-        wp_enqueue_script('naruto_cycle-spot_search-script', get_template_directory_uri() . '/assets/js/search.js', '', '', true);
+        wp_enqueue_script('naruto_cycle-spot_search-script2', get_template_directory_uri() . '/assets/js/search.js', '', '', true);
     }
     // タクソノミー（食べる、買う、楽しむ、サイクル）一覧ページページ
     elseif (is_tax()) {
