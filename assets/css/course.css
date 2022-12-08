@@ -36,6 +36,15 @@
 	cursor: pointer;
 }
 
+/* 髙瀬追加・コース選択ホバー時の設定 */
+.course_nav_list li:hover {
+	font-size: 30px;
+	color: rgb(255, 222, 132);
+	-webkit-text-stroke: 1px #000;
+	text-stroke: 1px #000;
+	transition: 0.3s;
+}
+
 /* コースのボタンごとに異なる設定 */
 .beginner {
 	background-color: #96c85c;
@@ -520,7 +529,7 @@
 	display: none;
 }
 
-section + section {
+section+section {
 	margin-top: 160px;
 }
 
