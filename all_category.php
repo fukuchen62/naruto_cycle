@@ -60,9 +60,11 @@ Template Name: 全記事一覧テスト
 
 
                 <!-- ページネーション -->
+
+
+
                 <div class="news_pagination_container flex">
-                    <p class="page_box">1</p>
-                    <p class="page_box">2</p>
+                    <?php wp_pagenavi(array('query' => $my_query)); ?>
                 </div>
                 <!--アーカイブ -->
                 <aside class="news_detail_archive_wrap">
