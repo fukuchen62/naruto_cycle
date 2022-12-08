@@ -47,23 +47,23 @@
 
 /* コースのボタンごとに異なる設定 */
 .beginner {
-	background-color: #96c85c;
-	border: solid 4px #96c85c;
+	background-color: #DD69C5;
+	border: solid 4px #DD69C5;
 }
 
 .short {
-	background-color: #ef6000;
-	border: solid 4px #ef6000;
+	background-color: #F6D72E;
+	border: solid 4px #F6D72E;
 }
 
 .middle {
-	background-color: #0018ef;
-	border: solid 4px #0018ef;
+	background-color: #0064B4;
+	border: solid 4px #0064B4;
 }
 
 .long {
-	background-color: #f00000;
-	border: solid 4px #f00000;
+	background-color: #E66702;
+	border: solid 4px #E66702;
 }
 
 .course_nav_text {
