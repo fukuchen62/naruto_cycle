@@ -72,8 +72,7 @@
 
 @media screen and (min-width: 600px) {
 	.howto_naruto_text {
-		line-height: 2.5rem;
-		font-size: 24px;
+		line-height: 1.5em;
 	}
 }
 
@@ -81,7 +80,7 @@
 @media screen and (min-width: 600px) {
 	.howto_text {
 		text-align: left;
-		line-height: 1.2em;
+		line-height: 1.5em;
 	}
 }
 
@@ -158,9 +157,9 @@
 }
 
 /* 走行の注意については左寄せ */
-
 .attention_text {
 	text-align: left;
+	line-height: 1.5em;
 }
 
 /* もっと鳴門について知るには */

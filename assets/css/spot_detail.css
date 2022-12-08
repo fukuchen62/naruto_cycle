@@ -163,6 +163,7 @@ td {
 .spot_date_icon {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
