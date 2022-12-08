@@ -258,16 +258,17 @@
                                             ?>
                                     <img class="spot_item_img" src="<?php echo $pic_url; ?>" alt="スポットの写真">
                                     <!-- スポット名 -->
-                                    <h3 class="spot_item_name"><?php the_field('shop_name'); ?></h3>
+                                    <h3 class="spot_item_name"><?php the_title(); ?></h3>
                                     <!-- スポット情報の表 -->
                                     <dl class="spot_item_info flex">
                                         <?php $page_id = get_the_id();
                                                 ?>
-                                        <?php $terms = get_the_terms($post->ID, 'spot_type');
-                                                // print_r($terms);
-                                                ?>
                                         <dt></dt>
-                                        <dd><?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                                        <dd>
+                                            <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
+                                            <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
+                                            <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
+                                            <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
                                         </dd>
                                     </dl>
                                 </li>

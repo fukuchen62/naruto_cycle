@@ -297,9 +297,9 @@ h2.search_title {
     }
 
     /* お気に入りボタン位置修正 */
-    .spot_like_icon {
+    /* .spot_like_icon {
         margin: 30px auto auto 10px;
-    }
+    } */
 }
 
 /* 画面幅が1375以上の時、疑似要素を消す */
