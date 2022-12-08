@@ -64,10 +64,10 @@
                 <ul class="item_box">
                     <li class="choice_item">
 
-                        <label class="s-search-btn"><input type="radio" class="checkbox_list" name="course_type" value="142" <?= $checked["course_type"]["142"]; ?> <?php
-                                                                                                                                                                    if (!$select_course) {
-                                                                                                                                                                        echo 'checked';
-                                                                                                                                                                    } ?> />初心者</label>
+                        <label class="s-search-btn"><input type="radio" class="checkbox_list check" name="course_type" value="142" <?= $checked["course_type"]["142"]; ?> <?php
+                                                                                                                                                                            if (!$select_course) {
+                                                                                                                                                                                echo 'checked';
+                                                                                                                                                                            } ?> />初心者</label>
                     </li>
                 </ul>
 
@@ -240,7 +240,7 @@
                 </a>
                 <ul class="btn-inner">
                     <li>
-                        <input type="reset" class="search-btn" value="リセット">
+                        <input type="button" class="search-btn reset-btn" value="リセット">
                     </li>
                 </ul>
             </div>
