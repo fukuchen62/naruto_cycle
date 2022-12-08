@@ -222,18 +222,7 @@
                                         <h3 class="spot_item_name"><?php the_title(); ?></h3>
                                         <!-- スポット情報の表 -->
                                         <dl class="spot_item_info flex">
-                                            <?php $page_id = get_the_id();
-                                                    ?>
-
-
-
-                                            <dt></dt>
-                                            <dd>
-                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
-                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
-                                            </dd>
+                                            <p><?php the_field('catchphrase'); ?></p>
 
                                         </dl>
                                     </li>
@@ -243,7 +232,7 @@
                     </li>
                     <?php endwhile;
                     endif;
-                    // wp_reset_postdata(); //サブループを抜ける
+                    wp_reset_postdata(); //サブループを抜ける
                     ?>
                 </ul>
                 <div class="spot_more_btn common_btn eat_btn">もっと見る</div>
@@ -318,18 +307,7 @@
                                         <!-- スポット情報の表 -->
 
                                         <dl class="spot_item_info flex">
-                                            <?php $page_id = get_the_id();
-                                                    ?>
-
-
-
-                                            <dt></dt>
-                                            <dd>
-                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
-                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
-                                            </dd>
+                                            <p><?php the_field('catchphrase'); ?></p>
 
                                         </dl>
                                     </li>
@@ -416,18 +394,7 @@
                                         <!-- スポット情報の表 -->
 
                                         <dl class="spot_item_info flex">
-                                            <?php $page_id = get_the_id();
-                                                    ?>
-
-
-
-                                            <dt></dt>
-                                            <dd>
-                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
-                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
-                                            </dd>
+                                            <p><?php the_field('catchphrase'); ?></p>
                                         </dl>
                                     </li>
                                 </ul>
@@ -458,7 +425,7 @@
                     $taxquerysp = array('relation' => 'AND ');
                     $taxquerysp[] = array(
                         'taxonomy' => 'shop_type',
-                        'terms' => array('cycle'),
+                        'terms' => array('cycle-spot'),
                         'field' => 'slug',
                     );
 
@@ -473,6 +440,7 @@
                     $args['meta_query'] = $metaquerysp;
 
                     $spot_query = new WP_Query($args); //サブループを変数に格納
+
 
                     if ($spot_query->have_posts()) :
                         while ($spot_query->have_posts()) :
@@ -515,18 +483,7 @@
                                         <!-- スポット情報の表 -->
 
                                         <dl class="spot_item_info flex">
-                                            <?php $page_id = get_the_id();
-                                                    ?>
-
-
-
-                                            <dt></dt>
-                                            <dd>
-                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
-                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
-                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
-                                            </dd>
+                                            <p><?php the_field('catchphrase'); ?></p>
 
                                         </dl>
                                     </li>
