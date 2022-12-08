@@ -35,36 +35,42 @@
     <!-- スマホ表示の人のあしらい -->
     <img src="assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp">
 
-    <div class="reccomend_wrap">
+    <section class="search">
+        <div class="reccomend_wrap">
+            <h2 class="headline">
+                <ruby><?php echo strtoupper($term); ?><rt><?php single_term_title(''); ?></rt></ruby>
+            </h2>
 
-        <!-- <div class="pickup">＼ PICK UP! ／ </div> -->
-        <!-- ピックアップタイトル -->
+        </div>
+        <div class="course_spot_cate_list">
+            <ul class="spot_list">
 
-        <h2 class="reccomend_title_jp"><?php single_term_title(''); ?></h2>
-        <h2 class="reccomend_title"><?php echo strtoupper($term); ?></h2>
-    </div>
-    <!-- 記事一覧 -->
-    <div class="spot_list_wrap">
-        <!-- カード全体の入れ物 -->
-        <ul class="spot_list">
-
-
-            <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
-
-            <li class="card_container">
-                <!-- カード -->
-                <?php get_template_part('template-parts/loop', 'spot') ?>
-            </li>
+                <!-- 記事一覧 -->
+                <!-- <div class="spot_list_wrap"> -->
+                <!-- カード全体の入れ物 -->
+                <!-- <ul class="spot_list"> -->
 
 
-            <?php endwhile;
-            endif;
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
 
-            ?>
+                <li class="card_container">
+                    <!-- カード -->
+                    <?php get_template_part('template-parts/loop', 'spot') ?>
+                </li>
 
-        </ul>
-    </div>
+
+                <?php endwhile;
+                endif;
+
+                ?>
+
+                <!-- </ul>
+                </div> -->
+            </ul>
+            <div class="spot_more_btn common_btn">もっと見る</div>
+        </div>
+    </section>
 </main>
 
 

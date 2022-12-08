@@ -10,6 +10,10 @@ body {
 	text-align: center;
 }
 
+.search {
+	margin: 0 auto;
+}
+
 /* ページタイトルの日本語ルビ */
 h2.search_title_jp {
 	font-size: 16px;

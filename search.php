@@ -15,8 +15,7 @@
     <div class="wrap">
 
         <!-- ページタイトル -->
-        <h2 class="search_title_jp">スポットを探す</h2>
-        <h2 class="search_title">SEARCH</h2>
+        <h2 class="course_spot_headline headline"><ruby>SEARCH<rt>スポットを探す</rt></ruby></h2>
         <div class="wrap_search_container">
 
             <?php get_search_form(); ?>
@@ -33,16 +32,16 @@
     </div>
 
     <!-- スマホ表示の人のあしらい -->
-    <img src="assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp">
 
-    <div class="reccomend_wrap">
 
-        <!-- <div class="pickup">＼ PICK UP! ／ </div> -->
-        <!-- ピックアップタイトル -->
+    <!-- <div class="pickup">＼ PICK UP! ／ </div> -->
+    <!-- ピックアップタイトル -->
 
-        <h2 class="reccomend_title_jp">検索結果</h2>
-        <h2 class="reccomend_title">RESULT</h2>
-    </div>
+    <h2 class="course_spot_headline headline">
+    <ruby>RESULT<rt>検索結果</rt></ruby>
+  </h2>
+
     <div class="course_spot_cate_list">
         <ul class="spot_list">
 
