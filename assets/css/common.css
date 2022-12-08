@@ -361,8 +361,8 @@ ruby rt {
 
 .spot_like_icon {
     position: absolute;
-    top: 58px;
-    right: 22px;
+    top: 30px;
+    right: 25px;
     z-index: 2;
 }
 
