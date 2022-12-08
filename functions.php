@@ -84,7 +84,10 @@ add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
 function add_common_stylesheet_script()
 {
     //font-awesomeを読み込む
-    wp_enqueue_style('naruto_cycle-fontawesome', '"https://use.fontawesome.com/releases/v5.6.1/css/all.css" ');
+    // wp_enqueue_style('naruto_cycle-fontawesome', '"https://use.fontawesome.com/releases/v5.6.1/css/all.css" ');
+
+    wp_enqueue_style('naruto_cycle-fontawesome2', get_template_directory_uri() . '/assets/css/all.min.css', array(), false);
+
 
     //googlefontを読み込む
     wp_enqueue_style('naruto_cycle-googlefonts_a', "https://fonts.googleapis.com");
