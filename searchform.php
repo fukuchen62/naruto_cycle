@@ -100,7 +100,7 @@
                         <ul class="item_box">
                             <li class="choice_item">
 
-                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="eat[]" value="cafe-restaurante" <?= $checked["eat"]["cafe-restaurant"] ?>>カフェ・レストラン</label>
+                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="eat[]" value="cafe-restaurant" <?= $checked["eat"]["cafe-restaurant"] ?>>カフェ・レストラン</label>
                             </li>
                         </ul>
                     </li>
