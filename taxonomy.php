@@ -56,7 +56,7 @@
 
                 <li class="card_container">
                     <!-- カード -->
-                    <?php get_template_part('template-parts/loop', 'spot') ?>
+                    <?php get_template_part('template-parts/loop', 'shop') ?>
                 </li>
 
 
