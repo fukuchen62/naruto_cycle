@@ -14,35 +14,39 @@
         <!-- </div> -->
         <div class="news_detail">
             <div class="news_detail_container flex">
-                <article class="news_detail_article">
-                    <h2 class="article_title"><?php the_title(); ?></h2>
+                <div class="article_wrap">
+                    <article class="news_detail_article">
+                        <h2 class="article_title"><?php the_title(); ?></h2>
 
-                    <div class="article_meta flex">
-                        <!-- 項目なし -->
-                        <!-- 日付 -->
-                        <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                        <!-- カテゴリ -->
-                        <div class="post-categories">
-                            <a href="#"><?php the_category(); ?></a>
+                        <div class="article_meta flex">
+                            <!-- 項目なし -->
+                            <!-- 日付 -->
+                            <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                            <!-- カテゴリ -->
+                            <div class="post-categories">
+                                <a href="#"><?php the_category(); ?></a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="article_body">
-                        <div class="news_detail_content">
+                        <div class="article_body">
+                            <div class="news_detail_content">
 
-                            <!-- 内容 -->
-                            <?php the_content(); ?>
+                                <!-- 内容 -->
+                                <?php the_content(); ?>
+                            </div>
                         </div>
-                    </div>
 
+                    </article>
                     <!-- 前後記事のリンク -->
-                    <div>
-                        <?php previous_post_link(); ?>
-
-                        <?php next_post_link(); ?>
+                    <div class="post_links flex pc_only">
+                        <div class="post_link post_link_prev"><span><?php previous_post_link(); ?></span></div>
+                        <div class="post_link post_link_next"><span><?php next_post_link(); ?></span></div>
                     </div>
-                </article>
-
+                    <div class="post_links flex not_pc">
+                        <div class="post_link post_link_prev"><span><?php previous_post_link('<<%link', '前の記事'); ?></span></div>
+                        <div class="post_link post_link_next"><span><?php next_post_link('%link>>', '次の記事'); ?></span></div>
+                    </div>
+                </div>
                 <!-- サイドバー -->
                 <aside class="news_detail_archive_wrap">
                     <div>
