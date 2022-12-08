@@ -48,9 +48,17 @@ section+section {
 
 
 /* キービジュアルの箱 */
-.index_key_visual {
+/* .index_key_visual {
     width: 100%;
     height: 100%;
+    position: relative;
+    vertical-align: bottom;
+} */
+
+
+.index_key_visual {
+    width: 100vw;
+    height: 100vh;
     position: relative;
     vertical-align: bottom;
 }
@@ -58,19 +66,23 @@ section+section {
 /* 動画 */
 .index_video_wrapper {
     position: relative;
-    top: -100px;
-    width: 100%;
+    /* top: -100px; */
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
 
 .index_video_wrapper video {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100%; */
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    object-fit: cover;
 }
 
 video {
@@ -124,7 +136,7 @@ video {
     width: 30%;
     font-weight: 900;
     position: absolute;
-    bottom: 100px;
+    bottom: 0;
     left: 10%;
 }
 
@@ -188,7 +200,7 @@ video {
         width: 650px;
         height: 160px;
         position: absolute;
-        bottom: 100px;
+        bottom: 0;
         right: 0;
         opacity: 0.7;
     }
