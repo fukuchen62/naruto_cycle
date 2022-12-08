@@ -62,7 +62,7 @@
 
             <li class="card_container">
                 <!-- カード -->
-                <?php get_template_part('template-parts/loop', 'spot') ?>
+                <?php get_template_part('template-parts/loop', 'shop') ?>
             </li>
 
             <?php endwhile;
@@ -87,7 +87,7 @@
             <li class="card_container">
                 <!-- カード -->
 
-                <?php get_template_part('template-parts/loop', 'spot') ?>
+                <?php get_template_part('template-parts/loop', 'shop') ?>
 
             </li>
             <?php endwhile;
@@ -112,7 +112,7 @@
                 <!-- カード -->
 
 
-                <?php get_template_part('template-parts/loop', 'spot') ?>
+                <?php get_template_part('template-parts/loop', 'shop') ?>
 
             </li>
             <?php endwhile;
