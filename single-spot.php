@@ -81,7 +81,44 @@
                                 </tr>
                                 <tr>
                                     <th>webサイト</th>
-                                    <td><a href="<?php the_field('home_url'); ?>"><?php the_field('home_url'); ?></a></td>
+
+                                    <td>
+                                        <?php if (get_field('home_url')) : ?><a href="<?php the_field('home_url'); ?>"><?php the_field('spot_name'); ?></a>
+                                        <?php endif; ?>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <th>SNS</th>
+                                    <?php
+                                    $sns_address_array = get_field('sns');
+                                    $sns_address = explode(",", $sns_address_array);
+                                    ?>
+
+
+                                    <td>
+                                        <div class="spot_mainInfo_sns">
+
+                                            <?php foreach ($sns_address as $sns) : ?>
+                                            <!-- 'twitter'が含まれている場合 -->
+                                            <?php
+                                                if (strpos($sns, 'twitter') !== false) : ?>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
+
+                                            <!-- facebook -->
+                                            <?php elseif (strpos($sns, 'facebook') !== false) : ?>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon " src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
+
+                                            <!-- insta -->
+                                            <?php elseif (strpos($sns, 'instagram') !== false) : ?>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン">
+
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+
+                                        </div>
+                                    </td>
                                 </tr>
 
                                 <tr>

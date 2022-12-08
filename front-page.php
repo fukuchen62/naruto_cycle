@@ -301,7 +301,7 @@
                 <!-- 見出しボックス -->
                 <div class="index_insta_headline tb_pc_flex">
                     <!-- インスタロゴ -->
-                    <img class="insta_logo_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_insta_logo_img.png" alt="インスタグラムのロゴ">
+                    <img class="insta_logo_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="インスタグラムのロゴ">
                     <!-- 見出し -->
                     <h2 class="index_insta_top headline">
                         <ruby>INSTAGRAM<rt>なるとサイくるっと！公式インスタグラム</rt></ruby>
