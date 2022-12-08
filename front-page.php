@@ -22,7 +22,7 @@
             <!-- 動画 -->
             <div class="index_video_wrapper">
                 <video autoplay muted playsinline loop>
-                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/index_key_movie.mp4" type="video/mp4">
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/img/index_keymovie_mp4.mp4" type="video/mp4">
                     <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像">
                 </video>
             </div>
