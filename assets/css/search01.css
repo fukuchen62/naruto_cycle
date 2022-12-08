@@ -39,13 +39,11 @@ h2.search_title {
     border: 1px solid #74c7f0;
     margin: auto;
     /* 斜めストライプ */
-    background-image: repeating-linear-gradient(
-        -45deg,
-        #d4ebec,
-        #d4ebec 10px,
-        #fffc 0,
-        #fffc 12px
-    );
+    background-image: repeating-linear-gradient(-45deg,
+            #d4ebec,
+            #d4ebec 10px,
+            #fffc 0,
+            #fffc 12px);
     /* background:linear-gradient(
     -45deg,
     #fff 25%, #C6E6FB 25%,
@@ -61,6 +59,7 @@ h2.search_title {
 .search_cate_box:first-child {
     margin: 20px auto auto;
 }
+
 .search_cate_box {
     margin: 48px auto auto;
 }
@@ -142,12 +141,58 @@ h2.search_title {
     height: 267px;
 }
 
+/* 髙瀬追加・あしらい（PC）女性の動き */
+.move_jump {
+    animation-name: jump;
+    animation-duration: 0.4s;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0%, 15px) rotateX(10deg);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+/* 髙瀬追加・人のあしらい（スマホ）半円の動き */
+.move_rolling {
+    animation-name: anim_s;
+    transform: rotate(5deg);
+    animation-duration: 2s;
+}
+
+@keyframes anim_s {
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* 髙瀬追加・PICKUPあしらい点滅 */
 .pickup {
     margin: 160px auto auto;
     font-weight: 900;
     font-size: 32px;
     line-height: 39px;
     color: #ef6000;
+    animation: blinking 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .reccomend_title_jp {
@@ -173,10 +218,11 @@ h2.search_title {
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 599px) {
-}
+@media screen and (min-width: 599px) {}
+
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
+
     /* パンくずリスト */
     .bradcrumbs {
         margin: 8px auto 94px auto;
@@ -197,6 +243,7 @@ h2.search_title {
         margin: auto auto 112px auto;
         position: relative;
     }
+
     /* 自転車のあしらい */
     .index_insta_img {
         object-fit: cover;
@@ -209,6 +256,7 @@ h2.search_title {
         top: -123px;
         bottom: auto;
     }
+
     /* 人のあしらい（スマホ） */
     .search_img1_sp {
         display: none;
@@ -224,6 +272,7 @@ h2.search_title {
         top: 703px;
         right: 726px;
     }
+
     .search_img2_pc {
         object-fit: cover;
         width: 200px;
@@ -251,6 +300,7 @@ h2.search_title {
         margin: 72px 208px 28px auto;
         width: 512px;
     }
+
     /* 検索ボタン */
     .btn-inner {
         margin: auto 16px;
@@ -283,6 +333,7 @@ h2.search_title {
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
     }
+
     .reccomend_title {
         position: absolute;
         top: 59px;
@@ -302,6 +353,7 @@ h2.search_title {
         margin: auto auto 160px auto;
         text-align: left;
     }
+
     /* お気に入りボタン位置修正 */
     .spot_like_icon {
         margin: 30px auto auto 10px;

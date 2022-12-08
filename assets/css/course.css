@@ -267,6 +267,7 @@
 	}
 }
 
+/* 自転車男女イラスト */
 .course_info_pic_woman {
 	display: none;
 }
@@ -314,6 +315,48 @@
 		left: 40px;
 	}
 }
+
+/* 髙瀬追加・男女イラストアニメーション基本設定 */
+.animation {
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1.5s;
+}
+
+/* 半円の動き */
+.move_rolling {
+	animation-name: anim_s;
+	transform: rotate(5deg);
+	animation-duration: 2s;
+}
+
+@keyframes anim_s {
+	50% {
+		transform: rotate(-5deg);
+	}
+
+	100% {
+		transform: rotate(5deg);
+	}
+}
+
+/* 跳ねる動き */
+.move_jump {
+	animation-name: jump;
+	animation-duration: .5s;
+}
+
+@keyframes jump {
+	0% {
+		transform: translate(0%, 15px) rotateX(10deg);
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
 
 /* 常に表示する装飾 */
 .course_info_pic_clip {

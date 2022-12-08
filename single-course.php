@@ -101,8 +101,8 @@
         <div class="info_wrap info_bg_deco"></div>
         <div class="info_wrap info_main">
             <img src="https://placehold.jp/22x60.png" alt="クリップ" class="course_info_pic_clip" />
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_info_img1.png" alt="自転車に乗る女性" class="course_info_pic_woman" />
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_info_img2.png" alt="自転車に乗る男性" class="course_info_pic_man" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_info_img1.png" alt="自転車に乗る女性" class="course_info_pic_woman animation move_rolling" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_info_img2.png" alt="自転車に乗る男性" class="course_info_pic_man animation move_jump" />
             <div class="info_content">
                 <ul class="info_list">
                     <li class="info_item">
