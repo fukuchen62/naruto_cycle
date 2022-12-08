@@ -1,5 +1,10 @@
 /* 共通CSSはコチラ */
 
+/* main要素の下部に60px */
+main {
+    padding-bottom: 60px;
+}
+
 /* デバッグ用border */
 .debug {
     border: 1px solid #000;
@@ -197,41 +202,40 @@ ruby rt {
 .key_bg_under {
     margin-bottom: 32px;
     position: relative;
-    top: -100px;
+    /* top: -100px; */
 }
 
+/* 消して大丈夫でした */
 /* スクリーンサイズが600px以上の場合(デスクトップ)に適用*/
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
     .key_bg_under {
         margin-bottom: 0;
     }
-}
+} */
 
 /* ----------パンくずリスト設定---------- */
-.bradcrumbs {
+/* .bradcrumbs {
     display: none;
-}
+} */
 
 /* リストはTB以上で表示 */
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
     .bradcrumbs {
         display: block;
         font-size: 16px;
         margin-top: 8px;
         margin-bottom: 32px;
     }
-}
+} */
 
 /* ---------------------------------------------- */
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {
-}
+@media screen and (min-width: 600px) {}
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
 
 /* moreボタン設定 */
 .common_btn {

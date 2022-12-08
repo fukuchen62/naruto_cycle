@@ -210,20 +210,20 @@ ruby rt {
 }
 
 /* ----------パンくずリスト設定---------- */
-.bradcrumbs {
+/* .bradcrumbs {
 	display: none;
-}
+} */
 
 /* リストはTB以上で表示 */
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
 	.bradcrumbs {
 		display: block;
 		font-size: 16px;
 		margin-top: 8px;
 		margin-bottom: 32px;
 	}
-}
+} */
 
 
 /* ---------------------------------------------- */

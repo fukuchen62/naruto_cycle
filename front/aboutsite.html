@@ -1,4 +1,3 @@
-<!-- ヘッダー切り取りここから -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,18 +13,15 @@
     <link rel="stylesheet" href="./assets/css/common.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/aboutsite.css">
-    <!-- <link rel="stylesheet" href="css/news.css" /> -->
-    <!-- <link rel="stylesheet" href="css/news_detail.css" /> -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./assets/css/cycle_move.css">
 
     <!-- googlefont本体ここから2行 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
     <!-- 全体用font↓ -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
     <!-- h1のfont↓ -->
 
     <!-- FontAwesome↓ -->
@@ -35,223 +31,291 @@
     <!-- ファビコン↓() -->
 </head>
 <body>
-    <header class="header flex">
-        <h1 class="header_logo"><a href="#"><img class="img" src="./image/header_logo_img.png" alt="なるとサイくるっと！のロゴ"></a></h1>
-        <nav>
-            <ul class="menu">
-                <li class="menu-list font_edge_white">
-                    <a href="news.html">NEWS</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="howto.html">HOWTO</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="course.html">COURSE</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="spot.html">SPOT</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="mypage.html">MYPAGE</a>
-                </li>
-                <li class="menu-list font_edge_white">
-                    <a href="question.html">Q&A</a>
-                </li>
-            </ul>
-            <button type="button" class="btn js-btn">
-                <span class="btn-line"></span>
-            </button>
-        </nav>
-    </header>
-    <!-- ヘッダー切り取りここまで -->
-    <main>
-        <!-- ページ見出し -->
-        <section class="aboutsite">
-            <h2 class="course_top headline"><ruby>ABOUT SITE<rt>このサイトについて</rt></ruby></h2>
-        </section>
-        <section class="about_container">
-            <!-- コンテンツボックス -->
-            <div class="about_box relative">
-                <!-- 最初のキャプション -->
-                <p class="about_txt">このサイトは、国の求職者支援制度に基づく、株式会社ＱＬＩＰ インターナショナル・ＷＥＢシステム開発実践科生『井（ハッシュ）』班が、2022年に制作したウェブサイトです。（以下「本サイト」と言います）
-                </p>
-                <div class="flex_pc">
-                    <!-- 写真 -->
-                    <!-- <div class="index_howto_imgbox"> -->
-                    <img src="assets\image\index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="index_howto_img">
-                </div>
-                <!-- テキスト用ボックス -->
-                <div class="about_txtbox absolute">
+    <div class="wrap">
 
-                    <!-- 見出し文 -->
-                    <h3 class="about_h3">なぜこのサイトを作ったのか</h3>
-                    <!-- キャプション -->
-                    <p class="about_txt">
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <header class="header fix_menu flex">
+            <!-- サイトロゴ -->
+            <h1 class="header_logo">
+                    <a href="#">
+                        <img class="img" src="./assets/image/header_log_svg.svg" alt="なるとサイくるっと！のロゴ">
+                    </a>
+                </h1>
+            <!-- グローバルナビ -->
+            <nav>
+                <ul class="menu">
+                    <li class="menu-list font_edge_white">
+                        <a href="news.html"><ruby>NEWS<rt>新着情報</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="howto.html"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="course.html"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="search.html"><ruby>SPOT<rt>スポット検索</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="mypage.html"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
+                    </li>
+                </ul>
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+            </nav>
+        </header>
+
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ headerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <header class="header fix_menu flex">
+            <!-- サイトロゴ -->
+            <h1 class="header_logo">
+                <a href="#">
+                    <img class="img" src="./assets/image/header_log_svg.svg" alt="なるとサイくるっと！のロゴ">
+                </a>
+            </h1>
+            <!-- グローバルナビ -->
+            <nav>
+                <ul class="menu">
+                    <li class="menu-list font_edge_white">
+                        <a href="news.html"><ruby>NEWS<rt>新着情報</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="howto.html"><ruby>HOWTO<rt>鳴門でサイクリング</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="course.html"><ruby>COURSE<rt>コース詳細</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="spot.html"><ruby>SPOT<rt>スポット検索</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="mypage.html"><ruby>MYPAGE<rt>マイページ</rt></ruby></a>
+                    </li>
+                    <li class="menu-list font_edge_white">
+                        <a href="question.html"><ruby>Q&A<rt>よくある質問</rt></ruby></a>
+                    </li>
+                </ul>
+                <button type="button" class="btn js-btn">
+                    <span class="btn-line"></span>
+                </button>
+            </nav>
+        </header>
+
+        <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ header切り取りここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
+        <main>
+            <!-- ページ見出し -->
+            <section class="aboutsite">
+                <h2 class="course_top headline"><ruby>ABOUT SITE<rt>このサイトについて</rt></ruby></h2>
+            </section>
+            <section class="about_container">
+                <!-- コンテンツボックス -->
+                <div class="about_box relative">
+                    <!-- 最初のキャプション -->
+                    <p class="about_txt">このサイトは、国の公的職業訓練制度に基づく、株式会社ＱＬＩＰ インターナショナル・ＷＥＢシステム開発実践科生『井（ハッシュ）』班が、2022年に制作したウェブサイトです。（以下「本サイト」と言います）
+                </p>
+                    <div class="flex_pc">
+                        <!-- 写真 -->
+                        <!-- <div class="index_howto_imgbox"> -->
+                        <img src="assets\image\index_howto_img.png" alt="浜辺に自転車を置いて海に向かう男性" class="index_howto_img">
+                    </div>
+                    <!-- テキスト用ボックス -->
+                    <div class="about_txtbox absolute">
+
+                        <!-- 見出し文 -->
+                        <h3 class="about_h3">なぜこのサイトを作ったのか</h3>
+                        <!-- キャプション -->
+                        <p class="about_txt">
                         このサイトは、国の求職者支援制度に基づく、株式会社ＱＬＩＰ インターナショナル・ＷＥＢシステム開発実践科生『井（ハッシュ）』班が、2022年に制作したウェブサイトです。（以下「本サイト」と言います）
                     </p>
+                    </div>
                 </div>
-            </div>
 
-            </div>
-        </section>
+    </div>
+    </section>
 
-        <section class="about_container shop_container">
-            <!-- コンテンツボックス -->
-            <div class="about_box flex_pc">
-                <!-- テキスト用ボックス -->
-                <div class="about_txtbox relative">
-                    <!-- 見出し文 -->
-                    <h3 class="about_h3">サイト制作に
+    <section class="about_container shop_container">
+        <!-- コンテンツボックス -->
+        <div class="about_box flex_pc">
+            <!-- テキスト用ボックス -->
+            <div class="about_txtbox relative">
+                <!-- 見出し文 -->
+                <h3 class="about_h3">サイト制作に
                         ご協力くださったみなさま</h3>
-                    <!-- キャプション -->
-                    <p class="about_txt ">この度は本サイト制作に際して、ご協力いただき誠にありがとうございます。</p>
-                    <!-- ショップ一覧 -->
-                    <div class="about_thanks_wrap">
-                        <TABLE class="about_table">
-                            <!-- １行目 -->
+                <!-- キャプション -->
+                <p class="about_txt ">この度は本サイト制作に際して、ご協力いただき誠にありがとうございます。</p>
+                <!-- ショップ一覧 -->
+                <div class="about_thanks_wrap">
+                    <TABLE class="about_table">
+                        <!-- １行目 -->
 
-                            <!-- ２行目 -->
-                            <TR>
-                                <TD>カフェAAA様</TD>
-                                <TD>カフェAAA様</TD>
-                                <TD>カフェAAA様</TD>
-                                <TD>カフェAAA様</TD>
-                            </TR>
-                            <!-- ３行目 -->
-                            <TR>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                            </TR>
-                            <!-- １行目 -->
-                            <TR>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>その他ご協力くださったみなさま</TD>
-                            </TR>
-                        </TABLE>
-                    </div>
-
-                    <!-- <p class="about_txt ">その他ご協力くださったみなさま</p> -->
+                        <!-- ２行目 -->
+                        <TR>
+                            <TD>カフェAAA様</TD>
+                            <TD>カフェAAA様</TD>
+                            <TD>カフェAAA様</TD>
+                            <TD>カフェAAA様</TD>
+                        </TR>
+                        <!-- ３行目 -->
+                        <TR>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                        </TR>
+                        <!-- １行目 -->
+                        <TR>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>その他ご協力くださったみなさま</TD>
+                        </TR>
+                    </TABLE>
                 </div>
 
+                <!-- <p class="about_txt ">その他ご協力くださったみなさま</p> -->
             </div>
-        </section>
 
-        <section class="about_container shop_container">
-            <!-- コンテンツボックス -->
-            <div class="about_box flex_pc">
-                <!-- テキスト用ボックス -->
-                <div class="about_txtbox relative">
-                    <!-- 見出し文 -->
-                    <h3 class="about_h3">サイト制作に
+        </div>
+    </section>
+
+    <section class="about_container shop_container">
+        <!-- コンテンツボックス -->
+        <div class="about_box flex_pc">
+            <!-- テキスト用ボックス -->
+            <div class="about_txtbox relative">
+                <!-- 見出し文 -->
+                <h3 class="about_h3">サイト制作に
                                 ご協力くださったみなさま</h3>
-                    <!-- キャプション -->
-                    <p class="about_txt ">以下のサイトを参考元・引用元として、まとめさせて頂きました。 各関係機関にご協力いただき、リンク先を掲載させていただいております。 アドレスをクリックすると、リンク先へ飛びます。
+                <!-- キャプション -->
+                <p class="about_txt ">以下のサイトを参考元・引用元として、まとめさせて頂きました。 各関係機関にご協力いただき、リンク先を掲載させていただいております。 アドレスをクリックすると、リンク先へ飛びます。
 </p>
-                    <!-- ショップ一覧 -->
-                    <div class="about_thanks_wrap">
-                        <TABLE class="about_table">
-                            <!-- １行目 -->
+                <!-- ショップ一覧 -->
+                <div class="about_thanks_wrap">
+                    <TABLE class="about_table">
+                        <!-- １行目 -->
 
-                            <!-- ２行目 -->
-                            <TR>
-                                <TD>カフェAAA様</TD>
-                                <TD>カフェAAA様</TD>
-                                <TD>カフェAAA様</TD>
-                                <TD>カフェAAA様</TD>
-                            </TR>
-                            <!-- ３行目 -->
-                            <TR>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                            </TR>
-                            <!-- １行目 -->
-                            <TR>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>ベーカリーカフェ様</TD>
-                                <TD>その他ご協力くださったみなさま</TD>
-                            </TR>
-                        </TABLE>
-                    </div>
-
-                    <!-- <p class="about_txt ">その他ご協力くださったみなさま</p> -->
+                        <!-- ２行目 -->
+                        <TR>
+                            <TD>カフェAAA様</TD>
+                            <TD>カフェAAA様</TD>
+                            <TD>カフェAAA様</TD>
+                            <TD>カフェAAA様</TD>
+                        </TR>
+                        <!-- ３行目 -->
+                        <TR>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                        </TR>
+                        <!-- １行目 -->
+                        <TR>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>ベーカリーカフェ様</TD>
+                            <TD>その他ご協力くださったみなさま</TD>
+                        </TR>
+                    </TABLE>
                 </div>
 
+                <!-- <p class="about_txt ">その他ご協力くださったみなさま</p> -->
             </div>
-        </section>
+
+        </div>
+    </section>
     </main>
+    <!--------- フッター切り取りここから --------->
+
+    <div class="news_bottom_container">
+        <!-- PCのみ出るニュース下部の自転車 -->
+        <img class="news_bottom_cycle_img" src="./assets/image/news_img.png" alt="ニュース下部装飾">
+
+        <!-- 下部背景の入れ物 -->
+        <div class="loop_wrap">
+            <!-- PCのみ出るニュース下部の背景 -->
+            <img src="./assets/image/news_bottom_bg_img.png"><img src="./assets/image/news_bottom_bg_img.png">
+        </div>
+    </div>
+    </main>
+
     <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここから ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
 
     <footer class="footer bg_blue white txt_c">
-        <div class="footer_wave_img">
-            <img src="./assets/image/footer_wave_img.png" alt="">
-        </div>
+        <!-- バナーの入れ物 -->
         <ul class="banner_list gap32_16 m_bottom40">
             <!-- asaなどのバナーがliで入ります -->
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
-            <li class="banner_item"><a href=""><img src="https://placehold.jp/234x60.png" alt="○○のバナー"></a></li>
+            <li class="banner_item"><a href=""><img src="./assets/image/footer_banner_asa.png" alt="○○のバナー"></a></li>
+            <li class="banner_item"><a href=""><img src="./assets/image/footer_banner_tokushimacycle.png" alt="○○のバナー"></a></li>
+            <li class="banner_item"><a href=""><img src="./assets/image/footer_banner_narutocity.png" alt="○○のバナー"></a></li>
         </ul>
-        <nav class="fnav_container bg_blue debug">
 
+        <nav class="fnav_container bg_blue">
             <!-- フッターナビ -->
             <!-- 近藤追加分 -->
-            <ul class="fnav">
-                <ul class="fnav_w_list flex">
-                    <li class="footer_headline">
-                        <ul class="footer_list">
-                            <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
-                            <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
-                            <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
-                        </ul>
-                    </li>
-                    <li class="footer_headline"><a href="course.html">サイクリングコース</a>
-                        <ul class="footer_list">
-                            <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
-                            <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
-                            <li class="footer_nav_item"><a href=".html">中距離コース</a></li>
-                            <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
-                        </ul>
-                    </li>
-                    <li class="footer_headline"><a href=".html">周辺スポット検索</a>
-                        <ul class="footer_list">
-                            <li class="footer_nav_item"><a href=".html">食べる</a></li>
-                            <li class="footer_nav_item"><a href=".html">見る</a></li>
-                            <li class="footer_nav_item"><a href=".html">買う</a></li>
-                            <li class="footer_nav_item"><a href=".html">楽しむ</a></li>
-                            <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
-                        </ul>
-                    </li>
-                    <li class="footer_headline">Q＆A・その他
-                        <ul class="footer_list">
-                            <li class="footer_nav_item"><a href="question.html">Q＆A</a></li>
-                            <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
-                            <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
-                            <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <ul class="fnav_w_list">
+                <li class="footer_headline">
+                    <ul class="footer_list">
+                        <li class="footer_nav_item bold"><a href="news.html">ニュース</a></li>
+                        <li class="footer_nav_item bold"><a href="howto.html">鳴門サイクリングについて</a></li>
+                        <li class="footer_nav_item bold"><a href="mypage.html">マイページ</a></li>
+                    </ul>
+                </li>
+                <li class="footer_headline"><a href="course.html">サイクリングコース</a>
+                    <ul class="footer_list">
+                        <li class="footer_nav_item"><a href=".html"></a>初心者モデルコース</li>
+                        <li class="footer_nav_item"><a href=".html">短距離コース</a></li>
+                        <li class="footer_nav_item"><a href=".html">中距離コース</a></li>
+                        <li class="footer_nav_item"><a href=".html">長距離コース</a></li>
+                    </ul>
+                </li>
+                <li class="footer_headline"><a href=".html">周辺スポット検索</a>
+                    <ul class="footer_list">
+                        <li class="footer_nav_item"><a href=".html">食べる</a></li>
+                        <li class="footer_nav_item"><a href=".html">見る</a></li>
+                        <li class="footer_nav_item"><a href=".html">買う</a></li>
+                        <li class="footer_nav_item"><a href=".html">楽しむ</a></li>
+                        <li class="footer_nav_item"><a href=".html">サイクルスポット</a></li>
+                    </ul>
+                </li>
+                <li class="footer_headline">Q＆A・その他
+                    <ul class="footer_list">
+                        <li class="footer_nav_item"><a href="question.html">Q＆A</a></li>
+                        <li class="footer_nav_item"><a href="contact.html">お問い合わせ</a></li>
+                        <li class="footer_nav_item"><a href="privacy.html">プライバシーポリシー・免責事項</a></li>
+                        <li class="footer_nav_item"><a href="aboutsite.html">サイト制作にあたって</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
         <!-- 追加分ここまで -->
 
         <div class="sns_container flex gap32_16">
             <!-- twitter -->
-            <a href=""><img class="sns_icon" src="./image/Twitter social icons - circle - blue.png" alt="ツイッターアイコン"></a>
+            <a href="//twitter.com/intent/tweet?url= なるとサイくるっと！のURL &text=" target="_blank" rel="nofollow noopener noreferrer"><img class="sns_icon" src="./assets/image/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン">
+            </a>
             <!-- facebook -->
-            <a href=""><img class="sns_icon" src="./image/f_logo_RGB-Blue_144.png" alt="ツイッターアイコン"></a>
+            <a href="//www.facebook.com/sharer/sharer.php?u= なるとサイくるっと！のURL &t=" target="_blank" rel="nofollow noopener noreferrer"><img class="sns_icon" src="./assets/image/index_footer_sharefb.png" alt="Facebookへのシェアボタン">
+            </a>
         </div>
         <p class="copyright txt_c">AllCopyRight©なるとサイくるっと！</p>
     </footer>
 
+    <!-- トップに戻るボタン -->
+    <div class="pagetop">
+        <!-- 戻るボタン画像 -->
+        <img src="./assets/image/index_pagetop_btn_img.png" alt="トップに戻るボタン">
+    </div>
     <!--＝＝＝＝＝＝＝＝＝＝＝＝＝ footerここまで ＝＝＝＝＝＝＝＝＝＝＝＝＝-->
-    <script src="./assets/js/question.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/footer.js"></script>
     <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/question.js"></script>
+
     </div>
 </body>
 
