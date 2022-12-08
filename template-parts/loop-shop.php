@@ -35,11 +35,16 @@
                 <dl class="spot_item_info flex">
                     <?php $page_id = get_the_id();
                     ?>
-                    <?php $terms = get_the_terms($post->ID, 'spot_type');
-                    // print_r($terms);
+                    <?php $terms_shop = get_the_terms($post->ID, 'shop_type');
+                    $terms_spot = get_the_terms($post->ID, 'spot_type');
+
                     ?>
                     <dt></dt>
-                    <dd><?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                    <dd>
+                        <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
+                        <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?><?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                        <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
+                        <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?><?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
                     </dd>
 
 
