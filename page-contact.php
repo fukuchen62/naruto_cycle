@@ -18,7 +18,12 @@
     <!-- 問い合わせフォーム -->
     <div class="contact_wrap">
         <!-- <form action="confirm.php" method="post" name="form" onsubmit="return validate()"> -->
+
+
         <?php echo do_shortcode('[contact-form-7 id="300" title="お問い合わせ"]'); ?>
+
+        <!-- 本サーバ用 -->
+        <?php echo do_shortcode('[contact-form-7 id="164" title="お問い合わせフォーム"]'); ?>
     </div>
 
 
