@@ -204,7 +204,7 @@
 
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
-            <!-- <?php else : ?> -->
+            <?php else : ?>
             <?php endif; ?>
             <?php endif; ?>
 
@@ -254,7 +254,7 @@
 
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
-            <!-- <?php else : ?> -->
+            <?php else : ?>
             <?php endif; ?>
             <?php endif; ?>
 
@@ -302,9 +302,13 @@
 
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
-            <!-- <?php else : ?> -->
+            <?php else : ?>
             <?php endif; ?>
             <?php endif; ?>
+
+            <!-- 結果の件数 -->
+            $sum=$eat_figure+$buy_figure+$enjoy_figure+$cycle_figure
+
 
             <!-- 検索結果がないとき -->
             <?php if (!empty($course_id) && (!empty($eat_slug) || !empty($buy_slug) || !empty($enjoy_slug) || !empty($cycle_slug)) && ($eat_figure == 0 || $eat_figure == null) && $buy_figure == 0 && $enjoy_figure == 0 && $cycle_figure == 0)
