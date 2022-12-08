@@ -192,17 +192,18 @@
 
                     <li class="card_container">
                         <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <?php echo get_favorites_button(get_the_ID()); ?>
-                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
-                            </div>
+
                             <!-- カード１枚にかかるスポット一覧へのリンク -->
                             <a href="<?php the_permalink(); ?>">
                                 <!-- カード全体の入れ物 -->
                                 <ul class="spot_list">
                                     <!-- カード１枚の入れ物-->
                                     <li class="spot_item relative">
+                                        <!-- お気に入りボタン -->
+                                        <div class="spot_like_icon">
+                                            <?php echo get_favorites_button(get_the_ID()); ?>
+                                            <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                                        </div>
                                         <!-- カテゴリーのラベル -->
                                         <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
@@ -221,12 +222,19 @@
                                         <h3 class="spot_item_name"><?php the_title(); ?></h3>
                                         <!-- スポット情報の表 -->
                                         <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd><?php the_field('open_time'); ?></dd>
-                                            <dt>住所</dt>
-                                            <dd><?php the_field('address'); ?></dd>
-                                            <dt>電話番号</dt>
-                                            <dd><?php the_field('telephone'); ?></dd>
+                                            <?php $page_id = get_the_id();
+                                                    ?>
+
+
+
+                                            <dt></dt>
+                                            <dd>
+                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
+                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                                            </dd>
+
                                         </dl>
                                     </li>
                                 </ul>
@@ -279,17 +287,18 @@
 
                     <li class="card_container">
                         <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <?php echo get_favorites_button(get_the_ID()); ?>
-                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
-                            </div>
+
                             <!-- カード１枚にかかるスポット一覧へのリンク -->
                             <a href="<?php the_permalink(); ?>">
                                 <!-- カード全体の入れ物 -->
                                 <ul class="spot_list">
                                     <!-- カード１枚の入れ物-->
                                     <li class="spot_item relative">
+                                        <!-- お気に入りボタン -->
+                                        <div class="spot_like_icon">
+                                            <?php echo get_favorites_button(get_the_ID()); ?>
+                                            <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                                        </div>
                                         <!-- カテゴリーのラベル -->
                                         <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
@@ -309,12 +318,19 @@
                                         <!-- スポット情報の表 -->
 
                                         <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd><?php the_field('open_time'); ?></dd>
-                                            <dt>住所</dt>
-                                            <dd><?php the_field('address'); ?></dd>
-                                            <dt>電話番号</dt>
-                                            <dd><?php the_field('telephone'); ?></dd>
+                                            <?php $page_id = get_the_id();
+                                                    ?>
+
+
+
+                                            <dt></dt>
+                                            <dd>
+                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
+                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                                            </dd>
+
                                         </dl>
                                     </li>
                                 </ul>
@@ -368,17 +384,18 @@
 
                     <li class="card_container">
                         <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <?php echo get_favorites_button(get_the_ID()); ?>
-                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
-                            </div>
+
                             <!-- カード１枚にかかるスポット一覧へのリンク -->
                             <a href="<?php the_permalink(); ?>">
                                 <!-- カード全体の入れ物 -->
                                 <ul class="spot_list">
                                     <!-- カード１枚の入れ物-->
                                     <li class="spot_item relative">
+                                        <!-- お気に入りボタン -->
+                                        <div class="spot_like_icon">
+                                            <?php echo get_favorites_button(get_the_ID()); ?>
+                                            <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                                        </div>
                                         <!-- カテゴリーのラベル -->
                                         <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
@@ -399,12 +416,18 @@
                                         <!-- スポット情報の表 -->
 
                                         <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd><?php the_field('open_time'); ?></dd>
-                                            <dt>住所</dt>
-                                            <dd><?php the_field('address'); ?></dd>
-                                            <dt>電話番号</dt>
-                                            <dd><?php the_field('telephone'); ?></dd>
+                                            <?php $page_id = get_the_id();
+                                                    ?>
+
+
+
+                                            <dt></dt>
+                                            <dd>
+                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
+                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                                            </dd>
                                         </dl>
                                     </li>
                                 </ul>
@@ -459,17 +482,18 @@
 
                     <li class="card_container">
                         <div class="spot_card relative">
-                            <!-- お気に入りボタン -->
-                            <div class="spot_like_icon">
-                                <?php echo get_favorites_button(get_the_ID()); ?>
-                                <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
-                            </div>
+
                             <!-- カード１枚にかかるスポット一覧へのリンク -->
                             <a href="<?php the_permalink(); ?>">
                                 <!-- カード全体の入れ物 -->
                                 <ul class="spot_list">
                                     <!-- カード１枚の入れ物-->
                                     <li class="spot_item relative">
+                                        <!-- お気に入りボタン -->
+                                        <div class="spot_like_icon">
+                                            <?php echo get_favorites_button(get_the_ID()); ?>
+                                            <!-- <i class="far fa-heart LikesIcon-fa-heart"></i> -->
+                                        </div>
                                         <!-- カテゴリーのラベル -->
                                         <?php $pic = get_field('label');
                                                 $pic_url = $pic['url'];
@@ -491,12 +515,19 @@
                                         <!-- スポット情報の表 -->
 
                                         <dl class="spot_item_info flex">
-                                            <dt>営業時間</dt>
-                                            <dd><?php the_field('open_time'); ?></dd>
-                                            <dt>住所</dt>
-                                            <dd><?php the_field('address'); ?></dd>
-                                            <dt>電話番号</dt>
-                                            <dd><?php the_field('telephone'); ?></dd>
+                                            <?php $page_id = get_the_id();
+                                                    ?>
+
+
+
+                                            <dt></dt>
+                                            <dd>
+                                                <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
+                                                <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
+                                                <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
+                                            </dd>
+
                                         </dl>
                                     </li>
                                 </ul>
