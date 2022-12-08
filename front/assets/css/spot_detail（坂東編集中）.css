@@ -221,15 +221,22 @@ td {
 
 /* コース情報を囲う色付きの部分の設定 */
 .info_wrap {
-  margin-top: 80px;
+  /* margin-top: 80px;
   padding-top: 80px;
   width: 320px;
   height: 400px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+
+
+  width: calc(100%*0.82051282);
+  max-width: 1024px;
+  /* height: 320px; */
+  padding-top: 32px;
+  margin: 80px auto;
 }
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   .info_wrap {
     width: 500px;
   }
@@ -241,7 +248,7 @@ td {
     height: 320px;
     width: 640px;
   }
-}
+} */
 
 /* メモ */
 /* 後ろの茶色の装飾 */
@@ -274,27 +281,35 @@ td {
 }
 
 .course_info_pic_boy {
-  position: absolute;
+  /* position: absolute;
   width: 91px;
   height: 210px;
   top: 275px;
+  right: 0px; */
+  position: absolute;
+  width: calc(100%*0.2);
+  max-width: 100px;
   right: 0px;
+  bottom: -10px;
 }
 
 @media screen and (min-width: 1024px) {
   .course_info_pic_boy {
-    width: 127px;
+    /* width: 127px;
     height: 293px;
     top: 50px;
-    right: 30px;
+    right: 30px; */
+    max-width: 120px;
+    bottom: -30px;
   }
 }
 
 /* テキストが入る部分の設定 */
 .info_content {
-  width: 100%;
+  width: 80%;
   padding: 20px;
-  line-height: 2rem;
+  line-height: 1.5em;
+  margin-right: auto;
 }
 
 .font_bold {
@@ -303,7 +318,6 @@ td {
 
 .info_list li {
   text-align: left;
-  margin: auto -10px;
 }
 
 /* RECCOMENDの見出し */
