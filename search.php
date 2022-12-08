@@ -307,7 +307,7 @@
             <?php endif; ?>
 
             <!-- 結果の件数 -->
-            $sum=$eat_figure+$buy_figure+$enjoy_figure+$cycle_figure
+            <?php $sum = $eat_figure + $buy_figure + $enjoy_figure + $cycle_figure ?>
 
 
             <!-- 検索結果がないとき -->

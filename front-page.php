@@ -261,15 +261,7 @@
                                     <h3 class="spot_item_name"><?php the_title(); ?></h3>
                                     <!-- スポット情報の表 -->
                                     <dl class="spot_item_info flex">
-                                        <?php $page_id = get_the_id();
-                                                ?>
-                                        <dt></dt>
-                                        <dd>
-                                            <?php $terms_shop = get_the_terms($post->ID, 'shop_type'); ?>
-                                            <?php echo get_the_term_list($post->ID, 'shop_type', '#', '<br>#', '') ?>
-                                            <?php $terms_spot = get_the_terms($post->ID, 'spot_type'); ?>
-                                            <?php echo get_the_term_list($post->ID, 'spot_type', '#', '<br>#', '') ?>
-                                        </dd>
+                                        <p><?php the_field('catchphrase'); ?></p>
                                     </dl>
                                 </li>
                             </ul>
