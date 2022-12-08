@@ -1,15 +1,27 @@
 <?php get_header(); ?>
-<h2>おといあわせ</h2>
-<?php if (have_posts()) : ?>
-<?php while (have_posts()) : the_post(); ?>
+<main>
+    <!-- キービジュアル -->
+    <div class="key_bg_under">
+        <img src="https://placehold.jp/1440x400.png" alt="マイページキービジュアル" class="key_bg_under_img">
+    </div>
+
+    <!-- パンくずリスト -->
+    <div class="bradcrumbs">
+        ここに＞パンくずリストが＞入ります
+    </div>
+
+    <!-- ページ見出し -->
+    <section class="mypage">
+        <h2 class="course_top headline"><ruby>CONTACT<rt>お問い合わせ</rt></ruby></h2>
+    </section>
+
+    <!-- 問い合わせフォーム -->
+    <div class="contact_wrap">
+        <!-- <form action="confirm.php" method="post" name="form" onsubmit="return validate()"> -->
+        <?php echo do_shortcode('[contact-form-7 id="300" title="お問い合わせ"]'); ?>
+    </div>
 
 
-<div class="col-md-3">
 
-
-    <?php the_content(); ?>
-</div>
-<?php endwhile; ?>
-<!-- ループの終了 -->
-<?php endif; ?>
+</main>
 <?php get_footer(); ?>
