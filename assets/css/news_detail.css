@@ -19,12 +19,27 @@
 	}
 }
 /* 記事全体の設定（画面左側） */
+.aeticle_wrap {
+	width: 100%;
+	padding: 16px;
+	margin-bottom: 80px;
+}
+@media screen and (min-width: 600px) {
+	.aeticle_wrap {
+		width: 600px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.aeticle_wrap {
+		width: 804px;
+		margin-bottom: auto;
+	}
+}
 .news_detail_article {
 	width: 100%;
 	padding: 16px;
 	border: dashed 2px #ef6000;
 	background-color: #fffffc;
-	margin-bottom: 80px;
 }
 @media screen and (min-width: 600px) {
 	.news_detail_article {
@@ -57,7 +72,7 @@
 
 /* 記事本文の設定 */
 .article_body {
-	margin-bottom: 32px;
+	margin-bottom: px;
 }
 
 /* 写真の設定 */
@@ -82,10 +97,27 @@
 
 /* 記事下部の別ページへのリンク */
 .post_links {
-	margin-top: 32px;
+	width: 100%;
+	margin-bottom: 60px;
 }
+.post_links.pc_only {
+	display: none;
+}
+@media screen and (min-width: 1024px) {
+	.post_links.pc_only {
+		display: flex;
+	}
+	.post_links.not_pc {
+		display: none;
+	}
+}
+
 .post_link {
 	width: 50%;
+}
+.post_link span:hover {
+	text-decoration: underline;
+	color: #ef6000;
 }
 .post_link_prev {
 	text-align: left;
@@ -93,7 +125,6 @@
 .post_link_next {
 	text-align: right;
 }
-
 /* アーカイブ部分の設定 */
 .news_detail_archive_wrap {
 	width: 320px;
