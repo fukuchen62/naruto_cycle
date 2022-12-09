@@ -155,15 +155,12 @@ h2.search_title {
 /* あしらい（PC）非表示 */
 .img_pc_only {
     display: none;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
 }
 
-/* 人のあしらい（スマホ） */
-.search_img1_sp {
-    margin: 32px;
-    object-fit: cover;
-    width: 250px;
-    height: 267px;
-}
 
 /* 髙瀬追加・男女イラストアニメーション基本設定 */
 .animation {
@@ -378,6 +375,8 @@ h2.search_title {
         top: 695px;
         left: 776px;
     }
+
+
 
     /* 要素を横並びにする */
     .radio-box {
