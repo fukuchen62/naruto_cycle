@@ -242,7 +242,6 @@
 /* ニュースタイトル */
 .index_news_headline {
     width: 100%;
-    height: 16px;
     margin-top: 8px;
     white-space: nowrap;
     overflow: hidden;
