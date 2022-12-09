@@ -239,7 +239,7 @@
 	line-height: 34px;
 	position: relative;
 	margin-left: 168px;
-	margin-top: 10px;
+	margin-top: -16px;
 	transition: 0.25s;
 }
 
@@ -284,7 +284,7 @@
 	.news_card_item_btn {
 		position: relative;
 		margin-left: 148px;
-		margin-top: 90px;
+		margin-top: 64px;
 	}
 }
 
@@ -326,7 +326,7 @@
 	.news_card_item_btn {
 		position: relative;
 		margin-left: 348px;
-		margin-top: 90px;
+		margin-top: 64px;
 	}
 }
 
@@ -352,7 +352,7 @@
 /* ニュース下部の装飾入れ物 */
 .news_bottom_container {
 	position: relative;
-	margin-bottom: 0;
+	margin-bottom: -60px;
 }
 
 /* 下部背景のアニメーション */
