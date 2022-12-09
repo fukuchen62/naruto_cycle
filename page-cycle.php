@@ -97,7 +97,7 @@
             <h3 class="howto_list_headline">もっと鳴門について知るには</h3>
             <ul class="more_naruto_card_list slider">
                 <li class="more_naruto_card_item">
-                    <a>
+                    <a href="<?php the_permalink(410); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img01.png" alt="">
                         <p class="more_naruto_num">01</p>
                         <div class="more_naruto_caption">
@@ -108,7 +108,7 @@
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a>
+                    <a href=" <?php echo get_term_link('eat', 'shop_type'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img02.png" alt="">
                         <p class="more_naruto_num">02</p>
                         <div class="more_naruto_caption">
@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a>
+                    <a href=" <?php echo get_term_link('buy', 'shop_type'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img03.png" alt="">
                         <p class="more_naruto_num">03</p>
                         <div class="more_naruto_caption">
@@ -130,7 +130,7 @@
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a>
+                    <a href="<?php echo get_term_link('enjoy', 'spot_type'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img04.png" alt="">
                         <p class="more_naruto_num">04</p>
                         <div class="more_naruto_caption">
@@ -140,7 +140,7 @@
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a>
+                    <a href="<?php echo get_term_link('cycle-spot', 'shop_type'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img05.png" alt="">
                         <p class="more_naruto_num">05</p>
                         <div class="more_naruto_caption">
@@ -150,7 +150,7 @@
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a>
+                    <a href="<?php echo home_url('/question/'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img06.png" alt="">
                         <p class="more_naruto_num">06</p>
                         <div class="more_naruto_caption">
