@@ -1,0 +1,110 @@
+main {
+    padding-bottom: 80px;
+}
+
+.aboutsite {
+    width: calc(100%*0.71794872);
+    min-width: 320px;
+    max-width: 1024px;
+    margin: 80px auto 0;
+    padding: 16px;
+    background-color: rgba(255, 255, 252, 0.7);
+    border: dashed 8px #EF6000;
+    border-radius: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .aboutsite {
+        width: 1024px;
+    }
+}
+
+.aboutsite_text {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+
+/* 写真とテキストのボックス */
+.aboutsite_imgtext_box {
+    width: 100%;
+    margin: 0 auto 32px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .aboutsite_imgtext_box {
+        display: flex;
+        gap: 16px;
+    }
+}
+
+/* 写真設定 */
+.aboutsite_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 1024px) {
+    .aboutsite_img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+.aboutsite_text_box {
+    margin-top: 32px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .aboutsite_text_box {
+        width: 50%;
+        margin-top: 0;
+    }
+}
+
+.aboutsite_h3 {
+    margin: 0 auto;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    background-image: repeating-linear-gradient(-45deg,
+            #d4ebec,
+            #d4ebec 10px,
+            #fffc 0,
+            #fffc 12px);
+    border-radius: 28px;
+}
+
+.aboutsite_h4 {
+    margin: 0 auto;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.aboutsite_text {
+    line-height: 1.5em;
+    padding: 16px 0;
+}
+
+/* サンクスリスト */
+.thanks_list {
+    padding: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+    line-height: 3em;
+}
+
+.thanks_list li {
+    width: 25%;
+    min-width: 236px;
+}

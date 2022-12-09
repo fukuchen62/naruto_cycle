@@ -1,0 +1,39 @@
+.error {
+    width: calc(100%*0.82051282);
+    max-width: 1024px;
+    margin: 80px auto;
+
+}
+
+.error_headline {
+    font-size: 5em;
+    font-weight: 900;
+    text-align: center;
+}
+
+.error_headline_caption {
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.error_text_box {
+    margin: 16px auto 32px;
+    width: 80%;
+    min-width: 320px;
+    max-width: 640px;
+}
+
+.error_text {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    left: auto;
+    right: auto;
+    bottom: 0;
+}
