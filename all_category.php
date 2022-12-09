@@ -24,7 +24,7 @@ Template Name: 全記事一覧テスト
         <!-- </div> -->
         <!-- ページ見出し -->
         <section class="news">
-            <h2 class="course_top headline"><ruby>NEWS<rt>ニュース</rt></ruby></h2>
+            <h2 class="course_top headline"><ruby>NEWS<rt>新着情報</rt></ruby></h2>
         </section>
         <div class="news_detail">
             <div class="news_detail_container flex">
