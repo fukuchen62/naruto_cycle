@@ -1,15 +1,38 @@
 // // headerをスクロールすると、色が変わる
 
 jQuery(document).ready(function () {
+	// // 画面幅の取得
+	var windowWidth = $(window).width();
+	var windowSp = 599;
 
-    $(window).scroll(function () {
-        console.log($(window).scrollTop());
-        if ($(window).scrollTop() > 500) {
-            $('.header').addClass('fixed_menu');
-        } else {
-            $('.header').removeClass('fixed_menu');
-        }
-    });
+	// console.log($(window).scrollTop());
+	// if ($(window).scrollTop() > 500) {
+	// 	$(".header").addClass("fixed_menu");
+	// } else {
+	// 	$(".header").removeClass("fixed_menu");
+	// }
+
+	if (windowWidth <= windowSp) {
+		//横幅599px以下（sp）に適用
+		// spの場合
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > 80) {
+				$(".header").addClass("fixed_menu");
+			} else {
+				$(".header").removeClass("fixed_menu");
+			}
+		});
+	} else {
+		//それ以外（PC）に適用
+		// pcの場合
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > 400) {
+				$(".header").addClass("fixed_menu");
+			} else {
+				$(".header").removeClass("fixed_menu");
+			}
+		});
+	}
 });
 
 // jQuery(function($) {

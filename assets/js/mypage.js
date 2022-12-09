@@ -8,12 +8,12 @@ $(window).on("load", function () {
 
 	// 画面幅の取得
 	var windowWidth = $(window).width();
-	var windowSm = 671;
+	var windowSp = 671;
 	var windowPc = 1023;
 
 	if (list == 1) $(".spot_list").css({ "justify-content": "center" });
 
-	if (windowWidth <= windowSm) {
+	if (windowWidth <= windowSp) {
 		//横幅671px以下（1カラム）に適用
 		// spの場合
 		// 4件以上ならボタン非表示。
