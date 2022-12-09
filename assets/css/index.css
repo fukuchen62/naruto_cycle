@@ -273,7 +273,7 @@ video {
 /* ニュースタイトル */
 .index_news_headline {
     width: 100%;
-    height: 16px;
+    height: 20px;
     margin-top: 8px;
     white-space: nowrap;
     overflow: hidden;
