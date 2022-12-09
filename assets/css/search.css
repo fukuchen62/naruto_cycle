@@ -42,13 +42,11 @@ h2.search_title {
     border: 1px solid #74c7f0;
     margin: auto;
     /* 斜めストライプ */
-    background-image: repeating-linear-gradient(
-        -45deg,
-        #d4ebec,
-        #d4ebec 10px,
-        #fffc 0,
-        #fffc 12px
-    );
+    background-image: repeating-linear-gradient(-45deg,
+            #d4ebec,
+            #d4ebec 10px,
+            #fffc 0,
+            #fffc 12px);
     /* background:linear-gradient(
     -45deg,
     #fff 25%, #C6E6FB 25%,
@@ -167,6 +165,14 @@ h2.search_title {
     height: 267px;
 }
 
+/* 髙瀬追加・男女イラストアニメーション基本設定 */
+.animation {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+}
+
 /* 髙瀬追加・あしらい（PC）女性の動き */
 .move_jump {
     animation-name: jump;
@@ -252,6 +258,7 @@ h2.search_title {
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する */
 @media screen and (min-width: 600px) {
+
     /* 検索ボックス */
     .search_container {
         width: 600px;
@@ -311,6 +318,7 @@ h2.search_title {
 
 /* スクリーンサイズが1025px以上の場合(デスクトップ)に適用する○○ */
 @media screen and (min-width: 1024px) {
+
     /* パンくずリスト */
     .bradcrumbs {
         margin: 8px auto 94px auto;
