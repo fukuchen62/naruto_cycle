@@ -354,4 +354,8 @@ function add_individual_stylesheet_script()
     else if (is_page('privacy')) {
         wp_enqueue_style('naruto_cycle-privacy', get_template_directory_uri() . '/assets/css/privacy.css', array(), false);
     }
+    // エラーページ
+    else if (is_404()) {
+        wp_enqueue_style('naruto_cycle-privacy', get_template_directory_uri() . '/assets/css/404.css', array(), false);
+    }
 }
