@@ -77,8 +77,9 @@ button {
 
 .menu {
 	position: fixed;
-	right: -1000%;
-	width: 40%;
+	top: 0;
+	/* right: -1000%; */
+	width: 100%;
 	height: 100vh;
 	margin-left: auto;
 	font-size: 100%;
@@ -86,7 +87,6 @@ button {
 	background-color: #74C7F0;
 	z-index: 9;
 	transition: 0.3s;
-	border-radius: 0 0 0 16px;
 }
 
 /* PC表示 */
@@ -108,7 +108,7 @@ button {
 }
 
 .menu li:first-child {
-	margin-top: 80px;
+	margin-top: 160px;
 }
 
 /* PC表示 */
