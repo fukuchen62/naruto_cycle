@@ -19,7 +19,7 @@ jQuery(document).ready(function () {
   topBtn.click(function () {
     $('body,html').animate({
       scrollTop: 0
-    }, 200);
+    }, 1000);
     return false;
   });
 });
