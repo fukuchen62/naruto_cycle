@@ -192,6 +192,10 @@ h2.search_title {
     object-fit: cover;
     width: 250px;
     height: 267px;
+
+    z-index: 2;
+    /* safariでのバグ表示回避 */
+    transform: translateZ(1px);
 }
 
 /* 髙瀬追加・人のあしらい（スマホ）半円の動き */
@@ -219,6 +223,10 @@ h2.search_title {
     line-height: 39px;
     color: #ef6000;
     animation: blinking 0.5s ease-in-out infinite alternate;
+
+    z-index: 3;
+    /* safariでのバグ表示回避 */
+    transform: translateZ(1px);
 }
 
 @keyframes blinking {
@@ -364,6 +372,10 @@ h2.search_title {
         position: absolute;
         top: 703px;
         right: 726px;
+
+        z-index: 3;
+        /* safariでのバグ表示回避 */
+        transform: translateZ(1px);
     }
 
     .search_img2_pc {
@@ -374,6 +386,10 @@ h2.search_title {
         position: absolute;
         top: 695px;
         left: 776px;
+
+        z-index: 3;
+        /* safariでのバグ表示回避 */
+        transform: translateZ(1px);
     }
 
 
