@@ -21,18 +21,29 @@
     width: 100%;
     margin: 0 auto;
     border-radius: 8px;
-    background-color: #D4EBEC;
+
 }
 
 .form_item {
     padding: 20px;
+    background-color: #D4EBEC;
     border: 2px solid #74C7F0
 }
 
 .item_req {
-    margin: 0 auto;
+    margin-right: 16px;
+    padding: 6px;
     background-color: #EF6000;
     color: #fffffc;
+    border-radius: 8px;
+}
+
+.item_any {
+    margin-right: 16px;
+    padding: 6px;
+    background-color: #fffffc;
+    color: #EF6000;
+    border: solid 1px #ef6000;
 }
 
 .item {
@@ -47,4 +58,8 @@
     display: inline-block;
     text-align: center;
     margin: 0 auto;
+}
+
+.submit_btn {
+    margin-top: 32px;
 }
