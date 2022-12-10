@@ -222,8 +222,8 @@
 .news_card_txt p {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	/* 2行目の末で省略する*/
+	-webkit-line-clamp: 1;
+	/* 1行目の末で省略する*/
 	overflow: hidden;
 }
 
@@ -276,8 +276,8 @@
 		height: 122px;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 6;
-		/* 6行目の末で省略する*/
+		-webkit-line-clamp: 4;
+		/* 4行目の末で省略する*/
 		overflow: hidden;
 	}
 
@@ -318,8 +318,8 @@
 		width: 460px;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 6;
-		/* 6行目の末で省略する*/
+		-webkit-line-clamp: 4;
+		/* 4行目の末で省略する*/
 		overflow: hidden;
 	}
 
