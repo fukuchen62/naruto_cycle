@@ -256,7 +256,14 @@
     </section>
     <!-- おすすめスポット -->
     <section>
-        <h2 class="info_headline headline"><ruby>RECOMMEND<rt>こちらもいかがですか？</rt></ruby></h2>
+        <div class="info_spot_headlinebox">
+            <!-- 吹き出しPICKUP！文字 -->
+            <div class="info_spot_deco">＼PICK UP!／</div>
+            <!-- SPOT見出し -->
+            <h2 class="info_headline headline">
+                <ruby>RECOMMEND<rt>こちらもいかがですか？</rt></ruby>
+            </h2>
+        </div>
 
         <!-- 全てのカード入りの箱 -->
         <div class="spot_card_box">
