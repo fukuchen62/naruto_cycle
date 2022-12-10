@@ -37,9 +37,9 @@
     <div class="reccomend_wrap">
         <div class="pickup">＼ PICK UP! ／ </div>
         <!-- ピックアップタイトル -->
-
-        <h2 class="reccomend_title_jp">こちらもいかがですか？</h2>
-        <h2 class="reccomend_title">RECOMMEND</h2>
+        <h2 class="course_spot_headline headline">
+      <ruby>RECOMMEND<rt>こちらもいかがですか？</rt></ruby>
+    </h2>
     </div>
 
     <div class="spot_list_wrap">
