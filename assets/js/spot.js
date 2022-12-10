@@ -1,6 +1,7 @@
 "use strict";
 
 $(".slider").slick({
+	arrows: false, //左右の矢印
 	dots: true, //スライドしたのドット
 	customPaging: function (slick, index) {
 		// スライダーのインデックス番号に対応した画像のsrcを取得
@@ -13,7 +14,6 @@ $(".slider").slick({
 	autoplay: true, //自動再生
 	autoplaySpeed: 2000, //自動再生のスピード
 	speed: 800, //スライドするスピード
-	arrows: true, //左右の矢印
 	infinite: true, //スライドのループ
 	pauseOnHover: false, //ホバーしたときにスライドを一時停止しない
 	variableWidth: true, //width等をcssで管理

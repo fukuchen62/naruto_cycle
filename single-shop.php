@@ -22,7 +22,7 @@
                     <div class="spot_img_box">
 
                         <div class="slider-container">
-                            <div id="slider" class="slider_img_box slider">
+                            <div class="slider_img_box slider">
                                 <?php
                                 $pic = get_field('eyecatch');
                                 $pic_url = $pic['sizes']['medium'];
@@ -41,8 +41,6 @@
                                 $pic2_url = $pic2['url'];
                                 ?>
                                 <div><img src="<?php echo $pic2_url; ?>" alt="アイキャッチ画像" class="slider_img"></div>
-
-                                <div><img src="<?php echo $pic_url; ?>" alt="アイキャッチ画像" class="slider_img"></div>
                             </div>
                         </div>
 
@@ -119,7 +117,7 @@
 
                                 <tr>
                                     <th>備考</th>
-                                    <td><?php the_field('memo'); ?></td>
+                                    <td class="remark"><?php the_field('memo'); ?></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -220,6 +218,7 @@
                 <!-- お気に入りボタン -->
                 <div class=" ">
                     <?php echo get_favorites_button(get_the_ID()); ?>
+                    お気に入り
                 </div>
 
             </div>
@@ -255,7 +254,7 @@
     </section>
     <!-- おすすめスポット -->
     <section>
-        <h2 class="info_headline headline"><ruby>RECCOMEND<rt>こちらもいかがですか？</rt></ruby></h2>
+        <h2 class="info_headline headline"><ruby>RECOMMEND<rt>こちらもいかがですか？</rt></ruby></h2>
 
         <!-- 全てのカード入りの箱 -->
         <div class="spot_card_box">
