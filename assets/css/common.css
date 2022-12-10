@@ -376,6 +376,9 @@ ruby rt {
     top: 30px;
     right: 25px;
     z-index: 2;
+
+    /* safariでのバグ表示回避 */
+    transform: translateZ(1px);
 }
 
 .LikesIcon-fa-heart {

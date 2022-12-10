@@ -199,6 +199,10 @@
 	left: 0;
 	right: 0;
 	transform: rotateZ(3deg);
+
+	z-index: 1;
+	/* safariでのバグ表示回避 */
+	transform: translateZ(1px);
 }
 
 /* 前の白い部分 */
@@ -209,6 +213,10 @@
 	flex-wrap: wrap;
 	column-gap: 64px;
 	justify-content: center;
+
+	z-index: 2;
+	/* safariでのバグ表示回避 */
+	transform: translateZ(1px);
 }
 
 /* 装飾の設定 */
@@ -238,6 +246,9 @@
 		animation: rotateAnim 15s linear infinite;
 		/* 円形テキストを回転 */
 		z-index: -1;
+
+		/* safariでのバグ表示回避 */
+		transform: translateZ(1px);
 	}
 
 	@keyframes rotateAnim {
@@ -264,6 +275,10 @@
 			0 -1px 0 #fdacac, 0 1px 0 #fdacac, 1px -1px 0 #fdacac, 1px 0 0 #fdacac,
 			1px 1px 0 #fdacac;
 		color: #f3f0e8;
+
+		z-index: -1;
+		/* safariでのバグ表示回避 */
+		transform: translateZ(1px);
 	}
 }
 
@@ -284,6 +299,10 @@
 		position: absolute;
 		right: -140px;
 		top: -20px;
+
+		z-index: 3;
+		/* safariでのバグ表示回避 */
+		transform: translateZ(1px);
 	}
 
 	.course_info_pic_man {
@@ -293,6 +312,10 @@
 		position: absolute;
 		bottom: 0;
 		left: -120px;
+
+		z-index: 3;
+		/* safariでのバグ表示回避 */
+		transform: translateZ(1px);
 	}
 }
 
@@ -304,6 +327,10 @@
 		position: absolute;
 		right: 0;
 		top: -20px;
+
+		z-index: 3;
+		/* safariでのバグ表示回避 */
+		transform: translateZ(1px);
 	}
 
 	.course_info_pic_man {
@@ -313,6 +340,10 @@
 		position: absolute;
 		bottom: 0;
 		left: 40px;
+
+		z-index: 3;
+		/* safariでのバグ表示回避 */
+		transform: translateZ(1px);
 	}
 }
 
@@ -322,6 +353,9 @@
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-duration: 1.5s;
+
+	/* safariでのバグ表示回避 */
+	transform: translateZ(1px);
 }
 
 /* 半円の動き */
@@ -329,6 +363,9 @@
 	animation-name: anim_s;
 	transform: rotate(5deg);
 	animation-duration: 2s;
+
+	/* safariでのバグ表示回避 */
+	transform: translateZ(1px);
 }
 
 @keyframes anim_s {
@@ -366,6 +403,10 @@
 	top: -15px;
 	left: 40px;
 	transform: rotateZ(-15deg);
+
+	z-index: 3;
+	/* safariでのバグ表示回避 */
+	transform: translateZ(1px);
 }
 
 /* テキストが入る部分の設定 */
