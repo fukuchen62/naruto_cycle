@@ -240,13 +240,13 @@
                         おすすめアイテム
                     </li>
                     <li>
-                        <?php the_field('recommend_menu'); ?><br>
+                        <?php the_field('recommended_menu'); ?><br>
                     </li>
                     <li class="info_item font_bold">
                         お店から一言
                     </li>
                     <li>
-                        <?php the_field('recommend_point'); ?>
+                        <?php the_field('recommended_point'); ?>
                     </li>
 
                 </ul>

@@ -250,7 +250,7 @@
                         オススメポイント
                     </li>
                     <li>
-                        <?php the_field('recommend_point'); ?>
+                        <?php the_field('recommended_point'); ?>
                     </li>
 
                 </ul>
