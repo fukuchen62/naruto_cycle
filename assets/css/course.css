@@ -360,6 +360,8 @@
 
 /* 常に表示する装飾 */
 .course_info_pic_clip {
+	height: 70px;
+	object-fit: cover;
 	position: absolute;
 	top: -15px;
 	left: 40px;
