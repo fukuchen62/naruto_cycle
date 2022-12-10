@@ -128,16 +128,11 @@
         <!-- コンテンツボックス -->
         <div class="index_course_content">
 
-            <!-- マップ -->
-            <div class="index_map_imgbox">
-                <img class="index_map_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_course_img.png" alt="サイクリングコースマップ">
-            </div>
-
             <!-- サイクリングコース選択エリアのコンテナ -->
             <div class="course_top_choice_container">
 
                 <!-- コース選択見出し -->
-                <h3 class="index_couse_selecttop">コースを選ぶ</h3>
+                <h3 class="index_course_selecttop">コースを選ぶ</h3>
 
                 <!-- コース選択ボタンボックス -->
                 <div class="index_course_btnbox flex">
@@ -184,6 +179,13 @@
 
                 </div>
             </div>
+
+            <!-- マップ -->
+            <div class="index_map_imgbox">
+                <img class="index_map_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_course_img.png" alt="サイクリングコースマップ">
+            </div>
+
+
         </div>
     </section>
 

@@ -159,7 +159,7 @@ video {
     }
 
     100% {
-        transform: translate(500px, 0);
+        transform: translate(300px, 0);
     }
 }
 
@@ -398,11 +398,16 @@ video {
     }
 }
 
+
 /* 波のあしらいに被らないように調整 */
 @media screen and (min-width: 1024px) {
     .index_course_content {
         margin-bottom: 160px;
     }
+}
+
+.course_top_choice_container {
+    margin-bottom: 32px;
 }
 
 .index_map_imgbox {
@@ -433,10 +438,10 @@ video {
 }
 
 /* コースを選ぶ見出し */
-.index_couse_selecttop {
+.index_course_selecttop {
     width: 160px;
     margin: 24px auto 0;
-    padding: 8px;
+    /* padding: 8px; */
     text-align: center;
     line-height: 1.2em;
     font-size: 24px;

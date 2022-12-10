@@ -37,14 +37,14 @@
     <div class="reccomend_wrap">
         <div class="pickup">＼ PICK UP! ／ </div>
         <!-- ピックアップタイトル -->
-
-        <h2 class="reccomend_title_jp">こちらもいかがですか？</h2>
-        <h2 class="reccomend_title">RECCOMEND</h2>
+        <h2 class="course_spot_headline headline">
+      <ruby>RECOMMEND<rt>こちらもいかがですか？</rt></ruby>
+    </h2>
     </div>
 
     <div class="spot_list_wrap">
         <!-- カード全体の入れ物 -->
-        <ul class="spot_list">
+        <ul class="spot_list flex just_center">
 
             <!-- ショップ記事ランダムで1件表示 -->
             <?php
