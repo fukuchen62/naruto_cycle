@@ -3,9 +3,9 @@
 <footer class="footer bg_blue white txt_c">
     <ul class="banner_list gap32_16 m_bottom40">
         <!-- asaなどのバナーがliで入ります -->
-        <li class="banner_item"><a href="https://asa-cycling.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner_asa.png" alt="ASAのバナー"></a></li>
-        <li class="banner_item"><a href="https://www.city.naruto.tokushima.jp/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner_naruto.png" alt="鳴門市のバナー"></a></li>
-        <li class="banner_item"><a href="https://www.tokusupo.net/bicycle/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner_okoku.png" alt="自転車王国のバナー"></a></li>
+        <li class="banner_item"><a href="https://asa-cycling.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner_asa.png" target=" _blank" rel="noopener noreferrer" alt="ASAのバナー"></a></li>
+        <li class="banner_item"><a href="https://www.city.naruto.tokushima.jp/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner_naruto.png" target=" _blank" rel="noopener noreferrer" alt="鳴門市のバナー"></a></li>
+        <li class="banner_item"><a href="https://www.tokusupo.net/bicycle/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner_okoku.png" target=" _blank" rel="noopener noreferrer" alt="自転車王国のバナー"></a></li>
     </ul>
 
     <nav class="fnav_container bg_blue">
