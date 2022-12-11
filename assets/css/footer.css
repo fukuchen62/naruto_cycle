@@ -24,8 +24,7 @@
 }
 
 /* スクリーンサイズが600px以上の場合(タブレット)に適用する○○ */
-@media screen and (min-width: 600px) {
-}
+@media screen and (min-width: 600px) {}
 
 /* liバナー */
 .banner_item {
@@ -60,6 +59,7 @@
 	bottom: 10px;
 	cursor: pointer;
 	z-index: 100;
+	transform: translateZ(1px);
 }
 
 /* ボタンの画像はこちら */

@@ -1,137 +1,143 @@
-/* 見出し */
-.about_h3 {
-    font-size: 16px;
-    font-weight: bold;
-    /* margin: 20px 20px 10px 20px; */
-    text-align: center;
-    padding: 5%;
+main {
+    padding-bottom: 80px;
 }
 
-/* なぜこのサイトを～の見出し */
-@media screen and (min-width: 1024px) {
-    .absolute h3 {
-        text-align: left;
-        margin-left: 20px;
-        /* margin-bottom: -10px; */
-        padding: 0%;
-    }
-
-    /* 他の見出し */
-    .about_h3 {
-        font-size: 24px;
-        white-space: nowrap;
-        padding: 2%;
-    }
-}
-
-/* 画像 */
-.index_howto_img {
-    object-fit: cover;
-    width: 280px;
-    margin: auto 10px;
+.aboutsite {
+    width: calc(100%*0.71794872);
+    min-width: 320px;
+    max-width: 1024px;
+    margin: 80px auto 0;
+    padding: 16px;
+    background-color: rgba(255, 255, 252, 0.7);
+    border-radius: 16px;
 }
 
 @media screen and (min-width: 1024px) {
-    .index_howto_img {
-        text-align: left;
-        object-fit: cover;
-        width: 550px;
-        height: 400px;
-        margin-top: 20px;
-    }
-}
-
-/* 各セクションのボックス */
-.about_container {
-    display: block;
-    width: 300px;
-    height: 600px;
-    background-color: #FFFFFF;
-    margin-bottom: 50px;
-    margin: 50px auto;
-}
-
-/* サイト制作にご協力～のボックス */
-.shop_container {
-    height: 700px;
-}
-
-@media screen and (min-width: 1024px) {
-    .about_container {
+    .aboutsite {
         width: 1024px;
-        height: 500px;
     }
 }
 
-/* テキストボックス */
-.about_txtbox {
-    margin: 15px auto;
+.aboutsite_text {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+
+/* 写真とテキストのボックス */
+.aboutsite_imgtext_box {
+    width: 100%;
+    margin: 0 auto 32px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .aboutsite_imgtext_box {
+        display: flex;
+        gap: 16px;
+    }
+}
+
+/* 写真設定 */
+.aboutsite_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.aboutsite_img img {
+    border-radius: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-    .about_txtbox {
-        margin: auto 0px;
-
+    .aboutsite_img {
+        width: 50%;
+        height: auto;
     }
+}
+
+.aboutsite_text_box {
+    margin-top: 32px;
+    width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-    .absolute {
-        width: 430px;
-        right: 0px;
-        bottom: 250px;
+    .aboutsite_text_box {
+        width: 50%;
+        margin-top: 0;
     }
 }
 
-/* 単独テキスト */
-.about_txt {
-    display: inline-block;
-    margin: 10px 20px;
-    line-height: 22px;
-}
-
-@media screen and (min-width: 1024px) {
-    .about_txt {
-        text-align: left;
-    }
-}
-
-/* ショップ一覧 */
-.about_thanks_wrap {
-    /* margin: 20px 15px 30px; */
-    /* margin: auto; */
-    height: 208px;
-    width: 962px;
-
-}
-
-.about_thanks_table {
+.aboutsite_h3 {
+    margin: 0 auto;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 900;
     text-align: center;
-    height: 208px;
-
+    border-radius: 28px;
+    background-image: repeating-linear-gradient(-45deg,
+            #d4ebec,
+            #d4ebec 10px,
+            #fffc 0,
+            #fffc 12px);
 }
 
-.about_table td {
-    text-align: start;
-    padding: 10px;
-    display: block;
+.aboutsite_h4 {
+    margin: 0 auto;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    border-left: solid 8px #96C85C;
 }
 
-@media screen and (min-width: 1024px) {
-    .about_table td {
-        white-space: nowrap;
-        text-align: start;
+.aboutsite_text {
+    line-height: 1.5em;
+    padding: 16px 0;
+}
 
-        display: inline-block;
-        margin: 5px;
-    }
+/* サンクスリスト */
+.thanks_list {
+    padding: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+    line-height: 3em;
+}
 
-    .about_table tr {
-        text-align: start;
-    }
+.thanks_list:last-child {
+    padding-bottom: 0;
+}
 
-    .about_table {
-        margin: 20px auto;
-    }
+.thanks_list li {
+    width: 25%;
+    min-width: 236px;
+    transition: 0.3s;
+}
 
+li a {
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+}
+
+li a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #EF6000;
+    transition: .3s;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+.thanks_list_all {
+    text-align: right;
+    margin-bottom: 32px;
 }
