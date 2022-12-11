@@ -268,7 +268,7 @@ ruby rt {
 /* カードそのものの設定 */
 .spot_card {
     width: 320px;
-    height: 440px;
+    height: 390px;
     margin: 0 auto;
 }
 
