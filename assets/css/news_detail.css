@@ -73,7 +73,7 @@
 /* ニュース上部カテゴリと日付の設定 */
 .article_meta {
 	gap: 16px;
-	margin: 16px;
+	margin-top: 16px;
 }
 
 .post-categories {

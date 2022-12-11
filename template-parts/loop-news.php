@@ -34,8 +34,9 @@
 
                 </div>
             </div>
+            <!-- スポットもっと見るボタン -->
+            <div class="news_card_item_btn"><a href="<?php the_permalink(); ?>">[続きを読む]</a></div>
         </div>
-        <!-- スポットもっと見るボタン -->
-        <div class="news_card_item_btn"><a href="<?php the_permalink(); ?>">[続きを読む]</a></div>
+
     </div>
 </div>
