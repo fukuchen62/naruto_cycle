@@ -236,6 +236,7 @@ button {
 	/* display: inline-block; */
 	position: absolute;
 	top: 20px;
+	left: 0;
 	/* バーガー線の位置基準として設定 */
 	width: 100%;
 	/* 線の長さと高さ */
