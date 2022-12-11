@@ -126,8 +126,8 @@ video {
 /* PC表示 */
 @media screen and (min-width: 1024px) {
     .key_msg {
-        font-size: calc(100vw /10);
-        top: 160px;
+        font-size: calc(100vw /12);
+        top: 140px;
         left: 10%;
     }
 }
