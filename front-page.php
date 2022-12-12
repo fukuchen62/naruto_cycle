@@ -23,7 +23,7 @@
             <div class="index_video_wrapper">
                 <video autoplay muted playsinline loop>
                     <source src="<?php echo get_template_directory_uri(); ?>/assets/img/index_keymovie_mp4.mp4" type="video/mp4">
-                    <img src="https://placehold.jp/1440x1024.png" alt="キービジュアル画像">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_key_img1.png" alt="キービジュアル画像・大鳴門橋">
                 </video>
             </div>
 
@@ -296,39 +296,46 @@
         <div class="index_insta_content flex">
             <div class="index_insta_txtbox">
                 <!-- 見出しボックス -->
-                <div class="index_insta_headline tb_pc_flex">
-                    <!-- インスタロゴ -->
-                    <img class="insta_logo_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="インスタグラムのロゴ">
-                    <!-- 見出し -->
-                    <h2 class="index_insta_top headline">
-                        <ruby>INSTAGRAM<rt>なるとサイくるっと！公式インスタグラム</rt></ruby>
-                    </h2>
-                </div>
+                <!-- <div class="index_insta_headline tb_pc_flex"> -->
+                <!-- 見出し -->
+                <h2 class="index_insta_top headline">
+                    <ruby>INSTAGRAM<rt>なるとサイくるっと！公式インスタグラム</rt></ruby>
+                </h2>
+                <!-- </div> -->
 
                 <!-- キャプション -->
                 <div class="index_insta_caption">
                     <p>＃なるとサイくるっと！をチェックしてね！</p>
-                    <p>鳴門サイクリングの思い出をシェアしよう！</p>
+                    <!-- <p>鳴門サイクリングの思い出をシェアしよう！</p> -->
+                </div>
+
+                <!-- 公式アカウントへのリンク -->
+                <div class="index_insta_linkbox">
+                    <!-- インスタロゴ -->
+                    <img class="insta_logo_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="インスタグラムのロゴ">
+                    <a href="https://www.instagram.com/naruto_cycle/">
+                        <div class="index_insta_link">naruto_cycle</div>
+                    </a>
                 </div>
             </div>
 
             <!-- 自転車のあしらい＋回転アニメーション（SP非表示） -->
-            <div class="index_insta_decobox">
+            <!-- <div class="index_insta_decobox"> -->
 
-                <!-- 回転アニメーション -->
-                <!-- <div class="index_circle">
+            <!-- 回転アニメーション -->
+            <!-- <div class="index_circle">
                     <div class="index_inner">
                         <p class="text index_insta_decotxt">HAVE A NICE BIKE TRIP! </p>
                     </div>
                 </div> -->
 
-                <!-- 自転車のあしらい -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
-            </div>
+            <!-- 自転車のあしらい -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
+            <!-- </div> -->
         </div>
         <div class="index_insta_SWbox">
             <!-- SnapWidget -->
-            <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget index_insta_SW insta_PC" style="border:none; overflow:hidden; width:1250px; height:250px"></iframe>
+            <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" style="border:none; overflow:hidden; width:1250px; height:250px"></iframe>
 
             <!-- <?php echo do_shortcode('[instagram-feed feed=1]'); ?> -->
 
