@@ -56,7 +56,7 @@
                             </ul>
                         </div> -->
 
-                    <!-- <?php get_sidebar('archives'); ?> -->
+
                     <!-- <div class="news_detail_archive">
                             <h2 class="news_detail_archive_title">月別アーカイブ</h2>
                             <ul class="news_detail_archive_list">
