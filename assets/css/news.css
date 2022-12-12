@@ -188,6 +188,7 @@
 	padding: 20px;
 	margin: 0 auto;
 	border: dashed 2px #EF6000;
+	border-radius: 5px;
 	background-color: #FFFFFC;
 	position: relative;
 }
