@@ -173,6 +173,7 @@
 /* -------- ニュース記事の設定 -------- */
 
 /* ニュース記事１つ分の枠 */
+
 .news_card {
 	width: 320px;
 	height: 440px;
@@ -248,7 +249,7 @@
 
 .news_article_info_container {
 	width: 280px;
-	height: 140px;
+	height: 160px;
 	position: relative;
 }
 
