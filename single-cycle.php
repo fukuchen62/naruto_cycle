@@ -230,7 +230,7 @@
 
         <!-- 装飾 -->
         <div class="info_wrap info_main">
-            <img src="https://placehold.jp/22x60.png" alt="クリップ" class="course_info_pic_clip" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_info_img3.png" alt="クリップ" class="course_info_pic_clip" />
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spotdetail_message_img.png" alt="装飾" class="course_info_pic_boy">
 
             <!-- メモ欄 -->

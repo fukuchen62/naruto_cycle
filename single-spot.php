@@ -232,32 +232,30 @@
         </div>
 
         <!-- 装飾 -->
-        <div class="info_wrap">
-            <div class="info_bg_deco"></div>
-            <div class="info_main">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_info_img3.png" alt="クリップ" class="course_info_pic_clip" />
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spotdetail_message_img.png" alt="装飾" class="course_info_pic_boy">
+        <div class="info_wrap info_main">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course_info_img3.png" alt="クリップ" class="course_info_pic_clip" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spotdetail_message_img.png" alt="装飾" class="course_info_pic_boy">
 
-                <!-- メモ欄 -->
-                <div class="info_content">
-                    <ul class="info_list">
-                        <!--
+            <!-- メモ欄 -->
+            <div class="info_content">
+                <ul class="info_list">
+                    <!--
                     <li class="info_item font_bold">*/
 
                     </li>
                     <li> -->
-                        <!-- <?php the_field('recommend_menu'); ?><br> -->
-                        <!-- </li> -->
-                        <li class="info_item font_bold">
-                            オススメポイント
-                        </li>
-                        <li>
-                            <?php the_field('recommended_point'); ?>
-                        </li>
+                    <!-- <?php the_field('recommend_menu'); ?><br> -->
+                    <!-- </li> -->
+                    <li class="info_item font_bold">
+                        オススメポイント
+                    </li>
+                    <li>
+                        <?php the_field('recommended_point'); ?>
+                    </li>
 
-                    </ul>
-                </div>
+                </ul>
             </div>
+        </div>
         </div>
 
     </section>
