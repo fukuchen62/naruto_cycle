@@ -33,7 +33,7 @@
     </div>
 
     <!-- スマホ表示の人のあしらい -->
-    <img src="assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp animation move_rolling">
+    <img src="/assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp animation move_rolling">
 
     <section class="search">
         <div class="reccomend_wrap">
