@@ -27,13 +27,13 @@
 
 
         <!-- PC表示の人のあしらい１ -->
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/search_form_img1.png" alt="装飾" class="search_img1_pc img_pc_only">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/search_form_img1.png" alt="装飾" class="search_img1_pc img_pc_only animation move_rolling">
         <!-- PC表示の人のあしらい２ -->
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/search_form_img2.png" alt="装飾" class="search_img2_pc img_pc_only">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/search_form_img2.png" alt="装飾" class="search_img2_pc img_pc_only animation move_jump">
     </div>
 
     <!-- スマホ表示の人のあしらい -->
-    <img src="assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp">
+    <img src="/assets/img/search_form_img1.png" alt="装飾" class="search_img1_sp animation move_rolling">
 
     <section class="search">
         <div class="reccomend_wrap">
