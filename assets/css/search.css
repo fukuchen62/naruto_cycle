@@ -40,6 +40,7 @@ h2.search_title {
     width: 320px;
     height: 1629px;
     border: 1px solid #74c7f0;
+    border-radius: 5px;
     margin: auto;
     /* 斜めストライプ */
     background-image: repeating-linear-gradient(-45deg,
