@@ -185,7 +185,7 @@ video {
 /* ニュース全体ボックス */
 .index_news {
     width: 100%;
-    height: 140px;
+    height: 138px;
     margin-top: 0;
     /* display: flex; */
     justify-content: space-between;
@@ -199,7 +199,7 @@ video {
 @media screen and (min-width: 940px) {
     .index_news {
         width: 650px;
-        height: 160px;
+        height: 136px;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -243,7 +243,7 @@ video {
     .index_news {
         width: 100%;
         max-width: 650px;
-        height: 156px;
+        height: 138px;
     }
 }
 
@@ -251,7 +251,7 @@ video {
 .index_news_article_box {
     width: 70%;
     /* margin-left: 16px; */
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
 .index_news_article_box article+article {
@@ -446,7 +446,7 @@ video {
     line-height: 1.2em;
     font-size: 24px;
     font-weight: 400;
-    border-bottom: dashed 5px #EF6000;
+    border-bottom: dotted 5px #EF6000;
 }
 
 /* ボタンボックス */
@@ -633,6 +633,7 @@ canvas {
         max-width: 1024px;
         flex-wrap: nowrap;
         justify-content: center;
+        align-items: flex-end;
     }
 }
 
@@ -667,8 +668,9 @@ canvas {
 .insta_logo_img {
     width: 64px;
     height: 64px;
-    display: block;
-    margin: 0 auto 16px;
+    object-fit: cover;
+    /* display: inline-block; */
+    /* margin: 0 auto 16px; */
 }
 
 /* TB表示 */
@@ -774,16 +776,53 @@ span {
     color: rgba(0, 0, 0, 0);
 }
 
-/* SnapWidgetの設定 */
-.index_insta_SWbox {
+
+.index_insta_linkbox {
+    margin: 24px auto;
     text-align: center;
 }
 
-.index_insta_SW {
-    background: transparent;
-    border: none;
-    overflow: hidden;
+.index_insta_link {
+    display: inline-block;
+    width: 200px;
+    height: 64px;
+    padding: 16px;
+    font-size: 24px;
+    transition: 0.3s;
 }
+
+.index_insta_link:hover {
+    color: #EF6000;
+}
+
+/* SnapWidgetの設定 */
+.index_insta_SWbox {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    padding-top: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.index_insta_SWbox iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    margin: auto; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
 
 /* ---------------波アニメーション---------------  */
 

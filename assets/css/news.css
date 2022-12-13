@@ -173,6 +173,7 @@
 /* -------- ニュース記事の設定 -------- */
 
 /* ニュース記事１つ分の枠 */
+
 .news_card {
 	width: 320px;
 	height: 440px;
@@ -187,6 +188,7 @@
 	padding: 20px;
 	margin: 0 auto;
 	border: dashed 2px #EF6000;
+	border-radius: 5px;
 	background-color: #FFFFFC;
 	position: relative;
 }
@@ -248,7 +250,7 @@
 
 .news_article_info_container {
 	width: 280px;
-	height: 140px;
+	height: 160px;
 	position: relative;
 }
 

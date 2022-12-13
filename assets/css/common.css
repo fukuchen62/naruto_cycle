@@ -316,6 +316,7 @@ ruby rt {
     font-size: 24px;
     margin: 8px auto;
     flex-wrap: wrap;
+    text-align: left;
 }
 
 .spot_item_info {
@@ -323,6 +324,7 @@ ruby rt {
     font-size: 16px;
     letter-spacing: 0.5px;
     line-height: 20px;
+    text-align: left;
 }
 
 .spot_item_info dt {

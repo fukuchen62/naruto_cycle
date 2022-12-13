@@ -8,7 +8,7 @@
     <div class="news_main_wrap">
         <!-- キービジュアル -->
         <div class="key_bg_under">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_blue.png" alt="マイページキービジュアル" class="key_bg_under_img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/key_visual_img1.png" alt="マイページキービジュアル" class="key_bg_under_img">
         </div>
 
         <!-- パンくずリスト -->
@@ -40,9 +40,12 @@
 
                 <!-- ページネーション -->
                 <div class="news_pagination_container flex">
+                    <?php wp_pagenavi(); ?>
+                </div>
+                <!-- <div class="news_pagination_container flex">
                     <p class="page_box">1</p>
                     <p class="page_box">2</p>
-                </div>
+                </div> -->
                 <!--アーカイブ -->
                 <aside class="news_detail_archive_wrap">
 
