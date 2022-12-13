@@ -185,7 +185,7 @@ video {
 /* ニュース全体ボックス */
 .index_news {
     width: 100%;
-    height: 140px;
+    height: 138px;
     margin-top: 0;
     /* display: flex; */
     justify-content: space-between;
@@ -199,7 +199,7 @@ video {
 @media screen and (min-width: 940px) {
     .index_news {
         width: 650px;
-        height: 160px;
+        height: 136px;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -243,7 +243,7 @@ video {
     .index_news {
         width: 100%;
         max-width: 650px;
-        height: 156px;
+        height: 138px;
     }
 }
 
@@ -251,7 +251,7 @@ video {
 .index_news_article_box {
     width: 70%;
     /* margin-left: 16px; */
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
 .index_news_article_box article+article {
@@ -446,7 +446,7 @@ video {
     line-height: 1.2em;
     font-size: 24px;
     font-weight: 400;
-    border-bottom: dashed 5px #EF6000;
+    border-bottom: dotted 5px #EF6000;
 }
 
 /* ボタンボックス */

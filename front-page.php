@@ -313,7 +313,7 @@
                 <div class="index_insta_linkbox">
                     <!-- インスタロゴ -->
                     <img class="insta_logo_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="インスタグラムのロゴ">
-                    <a href="https://www.instagram.com/naruto_cycle/">
+                    <a href="https://www.instagram.com/naruto_cycle/" target="_blank" rel="noopener noreferrer">
                         <div class="index_insta_link">naruto_cycle</div>
                     </a>
                 </div>
