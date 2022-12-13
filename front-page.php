@@ -335,7 +335,9 @@
         </div>
         <div class="index_insta_SWbox">
             <!-- SnapWidget -->
-            <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" style="border:none; overflow:hidden; width:1250px; height:250px"></iframe>
+            <!-- <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" style="border:none; overflow:hidden; width:1250px; height:250px"></iframe> -->
+            <!-- SnapWidget -->
+            <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:2000px; height:250px"></iframe>
 
             <!-- <?php echo do_shortcode('[instagram-feed feed=1]'); ?> -->
 
