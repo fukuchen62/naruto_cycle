@@ -41,6 +41,7 @@
                                 $pic2_url = $pic2['url'];
                                 ?>
                                 <div><img src="<?php echo $pic2_url; ?>" alt="アイキャッチ画像" class="slider_img"></div>
+
                             </div>
                         </div>
 
@@ -49,7 +50,7 @@
                     <!-- スポットメインデータボックス -->
                     <div class="spot_maindate_box">
                         <!-- スポット名 -->
-                        <h2 class="spot_item_name"><?php the_field('shop_name'); ?></h2>
+                        <h2 class="spot_item_name"><?php the_field('spot_name'); ?></h2>
                         <!-- スポット紹介文 -->
                         <p class="spot_text">
                             <?php the_field('catchphrase'); ?></p>
@@ -79,8 +80,12 @@
                                 </tr>
                                 <tr>
                                     <th>webサイト</th>
-                                    <td><?php if (get_field('home_url')) : ?><a href="<?php the_field('home_url'); ?>" target="_blank" rel="noopener noreferrer"><?php the_field('shop_name'); ?></a>
-                                        <?php endif; ?></td>
+
+                                    <td>
+                                        <?php if (get_field('home_url')) : ?><a href="<?php the_field('home_url'); ?>" target="_blank" rel="noopener noreferrer"><?php the_field('spot_name'); ?></a>
+                                        <?php endif; ?>
+                                    </td>
+
                                 </tr>
 
                                 <tr>
@@ -95,20 +100,20 @@
                                         <div class="spot_mainInfo_sns">
 
                                             <?php foreach ($sns_address as $sns) : ?>
-                                            <!-- 'twitter'が含まれている場合 -->
-                                            <?php
+                                                <!-- 'twitter'が含まれている場合 -->
+                                                <?php
                                                 if (strpos($sns, 'twitter') !== false) : ?>
-                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
+                                                    <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン" target="_blank" rel="noopener noreferrer"></a>
 
-                                            <!-- facebook -->
-                                            <?php elseif (strpos($sns, 'facebook') !== false) : ?>
-                                            <a href="<?php echo $sns; ?>"><img class="sns_icon " src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン" target="_blank" rel="noopener noreferrer"></a>
+                                                    <!-- facebook -->
+                                                <?php elseif (strpos($sns, 'facebook') !== false) : ?>
+                                                    <a href="<?php echo $sns; ?>"><img class="sns_icon " src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン" target="_blank" rel="noopener noreferrer"></a>
 
-                                            <!-- insta -->
-                                            <?php elseif (strpos($sns, 'instagram') !== false) : ?>
-                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン" target="_blank" rel="noopener noreferrer">
+                                                    <!-- insta -->
+                                                <?php elseif (strpos($sns, 'instagram') !== false) : ?>
+                                                    <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン" target="_blank" rel="noopener noreferrer">
 
-                                                <?php endif; ?>
+                                                    <?php endif; ?>
                                                 <?php endforeach; ?>
 
                                         </div>
@@ -141,11 +146,11 @@
                                 <?php $icons = get_field('icon'); ?>
                                 <?php
                                 foreach ($icons as $icon) : ?>
-                                <li class="spot_service_icon">
+                                    <li class="spot_service_icon">
 
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン">
                                     <?php endforeach; ?>
-                                </li>
+                                    </li>
 
 
                             </ul>
@@ -171,14 +176,14 @@
                                 <?php
                                 foreach ($cid as $id) : ?>
 
-                                <a href="<?php echo get_permalink($id); ?>">
-                                    <div class="index_course_selectbtn  <?php the_field('class', $id); ?>">
-                                        <div class="index_course_btntxt">
-                                            <p><?php echo get_the_title($id); ?></p>
-                                            <p>約<?php the_field('distance', $id); ?>km</p>
+                                    <a href="<?php echo get_permalink($id); ?>">
+                                        <div class="index_course_selectbtn  <?php the_field('class', $id); ?>">
+                                            <div class="index_course_btntxt">
+                                                <p><?php echo get_the_title($id); ?></p>
+                                                <p>約<?php the_field('distance', $id); ?>km</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
                                 <?php endforeach;
                                 ?>
 
@@ -234,7 +239,13 @@
             <!-- メモ欄 -->
             <div class="info_content">
                 <ul class="info_list">
+                    <!--
+                    <li class="info_item font_bold">*/
 
+                    </li>
+                    <li> -->
+                    <!-- <?php the_field('recommend_menu'); ?><br> -->
+                    <!-- </li> -->
                     <li class="info_item font_bold">
                         オススメポイント
                     </li>
@@ -245,11 +256,11 @@
                 </ul>
             </div>
         </div>
+        </div>
 
     </section>
     <!-- おすすめスポット -->
     <section>
-
         <div class="info_spot_headlinebox">
             <!-- 吹き出しPICKUP！文字 -->
             <div class="info_spot_deco">＼PICK UP!／</div>
@@ -258,6 +269,7 @@
                 <ruby>RECOMMEND<rt>こちらもいかがですか？</rt></ruby>
             </h2>
         </div>
+
         <!-- 全てのカード入りの箱 -->
         <div class="spot_card_box">
             <!-- カード一覧 -->
@@ -289,9 +301,9 @@
                 ?>
 
 
-                <li class="card_container">
-                    <?php get_template_part('template-parts/loop', 'shop'); ?>
-                </li>
+                        <li class="card_container">
+                            <?php get_template_part('template-parts/loop', 'shop'); ?>
+                        </li>
 
                 <?php endwhile;
                 endif;
