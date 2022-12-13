@@ -110,6 +110,6 @@ Template Name: 全記事一覧テスト
 </main>
 <!-- フッターナビ -->
 
-<!-- <?php get_footer(); ?> -->
+<?php get_footer(); ?>
 
 <!-- フッター切り取りここまで -->
