@@ -2,7 +2,7 @@ body {
 	box-sizing: border-box;
 }
 
-section + section {
+section+section {
 	margin-top: 160px;
 }
 
@@ -13,6 +13,7 @@ section + section {
 	margin: 0 auto;
 	padding: 20px;
 	border: 8px solid #96c85c;
+	border-radius: 5px;
 	background-color: #fffffc;
 }
 
@@ -52,18 +53,22 @@ section + section {
 	object-fit: cover;
 	overflow: hidden;
 }
+
 .slick-dots {
 	position: relative !important;
 	display: flex !important;
 	width: 100% !important;
 }
+
 .slick-dots li {
 	height: 100% !important;
-	width: 33.33333% !important; /* 未対応ブラウザ用フォールバック */
+	width: 33.33333% !important;
+	/* 未対応ブラウザ用フォールバック */
 	/* width: -webkit-calc(100% / 3); */
 	width: calc(100% / 3) !important;
 	margin: 0 !important;
 }
+
 .slick-dots img {
 	width: 100% !important;
 	margin: 0 0px;
@@ -71,6 +76,7 @@ section + section {
 	object-fit: cover !important;
 	overflow: hidden !important;
 }
+
 @media screen and (min-width: 600px) {
 	.slick-dots img {
 		max-height: 120px;
@@ -81,9 +87,11 @@ section + section {
 	height: 100% !important;
 	width: 100% !important;
 }
+
 .slick-dots li.slick-active img {
 	border: 2px solid #ef6000;
 }
+
 /* ----------------------メイン情報の設定---------------------- */
 .spot_maindate_box {
 	width: 100%;
@@ -138,10 +146,12 @@ td {
 	/* white-space: nowrap; */
 	word-wrap: break-word;
 }
+
 /* 備考欄 */
 .remark {
 	line-height: 1.5em;
 }
+
 /* ----------------------マップ設定---------------------- */
 .box_heading {
 	text-align: left;
