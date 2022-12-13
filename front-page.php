@@ -247,7 +247,10 @@
                                 <!-- カード１枚の入れ物-->
                                 <li class="spot_item">
                                     <!-- カテゴリーのラベル -->
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_cate_grume_img.png" alt="カテゴリーのラベル" class="spot_item_cate">
+                                    <?php $pic = get_field('label');
+                                            $pic_url = $pic['url'];
+                                            ?>
+                                    <img src="<?php echo $pic_url; ?>" alt="カテゴリーのラベル" class="spot_item_cate">
 
                                     <!-- スポット写真 -->
                                     <?php

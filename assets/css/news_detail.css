@@ -49,6 +49,7 @@
 	background-color: #fffffc;
 	margin-bottom: 80px;
 	line-height: 1.5em;
+	border-radius: 5px;
 }
 
 @media screen and (min-width: 600px) {

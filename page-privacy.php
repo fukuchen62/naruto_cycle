@@ -144,4 +144,6 @@
         </section>
 
     </div>
-    <?php get_footer(); ?>
+
+</main>
+<?php get_footer(); ?>
