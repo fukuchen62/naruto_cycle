@@ -47,23 +47,23 @@
 
 /* コースのボタンごとに異なる設定 */
 .beginner {
-	background-color: #DD69C5;
-	border: solid 4px #DD69C5;
+	background-color: #dd69c5;
+	border: solid 4px #dd69c5;
 }
 
 .short {
-	background-color: #F6D72E;
-	border: solid 4px #F6D72E;
+	background-color: #f6d72e;
+	border: solid 4px #f6d72e;
 }
 
 .middle {
-	background-color: #0064B4;
-	border: solid 4px #0064B4;
+	background-color: #0064b4;
+	border: solid 4px #0064b4;
 }
 
 .long {
-	background-color: #E66702;
-	border: solid 4px #E66702;
+	background-color: #e66702;
+	border: solid 4px #e66702;
 }
 
 .course_nav_text {
@@ -108,23 +108,18 @@
 }
 
 .icon_list {
-	width: 320px;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
 	row-gap: 8px;
+	margin: 8px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 672px) {
 	.icon_list {
 		width: auto;
-		gap: 8px;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.icon_list {
-		width: auto;
+		margin: auto;
 		gap: 8px;
 	}
 }
@@ -136,15 +131,7 @@
 	line-height: 40px;
 }
 
-@media screen and (min-width: 600px) {
-	.icon {
-		margin: 8px;
-		width: auto;
-		text-align: center;
-	}
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 672px) {
 	.icon {
 		margin: 8px;
 		width: auto;
@@ -381,7 +368,7 @@
 /* 跳ねる動き */
 .move_jump {
 	animation-name: jump;
-	animation-duration: .5s;
+	animation-duration: 0.5s;
 }
 
 @keyframes jump {
@@ -393,7 +380,6 @@
 		transform: translate(0%, 0%);
 	}
 }
-
 
 /* 常に表示する装飾 */
 .course_info_pic_clip {
@@ -615,7 +601,7 @@
 	display: none;
 }
 
-section+section {
+section + section {
 	margin-top: 160px;
 }
 
