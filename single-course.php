@@ -91,7 +91,7 @@
     </section>
 
     <section class="info">
-        <h2 class="info_headline headline"><ruby>INFOMATION<rt>コース情報</rt></ruby></h2>
+        <h2 class="info_headline headline"><ruby>INFORMATION<rt>コース情報</rt></ruby></h2>
         <div class="circle">
             <div class="inner">
                 <!-- 文字配置の基準となる親要素 -->
