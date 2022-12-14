@@ -49,7 +49,7 @@
                     <!-- スポットメインデータボックス -->
                     <div class="spot_maindate_box">
                         <!-- スポット名 -->
-                        <h2 class="spot_item_name"><?php the_field('shop_name'); ?></h2>
+                        <h2 class="spot_item_name"><?php the_field('spot_name'); ?></h2>
                         <!-- スポット紹介文 -->
                         <p class="spot_text">
                             <?php the_field('catchphrase'); ?></p>
@@ -79,7 +79,7 @@
                                 </tr>
                                 <tr>
                                     <th>webサイト</th>
-                                    <td><?php if (get_field('home_url')) : ?><a href="<?php the_field('home_url'); ?>" target="_blank" rel="noopener noreferrer"><?php the_field('shop_name'); ?></a>
+                                    <td><?php if (get_field('home_url')) : ?><a href="<?php the_field('home_url'); ?>" target="_blank" rel="noopener noreferrer"><?php the_field('spot_name'); ?></a>
                                         <?php endif; ?></td>
                                 </tr>
 
