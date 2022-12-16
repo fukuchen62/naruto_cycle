@@ -32,7 +32,7 @@
             <li class="footer_headline"><a href="<?php echo home_url('/spot/'); ?>">周辺スポット検索</a>
                 <ul class="footer_list">
                     <li class="footer_nav_item"><a href=" <?php echo get_term_link('eat', 'shop_type'); ?>">食べる</a></li>
-                    <li class="footer_nav_item"><a href="<?php echo get_term_link('buy', 'shop_type'); ?>">買う</a></li>
+                    <li class="footer_nav_item"><a href="<?php echo get_term_link('shopping', 'shop_type'); ?>">買う</a></li>
                     <li class="footer_nav_item"><a href="<?php echo get_term_link('enjoy', 'spot_type'); ?>">楽しむ</a></li>
                     <li class="footer_nav_item"><a href="<?php echo get_term_link('cycle-spot', 'shop_type'); ?>">サイクルスポット</a></li>
                 </ul>

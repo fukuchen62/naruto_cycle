@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li class="more_naruto_card_item">
-                    <a href=" <?php echo get_term_link('buy', 'shop_type'); ?>">
+                    <a href=" <?php echo get_term_link('shopping', 'shop_type'); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/howto_slide_img03.png" alt="">
                         <p class="more_naruto_num">03</p>
                         <div class="more_naruto_caption">

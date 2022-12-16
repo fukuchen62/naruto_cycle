@@ -57,7 +57,7 @@ add_action('pre_get_posts', 'sortpost_rand');
 function theme_query_vars($vars)
 {
     $vars[] = 'eat'; // 必要に応じて追加.
-    $vars[] = 'buy'; // 必要に応じて追加.
+    $vars[] = 'shopping'; // 必要に応じて追加.
     $vars[] = 'enjoy'; // 必要に応じて追加.
     $vars[] = 'cyclespot'; // 必要に応じて追加.
     return $vars;

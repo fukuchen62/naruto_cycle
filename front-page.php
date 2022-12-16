@@ -275,8 +275,9 @@
                 </li>
 
                 <?php endwhile;
+                    wp_reset_postdata(); //サブループを抜ける
                 endif;
-                wp_reset_postdata(); //サブループを抜ける
+
                 ?>
 
 

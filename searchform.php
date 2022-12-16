@@ -23,10 +23,10 @@
 
 
     <!-- 「買うタイプ」のチェックを保持 -->
-    <?php $select_buy = filter_input(INPUT_GET, "buy", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
-    $checked["buy"] = ["souvenir" => "", "roadstation" => ""];
-    foreach ($select_buy as $val) {
-        $checked["buy"][$val] = " checked";
+    <?php $select_shopping = filter_input(INPUT_GET, "shopping", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY) ?: [];
+    $checked["shopping"] = ["souvenir" => "", "roadstation" => ""];
+    foreach ($select_shopping as $val) {
+        $checked["shopping"][$val] = " checked";
     }
     ?>
 
@@ -143,7 +143,7 @@
                         <ul class="item_box">
                             <li class="choice_item">
 
-                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="buy[]" value="souvenir" <?= $checked["buy"]["souvenir"] ?>>お土産</label>
+                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="shopping[]" value="souvenir" <?= $checked["shopping"]["souvenir"] ?>>お土産</label>
                             </li>
                         </ul>
                     </li>
@@ -153,7 +153,7 @@
                         <ul class="item_box">
                             <li class="choice_item">
 
-                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="buy[]" value="roadstation" <?= $checked["buy"]["roadstation"] ?>>道の駅</label>
+                                <label class="s-search-btn"><input type="checkbox" class="checkbox_list" name="shopping[]" value="roadstation" <?= $checked["shopping"]["roadstation"] ?>>道の駅</label>
                             </li>
                         </ul>
                     </li>

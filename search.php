@@ -50,13 +50,13 @@
       // searchform.phpから送られてきたパラメーターを取得
       $course_id = get_query_var('course_type');
       $eat_slug = get_query_var('eat');
-      $buy_slug = get_query_var('buy');
+      $shopping_slug = get_query_var('shopping');
       $enjoy_slug = get_query_var('enjoy');
       $cycle_slug = get_query_var('cyclespot');
 
 
       $eat_figure = 0;
-      $buy_figure = 0;
+      $shopping_figure = 0;
       $enjoy_figure = 0;
       $cycle_figure = 0;
 
@@ -65,7 +65,7 @@
 
             <!-- コースだけ選択されている場合 -->
 
-            <?php if (!empty($course_id) && (empty($eat_slug)) && (empty($buy_slug)) && (empty($enjoy_slug)) && (empty($cycle_slug))) : ?>
+            <?php if (!empty($course_id) && (empty($eat_slug)) && (empty($shopping_slug)) && (empty($enjoy_slug)) && (empty($cycle_slug))) : ?>
 
             <?php
         $args = array(
@@ -159,7 +159,7 @@
       ?>
 
             <!-- 買うカテゴリが選択されているとき -->
-            <?php if (!empty($buy_slug)) :
+            <?php if (!empty($shopping_slug)) :
 
         $args = array(
           'post_type' => array('shop', 'spot', 'cycle'), //カスタム投稿タイプを指定
@@ -171,7 +171,7 @@
         // 買うのスラッグで絞り込み
         $taxquerysp[] = array(
           'taxonomy' => 'shop_type', //タクソノミー：『ショップ』
-          'terms' => $buy_slug, //スラッグ名
+          'terms' => $shopping_slug, //スラッグ名
           'field' => 'slug', //スラッグ指定
         );
 
@@ -190,8 +190,8 @@
         $the_query = new WP_Query($args);
 
         // 買うの件数結果
-        $buy_figure = $the_query->found_posts;
-        // echo $buy_figure;
+        $shopping_figure = $the_query->found_posts;
+        // echo $shopping_figure;
 
 
       ?>
@@ -307,11 +307,11 @@
             <?php endif; ?>
 
             <!-- 結果の件数 -->
-            <?php $sum = $eat_figure + $buy_figure + $enjoy_figure + $cycle_figure ?>
+            <?php $sum = $eat_figure + $shopping_figure + $enjoy_figure + $cycle_figure ?>
 
 
             <!-- 検索結果がないとき -->
-            <?php if (!empty($course_id) && (!empty($eat_slug) || !empty($buy_slug) || !empty($enjoy_slug) || !empty($cycle_slug)) && ($eat_figure == 0 || $eat_figure == null) && $buy_figure == 0 && $enjoy_figure == 0 && $cycle_figure == 0)
+            <?php if (!empty($course_id) && (!empty($eat_slug) || !empty($shopping_slug) || !empty($enjoy_slug) || !empty($cycle_slug)) && ($eat_figure == 0 || $eat_figure == null) && $shopping_figure == 0 && $enjoy_figure == 0 && $cycle_figure == 0)
 
         echo '<P>該当のスポットはありません</P>';
       ?>
