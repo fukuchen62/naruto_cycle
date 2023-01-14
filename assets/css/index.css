@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-section+section {
+section + section {
     margin-top: 160px;
 }
 
@@ -21,14 +21,14 @@ section+section {
     width: 240px;
     height: 56px;
     background: #fff;
-    box-shadow: 4px 4px #EF6000;
-    border: 3px solid #005EA7;
+    box-shadow: 4px 4px #ef6000;
+    border: 3px solid #005ea7;
     position: relative;
 }
 
 /* 検索ボタンのテキスト */
 .top_more_btn {
-    color: #FFFFFC;
+    color: #fffffc;
     font-size: 24px;
     font-weight: bold;
     margin: auto;
@@ -40,13 +40,10 @@ section+section {
 
 /* moreボタンのスタイルここまで */
 
-
-
 /* ---------------section：キービジュアル---------------  */
 .key_news_wrap {
     position: relative;
 }
-
 
 /* キービジュアルの箱 */
 /* .index_key_visual {
@@ -55,7 +52,6 @@ section+section {
     position: relative;
     vertical-align: bottom;
 } */
-
 
 .index_key_visual {
     width: 100vw;
@@ -90,7 +86,6 @@ video {
     vertical-align: bottom;
 }
 
-
 /* キービジュアル画像 */
 /* .key_img {
     width: 100vw;
@@ -101,8 +96,8 @@ video {
 
 /* キービジュ：装飾文字 */
 .key_msg {
-    font-family: 'Arvo', serif;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Arvo", serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: 900;
     font-size: calc(100vw / 8);
     -webkit-text-stroke: 2px #fff;
@@ -126,7 +121,7 @@ video {
 /* PC表示 */
 @media screen and (min-width: 1024px) {
     .key_msg {
-        font-size: calc(100vw /12);
+        font-size: calc(100vw / 12);
         top: 140px;
         left: 10%;
     }
@@ -163,7 +158,6 @@ video {
     }
 }
 
-
 /* TB表示 */
 @media screen and (min-width: 600px) {
     .key_man {
@@ -190,9 +184,9 @@ video {
     /* display: flex; */
     justify-content: space-between;
     /* align-items: center; */
-    background-color: #F3F0E8;
-    color: #005EA7;
-    border: 1px #005EA7 solid;
+    background-color: #f3f0e8;
+    color: #005ea7;
+    border: 1px #005ea7 solid;
 }
 
 /* PC表示 */
@@ -214,8 +208,8 @@ video {
     margin: 0;
     font-size: 24px;
     font-weight: 900;
-    -webkit-text-stroke: 1px #005EA7;
-    text-stroke: 1px #005EA7;
+    -webkit-text-stroke: 1px #005ea7;
+    text-stroke: 1px #005ea7;
     color: rgba(0, 0, 0, 0);
     text-align: left;
 }
@@ -229,12 +223,12 @@ video {
 
 /* ニュースコンテンツ全部入り */
 .index_news_content {
-    width: calc(100%*0.83589744);
+    width: calc(100% * 0.83589744);
     margin: 10px;
     justify-content: space-between;
 }
 
-.index_news_content h2+article {
+.index_news_content h2 + article {
     margin-left: 16px;
 }
 
@@ -254,10 +248,9 @@ video {
     /* padding-top: 10px; */
 }
 
-.index_news_article_box article+article {
+.index_news_article_box article + article {
     margin-top: 16px;
 }
-
 
 /* カテゴリタグ＋日付ボックス */
 .index_news_meta {
@@ -280,15 +273,14 @@ video {
     text-overflow: ellipsis;
 }
 
-
 /* 一覧へボタン */
 .index_news_btn {
-    width: calc(100%*0.16410256);
+    width: calc(100% * 0.16410256);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #005EA7;
-    color: #FFFFFC;
+    background-color: #005ea7;
+    color: #fffffc;
 }
 
 /* ---------------section：サイクリングについて---------------  */
@@ -296,7 +288,7 @@ video {
     width: 100%;
     height: 100%;
     /* padding: 32px; */
-    background-color: #005EA7;
+    background-color: #005ea7;
 }
 
 /* コンテンツボックス（見出し、概要、ボタン） */
@@ -318,9 +310,9 @@ video {
 
 /* テキストボックス */
 .index_howto_txtbox {
-    width: calc(100%*0.82051282);
+    width: calc(100% * 0.82051282);
     margin: 0 auto;
-    color: #FFFFFC;
+    color: #fffffc;
     text-align: left;
     line-height: 1.2em;
     position: relative;
@@ -358,7 +350,7 @@ video {
 /* 写真ボックス */
 .index_howto_imgbox {
     /* width: 60%; */
-    width: calc(100%*0.82051282);
+    width: calc(100% * 0.82051282);
     margin: 0 auto;
 }
 
@@ -385,7 +377,6 @@ video {
     }
 }
 
-
 /* ---------------section：コースマップ---------------  */
 .index_course {
     margin: 160px auto;
@@ -397,7 +388,6 @@ video {
         margin: 160px auto 0;
     }
 }
-
 
 /* 波のあしらいに被らないように調整 */
 @media screen and (min-width: 1024px) {
@@ -425,7 +415,7 @@ video {
 /* コースマップの画像 */
 .index_map_img {
     width: 100%;
-    border: 10px solid #E1D6B8;
+    border: 10px solid #e1d6b8;
 }
 
 /* PC表示 */
@@ -446,7 +436,7 @@ video {
     line-height: 1.2em;
     font-size: 24px;
     font-weight: 400;
-    border-bottom: dotted 5px #EF6000;
+    border-bottom: dotted 5px #ef6000;
 }
 
 /* ボタンボックス */
@@ -471,7 +461,6 @@ video {
     }
 }
 
-
 /* ボタン共通スタイル */
 .index_course_selectbtn {
     display: inline-block;
@@ -479,7 +468,7 @@ video {
     height: 60px;
     border-radius: 50%;
     text-align: center;
-    color: #FFFFFC;
+    color: #fffffc;
     position: relative;
     transition: 0.3s;
 }
@@ -503,17 +492,16 @@ video {
 /* ボタン個別スタイル */
 /* 初心者コース */
 .beginner {
-    background-color: #DD69C5;
+    background-color: #dd69c5;
 }
 
 .beginner:hover {
     transform: scale(1.1);
 }
 
-
 /* 短距離コース */
 .short {
-    background-color: #F6D72E;
+    background-color: #f6d72e;
 }
 
 .short:hover {
@@ -522,7 +510,7 @@ video {
 
 /* 中距離コース */
 .middle {
-    background-color: #0064B4;
+    background-color: #0064b4;
 }
 
 .middle:hover {
@@ -531,7 +519,7 @@ video {
 
 /* 長距離コース */
 .long {
-    background-color: #E66702;
+    background-color: #e66702;
 }
 
 .long:hover {
@@ -540,11 +528,11 @@ video {
 
 /* ---------------section：スポット---------------  */
 .index_spot {
-    background-color: #D4EBEC;
+    background-color: #d4ebec;
     position: relative;
-    background: -moz-linear-gradient(top, #D4EBEC 90%, #F3F0E8);
-    background: -webkit-linear-gradient(top, #D4EBEC 90%, #F3F0E8);
-    background: linear-gradient(to bottom, #D4EBEC 90%, #F3F0E8);
+    background: -moz-linear-gradient(top, #d4ebec 90%, #f3f0e8);
+    background: -webkit-linear-gradient(top, #d4ebec 90%, #f3f0e8);
+    background: linear-gradient(to bottom, #d4ebec 90%, #f3f0e8);
 }
 
 .index_spot_headlinebox {
@@ -552,7 +540,6 @@ video {
     margin: 0 auto;
     position: relative;
 }
-
 
 @keyframes blink {
     0% {
@@ -567,7 +554,7 @@ video {
 .index_spot_deco {
     font-size: 32px;
     font-weight: 900;
-    color: #EF6000;
+    color: #ef6000;
     text-align: center;
     animation: blink 0.5s ease-in-out infinite alternate;
 }
@@ -609,7 +596,7 @@ video {
     /* display: none; */
     position: relative;
     height: 160px;
-    background-color: #F3F0E8;
+    background-color: #f3f0e8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
@@ -738,8 +725,6 @@ canvas {
     }
 }
 
-
-
 .index_inner {
     width: 20px;
     height: 20px;
@@ -763,7 +748,7 @@ canvas {
 }
 
 span {
-    position: absolute;
+    /* position: absolute; */
     inset: 0;
     text-align: center;
 }
@@ -771,11 +756,10 @@ span {
 .index_insta_decotxt {
     font-size: 24px;
     font-weight: 900;
-    -webkit-text-stroke: 1px #EF6000;
-    text-stroke: 1px #EF6000;
+    -webkit-text-stroke: 1px #ef6000;
+    text-stroke: 1px #ef6000;
     color: rgba(0, 0, 0, 0);
 }
-
 
 .index_insta_linkbox {
     margin: 24px auto;
@@ -792,7 +776,7 @@ span {
 }
 
 .index_insta_link:hover {
-    color: #EF6000;
+    color: #ef6000;
 }
 
 /* SnapWidgetの設定 */
@@ -804,7 +788,6 @@ span {
     overflow: hidden;
     margin: 0 auto;
 }
-
 
 .index_insta_SWbox iframe {
     width: 100%;
@@ -818,11 +801,7 @@ span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
-
-
-
 
 /* ---------------波アニメーション---------------  */
 
@@ -831,7 +810,7 @@ span {
     position: relative;
     width: 100%;
     height: 200px;
-    background-color: #F3F0E8;
+    background-color: #f3f0e8;
     /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
 }
 
