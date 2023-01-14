@@ -90,8 +90,9 @@ function add_common_stylesheet_script()
 
 
     //googlefontを読み込む
-    wp_enqueue_style('naruto_cycle-googlefonts_a', "https://fonts.googleapis.com");
-    wp_enqueue_style('naruto_cycle-googlefonts_b', "https://fonts.gstatic.com");
+    // header.phpから直接読み込み
+    // wp_enqueue_style('naruto_cycle-googlefonts_a', "https://fonts.googleapis.com");
+    // wp_enqueue_style('naruto_cycle-googlefonts_b', "https://fonts.gstatic.com");
     wp_enqueue_style('naruto_cycle-googlefonts_c', "https://fonts.googleapis.com/css2?family=Arvo&family=Noto+Sans+JP:wght@400;900&display=swap");
 
     //共通のCSS（common.css）を読み込む
@@ -110,7 +111,7 @@ function add_common_stylesheet_script()
 
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
-    // wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery');
 
     // 00.『jQuery』
 
