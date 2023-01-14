@@ -337,15 +337,19 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/index_insta_img.png" alt="自転車の装飾" class="index_insta_img">
             <!-- </div> -->
         </div>
-        <div class="index_insta_SWbox">
-            <!-- SnapWidget -->
-            <!-- <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" style="border:none; overflow:hidden; width:1250px; height:250px"></iframe> -->
-            <!-- SnapWidget -->
-            <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:2000px; height:250px"></iframe>
+        <!-- <div class="index_insta_SWbox"> -->
+        <!-- SnapWidget -->
+        <!-- <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" style="border:none; overflow:hidden; width:1250px; height:250px"></iframe> -->
+        <!-- SnapWidget -->
+        <!-- <iframe src="https://snapwidget.com/embed/1017659" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:2000px; height:250px"></iframe> -->
 
-            <!-- <?php echo do_shortcode('[instagram-feed feed=1]'); ?> -->
 
+
+        <!-- </div> -->
+        <div class="insta_feed_box">
+            <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
         </div>
+
     </section>
 </main>
 
