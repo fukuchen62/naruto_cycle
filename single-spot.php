@@ -108,8 +108,12 @@
                                             <?php elseif (strpos($sns, 'instagram') !== false) : ?>
                                             <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン" target="_blank" rel="noopener noreferrer">
 
-                                                <?php endif; ?>
-                                                <?php endforeach; ?>
+                                                <!-- youtube -->
+                                                <?php elseif (strpos($sns, 'youtube') !== false) : ?>
+                                                <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube_social_squircle_red.png" alt="youtubeへのシェアボタン">
+
+                                                    <?php endif; ?>
+                                                    <?php endforeach; ?>
 
                                         </div>
                                     </td>

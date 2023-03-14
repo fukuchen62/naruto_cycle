@@ -96,21 +96,27 @@
                                         <div class="spot_mainInfo_sns">
 
                                             <?php foreach ($sns_address as $sns) : ?>
-                                                <!-- 'twitter'が含まれている場合 -->
-                                                <?php
+                                            <!-- 'twitter'が含まれている場合 -->
+                                            <?php
                                                 if (strpos($sns, 'twitter') !== false) : ?>
-                                                    <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharetwitter.png" alt=" Twitterへのシェアボタン"></a>
 
-                                                    <!-- facebook -->
-                                                <?php elseif (strpos($sns, 'facebook') !== false) : ?>
-                                                    <a href="<?php echo $sns; ?>"><img class="sns_icon " src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
+                                            <!-- facebook -->
+                                            <?php elseif (strpos($sns, 'facebook') !== false) : ?>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon " src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_sharefb.png" alt="Facebookへのシェアボタン"></a>
 
-                                                    <!-- insta -->
-                                                <?php elseif (strpos($sns, 'instagram') !== false) : ?>
-                                                    <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン">
+                                            <!-- insta -->
+                                            <?php elseif (strpos($sns, 'instagram') !== false) : ?>
+                                            <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/index_footer_shareig.png" alt="instagramへのシェアボタン">
+
+                                                <!-- youtube -->
+                                                <?php elseif (strpos($sns, 'youtube') !== false) : ?>
+                                                <a href="<?php echo $sns; ?>"><img class="sns_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/youtube_social_squircle_red.png" alt="youtubeへのシェアボタン">
 
                                                     <?php endif; ?>
-                                                <?php endforeach; ?>
+                                                    <?php endforeach; ?>
+
+
 
                                         </div>
                                     </td>
@@ -142,11 +148,11 @@
                                 <?php $icons = get_field('icon'); ?>
                                 <?php
                                 foreach ($icons as $icon) : ?>
-                                    <li class="spot_service_icon">
+                                <li class="spot_service_icon">
 
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/spot_icon_<?php echo $icon; ?>_img.png" alt="アイコン">
                                     <?php endforeach; ?>
-                                    </li>
+                                </li>
 
 
                             </ul>
@@ -172,14 +178,14 @@
                                 <?php
                                 foreach ($cid as $id) : ?>
 
-                                    <a href="<?php echo get_permalink($id); ?>">
-                                        <div class="index_course_selectbtn  <?php the_field('class', $id); ?>">
-                                            <div class="index_course_btntxt">
-                                                <p><?php echo get_the_title($id); ?></p>
-                                                <p>約<?php the_field('distance', $id); ?>km</p>
-                                            </div>
+                                <a href="<?php echo get_permalink($id); ?>">
+                                    <div class="index_course_selectbtn  <?php the_field('class', $id); ?>">
+                                        <div class="index_course_btntxt">
+                                            <p><?php echo get_the_title($id); ?></p>
+                                            <p>約<?php the_field('distance', $id); ?>km</p>
                                         </div>
-                                    </a>
+                                    </div>
+                                </a>
                                 <?php endforeach;
                                 ?>
 
@@ -296,9 +302,9 @@
                 ?>
 
 
-                        <li class="card_container">
-                            <?php get_template_part('template-parts/loop', 'shop'); ?>
-                        </li>
+                <li class="card_container">
+                    <?php get_template_part('template-parts/loop', 'shop'); ?>
+                </li>
 
                 <?php endwhile;
                 endif;
