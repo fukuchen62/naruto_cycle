@@ -63,17 +63,26 @@ $favorites_count = 0;
                             $latitude = get_field('latitude'); // 緯度のフィールド名latitude
                             $longitude = get_field('longitude'); // 経度のフィールド名longitude
                             $text = esc_html(get_the_title()); // shopの名前(タイトル名)
+                            $url = get_permalink();
+                            // リンクＵＲＬ
+                            $icon_url = get_field('label');
+                            $icon = $icon_url['url']; // shopのicon
+
 
                             $favorite_maps['lat'][] = $latitude;
                             $favorite_maps['lng'][] = $longitude;
                             $favorite_maps['text'][] = $text;
+                            $favorite_maps['url'][] = $url;
+
 
                             $favorite_maps2[] = [
                                 'lat' => $latitude,
                                 'lng' => $longitude,
                                 'text' => $text,
-                            ];
+                                'url' => $url,
 
+                            ];
+                            // print_r($favorite_maps2);
             ?>
 
 
@@ -114,6 +123,9 @@ $favorites_count = 0;
 
 <script type="text/javascript">
 // initMap() を使って地図を埋め込む記述
+
+let marker
+
 function initMap() {
     //alert("lkjfks");
     const color = "black"; // ラベルの色
@@ -135,6 +147,8 @@ function initMap() {
     // フォント変えられる
 
     let favorite_maps = [];
+
+
     <?php
         for ($i = 0; $i < $favorites_count; $i++) {
             echo "favorite_maps[${i}]={lat:";
@@ -143,6 +157,10 @@ function initMap() {
             echo $favorite_maps['lng'][$i];
             echo ', text:"';
             echo $favorite_maps['text'][$i];
+            // echo ', url:"';
+            // echo $favorite_maps['url'][$i];
+            // echo ', icon:"';
+            // echo $favorite_maps['icon'][$i];
             echo "\",
                 color: \"#AD7000\",
                 fontFamilt: 'Kosugi Maru',
@@ -153,20 +171,75 @@ function initMap() {
         ?>
 
 
-    var marker = new google.maps.Marker();
+    // var marker = new google.maps.Marker();
+    // for (let i = 0; i < favorite_maps.length; i++) {
+    //     // const image = $icon,
+    //     marker = new google.maps.Marker({
+    //         position: favorite_maps[i],
+    //         label: favorite_maps[i],
+    //         // icon: img,
+    //         map: map,
+    //     });
+    // }
+    // マーカー表示
+    // marker.setMap(map);
+
+
+    // マーカーをフラッグに変更＆アニメーション追加
+    // フラッグ画像
+    const image = "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+
+
+    // var marker = new google.maps.Marker();
     for (let i = 0; i < favorite_maps.length; i++) {
+        // const favorite_maps2 = [];
+        // const image = $icon,
+        // console.log(favorite_maps2);
         marker = new google.maps.Marker({
             position: favorite_maps[i],
             label: favorite_maps[i],
+            // icon: img,
             map: map,
+            animation: google.maps.Animation.DROP,
+            icon: image,
+            optimized: false,
         });
+        // marker.addListener("click", (function(url) {
+        //     return function() {
+        //         location.href = url;
+        //     };
+        // })(favorite_maps2[i].url));
+
+
+
+
+        // google.maps.event.addListener(markers, 'click', (function(url) {
+        //     return function() {
+        //         location.href = url;
+        //     };
+        // })(data[i].url));
+
     }
-    マーカー表示
-    marker.setMap(map);
 }
+
+
+// マーカー表示
+
+window.initMap = initMap;
+
+
+// const markerView = new google.maps.marker.AdvancedMarkerView();
+// for (let i = 0; i < favorite_maps.length; i++) {
+//     markerView = new google.maps.marker.AdvancedMarkerView({
+//         position: favorite_maps[i],
+//         label: favorite_maps[i],
+//         map: map,
+//     });
+// }
+// window.initMap = initMap;
 </script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJpkrA0wadpGsq26hNJcnFOoZiKpeOTfM&callback=initMap">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd_KzGsIv3mje81AUtTGsJcbW1GoJKYuk&callback=initMap">
 </script>
 
 
