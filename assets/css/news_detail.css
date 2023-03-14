@@ -2,235 +2,236 @@
 
 /* 全体の設定 */
 .news_detail_container {
-	width: 320px;
-	margin-left: auto;
-	margin-right: auto;
-	flex-wrap: wrap;
-	justify-content: space-between;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-
+a {
+    word-wrap: break-word;
+}
 @media screen and (min-width: 600px) {
-	.news_detail_container {
-		width: 600px;
-	}
+    .news_detail_container {
+        width: 600px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-	.news_detail_container {
-		width: 1024px;
-	}
+    .news_detail_container {
+        width: 1024px;
+    }
 }
 
 /* 記事全体の設定（画面左側） */
-.aeticle_wrap {
-	width: 100%;
-	padding: 16px;
-	margin-bottom: 80px;
+.article_wrap {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 80px;
 }
 
 @media screen and (min-width: 600px) {
-	.aeticle_wrap {
-		width: 600px;
-	}
+    .article_wrap {
+        width: 600px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-	.aeticle_wrap {
-		width: 804px;
-		margin-bottom: auto;
-	}
+    .article_wrap {
+        width: 804px;
+        margin-bottom: auto;
+    }
 }
 
 .news_detail_article {
-	width: 100%;
-	padding: 16px;
-	border: dashed 2px #ef6000;
-	background-color: #fffffc;
-	margin-bottom: 80px;
-	line-height: 1.5em;
-	border-radius: 5px;
+    width: 100%;
+    padding: 16px;
+    border: dashed 2px #ef6000;
+    background-color: #fffffc;
+    margin-bottom: 80px;
+    line-height: 1.5em;
+    border-radius: 5px;
 }
 
 @media screen and (min-width: 600px) {
-	.news_detail_article {
-		width: 600px;
-	}
+    .news_detail_article {
+        width: 600px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-	.news_detail_article {
-		width: 804px;
-		margin-bottom: auto;
-	}
+    .news_detail_article {
+        width: 804px;
+        margin-bottom: auto;
+    }
 }
 
 .article_title {
-	font-size: 24px;
-	font-weight: bold;
-	padding-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 16px;
 }
 
 /* ニュース上部カテゴリと日付の設定 */
 .article_meta {
-	gap: 16px;
-	margin-top: 16px;
+    gap: 16px;
+    margin-top: 16px;
 }
 
 .post-categories {
-	background-color: #d4ebec;
-	border: solid 1px #005ea7;
-	color: #005ea7;
+    background-color: #d4ebec;
+    border: solid 1px #005ea7;
+    color: #005ea7;
 }
 
 /* 記事本文の設定 */
 .article_body {
-	margin-bottom: px;
+    margin-bottom: px;
 }
 
 /* 写真の設定 */
 .article_body img {
-	margin: 16px auto;
-	width: 280px;
-	height: 220px;
-	object-fit: cover;
+    /* margin: 16px auto; */
+    width: 280px;
+    /* height: 220px; */
+    object-fit: cover;
 }
 
 @media screen and (min-width: 600px) {
-	.article_body img {
-		width: 560px;
-		height: 294px;
-	}
+    .article_body img {
+        width: 560px;
+        /* height: 294px; */
+    }
 }
 
 @media screen and (min-width: 1024px) {
-	.article_body img {
-		width: 764px;
-		height: 400px;
-	}
+    .article_body img {
+        width: 764px;
+        /* height: 400px; */
+    }
 }
 
 /* 記事下部の別ページへのリンク */
 .post_links {
-	width: 100%;
-	margin-bottom: 60px;
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 .post_links.pc_only {
-	display: none;
+    display: none;
 }
 
 @media screen and (min-width: 1024px) {
-	.post_links.pc_only {
-		display: flex;
-	}
+    .post_links.pc_only {
+        display: flex;
+    }
 
-	.post_links.not_pc {
-		display: none;
-	}
+    .post_links.not_pc {
+        display: none;
+    }
 }
 
 .post_link {
-	width: 50%;
+    width: 50%;
 }
 
 .post_link span:hover {
-	text-decoration: underline;
-	color: #ef6000;
+    text-decoration: underline;
+    color: #ef6000;
 }
 
 .post_link_prev {
-	text-align: left;
+    text-align: left;
 }
 
 .post_link_next {
-	text-align: right;
+    text-align: right;
 }
 
 /* アーカイブ部分の設定 */
 .news_detail_archive_wrap {
-	width: 320px;
+    width: 320px;
 }
 
 @media screen and (min-width: 600px) {
-	.news_detail_archive_wrap {
-		width: 600px;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
+    .news_detail_archive_wrap {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-	.news_detail_archive_wrap {
-		display: inline-block;
-		width: 180px;
-	}
+    .news_detail_archive_wrap {
+        display: inline-block;
+        width: 180px;
+    }
 }
 
 /* サイズと縁取り（要素の増減に対応） */
 .news_detail_archive {
-	color: #005ea7;
-	border: solid 1px #74c7f0;
-	margin-bottom: 24px;
+    color: #005ea7;
+    border: solid 1px #74c7f0;
+    margin-bottom: 24px;
 }
 
 @media screen and (min-width: 600px) {
-	.news_detail_archive {
-		height: auto;
-		width: 284px;
-		margin-bottom: 40px;
-	}
+    .news_detail_archive {
+        height: auto;
+        width: 284px;
+        margin-bottom: 40px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-	.news_detail_archive {
-		width: auto;
-		margin-bottom: 40px;
-	}
+    .news_detail_archive {
+        width: auto;
+        margin-bottom: 40px;
+    }
 }
 
 /* 背景色（要素の増減に対応） */
 .news_detail_archive_title {
-	height: 40px;
-	line-height: 40px;
-	background-color: #d4ebec;
-	padding-left: 10px;
-	font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    background-color: #d4ebec;
+    padding-left: 10px;
+    font-weight: bold;
 }
 
 .news_detail_archive_list li {
-	height: 40px;
-	line-height: 40px;
-	padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
 }
 
 .news_detail_archive_list li:nth-child(even) {
-	background-color: #d4ebec;
+    background-color: #d4ebec;
 }
 
 .news_detail_archive_list li:nth-child(odd) {
-	background-color: #fff;
+    background-color: #fff;
 }
 
 /* 下部装飾画像用（自転車をこぐ女性） */
 .news_detail_wrap {
-	position: relative;
-	padding-bottom: 60px;
+    position: relative;
+    padding-bottom: 60px;
 }
 
 .news_bottom_img {
-	display: none;
+    display: none;
 }
 
 @media screen and (min-width: 1024px) {
-	.news_bottom_img {
-		display: block;
-		position: absolute;
-		bottom: 0px;
-		right: 100px;
-		width: 238px;
-		height: 292px;
-		z-index: -1;
-	}
+    .news_bottom_img {
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        right: 100px;
+        width: 238px;
+        height: 292px;
+        z-index: -1;
+    }
 }
